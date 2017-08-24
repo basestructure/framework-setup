@@ -1,0 +1,23 @@
+/* SETUP | CREDIT | 250_BLANK | COPYRIGHT - 2017-08-09 */
+
+// -------------------------------------
+// EXTEND
+
+	%copyright {}
+		%copyright-a {}
+		%copyright-hvr {}
+
+// -------------------------------------
+// SELECTORS
+
+	.copyright {
+		@extend %copyright !optional;
+
+		a {
+			@extend %copyright-a !optional;
+
+			&:hover {
+				@extend %copyright-hvr !optional;
+			}
+		}
+	}
