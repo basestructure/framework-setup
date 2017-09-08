@@ -1,0 +1,20 @@
+/* SETUP | HEADLINE | 251_SETUPBASIC | HEADLINE - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%headline {
+		font-family: $fontfamily-headline;
+		line-height: $lineheight-headline;
+		line-height: $letterspacing-headline;
+		margin: 0;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+// HEADLINE
+
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+		@extend %headline !optional;
+	}

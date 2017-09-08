@@ -1,0 +1,22 @@
+/* SETUP | FOOTER | 251_SETUPBASIC | SITEFOOTER - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%sitefooter {}
+	%sitefooterwrap {}
+	%sitefooterwraponly {}
+
+// -------------------------------------
+// SELECTORS
+
+	.site-footer {
+		@extend %sitefooter !optional;
+
+		.wrap {
+			@extend %sitefooterwrap !optional;
+		}
+	}
+	.site-footer > .wrap {
+		@extend %sitefooterwraponly !optional;
+	}

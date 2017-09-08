@@ -1,0 +1,25 @@
+/* SETUP | LAYOUT | 251_SETUPBASIC | FULL - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%full-siteinner {}
+
+	%full-csw {}
+
+	%full-content {}
+
+// -------------------------------------
+// SELECTORS
+
+	.full-width-content .site-inner {
+		@extend %full-siteinner !optional;
+	}
+
+	.full-width-content .content-sidebar-wrap {
+		@extend %full-csw !optional;
+	}
+
+	.full-width-content .content {
+		@extend %full-content !optional;
+	}

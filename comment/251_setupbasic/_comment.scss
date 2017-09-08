@@ -1,0 +1,27 @@
+/* SETUP | COMMENT | 251_SETUPBASIC | COMMENT - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+// COMMENT
+
+	%comment {
+		margin-bottom: #{$space-default}rem;
+	}
+
+// COMMENT ARTICLE
+
+	%comment-article {}
+
+// -------------------------------------
+// SELECTORS
+
+// COMMENT
+
+	.comment {
+		@extend %comment !optional;
+
+		article {
+			@extend %comment-article !optional;
+		}
+	}

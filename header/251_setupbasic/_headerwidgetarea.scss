@@ -1,0 +1,13 @@
+/* SETUP | HEADER | 251_SETUPBASIC | HEADERWIDGETAREA - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%headerwidgetarea {}
+
+// -------------------------------------
+// SELECTORS
+
+	.header-widget-area {
+		@extend %headerwidgetarea !optional;
+	}

@@ -1,0 +1,17 @@
+/* SETUP | HEADLINE | 251_SETUPBASIC | H3 - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%h3 {
+		font-size: #{$fontsize-h3}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+// H3
+
+	h3, .h3 {
+		@extend %h3 !optional;
+	}

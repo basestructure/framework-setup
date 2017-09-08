@@ -1,0 +1,13 @@
+/* SETUP | INNER | 251_SETUPBASIC | CONTENT - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%content {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content {
+		@extend %content !optional;
+	}

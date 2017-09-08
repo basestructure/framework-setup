@@ -1,0 +1,121 @@
+/* SETUP | TYPE | 250_SETUPBASIC | HEIGHT - 2018-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	// BODY
+	%lineheight-body {
+		line-height: $lineheight-body;
+	}
+
+	// DEFAULT
+	%lineheight-default {
+		line-height: $lineheight-default;
+	}
+
+	// USAGE
+	%lineheight-quote {
+		line-height: $lineheight-quote;
+	}
+
+	// RELATIVE
+	%lineheight-tighter {
+		line-height: $lineheight-tighter;
+	}
+	%lineheight-tight {
+		line-height: $lineheight-tight;
+	}
+	%lineheight-normal {
+		line-height: $lineheight-normal;
+	}
+	%lineheight-tight {
+		line-height: $lineheight-tight;
+	}
+	%lineheight-tighter {
+		line-height: $lineheight-tighter;
+	}
+
+	// PERCENTAGE
+	%lineheight-half {
+		line-height: $lineheight-half;
+	}
+	%lineheight-threefourth {}
+	%lineheight-single {
+		line-height: $lineheight-single;
+	}
+	%lineheight-onehalf {
+		line-height: $lineheight-onehalf;
+	}
+	%lineheight-onequarter {}
+	%lineheight-onefifth {}
+	%lineheight-double {
+		line-height: $lineheight-double;
+	}
+	%lineheight-triple {}
+
+// -------------------------------------
+// SELECTORS
+
+	.lineheight-body {
+		@extend %lineheight-body !optional;
+	}
+
+	.lineheight-default {
+		@extend %lineheight-default !optional;
+	}
+
+	.lineheight-half {
+		@extend %lineheight-half !optional;
+	}
+
+	.lineheight-threefourth {
+		@extend %lineheight-threefourth !optional;
+	}
+
+	.lineheight-single {
+		@extend %lineheight-single !optional;
+	}
+
+	.lineheight-onehalf {
+		@extend %lineheight-onehalf !optional;
+	}
+
+	.lineheight-onequarter {
+		@extend %lineheight-onequarter !optional;
+	}
+
+	.lineheight-onefifth {
+		@extend %lineheight-onefifth !optional;
+	}
+
+	.lineheight-double {
+		@extend %lineheight-double !optional;
+	}
+
+	.lineheight-triple {
+		@extend %lineheight-triple !optional;
+	}
+
+	.lineheight-tighter {
+		@extend %lineheight-tighter !optional;
+	}
+
+	.lineheight-tighter {
+		@extend %lineheight-tighter !optional;
+	}
+
+	.lineheight-tight {
+		@extend %lineheight-tight !optional;
+	}
+
+	.lineheight-normal {
+		@extend %lineheight-normal !optional;
+	}
+
+	.lineheight-loose {
+		@extend %lineheight-loose !optional;
+	}
+
+	.lineheight-looser {
+		@extend %lineheight-looser !optional;
+	}

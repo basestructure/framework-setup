@@ -1,0 +1,96 @@
+/* SETUP | RESPONSIVE | 250_SETUPBASIC | BREAKPOINTS - 2017-08-09 */
+
+// -------------------------------------
+// VARIABLES
+
+	// BASE
+
+	// FROM: BASE UP					@include responsive-range(baseup) {}
+	// FROM: BASE +1 UP					@include responsive-range(baseaboveup) {}
+	// BASE --------------------
+	// FROM: BASE DOWN					@include responsive-range(basedown) {}
+	// FROM: BASE-1 DOWN				@include responsive-range(basebelowdown) {}
+	// RANGE: ZERO TO BASE+1			@include responsive-range(zero-baseabove) {}
+	// RANGE: ZERO TO BASE 				@include responsive-range(zero-base) {}
+	// RANGE: ZERO TO BASE-1			@include responsive-range(zero-basebelow) {}
+
+	// FROM: ZERO & UP					@include responsive-range(zeroup) {}
+	// FROM: XSML & UP					@include responsive-range(xsmlup) {}
+	// FROM: SML & UP					@include responsive-range(smlup) {}
+	// FROM: MED & UP					@include responsive-range(medup) {}
+	// FROM: LRG & UP					@include responsive-range(lrgup) {}
+	// FROM: XLRG & UP					@include responsive-range(xlrgup) {}
+	// FROM: HUGE & UP					@include responsive-range(hugeup) {}
+
+	// FROM: ZERO & DOWN				@include responsive-range(zerodown) {}
+	// FROM: XSML & DOWN				@include responsive-range(xsmldown) {}
+	// FROM: SML & DOWN					@include responsive-range(smldown) {}
+	// FROM: MED & DOWN					@include responsive-range(meddown) {}
+	// FROM: LRG & DOWN					@include responsive-range(lrgdown) {}
+	// FROM: XLRG & DOWN				@include responsive-range(xlrgdown) {}
+	// FROM: HUGE & DOWN				@include responsive-range(hugedown) {}
+
+	// XLARGE (LAPTOP)
+	//
+	// FROM: XLRG & UP (ABOVE)
+	// FROM: XLRG & DOWN (BELOW)
+	// RANGE: ZERO TO XLRG
+
+	// LARGE (LAPTOP)
+	//
+	// FROM: LRG & UP (ABOVE)
+	// FROM: LRG & DOWN (BELOW)
+	// RANGE: ZERO TO LRG
+
+	// MEDIUM (TABLET)
+	//
+	// FROM: MED & UP (ABOVE)
+	// FROM: MED & DOWN (BELOW)
+	// RANGE: ZERO TO MED
+
+	// SMALL (MOBILE)
+	//
+	// FROM: SML & UP (ABOVE)
+	// FROM: SML & DOWN (BELOW)
+	// RANGE: ZERO TO SML
+
+
+	// FROM: ZERO & UP			@include responsive-range(zeroup) {}
+	// FROM: MOBILESML & UP		@include responsive-range(mobilesmlup) {}
+	// FROM: MOBILE & UP		@include responsive-range(mobileup) {}
+	// FROM: TABLET & UP		@include responsive-range(tabletup) {}
+	// FROM: DESKTOPSML & UP	@include responsive-range(desktopsmlup) {}
+	// FROM: DESKTOP & UP		@include responsive-range(desktopup) {}
+	// FROM: WIDESCREEN & UP	@include responsive-range(widescreenup) {}
+
+	// FROM: ZERO & DOWN		@include responsive-range(zerodown) {}
+	// FROM: MOBILESML & DOWN	@include responsive-range(mobilesmldown) {}
+	// FROM: MOBILE & DOWN		@include responsive-range(mobiledown) {}
+	// FROM: TABLET & DOWN		@include responsive-range(tabletdown) {}
+	// FROM: DESKTOPSML & DOWN	@include responsive-range(desktopsmldown) {}
+	// FROM: DESKTOP & DOWN		@include responsive-range(desktopdown) {}
+	// FROM: WIDESCREEN & DOWN	@include responsive-range(widescreendown) {}
+
+	// DESKTOP (XLRG)
+	//
+	// FROM: DESKTOP & UP (ABOVE)
+	// FROM: DESKTOP & DOWN (BELOW)
+	// RANGE: ZERO TO DESKTOP
+
+	// DESKTOPSML (LRG)
+	//
+	// FROM: DESKTOPSML & UP (ABOVE)
+	// FROM: DESKTOPSML & DOWN (BELOW)
+	// RANGE: ZERO TO DESKTOPSML
+
+	// TABLET (MED)
+	//
+	// FROM: TABLET & UP (ABOVE)
+	// FROM: TABLET & DOWN (BELOW)
+	// RANGE: ZERO TO TABLET
+
+	// MOBILE (SML)
+	//
+	// FROM: MOBILE & UP (ABOVE)
+	// FROM: MOBILE & DOWN (BELOW)
+	// RANGE: ZERO TO MOBILE

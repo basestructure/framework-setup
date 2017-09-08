@@ -1,0 +1,27 @@
+/* SETUP | LIST | 251_SETUPBASIC | LIST - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%li {}
+	%liul {
+		margin-bottom: 0;
+	}
+	%liol {
+		margin-bottom: 0;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// LI
+
+	li {
+		@extend %li !optional;
+	}
+	li > ul {
+		@extend %liul !optional;
+	}
+	li > ol {
+		@extend %liol !optional;
+	}

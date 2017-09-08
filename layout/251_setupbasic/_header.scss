@@ -1,0 +1,119 @@
+/* SETUP | LAYOUT | 251_SETUPBASIC | HEADER - 2018-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader {
+
+		grid-area: header;
+
+	}
+	%siteheaderwrap {}
+	%siteheaderwraponly {
+		@extend %clearfix !optional;
+
+		// MOBILE -1 (DOWN)
+		@include responsive-range(mobilebelowdown) {}
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {}
+		// TABLET (UP)
+		@include responsive-range(tabletup) {}
+		// DESKTOP SMALL (UP)
+		@include responsive-range(desktopsmlup) {}
+		// DESKTOP (UP)
+		@include responsive-range(desktopup) {}
+		// WIDESCREEN (UP)
+		@include responsive-range(widescreenup) {}
+
+	}
+
+	// HEADER-WIDGET-AREA
+
+	%headerwidgetarea {
+		@extend %clearfix !optional;
+	}
+
+	// TITLE-AREA
+
+	%titlearea {
+		@extend %clearfix !optional;
+	}
+
+	// SITE-TITLE
+
+	%sitetitle {
+		@extend %clearfix !optional;
+
+		font-family: $fontfamily-sitetitle;				// fontfamily
+		font-size: #{$fontsize-sitetitle}rem;			// fontsize
+		font-weight: $fontweight-thick;
+		line-height: 1;
+		margin-bottom: 0;
+	}
+	%sitetitle-a {
+		@extend %clearfix !optional;
+	}
+	%sitetitle-hvr {}
+
+	// SITE-DESCRIPTION
+
+	%sitedescription {
+		@extend %clearfix !optional;
+
+		font-family: $fontfamily-sitedescription;		// fontfamily
+		font-size: #{$fontsize-sitedescription}rem;		// fontsize
+		font-weight: $fontweight-thin;
+		line-height: 1;
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header {
+		@extend %siteheader !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap !optional;
+		}
+	}
+	.site-header > .wrap {
+		@extend %siteheaderwraponly !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	.header-widget-area {
+		@extend %headerwidgetarea !optional;
+	}
+
+	// TITLE-AREA
+
+	.title-area {
+		@extend %titlearea !optional;
+	}
+
+	// SITE-TITLE
+
+	.site-title {
+		@extend %sitetitle !optional;
+
+		a {
+			@extend %sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-DESCRIPTION
+
+	.site-description {
+		@extend %sitedescription !optional;
+	}

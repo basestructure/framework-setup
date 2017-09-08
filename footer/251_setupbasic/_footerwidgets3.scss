@@ -1,0 +1,13 @@
+/* SETUP | FOOTER | 251_SETUPBASIC | FOOTERWIDGETS3 - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%footerwidgets3 {}
+
+// -------------------------------------
+// SELECTORS
+
+	.footer-widgets-3 {
+		@extend %footerwidgets3 !optional;
+	}

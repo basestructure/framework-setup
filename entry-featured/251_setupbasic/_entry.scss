@@ -1,0 +1,24 @@
+/* BASE_230 | ENTRY-FEATURED-HOOK | 250_MODEL-BASICSETUP | ENTRY-FEATUREDCONTENT - 2017-06-22 */
+
+// -------------------------------------
+// EXTEND
+
+	%featuredcontent-entry {
+		margin-bottom: #{$space-default}rem;
+	}
+		%featuredcontent-entryfot {}
+
+// -------------------------------------
+// SELECTORS
+
+	.featured-content {
+		.entry {
+			@extend %featuredcontent-entry !optional;
+		}
+	}
+
+	.featured-content {
+		article.entry:first-of-type {
+			@extend %featuredcontent-entryfot !optional;
+		}
+	}

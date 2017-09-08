@@ -1,0 +1,21 @@
+/* SETUP | SETUP | 251_SETUPBASIC | CITE - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%cite {
+		font-size: #{$fontsize-cite}rem;
+		font-weight: $fontweight-cite;
+		line-height: $lineheight-cite;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	cite {
+		@extend %cite !optional;
+	}
+
+	cite p {
+		@extend %cite !optional;
+	}

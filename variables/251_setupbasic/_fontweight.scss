@@ -1,0 +1,91 @@
+/* SETUP | VARIABLES | 251_SETUPBASIC | FONTWEIGHT - 2018-08-31 */
+
+// -------------------------------------
+// VARIABLES
+
+	$fontweight-default:				400;
+
+// TAGS
+
+	$fontweight-body:					400;
+	$fontweight-p:						null;
+	
+	// LIST
+	$fontweight-list:					null;
+	$fontweight-ul:						null;
+	$fontweight-ol:						null;
+	$fontweight-li:						null;
+
+	// HEADLINE
+	$fontweight-headline:				null;
+	$fontweight-h1:						null;
+	$fontweight-h2:						null;
+	$fontweight-h3:						null;
+	$fontweight-h4:						null;
+	$fontweight-h5:						null;
+	$fontweight-h6:						null;
+
+// PURPOSE
+
+	// QUOTES
+	$fontweight-blockquote:				null;
+	$fontweight-quote:					null;
+	$fontweight-cite:					null;
+
+	// CAPTION
+	$fontweight-caption:				null;
+	
+	// TITLES
+	$fontweight-sitetitle:				null;
+	$fontweight-sitedescription:		null;
+	$fontweight-titlepage:				null;
+	$fontweight-titlepost:				null;
+	$fontweight-titlewidget:			null;
+	$fontweight-titlearchive:			null;
+
+	// META
+	$fontweight-meta:					null;
+	$fontweight-copyright:				null;
+	$fontweight-breadcrumb:				null;
+
+// PAGE & POST
+
+	// ENTRY
+	$fontweight-entrytitle:				null;
+	$fontweight-entrymeta:				null;
+
+	// SINGLE
+	$fontweight-single-entrytitle:		null;
+	$fontweight-single-entrymeta:		null;
+
+	// PAGE
+	$fontweight-page-entrytitle:		null;
+	$fontweight-page-entrymeta:			null;
+
+	// BLOG
+	$fontweight-blog-entrytitle:		null;
+	$fontweight-blog-entrymeta:			null;
+
+	// ARCHIVE
+	$fontweight-archivetitle:			null;
+	$fontweight-archivedescription:		null;
+
+	// COMMENTS
+	$fontweight-commentstitle:			null;
+
+	// REPLY
+	$fontweight-replytitle:				null;
+
+	// WIDGET
+	$fontweight-widgettitle:			null;
+
+
+// RELATIVE
+
+	$fontweight-thinnest:				100;
+	$fontweight-thinner:				100;
+	$fontweight-thin:					300;
+	$fontweight-normal:					400;
+	$fontweight-thick:					500;
+	$fontweight-thicker:				700;
+	$fontweight-thickest:				900;

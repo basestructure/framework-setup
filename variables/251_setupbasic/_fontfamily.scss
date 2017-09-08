@@ -1,22 +1,29 @@
-/* SETUP | VARIABLES | 250_SETUPBASIC | FONTFAMILY - 2018-08-31 */
+/* SETUP | VARIABLES | 251_SETUPBASIC | FONTFAMILY - 2018-08-31 */
 
 // -------------------------------------
 // VARIABLES
-
-// DEFAULT
 
 	$fontfamily-default:				"Roboto",arial,sans-serif;
 
 // TAGS
 
 	$fontfamily-body:					"Roboto",arial,sans-serif;
-	$fontfamily-paragraph:				null;
+	$fontfamily-p:						null;
 	
 	// LIST
 	$fontfamily-list:					null;
+	$fontfamily-ul:						null;
+	$fontfamily-ol:						null;
+	$fontfamily-li:						null;
 
 	// HEADLINE
 	$fontfamily-headline:				null;
+	$fontfamily-h1:						null;
+	$fontfamily-h2:						null;
+	$fontfamily-h3:						null;
+	$fontfamily-h4:						null;
+	$fontfamily-h5:						null;
+	$fontfamily-h6:						null;
 
 // PURPOSE
 
@@ -40,14 +47,6 @@
 	$fontfamily-meta:					null;
 	$fontfamily-copyright:				null;
 	$fontfamily-breadcrumb:				null;
-
-// RELATIVE
-
-	$fontfamily-compact:				null;
-	$fontfamily-narrow:					null;
-	$fontfamily-regular:				null;
-	$fontfamily-wide:					null;
-	$fontfamily-script:					null;
 
 // PAGE & POST
 
@@ -80,12 +79,10 @@
 	// WIDGET
 	$fontfamily-widgettitle:			null;
 
-// MENU
+// RELATIVE
 
-	$fontfamily-menu:					null;
-	$fontfamily-submenu:				null;
-	$fontfamily-menu-primary:			null;
-	$fontfamily-submenu-primary:		null;
-	$fontfamily-menu-secondary:			null;
-	$fontfamily-submenu-secondary:		null;
-	$fontfamily-menuitem:				null;
+	$fontfamily-compact:				null;
+	$fontfamily-narrow:					null;
+	$fontfamily-regular:				null;
+	$fontfamily-wide:					null;
+	$fontfamily-script:					null;

@@ -1,0 +1,22 @@
+/* SETUP | INNER | 251_SETUPBASIC | SITEINNER - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%siteinner {}
+	%siteinnerwrap {}
+	%siteinnerwraponly {}
+
+// -------------------------------------
+// SELECTORS
+
+	.site-inner {
+		@extend %siteinner !optional;
+
+		.wrap {
+			@extend %siteinnerwrap !optional;
+		}
+	}
+	.site-inner > .wrap {
+		@extend %siteinnerwraponly !optional;
+	}

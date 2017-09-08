@@ -1,0 +1,22 @@
+/* SETUP | HEADER | 251_SETUPBASIC | SITEHEADER - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%siteheader {}
+	%siteheaderwrap {}
+	%siteheaderwraponly {}
+
+// -------------------------------------
+// SELECTORS
+
+	.site-header {
+		@extend %siteheader !optional;
+
+		.wrap {
+			@extend %siteheaderwrap !optional;
+		}
+	}
+	.site-header > .wrap {
+		@extend %siteheaderwraponly !optional;
+	}

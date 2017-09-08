@@ -1,0 +1,13 @@
+/* SETUP | BODY | 251_SETUPBASIC | HTML - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%html {}
+
+// -------------------------------------
+// SELECTORS
+
+	html {
+		@extend %html !optional;
+	}

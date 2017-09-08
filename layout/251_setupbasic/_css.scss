@@ -1,0 +1,77 @@
+/* SETUP | LAYOUT | 251_SETUPBASIC | CSS - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%css-siteinner {
+
+		// MOBILE -1 (DOWN)
+		@include responsive-range(mobilebelowdown) {}
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {}
+		// TABLET (UP)
+		@include responsive-range(tabletup) {}
+		// DESKTOP SMALL (UP)
+		@include responsive-range(desktopsmlup) {}
+		// DESKTOP (UP)
+		@include responsive-range(desktopup) {
+
+			grid-template-columns: 1fr minmax(0, 1060px) 32px minmax(0, 250px) 1fr;
+			grid-template-areas:
+			". csw . sidebarsecondary ."
+
+		}
+		// WIDESCREEN (UP)
+		@include responsive-range(widescreenup) {}
+
+	}
+
+	%css-csw {
+
+		// MOBILE -1 (DOWN)
+		@include responsive-range(mobilebelowdown) {}
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {}
+		// TABLET (UP)
+		@include responsive-range(tabletup) {}
+		// DESKTOP SMALL (UP)
+		@include responsive-range(desktopsmlup) {}
+		// DESKTOP (UP)
+		@include responsive-range(desktopup) {
+			grid-template-columns: 1fr minmax(0, 728px) 32px minmax(0, 300px) 1fr;
+			grid-template-areas:
+			". content . sidebarprimary .";
+		}
+		// WIDESCREEN (UP)
+		@include responsive-range(widescreenup) {}
+
+	}
+
+	%css-content {}
+
+	%css-sidebarprimary {}
+
+	%css-sidebarsecondary {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar-sidebar .site-inner {
+		@extend %css-siteinner !optional;
+	}
+
+	.content-sidebar-sidebar .content-sidebar-wrap {
+		@extend %css-csw !optional;
+	}
+
+	.content-sidebar-sidebar .content {
+		@extend %css-content !optional;
+	}
+
+	.content-sidebar-sidebar .sidebar-primary {
+		@extend %css-sidebarprimary !optional;
+	}
+
+	.content-sidebar-sidebar .sidebar-secondary {
+		@extend %css-sidebarsecondary !optional;
+	}

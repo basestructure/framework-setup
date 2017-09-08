@@ -1,0 +1,13 @@
+/* SETUP | STRUCTURE | 251_SETUPBASIC | SITECONTAINER - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer {}
+
+// -------------------------------------
+// SELECTORS
+
+	.site-container {
+		@extend %sitecontainer !optional;
+	}

@@ -1,0 +1,13 @@
+/* SETUP | INNER | 251_SETUPBASIC | SIDEBARSECONDARY - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%sidebarsecondary {}
+
+// -------------------------------------
+// SELECTORS
+
+	.sidebar-secondary {
+		@extend %sidebarsecondary !optional;
+	}

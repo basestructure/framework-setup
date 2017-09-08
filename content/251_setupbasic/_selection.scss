@@ -1,0 +1,18 @@
+/* SETUP | CONTENT | 251_SETUPBASIC | SELECTION - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%selection {}
+
+// -------------------------------------
+// SELECTORS
+
+	::selection {
+		background-color: $bgcolor-selection;
+		color: $color-selection;
+	}
+	::-moz-selection {
+		background-color: $bgcolor-selection;
+		color: $color-selection;
+	}

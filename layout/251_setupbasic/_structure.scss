@@ -1,0 +1,37 @@
+/* SETUP | LAYOUT | 251_SETUPBASIC | STRUCTURE - 2018-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer_layout {
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"header"
+		"inner"
+		"footerwidgets"
+		"footer";
+
+		// MOBILE -1 (DOWN)
+		@include responsive-range(mobilebelowdown) {}
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {}
+		// TABLET (UP)
+		@include responsive-range(tabletup) {}
+		// DESKTOP SMALL (UP)
+		@include responsive-range(desktopsmlup) {}
+		// DESKTOP (UP)
+		@include responsive-range(desktopup) {}
+		// WIDESCREEN (UP)
+		@include responsive-range(widescreenup) {}
+		
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.site-container {
+		@extend %sitecontainer_layout !optional;
+	}

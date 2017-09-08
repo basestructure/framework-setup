@@ -1,0 +1,39 @@
+/* SETUP | VARIABLES | 251_SETUPBASIC | BREAK - 2017-08-31 */
+
+// -------------------------------------
+// VARIABLES
+
+
+// NOTE: RELATIVE BREAKPOINTS BASED ON SITE DESIGN FUNCTIONALITY
+
+	$break-outer:						160;		// 2560px
+
+	$break-base:						90;			// 1440px
+
+	$break-inner:						90;			// 1400px
+		$break-inner-large:				64;			// 1024px
+		$break-inner-medium:			48;			// 768px
+		$break-inner-small:				26.563;		// 425px
+
+// NOTE: RELATIVE BREAKPOINTS BASED ON OVERALL SCALE
+
+	$break-huge:						160;		// 2560px
+	$break-xlrg:						90;			// 1440px
+	$break-lrg:							64;			// 1024px
+	$break-med:							48;			// 768px
+	$break-sml:							26.563;		// 425px
+	$break-xsml:						20;			// 320px
+
+// NOTE: RELATIVE BREAKPOINTS BASED ON DEVICES
+
+	$break-widescreen:					160;		// 2560px
+	$break-desktop:						90;			// 1440px
+	$break-desktopsml:					64;			// 1024px
+	$break-tablet:						48;			// 768px
+	$break-mobile:						26.563;		// 425px
+	$break-mobilesml:					20;			// 320px
+
+// NOTE: FUNCTIONAL BREAKPOINTS
+
+	$break-pixel:						0.0625;		// 1px
+	$break-zero: 						0;

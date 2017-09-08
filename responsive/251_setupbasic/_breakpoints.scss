@@ -1,0 +1,209 @@
+/* SETUP | RESPONSIVE | 250_SETUPBASIC | BREAKPOINTS - 2017-08-09 */
+
+// -------------------------------------
+// USAGE
+
+// -------------------------------------
+// MIXIN LIST
+
+// BASE
+
+	// FROM: BASE +1 UP						@include responsive-range(baseaboveup) {}
+	// FROM: BASE UP						@include responsive-range(baseup) {}
+	// BASE --------------------
+	// FROM: BASE DOWN						@include responsive-range(basedown) {}
+	// FROM: BASE-1 DOWN					@include responsive-range(basebelowdown) {}
+
+	// RANGE: ZERO TO BASE+1				@include responsive-range(zero-baseabove) {}
+	// RANGE: ZERO TO BASE 					@include responsive-range(zero-base) {}
+	// RANGE: ZERO TO BASE-1				@include responsive-range(zero-basebelow) {}
+
+// RANGE UP
+
+	// FROM: ZERO & UP						@include responsive-range(zeroup) {}
+	// FROM: XSML & UP						@include responsive-range(xsmlup) {}
+	// FROM: SML & UP						@include responsive-range(smlup) {}
+	// FROM: MED & UP						@include responsive-range(medup) {}
+	// FROM: LRG & UP						@include responsive-range(lrgup) {}
+	// FROM: XLRG & UP						@include responsive-range(xlrgup) {}
+	// FROM: HUGE & UP						@include responsive-range(hugeup) {}
+
+// RANGE DOWN
+
+	// FROM: ZERO & DOWN					@include responsive-range(zerodown) {}
+	// FROM: XSML & DOWN					@include responsive-range(xsmldown) {}
+	// FROM: SML & DOWN						@include responsive-range(smldown) {}
+	// FROM: MED & DOWN						@include responsive-range(meddown) {}
+	// FROM: LRG & DOWN						@include responsive-range(lrgdown) {}
+	// FROM: XLRG & DOWN					@include responsive-range(xlrgdown) {}
+	// FROM: HUGE & DOWN					@include responsive-range(hugedown) {}
+
+// HUGE (WIDESCREEN)
+
+	// FROM: HUGE & UP (ABOVE) 				@include responsive-range(hugeaboveup) {}
+	// FROM: HUGE & UP 						@include responsive-range(hugeup) {}
+	// HUGE --------------------
+	// FROM: HUGE & DOWN 					@include responsive-range(hugedown) {}
+	// FROM: HUGE & DOWN (BELOW) 			@include responsive-range(hugebelowdown) {}
+
+// XLARGE (DESKTOP)
+
+	// FROM: XLRG & UP (ABOVE) 				@include responsive-range(xlrgaboveup) {}
+	// FROM: XLRG & UP 						@include responsive-range(xlrgup) {}
+	// XLRG --------------------
+	// FROM: XLRG & DOWN 					@include responsive-range(xlrgdown) {}
+	// FROM: XLRG & DOWN (BELOW) 			@include responsive-range(xlrgbelowdown) {}
+
+// LARGE (DESKTOP)
+
+	// FROM: LRG & UP (ABOVE) 				@include responsive-range(lrgaboveup) {}
+	// FROM: LRG & UP 						@include responsive-range(lrgup) {}
+	// LRG --------------------
+	// FROM: LRG & DOWN 					@include responsive-range(lrgdown) {}
+	// FROM: LRG & DOWN (BELOW) 			@include responsive-range(lrgbelowdown) {}
+
+// MEDIUM (TABLET)
+
+	// FROM: MED & UP (ABOVE) 				@include responsive-range(medaboveup) {}
+	// FROM: MED & UP 						@include responsive-range(medup) {}
+	// MED --------------------
+	// FROM: MED & DOWN 					@include responsive-range(meddown) {}
+	// FROM: MED & DOWN (BELOW) 			@include responsive-range(medbelowdown) {}
+
+// SMALL (MOBILE)
+
+	// FROM: SML & UP (ABOVE) 				@include responsive-range(smlaboveup) {}
+	// FROM: SML & UP 						@include responsive-range(smlup) {}
+	// SML --------------------
+	// FROM: SML & DOWN 					@include responsive-range(smldown) {}
+	// FROM: SML & DOWN (BELOW) 			@include responsive-range(smlbelowdown) {}
+
+// DEVICE UP
+
+	// FROM: MOBILESML & UP					@include responsive-range(mobilesmlup) {}
+	// FROM: MOBILE & UP					@include responsive-range(mobileup) {}
+	// FROM: TABLET & UP					@include responsive-range(tabletup) {}
+	// FROM: DESKTOPSML & UP				@include responsive-range(desktopsmlup) {}
+	// FROM: DESKTOP & UP					@include responsive-range(desktopup) {}
+	// FROM: WIDESCREEN & UP				@include responsive-range(widescreenup) {}
+
+// DEVICE DOWN
+
+	// FROM: MOBILESML & DOWN				@include responsive-range(mobilesmldown) {}
+	// FROM: MOBILE & DOWN					@include responsive-range(mobiledown) {}
+	// FROM: TABLET & DOWN					@include responsive-range(tabletdown) {}
+	// FROM: DESKTOPSML & DOWN				@include responsive-range(desktopsmldown) {}
+	// FROM: DESKTOP & DOWN					@include responsive-range(desktopdown) {}
+	// FROM: WIDESCREEN & DOWN				@include responsive-range(widescreendown) {}
+
+// WIDESCREEN (HUGE)
+
+	// FROM: WIDESCREEN & UP (ABOVE) 		@include responsive-range(widescreenaboveup) {}
+	// FROM: WIDESCREEN & UP 				@include responsive-range(widescreenup) {}
+	// WIDESCREEN --------------------
+	// FROM: WIDESCREEN & DOWN 				@include responsive-range(widescreendown) {}
+	// FROM: WIDESCREEN & DOWN (BELOW) 		@include responsive-range(widescreenbelowdown) {}
+
+// DESKTOP (XLRG)
+
+	// FROM: DESKTOP & UP (ABOVE) 			@include responsive-range(desktopaboveup) {}
+	// FROM: DESKTOP & UP 					@include responsive-range(desktopup) {}
+	// DESKTOP --------------------
+	// FROM: DESKTOP & DOWN 				@include responsive-range(desktopdown) {}
+	// FROM: DESKTOP & DOWN (BELOW) 		@include responsive-range(desktopbelowdown) {}
+
+// DESKTOPSML (LRG)
+
+	// FROM: DESKTOPSML & UP (ABOVE) 		@include responsive-range(desktopsmlaboveup) {}
+	// FROM: DESKTOPSML & UP 				@include responsive-range(desktopsmlup) {}
+	// DESKTOPSML --------------------
+	// FROM: DESKTOPSML & DOWN 				@include responsive-range(desktopsmldown) {}
+	// FROM: DESKTOPSML & DOWN (BELOW) 		@include responsive-range(desktopsmlbelowdown) {}
+
+// TABLET (MED)
+
+	// FROM: TABLET & UP (ABOVE) 			@include responsive-range(tabletaboveup) {}
+	// FROM: TABLET & UP 					@include responsive-range(tabletup) {}
+	// TABLET --------------------
+	// FROM: TABLET & DOWN 					@include responsive-range(tabletdown) {}
+	// FROM: TABLET & DOWN (BELOW) 			@include responsive-range(tabletbelowdown) {}
+
+// MOBILE (SML)
+
+	// FROM: MOBILE & UP (ABOVE) 			@include responsive-range(mobileaboveup) {}
+	// FROM: MOBILE & UP 					@include responsive-range(mobileup) {}
+	// MOBILE --------------------
+	// FROM: MOBILE & DOWN 					@include responsive-range(mobiledown) {}
+	// FROM: MOBILE & DOWN (BELOW) 			@include responsive-range(mobilebelowdown) {}
+
+// ZERO TO HUGE
+
+	// ZERO-HUGE (ABOVE)					@include responsive-range(zerohugeabove) {}
+	// ZERO-HUGE							@include responsive-range(zerohuge) {}
+	// ZERO-HUGE (BELOW)					@include responsive-range(zerohugeabove) {}
+
+// ZERO TO XLARGE
+
+	// ZERO-XLRG (ABOVE)					@include responsive-range(zeroxlrgabove) {}
+	// ZERO-XLRG							@include responsive-range(zeroxlrg) {}
+	// ZERO-XLRG (BELOW)					@include responsive-range(zeroxlrgbelow) {}
+
+// ZERO TO LARGE
+
+	// ZERO-LRG (ABOVE)						@include responsive-range(zerolrgabove) {}
+	// ZERO-LRG								@include responsive-range(zerolrg) {}
+	// ZERO-LRG (BELOW)						@include responsive-range(zerolrgbelow) {}
+
+// ZERO TO MEDIUM
+
+	// ZERO-MED (ABOVE)						@include responsive-range(zeromedabove) {}
+	// ZERO-MED								@include responsive-range(zeromed) {}
+	// ZERO-MED (BELOW)						@include responsive-range(zeromedbelow) {}
+
+// ZERO TO SMALL
+
+	// ZERO-SML (ABOVE)						@include responsive-range(zerosmlabove) {}
+	// ZERO-SML								@include responsive-range(zerosml) {}
+	// ZERO-SML (BELOW)						@include responsive-range(zerosmlbelow) {}
+
+// ZERO TO XSMALL
+
+	// ZERO-XSML (ABOVE)					@include responsive-range(zeroxsmlabove) {}
+	// ZERO-XSML							@include responsive-range(zeroxsml) {}
+	// ZERO-XSML (BELOW)					@include responsive-range(zeroxsmlbelow) {}
+
+// ZERO TO WIDESCREEN
+
+	// ZERO-WIDESCREEN (ABOVE)				@include responsive-range(zerowidescreenabove) {}
+	// ZERO-WIDESCREEN						@include responsive-range(zerowidescreen) {}
+	// ZERO-WIDESCREEN (BELOW)				@include responsive-range(zerowidescreenabove) {}
+
+// ZERO TO DESKTOP
+
+	// ZERO-DESKTOP (ABOVE)					@include responsive-range(zerodesktopabove) {}
+	// ZERO-DESKTOP							@include responsive-range(zerodesktop) {}
+	// ZERO-DESKTOP (BELOW)					@include responsive-range(zerodesktopbelow) {}
+
+// ZERO TO DESKTOPSML
+
+	// ZERO-DESKTOPSML (ABOVE)				@include responsive-range(zerodesktopsmlabove) {}
+	// ZERO-DESKTOPSML						@include responsive-range(zerodesktopsml) {}
+	// ZERO-DESKTOPSML (BELOW)				@include responsive-range(zerodesktopsmlbelow) {}
+
+// ZERO TO TABLET
+
+	// ZERO-TABLET (ABOVE)					@include responsive-range(zerotabletabove) {}
+	// ZERO-TABLET							@include responsive-range(zerotablet) {}
+	// ZERO-TABLET (BELOW)					@include responsive-range(zerotabletbelow) {}
+
+// ZERO TO MOBILE
+
+	// ZERO-MOBILE (ABOVE)					@include responsive-range(zeromobileabove) {}
+	// ZERO-MOBILE							@include responsive-range(zeromobile) {}
+	// ZERO-MOBILE (BELOW)					@include responsive-range(zeromobilebelow) {}
+
+// ZERO TO MOBILESML
+
+	// ZERO-MOBILESML (ABOVE)				@include responsive-range(zeromobilesmlabove) {}
+	// ZERO-MOBILESML						@include responsive-range(zeromobilesml) {}
+	// ZERO-MOBILESML (BELOW)				@include responsive-range(zeromobilesmlbelow) {}

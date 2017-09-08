@@ -1,0 +1,24 @@
+/* SETUP | BODY | 251_SETUPBASIC | GUIDE - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%html-guide {}
+
+	%body-guide {
+		//background-color: #f62e32;
+		background-color: #f0f0f0;
+		padding: 3rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	html {
+		@extend %html-guide !optional;
+	}
+
+	body {
+		@extend %body-guide !optional;
+	}

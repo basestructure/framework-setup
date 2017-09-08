@@ -1,0 +1,77 @@
+/* SETUP | LAYOUT | 251_SETUPBASIC | SCS - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%scs-siteinner {
+
+		// MOBILE -1 (DOWN)
+		@include responsive-range(mobilebelowdown) {}
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {}
+		// TABLET (UP)
+		@include responsive-range(tabletup) {}
+		// DESKTOP SMALL (UP)
+		@include responsive-range(desktopsmlup) {}
+		// DESKTOP (UP)
+		@include responsive-range(desktopup) {
+
+			grid-template-columns: 1fr minmax(0, 300px) 32px minmax(0, 1060px) 1fr;
+			grid-template-areas:
+			". sidebarsecondary . csw ."
+
+		}
+		// WIDESCREEN (UP)
+		@include responsive-range(widescreenup) {}
+
+	}
+
+	%scs-csw {
+
+		// MOBILE -1 (DOWN)
+		@include responsive-range(mobilebelowdown) {}
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {}
+		// TABLET (UP)
+		@include responsive-range(tabletup) {}
+		// DESKTOP SMALL (UP)
+		@include responsive-range(desktopsmlup) {}
+		// DESKTOP (UP)
+		@include responsive-range(desktopup) {
+			grid-template-columns: 1fr minmax(0, 728px) 32px minmax(0, 300px) 1fr;
+			grid-template-areas:
+			". content . sidebarprimary .";
+		}
+		// WIDESCREEN (UP)
+		@include responsive-range(widescreenup) {}
+
+	}
+
+	%scs-content {}
+
+	%scs-sidebarprimary {}
+
+	%scs-sidebarsecondary {}
+
+// -------------------------------------
+// SELECTORS
+
+	.sidebar-content-sidebar .site-inner {
+		@extend %scs-siteinner !optional;
+	}
+
+	.sidebar-content-sidebar .content-sidebar-wrap {
+		@extend %scs-csw !optional;
+	}
+
+	.sidebar-content-sidebar .content {
+		@extend %scs-content !optional;
+	}
+
+	.sidebar-content-sidebar .sidebar-primary {
+		@extend %scs-sidebarprimary !optional;
+	}
+
+	.sidebar-content-sidebar .sidebar-secondary {
+		@extend %scs-sidebarsecondary !optional;
+	}

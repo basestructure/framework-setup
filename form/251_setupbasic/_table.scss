@@ -1,0 +1,34 @@
+/* SETUP | FORM | 251_SETUPBASIC | TABLE - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		line-height: 2;
+		width: 100%;
+		margin-bottom: #{$space}rem;
+	}
+
+	tbody {
+		border-bottom: 1px solid #ddd;
+	}
+
+	td,
+	th {
+		text-align: left;
+	}
+
+	td {
+		border-top: 1px solid #ddd;
+		padding: 6px 0;
+	}
+
+	th {
+		font-weight: 400;
+	}

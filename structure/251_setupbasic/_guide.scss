@@ -1,0 +1,17 @@
+/* SETUP | STRUCTURE | 251_SETUPBASIC | GUIDE - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer-guide {
+		//background-color: #fba2a4;
+		background-color: #fff;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	body .site-container {
+		@extend %sitecontainer-guide !optional;
+	}

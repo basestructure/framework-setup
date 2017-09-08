@@ -1,0 +1,241 @@
+/* SETUP | LAYOUT | 251_SETUPBASIC | WIDGET - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%widget {
+		margin-bottom: 2rem;
+	}
+
+		%sidebar-widget {}
+		%sidebarprimary-widget {}
+		%sidebarsecondary-widget {}
+		%siteheader-widget {}
+		%footerwidgets-widget {}
+		%afterentry-widget {}
+
+// WIDGET TITLE
+
+	%widgettitle {
+		font-size: #{$fontsize-widgettitle}rem;
+		font-weight: $fontweight-widgettitle;
+		line-height: $lineheight-widgettitle;
+		letter-spacing: #{$letterspacing-widgettitle}rem;
+		margin-bottom: 1rem;
+	}
+
+		%sidebar-widgettitle {}
+		%sidebarprimary-widgettitle {}
+		%sidebarsecondary-widgettitle {}
+		%siteheader-widgettitle {}
+		%footerwidgets-widgettitle {}
+		%afterentry-widgettitle {}
+
+// WIDGET WRAP
+
+	%widgetwrap {}
+
+		%sidebar-widgetwrap {}
+		%sidebarprimary-widgetwrap {}
+		%sidebarsecondary-widgetwrap {}
+		%siteheader-widgetwrap {}
+		%footerwidgets-widgetwrap {}
+		%afterentry-widgetwrap {}
+
+// WIDGET AREA
+
+	%widgetarea {}
+
+		%sidebar-widgetarea {}
+		%sidebarprimary-widgetarea {}
+		%sidebarsecondary-widgetarea {}
+		%siteheader-widgetarea {}
+		%footerwidgets-widgetarea {}
+		%afterentry-widgetarea {}
+
+// -------------------------------------
+// SELECTORS
+
+	.widget {
+		@extend %widget !optional;
+	}
+
+		// SIDEBAR
+
+		.sidebar {
+			.widget {
+				@extend %sidebar-widget !optional;
+			}
+		}
+		.sidebar.sidebar-primary {
+			.widget {
+				@extend %sidebarprimary-widget !optional;
+			}
+		}
+		.sidebar.sidebar-secondary {
+			.widget {
+				@extend %sidebarsecondary-widget !optional;
+			}
+		}
+
+		// SITE-HEADER
+
+		.site-header {
+			.widget {
+				@extend %siteheader-widget !optional;				
+			}
+		}
+
+		// FOOTER-WIDGETS
+
+		.footer-widgets {
+			.widget {
+				@extend %footerwidgets-widget !optional;
+			}
+		}
+
+		// AFTER-ENTRY
+
+		.after-entry {
+			.widget {
+				@extend %afterentry-widget !optional;
+			}
+		}
+
+// WIDGET WRAP
+
+	.widget-wrap {
+		@extend %widgetwrap !optional;
+	}
+
+		// SIDEBAR
+
+		.sidebar {
+			.widget-wrap {
+				@extend %sidebar-widgetwrap !optional;
+			}
+		}
+		.sidebar.sidebar-primary {
+			.widget-wrap {
+				@extend %sidebarprimary-widgetwrap !optional;
+			}
+		}
+		.sidebar.sidebar-secondary {
+			.widget-wrap {
+				@extend %sidebarsecondary-widgetwrap !optional;
+			}
+		}
+
+		// SITE-HEADER
+
+		.site-header {
+			.widget-wrap {
+				@extend %siteheader-widgetwrap !optional;				
+			}
+		}
+
+		// FOOTER-WIDGETS
+
+		.footer-widgets {
+			.widget-wrap {
+				@extend %footerwidgets-widgetwrap !optional;
+			}
+		}
+
+		// AFTER-ENTRY
+
+		.after-entry {
+			.widget-wrap {
+				@extend %afterentry-widgetwrap !optional;
+			}
+		}
+
+// WIDGET TITLE
+
+	.widget-title {
+		@extend %widgettitle !optional;
+	}
+
+		// SIDEBAR
+
+		.sidebar {
+			.widget-title {
+				@extend %sidebar-widgettitle !optional;
+			}
+		}
+		.sidebar.sidebar-primary {
+			.widget-title {
+				@extend %sidebarprimary-widgettitle !optional;
+			}
+		}
+		.sidebar.sidebar-secondary {
+			.widget-title {
+				@extend %sidebarsecondary-widgettitle !optional;
+			}
+		}
+
+		// SITE-HEADER
+
+		.site-header {
+			.widget-title {
+				@extend %siteheader-widgettitle !optional;				
+			}
+		}
+
+		// FOOTER-WIDGETS
+
+		.footer-widgets {
+			.widget-title {
+				@extend %footerwidgets-widgettitle !optional;
+			}
+		}
+
+		// AFTER-ENTRY
+
+		.after-entry {
+			.widget-title {
+				@extend %afterentry-widgettitle !optional;
+			}
+		}
+
+// WIDGET AREA
+
+	.widget-area {
+		@extend %widgetarea !optional;
+	}
+
+		// SIDEBAR
+
+		.sidebar.widget-area {
+			@extend %sidebar-widgetarea !optional;
+		}
+		.sidebar.sidebar-primary.widget-area {
+			@extend %sidebarprimary-widgetarea !optional;
+		}
+		.sidebar.sidebar-secondary.widget-area {
+			@extend %sidebarsecondary-widgetarea !optional;
+		}
+
+		// SITE-HEADER
+
+		.site-header {
+			.widget-area {
+				@extend %siteheader-widgetarea !optional;				
+			}
+		}
+
+		// FOOTER-WIDGETS
+
+		.footer-widgets {
+			.widget-area {
+				@extend %footerwidgets-widgetarea !optional;
+			}
+		}
+
+		// AFTER-ENTRY
+
+		.after-entry {
+			.widget-area {
+				@extend %afterentry-widgetarea !optional;
+			}
+		}

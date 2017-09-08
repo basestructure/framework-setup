@@ -1,0 +1,88 @@
+/* SETUP | TYPE | 251_SETUPBASIC | SPACING - 2018-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%letterspacing-default {
+		letter-spacing: #{$letterspacing-default}rem;
+	}
+
+// TAGS
+
+	%letterspacing-body {
+		letter-spacing: #{$letterspacing-body}rem;
+	}
+	%letterspacing-p {
+		letter-spacing: #{$letterspacing-p}rem;
+	}
+	
+	// LIST
+	%letterspacing-list {
+		letter-spacing: #{$letterspacing-list}rem;
+	}
+
+	// HEADLINE
+	%letterspacing-headline {
+		letter-spacing: #{$letterspacing-headline}rem;
+	}
+
+// PURPOSE
+
+	// QUOTES
+	%letterspacing-quote {
+		letter-spacing: #{$letterspacing-quote}rem;
+	}
+	%letterspacing-cite {
+		letter-spacing: #{$letterspacing-cite}rem;
+	}
+
+	// CAPTION
+	%letterspacing-caption {
+		letter-spacing: #{$letterspacing-caption}rem;
+	}
+
+// RELATIVE
+
+	%letterspacing-narrower {
+		letter-spacing: #{$letterspacing-narrower}rem;
+	}
+	%letterspacing-narrow {
+		letter-spacing: #{$letterspacing-narrow}rem;
+	}
+	%letterspacing-normal {
+		letter-spacing: #{$letterspacing-normal}rem;
+	}
+	%letterspacing-wide {
+		letter-spacing: #{$letterspacing-wide}rem;
+	}
+	%letterspacing-wider {
+		letter-spacing: #{$letterspacing-wider}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.letterspacing-default {
+		@extend %letterspacing-default !optional;
+	}
+	.letterspacing-body {
+		@extend %letterspacing-body !optional;
+	}
+
+	// RELATIVE
+
+	.letterspacing-narrower {
+		@extend %letterspacing-narrower !optional;
+	}
+	.letterspacing-narrow {
+		@extend %letterspacing-narrow !optional;
+	}
+	.letterspacing-normal {
+		@extend %letterspacing-normal !optional;
+	}
+	.letterspacing-wide {
+		@extend %letterspacing-wide !optional;
+	}
+	.letterspacing-wider {
+		@extend %letterspacing-wider !optional;
+	}

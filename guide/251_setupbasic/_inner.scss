@@ -1,0 +1,74 @@
+/* BASE_230 | LAYOUT | 250_GUIDE | INNER - 2017-06-06 */
+// BASE_230 | INNER | 250_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner_layout {
+		background-color: #b8b8b8;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw_layout {
+		background-color: #ddd;
+	}
+
+	// CONTENT
+
+	%content_layout {
+		background-color: #eee;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary_layout {
+		background-color: #f3f3f3;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary_layout {
+		@extend %clearfix !optional;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.site-inner {
+		@extend %siteinner !optional;
+		@extend %siteinner_layout !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.content-sidebar-wrap {
+		@extend %csw !optional;
+		@extend %csw_layout !optional;
+	}
+
+	// CONTENT
+
+	.content {
+		@extend %content !optional;
+		@extend %content_layout !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary {
+		@extend %sidebarprimary !optional;
+		@extend %sidebarprimary_layout !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary {
+		@extend %sidebarsecondary !optional;
+		@extend %sidebarsecondary_layout !optional;
+	}
+

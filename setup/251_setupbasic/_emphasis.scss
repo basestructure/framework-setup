@@ -1,0 +1,27 @@
+/* SETUP | SETUP | 251_SETUPBASIC | EMPHASIS - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%em {}
+
+	%strong {
+		font-weight: $fontweight-thicker;
+	}
+
+	%code {}
+
+// -------------------------------------
+// SELECTORS
+
+	em {
+		@extend %em !optional;
+	}
+
+	strong {
+		@extend %strong !optional;
+	}
+
+	code {
+		@extend %code !optional;
+	}

@@ -1,0 +1,208 @@
+/* SETUP | SETUP | 251_SETUPBASIC | LIST - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	// LI
+
+	%li {}
+	%liul {
+		margin-bottom: 0;
+	}
+	%liol {
+		margin-bottom: 0;
+	}
+
+	// OL
+
+	%ol {
+		margin: 0;
+		margin-bottom: #{$space}rem;
+		margin-left: #{$space}rem;
+		padding-left: 0;
+	}
+	%olol {
+		margin-left: #{$space}rem;	
+		margin-bottom: 0;
+	}
+	%olul {
+		margin-left: #{$space}rem;
+		margin-bottom: 0;
+	}
+
+	// CONTENT OL
+
+	%content-ol {}
+	%content-olol {}
+	%content-olul {}
+
+	// OL (INDENT)
+
+	%olindent {
+		margin-left: #{$space}rem;
+	}
+	%olnoindent {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	// OL (LISTSTYLE)
+
+	%olliststyle {}
+	%olnoliststyle {
+		list-style-type: none;
+	}
+
+	// UL
+
+	%ul {
+		margin: 0;
+		margin-bottom: #{$space}rem;
+		margin-left: #{$space}rem;
+		padding-left: 0;
+		list-style-type: disc;
+	}
+	%ulul {
+		margin-left: #{$space}rem;
+		margin-bottom: 0;
+	}
+	%ulol {
+		margin-left: #{$space}rem;
+		margin-bottom: 0;
+	}
+	
+	// CONTENT UL
+
+	%content-ul {}
+	%content-ulul {}
+	%content-ulol {}
+
+	// UL (INDENT)
+
+	%ulindent {
+		margin-left: #{$space}rem;
+	}
+	%ulnoindent {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	// UL (LISTSTYLE)
+
+	%ulliststyle {
+		list-style-type: disc;
+	}
+	%ulnoliststyle {
+		list-style-type: none;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// LI
+
+	li {
+		@extend %li !optional;
+	}
+	li > ul {
+		@extend %liul !optional;
+	}
+	li > ol {
+		@extend %liol !optional;
+	}
+
+	// OL
+
+	ol {
+		@extend %ol !optional;
+	}
+
+	ol > ol {
+		@extend %olol !optional;
+	}
+
+	ol > ul {
+		@extend %olul !optional;
+	}
+
+	// CONTENT OL
+
+	.content ol {
+		@extend %content-ol !optional;
+	}
+
+	.content ol > ol {
+		@extend %content-olol !optional;
+	}
+
+	.content ol > ul {
+		@extend %content-olul !optional;
+	}
+
+	// OL (INDENT)
+
+	ol.indent {
+		@extend %olindent !optional;
+	}
+
+	ol.no-indent {
+		@extend %olnoindent !optional;
+	}
+
+	// OL (LISTSTYLE)
+
+	ol.liststyle {
+		@extend %olliststyle !optional;
+	}
+
+	ol.no-liststyle {
+		@extend %olnoliststyle !optional;
+	}
+
+	// UL
+
+	ul {
+		@extend %ul !optional;
+	}
+
+	ul > ul {
+		@extend %ulul !optional;
+	}
+
+	ul > ol {
+		@extend %ulol !optional;
+	}
+
+	// CONTENT UL
+
+	.content ul {
+		@extend %content-ul !optional;
+	}
+
+	.content ul > ul {
+		@extend %content-ulul !optional;
+	}
+
+	.content ul > ol {
+		@extend %content-ulol !optional;
+	}
+
+	// UL (INDENT)
+
+	ul.indent {
+		@extend %ulindent !optional;
+	}
+
+	ul.no-indent {
+		@extend %ulnoindent !optional;
+	}
+
+	// UL (LISTSTYLE)
+
+	ul.liststyle {
+		@extend %ulliststyle !optional;
+	}
+
+	ul.no-liststyle {
+		@extend %ulnoliststyle !optional;
+	}

@@ -1,0 +1,28 @@
+/* SETUP | SETUP | 251_SETUPBASIC | BLOCKQUOTE - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%blockquote {
+		padding-left: #{$space}rem;
+		margin: 0;
+		margin-left: #{$space}rem;
+		font-weight: $fontweight-thin;
+	}
+	%blockquote-p {
+		font-family: $fontfamily-blockquote;
+		font-size: #{$fontsize-blockquote}rem;
+		line-height: $lineheight-blockquote;
+		font-weight: $fontweight-thin;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	blockquote {
+		@extend %blockquote !optional;
+	}
+
+	blockquote p {
+		@extend %blockquote-p !optional;
+	}

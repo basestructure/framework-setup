@@ -1,0 +1,36 @@
+/* SETUP | ENTRY | 251_SETUPBASIC | ENTRY - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%entryheader {}
+
+		%single-entryheader {
+			margin-bottom: 2rem;
+		}
+		%page-entryheader {
+			margin-bottom: 2rem;
+		}
+
+// -------------------------------------
+// SELECTORS
+
+	.entry-header {
+		@extend %entryheader !optional;
+	}
+
+		// SINGLE
+
+		.single {
+			.entry-header {
+				@extend %single-entryheader !optional;
+			}
+		}
+
+		// PAGE
+
+		.page {
+			.entry-header {
+				@extend %page-entryheader !optional;
+			}
+		}

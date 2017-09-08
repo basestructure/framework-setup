@@ -1,0 +1,13 @@
+/* SETUP | HEADER | 251_SETUPBASIC | SITEDESCRIPTION - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%sitedescription {}
+
+// -------------------------------------
+// SELECTORS
+
+	.site-description {
+		@extend %sitedescription !optional;
+	}

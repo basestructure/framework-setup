@@ -1,0 +1,13 @@
+/* SETUP | INNER | 251_SETUPBASIC | CONTENTSIDEBARWRAP - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%csw {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar-wrap {
+		@extend %csw !optional;
+	}

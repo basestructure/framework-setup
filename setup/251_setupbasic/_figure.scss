@@ -1,0 +1,19 @@
+/* SETUP | SETUP | 251_SETUPBASIC | FIGURE - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	// FIGURE
+
+	%figure {
+		margin: 0;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// FIGURE
+
+	figure {
+		@extend %figure !optional;
+	}
