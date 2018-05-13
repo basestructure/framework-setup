@@ -1,0 +1,43 @@
+/* SETUP | GRID | 252_SETUPBASIC | HIDE - 2017-10-10 */
+
+// -------------------------------------
+// EXTEND
+
+	%hide {
+		display: none;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.hide-header .site-header {
+		@extend %hide !optional;
+	}
+
+	.hide-inner .site-inner {
+		@extend %hide !optional;
+	}
+
+	.hide-footerwidgets .footer-widgets {
+		@extend %hide !optional;
+	}
+
+	.hide-footer .site-footer {
+		@extend %hide !optional;
+	}
+
+	.hide-archivedescription .archive-description {
+		@extend %hide !optional;
+	}
+
+	.hide-maintitle .content .entry-title {
+		@extend %hide !optional;
+	}
+
+	.hide-entryheader .content .entry-header {
+		@extend %hide !optional;
+	}
+
+	.hide-entryfooter .content .entry-footer {
+		@extend %hide !optional;
+	}

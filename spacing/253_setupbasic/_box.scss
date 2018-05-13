@@ -1,0 +1,31 @@
+/* SETUP | SPACING | 253_SETUPBASIC | BOX - 2018-01-20 */
+
+// -------------------------------------
+// EXTEND
+
+	%box-fullscreen {}
+
+	%box-fullheight {
+		height: 100vh;
+	}
+
+	%box-fullwidth {
+		width: 100vw;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.box-fullscreen {
+		@extend %box-fullscreen !optional;
+		@extend %box-fullwidth !optional;
+		@extend %box-fullheight !optional;
+	}
+
+	.box-fullwidth {
+		@extend %box-fullwidth !optional;
+	}
+
+	.box-fullheight {
+		@extend %box-fullheight !optional;
+	}

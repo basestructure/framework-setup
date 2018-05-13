@@ -1,0 +1,103 @@
+/* SETUP | VARIABLES | 252_SETUPBASIC | WIDTH - 2017-10-24 */
+
+// -------------------------------------
+// VARIABLES
+
+	// RELATIVE (BASED ON OVERALL SCALE)
+
+	$width-huge:						90;			// 1440px
+	$width-xlrg:						70;			// 1280px
+	$width-lrg:							64;			// 1024px
+	$width-med:							48;			// 768px
+	$width-sml:							26.563;		// 425px
+	$width-xsml:						20;			// 320px
+
+	// BASE
+
+	$width-base:						64;			// 1024px
+		$width-base-huge:				90;			// 1440px
+		$width-base-xlrg:				70;			// 1280px
+		$width-base-lrg:				64;			// 1024px - BASE
+		$width-base-med:				48;			// 768px
+		$width-base-sml:				26.563;		// 425px
+		$width-base-xsml:				20;			// 320px
+
+	// INNER
+
+	$width-outer:						160;		// 1440px
+	$width-inner:						64;			// 1024px
+		$width-inner-huge:				90;			// 1440px
+		$width-inner-xlrg:				70;			// 1280px
+		$width-inner-lrg:				64;			// 1024px
+		$width-inner-med:				48;			// 768px
+		$width-inner-sml:				26.563;		// 425px
+		$width-inner-xsml:				20;			// 320px
+
+	// SITE PARTS
+
+	$width-content:						48;			// 768px
+	$width-csw:							48;			// 768px
+	$width-csw-ms:						64;			// 1024px
+	$width-csw-mss:						70;			// 1280px
+	$width-sidebarprimary:				16;			// 256px
+	$width-sidebarsecondary:			16;			// 256px
+
+	// LAYOUT
+
+	$width-full:						48;			// 768px
+	$width-cs:							64;			// 1024px
+	$width-css:							70;			// 1280px
+
+	// GUTTER
+
+	$width-gutter:						2;			// 32px
+	$width-gutter-lrg:					4;			// 64px
+	$width-gutter-sml:					1;			// 16px
+
+// NOTE: FUNCTIONAL WIDTHS
+
+	$width-pixel:						0.0625;		// 1px
+	$width-zero: 						0;
+
+// MEDIA
+
+	$width-media-thumbnail:				9.375;		// 150px
+	$width-media-medium:				18.75;		// 300px
+	$width-media-large:					64;			// 1024px
+	$width-media-full:					90;			// 1440px
+
+// ICON
+
+	$width-icon-tiny:					0.5;		// 8px
+	$width-icon-xsml:					1;			// 16px
+	$width-icon-sml:					1.5;		// 24px
+	$width-icon-med:					2;			// 32px
+	$width-icon-lrg:					3;			// 48px
+	$width-icon-xlrg:					4;			// 64px
+	$width-icon-huge:					5;			// 80px
+
+// PIC
+
+	$width-pic-tiny:					10;			// 160px
+	$width-pic-xsml:					15;			// 240px
+	$width-pic-sml:						20;			// 320px
+	$width-pic-med:						26.563;		// 425px
+	$width-pic-lrg:						48;			// 768px
+	$width-pic-xlrg:					64;			// 1024px
+	$width-pic-huge:					90;			// 1440px
+
+// IMG SIZE
+
+	$width-img-tiny:					3.125;		// 60px 	DEPRECATED
+	$width-img-xsml:					6.250;		// 180px 	DEPRECATED
+	$width-img-sml:						20;			// 240px 	DEPRECATED
+	$width-img-med:						26.563;		// 425px 	DEPRECATED
+	$width-img-lrg:						48;			// 768px 	DEPRECATED
+	$width-img-xlrg:					64;			// 1024px 	DEPRECATED
+	$width-img-huge:					90;			// 1440px 	DEPRECATED
+
+// MEDIA SIZE
+
+	$width-img-thumb:					9.375;		// 150px 	DEPRECATED
+	$width-img-medium:					26.563;		// 300px 	DEPRECATED
+	$width-img-large:					64;			// 1024px 	DEPRECATED

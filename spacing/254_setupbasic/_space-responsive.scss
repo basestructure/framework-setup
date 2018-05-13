@@ -1,0 +1,208 @@
+/* SETUP | SPACING | 254_SETUPBASIC | SPACE - 2018-01-24 */
+
+// -------------------------------------
+// GUIDE
+
+	// SPACE VARIABLES
+
+	// $space:				1.0;		16px
+
+	// $space-tiny:			0.0625;		1px		TINY
+	// $space-xxxsml:		0.125;		2px		XXXSML
+	// $space-xxsml:		0.25;		4px		XXSML / QUARTER
+	// $space-quarter:		0.25;		4px
+	// $space-xsml:			0.3125;		5px		XSML
+	// $space-sml:			0.5;		8px		SML / HALF
+	// $space-half:			0.5;		8px
+	// $space-default:		1.0;		16px	DEFAULT
+	// $space-med:			1.5; 		24px	MED
+	// $space-lrg:			2;			32px	LRG / DOUBLE
+	// $space-double:		2.0;		32px
+	// $space-xlrg:			3;			48px	XLRG / TRIPLE
+	// $space-triple:		3;			48px
+	// $space-huge:			4;			64px
+
+
+// -------------------------------------
+// EXTEND
+
+// -------------------------------------
+// SELECTORS
+
+	// SPACE
+
+	.space-med {
+		@include responsive-range(medbelowdown) {
+			margin: #{$space-default}rem;
+		}
+	}
+
+	.space-lrg {
+		@include responsive-range(medbelowdown) {
+			margin: #{$space-med}rem;
+		}
+	}
+
+	.space-xlrg {
+		@include responsive-range(medbelowdown) {
+			margin: #{$space-lrg}rem;
+		}
+	}
+
+	.space-huge {
+		@include responsive-range(medbelowdown) {
+			margin: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-HORIZONTAL
+
+	.space-med-x {
+		@include responsive-range(medbelowdown) {
+			margin-right: #{$space-default}rem;
+			margin-left: #{$space-default}rem;
+		}
+	}
+
+	.space-lrg-x {
+		@include responsive-range(medbelowdown) {
+			margin-right: #{$space-med}rem;
+			margin-left: #{$space-med}rem;
+		}
+	}
+
+	.space-xlrg-x {
+		@include responsive-range(medbelowdown) {
+			margin-right: #{$space-xlrg}rem;
+			margin-left: #{$space-xlrg}rem;
+		}
+	}
+
+	.space-huge-x {
+		@include responsive-range(medbelowdown) {
+			margin-right: #{$space-huge}rem;
+			margin-left: #{$space-huge}rem;
+		}
+	}
+
+	// SPACE-VERTICAL
+
+	.space-med-y {
+		@include responsive-range(medbelowdown) {
+			margin-top: #{$space-default}rem;
+			margin-bottom: #{$space-default}rem;
+		}
+	}
+
+	.space-lrg-y {
+		@include responsive-range(medbelowdown) {
+			margin-top: #{$space-med}rem;
+			margin-bottom: #{$space-med}rem;
+		}
+	}
+
+	.space-xlrg-y {
+		@include responsive-range(medbelowdown) {
+			margin-top: #{$space-lrg}rem;
+			margin-bottom: #{$space-lrg}rem;
+		}
+	}
+
+	.space-huge-y {
+		@include responsive-range(medbelowdown) {
+			margin-top: #{$space-xlrg}rem;
+			margin-bottom: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-TOP
+
+	.space-med-top {
+		@include responsive-range(medbelowdown) {
+			margin-top: #{$space-default}rem;
+		}
+	}
+	.space-lrg-top {
+		@include responsive-range(medbelowdown) {
+			margin-top: #{$space-med}rem;
+		}
+	}
+	.space-xlrg-top {
+		@include responsive-range(medbelowdown) {
+			margin-top: #{$space-lrg}rem;
+		}
+	}
+	.space-huge-top {
+		@include responsive-range(medbelowdown) {
+			margin-top: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-BOTTOM
+
+	.space-med-bottom {
+		@include responsive-range(medbelowdown) {
+			margin-bottom: #{$space-default}rem;
+		}
+	}
+	.space-lrg-bottom {
+		@include responsive-range(medbelowdown) {
+			margin-bottom: #{$space-med}rem;
+		}
+	}
+	.space-xlrg-bottom {
+		@include responsive-range(medbelowdown) {
+			margin-bottom: #{$space-lrg}rem;
+		}
+	}
+	.space-huge-bottom {
+		@include responsive-range(medbelowdown) {
+			margin-bottom: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-LEFT
+
+	.space-med-left {
+		@include responsive-range(medbelowdown) {
+			margin-left: #{$space-default}rem;
+		}
+	}
+	.space-lrg-left {
+		@include responsive-range(medbelowdown) {
+			margin-left: #{$space-med}rem;
+		}
+	}
+	.space-xlrg-left {
+		@include responsive-range(medbelowdown) {
+			margin-left: #{$space-lrg}rem;
+		}
+	}
+	.space-huge-left {
+		@include responsive-range(medbelowdown) {
+			margin-left: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-RIGHT
+
+	.space-med-right {
+		@include responsive-range(medbelowdown) {
+			margin-right: #{$space-default}rem;
+		}
+	}
+	.space-lrg-right {
+		@include responsive-range(medbelowdown) {
+			margin-right: #{$space-med}rem;
+		}
+	}
+	.space-xlrg-right {
+		@include responsive-range(medbelowdown) {
+			margin-right: #{$space-lrg}rem;
+		}
+	}
+	.space-huge-right {
+		@include responsive-range(medbelowdown) {
+			margin-right: #{$space-xlrg}rem;
+		}
+	}

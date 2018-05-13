@@ -1,0 +1,32 @@
+/* SETUP | PLUGIN | 252_SETUPBASIC | SHORTCODESULTIMATE - 2017-10-02 */
+
+// -------------------------------------
+// EXTEND
+
+	// SU-ACCORDION
+
+	%su-accordion {
+		margin-top: 0;
+		margin-bottom: #{$fontsize-default}rem;
+	}
+
+	// SU-ACCORDION-SPOILER
+
+	%su-accordion-spoiler {
+		margin-bottom: 0;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SU-ACCORDION
+	
+	body .su-accordion {
+		@extend %su-accordion !optional;
+	}
+
+	// SU-ACCORDION-SPOILER
+
+	body .su-accordion .su-spoiler {
+		@extend %su-accordion-spoiler !optional;
+	}

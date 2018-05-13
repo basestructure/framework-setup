@@ -1,0 +1,40 @@
+/* SETUP | GUIDE | 251_SETUPBASIC | DEMO - 2017-09-12 */
+
+// -------------------------------------
+// EXTEND
+
+	%guide-label {
+		font-size: 10px;
+		padding: 5px 10px;
+		color: white;
+		background-color: #ce2029;
+	}
+	%guide-item {
+		border-left: 1px solid #e5565d;
+		margin-bottom: 3rem;
+		margin-left: 2rem;
+		padding-left: 1rem;
+	}
+	%guide-itemlabel {
+		display: inline-block;
+		font-size: 10px;
+		padding: 5px 10px;
+		color: white;
+		background-color: #e5565d;
+		margin-left: 2rem;
+	}
+	%guide-separator {}
+
+// -------------------------------------
+// SELECTORS
+
+	.guide-item {
+		@extend %guide-item !optional;
+	}
+	.guide-itemlabel {
+		@extend %guide-itemlabel !optional;
+	}
+	.guide-label {
+		@extend %guide-label !optional;
+	}
+	.guide-separator {}

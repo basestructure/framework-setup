@@ -1,0 +1,108 @@
+/* SETUP | LAYOUT | 253_SETUPBASIC | FULL - 2017-10-31 */
+
+// -------------------------------------
+// EXTEND
+
+	%full-siteinner {
+
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {
+			grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+			grid-template-areas:
+			". csw ."
+			". sidebarsecondary .";
+		}
+
+	}
+
+	%full-csw {
+
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {
+			grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+			grid-template-areas:
+			". content ."
+			". sidebarprimary .";
+		}
+
+	}
+
+	%full-content {}
+
+	// SITE-HEADER
+
+	%full-siteheader {
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+			grid-template-areas:
+			". headerwrap .";
+		}
+
+	}
+	%full-siteheaderwraponly {}
+
+	// SITE-FOOTER
+
+	%full-sitefooter {
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+			grid-template-areas:
+			". footerwrap .";
+		}
+
+	}
+	%full-sitefooterwraponly {}
+
+	// FOOTER-WIDGETS
+
+	%full-footerwidgets {
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+			grid-template-areas:
+			". footerwidgetswrap .";			
+		}
+
+	}
+	%full-footerwidgetswraponly {}
+
+// -------------------------------------
+// SELECTORS
+
+	.full-width-content .site-inner {
+		@extend %full-siteinner !optional;
+	}
+
+	.full-width-content .content-sidebar-wrap {
+		@extend %full-csw !optional;
+	}
+
+	.full-width-content .content {
+		@extend %full-content !optional;
+	}
+
+	.full-width-content .site-header {
+		@extend %full-siteheader !optional;
+	}
+	.full-width-content .site-header > .wrap {
+		@extend %full-siteheaderwraponly !optional;
+	}
+
+	.full-width-content .site-footer {
+		@extend %full-sitefooter !optional;
+	}
+	.full-width-content .site-footer > .wrap {
+		@extend %full-sitefooterwraponly !optional;
+	}
+
+	.full-width-content .footer-widgets {
+		@extend %full-footerwidgets !optional;
+	}
+	.full-width-content .footer-widgets > .wrap {
+		@extend %full-footerwidgetswraponly !optional;
+	}

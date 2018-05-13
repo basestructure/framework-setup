@@ -1,0 +1,218 @@
+/* SETUP | BLOCK | 251_SETUPBASIC | ORDER - 2017-09-21 */
+
+// -------------------------------------
+// EXTEND
+
+	%block {
+		display: grid;
+	}
+
+	// COLUMNS
+
+	%block-3col {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	%block-2col {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	// ORDER
+
+	%order-ms {
+		grid-template-areas: "main side";
+	}
+
+	%order-mse {
+		grid-template-areas: "main side extra";
+	}
+
+	%order-mes {
+		grid-template-areas: "main extra side";
+	}
+
+	%order-sm {
+		grid-template-areas: "side main";
+	}
+
+	%order-sme {
+		grid-template-areas: "side main extra";
+	}
+
+	%order-sem {
+		grid-template-areas: "side extra main";
+	}
+
+	// WIDTH
+
+	%width-half {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	%width-third {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	%width-third-ms {
+		grid-template-areas: "main main side";
+	}
+	%width-third-sm {
+		grid-template-areas: "side main main";
+	}
+
+	%width-fourth {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	%width-fourth-ms {
+		grid-template-areas: "main main main side";
+	}
+	%width-fourth-sm {
+		grid-template-areas: "side main main main";
+	}
+
+	%width-fifth {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+	%width-fifth-ms {
+		grid-template-areas: "main main main main side";
+	}
+	%width-fifth-sm {
+		grid-template-areas: "side main main main main";
+	}
+	%width-fifth2-ms {
+		grid-template-areas: "main main main side side";
+	}
+	%width-fifth2-sm {
+		grid-template-areas: "side side main main main";
+	}
+
+	%width-sixth {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+	%width-sixth-ms {
+		grid-template-areas: "main main main main main side";
+	}
+	%width-sixth-sm {
+		grid-template-areas: "side main main main main main";
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// PARENT
+
+	.block {
+		@extend %block !optional;
+	}
+
+	// CHILD
+
+	.main {
+		grid-area: main;
+	}
+
+	.side {
+		grid-area: side;
+	}
+
+	.extra {
+		grid-area: extra;
+	}
+
+	// ORDER
+
+	.order-ms {
+		@extend %block-2col !optional;
+		@extend %order-ms !optional;
+	}
+
+	.order-mse {
+		@extend %block-3col !optional;
+		@extend %order-mse !optional;
+	}
+
+	.order-mes {
+		@extend %block-3col !optional;
+		@extend %order-mes !optional;
+	}
+
+	.order-sm {
+		@extend %block-2col !optional;
+		@extend %order-sm !optional;
+	}
+
+	.order-sme {
+		@extend %block-3col !optional;
+		@extend %order-sme !optional;
+	}
+
+	.order-sem {
+		@extend %block-3col !optional;
+		@extend %order-sem !optional;
+	}
+
+	// WIDTH
+
+	.width-half {
+		@extend %width-half !optional;
+	}
+	.width-third {
+		@extend %width-third !optional;
+	}
+	.width-fourth {
+		@extend %width-fourth !optional;
+	}
+	.width-fifth {
+		@extend %width-fifth !optional;
+	}
+	.width-sixth {
+		@extend %width-sixth !optional;
+	}
+
+
+	.width-third-ms {
+		@extend %width-third !optional;
+		@extend %width-third-ms !optional;
+	}
+	.width-third-sm {
+		@extend %width-third !optional;
+		@extend %width-third-sm !optional;
+	}
+
+	.width-fourth-ms {
+		@extend %width-fourth !optional;
+		@extend %width-fourth-ms !optional;
+	}
+	.width-fourth-sm {
+		@extend %width-fourth !optional;
+		@extend %width-fourth-sm !optional;
+	}
+
+	.width-fifth-ms {
+		@extend %width-fifth !optional;
+		@extend %width-fifth-ms !optional;
+	}
+	.width-fifth-sm {
+		@extend %width-fifth !optional;
+		@extend %width-fifth-sm !optional;
+	}
+
+	.width-fifth2-ms {
+		@extend %width-fifth !optional;
+		@extend %width-fifth2-ms !optional;
+	}
+	.width-fifth2-sm {
+		@extend %width-fifth !optional;
+		@extend %width-fifth2-sm !optional;
+	}
+
+	.width-sixth-ms {
+		@extend %width-sixth !optional;
+		@extend %width-sixth-ms !optional;
+	}
+	.width-sixth-sm {
+		@extend %width-sixth !optional;
+		@extend %width-sixth-sm !optional;
+	}

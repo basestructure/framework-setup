@@ -1,0 +1,307 @@
+/* SETUP | GRID | 253_SETUPBASIC | GAP - 2017-12-07 */
+
+// -------------------------------------
+// EXTEND
+
+	// GAP
+
+	%gap-zero {
+		grid-column-gap: 0;
+		grid-row-gap: 0;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: 0;
+			grid-row-gap: 0;
+		}
+	}
+
+	%gap-default {
+		grid-column-gap: #{$space-default}rem;
+		grid-row-gap: #{$space-default}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-sml}rem;
+			grid-row-gap: #{$space-sml}rem;
+		}
+	}
+
+	%gap {
+		grid-column-gap: #{$space-default}rem;
+		grid-row-gap: #{$space-default}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-sml}rem;
+			grid-row-gap: #{$space-sml}rem;
+		}
+	}
+
+	%gap-sml {
+		grid-column-gap: #{$space-sml}rem;
+		grid-row-gap: #{$space-sml}rem;
+	}
+
+	%gap-med {
+		grid-column-gap: #{$space-med}rem;
+		grid-row-gap: #{$space-med}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-default}rem;
+			grid-row-gap: #{$space-default}rem;
+		}
+	}
+
+	%gap-lrg {
+		grid-column-gap: #{$space-lrg}rem;
+		grid-row-gap: #{$space-lrg}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-default}rem;
+			grid-row-gap: #{$space-default}rem;
+		}
+	}
+
+	%gap-xlrg {
+		grid-column-gap: #{$space-xlrg}rem;
+		grid-row-gap: #{$space-xlrg}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-med}rem;
+			grid-row-gap: #{$space-med}rem;
+		}
+	}
+
+	%gap-huge {
+		grid-column-gap: #{$space-huge}rem;
+		grid-row-gap: #{$space-huge}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-med}rem;
+			grid-row-gap: #{$space-med}rem;
+		}
+	}
+
+	// GAP-X (HORIZONTAL)
+
+	%gap-x-zero {
+		grid-column-gap: 0;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: 0;
+		}
+	}
+
+	%gap-x {
+		grid-column-gap: #{$space-default}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-sml}rem;
+		}
+	}
+
+	%gap-default-x {
+		grid-column-gap: #{$space-default}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-sml}rem;
+		}
+	}
+
+	%gap-sml-x {
+		grid-column-gap: #{$space-sml}rem;
+	}
+
+	%gap-med-x {
+		grid-column-gap: #{$space-med}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-default}rem;
+		}
+	}
+
+	%gap-lrg-x {
+		grid-column-gap: #{$space-lrg}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-default}rem;
+		}
+	}
+
+	%gap-xlrg-x {
+		grid-column-gap: #{$space-xlrg}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-med}rem;
+		}
+	}
+
+	%gap-huge-x {
+		grid-column-gap: #{$space-huge}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-med}rem;
+		}
+	}
+
+	// GAP-Y (HORIZONTAL)
+
+	%gap-y-zero {
+		grid-row-gap: 0;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-row-gap: 0;
+		}
+	}
+
+	%gap-y {
+		grid-row-gap: #{$space-default}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-row-gap: #{$space-sml}rem;
+		}
+	}
+
+	%gap-default-y {
+		grid-row-gap: #{$space-default}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-row-gap: #{$space-sml}rem;
+		}
+	}
+
+	%gap-sml-y {
+		grid-row-gap: #{$space-sml}rem;
+	}
+
+	%gap-med-y {
+		grid-row-gap: #{$space-med}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-row-gap: #{$space-default}rem;
+		}
+	}
+
+	%gap-lrg-y {
+		grid-row-gap: #{$space-lrg}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-row-gap: #{$space-default}rem;
+		}
+	}
+
+	%gap-xlrg-y {
+		grid-row-gap: #{$space-xlrg}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-row-gap: #{$space-med}rem;
+		}
+	}
+
+	%gap-huge-y {
+		grid-row-gap: #{$space-huge}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-row-gap: #{$space-med}rem;
+		}
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// GAP
+
+	.gap {
+		@extend %gap-x !optional;
+		@extend %gap-y !optional;
+	}
+
+	.gap-sml {
+		@extend %gap-sml-x !optional;
+		@extend %gap-sml-y !optional;
+	}
+
+	.gap-med {
+		@extend %gap-med-x !optional;
+		@extend %gap-med-y !optional;
+	}
+
+	.gap-lrg {
+		@extend %gap-lrg-x !optional;
+		@extend %gap-lrg-y !optional;
+	}
+
+	.gap-xlrg {
+		@extend %gap-xlrg-x !optional;
+		@extend %gap-xlrg-y !optional;
+	}
+
+	.gap-huge {
+		@extend %gap-huge-x !optional;
+		@extend %gap-huge-y !optional;
+	}
+
+	// GAP-X (HORIZONTAL)
+
+	.gap-x {
+		@extend %gap-x !optional;
+	}
+
+	.gap-sml-x {
+		@extend %gap-sml-x !optional;
+	}
+
+	.gap-med-x {
+		@extend %gap-med-x !optional;
+	}
+
+	.gap-lrg-x {
+		@extend %gap-lrg-x !optional;
+	}
+
+	.gap-xlrg-x {
+		@extend %gap-xlrg-x !optional;
+	}
+
+	.gap-huge-x {
+		@extend %gap-huge-x !optional;
+	}
+
+	// GAP-Y (VERTICAL)
+
+	.gap-y {
+		@extend %gap-y !optional;
+	}
+
+	.gap-sml-y {
+		@extend %gap-sml-y !optional;
+	}
+
+	.gap-med-y {
+		@extend %gap-med-y !optional;
+	}
+
+	.gap-lrg-y {
+		@extend %gap-lrg-y !optional;
+	}
+
+	.gap-xlrg-y {
+		@extend %gap-xlrg-y !optional;
+	}
+
+	.gap-huge-y {
+		@extend %gap-huge-y !optional;
+	}
+
+	// GAP-ZERO
+
+	.gap-zero {
+		@extend %gap-x-zero !optional;
+		@extend %gap-y-zero !optional;
+	}
+
+	.gap-x-zero {
+		@extend %gap-x-zero !optional;
+	}
+
+	.gap-y-zero {
+		@extend %gap-y-zero !optional;
+	}

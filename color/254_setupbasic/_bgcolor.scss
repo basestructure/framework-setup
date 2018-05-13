@@ -1,0 +1,157 @@
+/* SETUP | COLOR | 254_SETUPBASIC | BGCOLOR - 2018-03-30 */
+
+// -------------------------------------
+// EXTEND
+
+	// SOLID
+
+	%bgcolor-white {
+		background-color: $bgcolor-white;
+	}
+	%bgcolor-black {
+		background-color: $bgcolor-black;
+	}
+	%bgcolor-lightgray {
+		background-color: $bgcolor-lightgray;
+	}
+	%bgcolor-gray {
+		background-color: $bgcolor-gray;
+	}
+	%bgcolor-darkgray {
+		background-color: $bgcolor-darkgray;
+	}
+
+	// FUNCTIONAL
+
+	%bgcolor-default {
+		background-color: $bgcolor-default;
+	}
+	%bgcolor-link {
+		background-color: $bgcolor-link;
+	}
+	%bgcolor-hover {
+		background-color: $bgcolor-hover;
+	}
+
+	// SHADES
+
+	%bgcolor-lightest {
+		background-color: $bgcolor-lightest;
+	}
+	%bgcolor-light {
+		background-color: $bgcolor-light;
+	}
+	%bgcolor-lighter {
+		background-color: $bgcolor-lighter;
+	}
+	%bgcolor-middle {
+		background-color: $bgcolor-middle;
+	}
+	%bgcolor-dark {
+		background-color: $bgcolor-dark;
+	}
+	%bgcolor-darker {
+		background-color: $bgcolor-darker;
+	}
+	%bgcolor-darkest {
+		background-color: $bgcolor-darkest;
+	}
+
+	// RAINBOW
+
+	%bgcolor-red {
+		background-color: $bgcolor-red;
+	}
+	%bgcolor-orange {
+		background-color: $bgcolor-orange;
+	}
+	%bgcolor-yellow {
+		background-color: $bgcolor-yellow;
+	}
+	%bgcolor-green {
+		background-color: $bgcolor-green;
+	}
+	%bgcolor-violet {
+		background-color: $bgcolor-violet;
+	}
+	%bgcolor-blue {
+		background-color: $bgcolor-blue;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SOLID
+
+	.bgcolor-white {
+		@extend %bgcolor-white !optional;
+	}
+	.bgcolor-black {
+		@extend %bgcolor-black !optional;
+	}
+	.bgcolor-lightgray {
+		@extend %bgcolor-lightgray !optional;
+	}
+	.bgcolor-gray {
+		@extend %bgcolor-gray !optional;
+	}
+	.bgcolor-darkgray {
+		@extend %bgcolor-darkgray !optional;
+	}
+
+	// FUNCTIONAL
+
+	.bgcolor-default {
+		@extend %bgcolor-default !optional;
+	}
+	.bgcolor-link {
+		@extend %bgcolor-link !optional;
+	}
+	.bgcolor-hover {
+		@extend %bgcolor-hover !optional;
+	}
+
+	// SHADES
+
+	.bgcolor-lightest {
+		@extend %bgcolor-lightest !optional;
+	}
+	.bgcolor-light {
+		@extend %bgcolor-light !optional;
+	}
+	.bgcolor-lighter {
+		@extend %bgcolor-lighter !optional;
+	}
+	.bgcolor-middle {
+		@extend %bgcolor-middle !optional;
+	}
+	.bgcolor-dark {
+		@extend %bgcolor-dark !optional;
+	}
+	.bgcolor-darker {
+		@extend %bgcolor-darker !optional;
+	}
+	.bgcolor-darkest {
+		@extend %bgcolor-darkest !optional;
+	}
+
+	// RAINBOW
+
+	.bgcolor-red {
+		@extend %bgcolor-red !optional;
+	}
+	.bgcolor-orange {
+		@extend %bgcolor-orange !optional;
+	}
+	.bgcolor-yellow {
+		@extend %bgcolor-yellow !optional;
+	}
+	.bgcolor-green {
+		@extend %bgcolor-green !optional;
+	}
+	.bgcolor-violet {
+		@extend %bgcolor-violet !optional;
+	}
+	.bgcolor-blue {
+		@extend %bgcolor-blue !optional;
+	}

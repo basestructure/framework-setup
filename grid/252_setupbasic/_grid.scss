@@ -1,0 +1,123 @@
+/* SETUP | GRID | 252_SETUPBASIC | GRID - 2017-10-03 */
+
+// -------------------------------------
+// EXTEND
+
+// DISPLAY GRID
+
+	%grid-displaygrid {
+		display: grid;
+	}
+
+// GRID GAP
+
+	%grid-gap {
+		grid-gap: 1rem;
+	}
+		%grid-column-gap {
+			grid-column-gap: 1rem;
+		}
+		%grid-row-gap {
+			grid-row-gap: 1rem;
+		}
+
+// FULL
+
+	%grid-full {
+		grid-template-columns: 1fr;
+	}
+
+// HALF (GRID)
+
+	%grid-half {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+// THIRD
+
+	%grid-third {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+// FOURTH
+
+	%grid-fourth {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+// FIFTH
+
+	%grid-fifth {
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+// SIXTH
+
+	%grid-sixth {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+// EIGHT
+
+	%grid-eight {
+		grid-template-columns: repeat(8, 1fr);
+	}
+
+// -------------------------------------
+// SELECTORS
+
+// FULL
+
+	.full-grid {
+		@extend %grid-displaygrid !optional;
+		@extend %grid-full !optional;
+		@extend %grid-gap !optional;
+	}
+
+// HALF
+
+	.half-grid {
+		@extend %grid-displaygrid !optional;
+		@extend %grid-half !optional;
+		@extend %grid-gap !optional;
+	}
+
+// THIRD
+
+	.third-grid {
+		@extend %grid-displaygrid !optional;
+		@extend %grid-third !optional;
+		@extend %grid-gap !optional;
+	}
+
+// FOURTH
+
+	.fourth-grid {
+		@extend %grid-displaygrid !optional;
+		@extend %grid-fourth !optional;
+		@extend %grid-gap !optional;
+	}
+
+// FIFTH
+
+	.fifth-grid {
+		@extend %grid-displaygrid !optional;
+		@extend %grid-fifth !optional;
+		@extend %grid-gap !optional;
+	}
+
+// SIXTH
+
+	.sixth-grid {
+		@extend %grid-displaygrid !optional;
+		@extend %grid-sixth !optional;
+		@extend %grid-gap !optional;
+	}
+
+// EIGHT
+
+	.eight-grid {
+		@extend %grid-displaygrid !optional;
+		@extend %grid-eight !optional;
+		@extend %grid-gap !optional;
+	}

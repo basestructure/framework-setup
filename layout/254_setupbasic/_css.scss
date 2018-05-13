@@ -1,0 +1,174 @@
+/* SETUP | LAYOUT | 254_SETUPBASIC | CSS - 2018-03-07 */
+
+// -------------------------------------
+// EXTEND
+
+	%css-siteinner {
+
+		grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+		grid-template-areas:
+		". csw ."
+		". sidebarsecondary .";
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+		}
+
+		// CSS (UP)
+		@include responsive-range(cssup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) minmax(0, 2rem) minmax(0, #{$width-sidebarsecondary}rem) 1fr;
+			grid-template-areas:
+			". csw . sidebarsecondary .";
+		}
+
+	}
+
+	%css-csw {
+
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"content"
+		"sidebarprimary";
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: minmax(0, #{$width-content}rem) 1fr minmax(0, #{$width-sidebarprimary}rem);
+			grid-template-areas:
+			"content . sidebarprimary";
+		}
+
+	}
+
+	%css-content {}
+
+	%css-sidebarprimary {}
+
+	%css-sidebarsecondary {}
+
+	// SITE-HEADER
+
+	%css-siteheader {
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+			grid-template-areas:
+			". headerwrap .";
+		}
+
+		// CSS (UP)
+		@include responsive-range(cssup) {
+			grid-template-columns: 1fr minmax(0, #{$width-css}rem) 1fr;
+		}
+
+	}
+	%css-siteheaderwraponly {}
+
+	// SITE-FOOTER
+
+	%css-sitefooter {
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+			grid-template-areas:
+			". footerwrap .";
+		}
+
+		// CSS (UP)
+		@include responsive-range(cssup) {
+			grid-template-columns: 1fr minmax(0, #{$width-css}rem) 1fr;
+		}
+
+	}
+	%css-sitefooterwraponly {}
+
+	// FOOTER-WIDGETS
+
+	%css-footerwidgets {
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+			grid-template-areas:
+			". footerwidgetswrap .";
+		}
+
+		// CSS (UP)
+		@include responsive-range(cssup) {
+			grid-template-columns: 1fr minmax(0, #{$width-css}rem) 1fr;
+		}
+
+	}
+	%css-footerwidgetswraponly {}
+
+	// FOOTER-MENU
+
+	%css-footermenu {
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+			grid-template-areas:
+			". footermenuwrap .";
+		}
+
+		// CSS (UP)
+		@include responsive-range(cssup) {
+			grid-template-columns: 1fr minmax(0, #{$width-css}rem) 1fr;
+		}
+
+	}
+	%css-footermenuwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar-sidebar .site-inner {
+		@extend %css-siteinner !optional;
+	}
+
+	.content-sidebar-sidebar .content-sidebar-wrap {
+		@extend %css-csw !optional;
+	}
+
+	.content-sidebar-sidebar .content {
+		@extend %css-content !optional;
+	}
+
+	.content-sidebar-sidebar .sidebar-primary {
+		@extend %css-sidebarprimary !optional;
+	}
+
+	.content-sidebar-sidebar .sidebar-secondary {
+		@extend %css-sidebarsecondary !optional;
+	}
+
+	.content-sidebar-sidebar .site-header {
+		@extend %css-siteheader !optional;
+	}
+	.content-sidebar-sidebar .site-header > .wrap {
+		@extend %css-siteheaderwraponly !optional;
+	}
+
+	.content-sidebar-sidebar .site-footer {
+		@extend %css-sitefooter !optional;
+	}
+	.content-sidebar-sidebar .site-footer > .wrap {
+		@extend %css-sitefooterwraponly !optional;
+	}
+
+	.content-sidebar-sidebar .footer-widgets {
+		@extend %css-footerwidgets !optional;
+	}
+	.content-sidebar-sidebar .footer-widgets > .wrap {
+		@extend %css-footerwidgetswraponly !optional;
+	}
+
+	.content-sidebar-sidebar .footer-menu {
+		@extend %css-footermenu !optional;
+	}
+	.content-sidebar-sidebar .footer-menu > .wrap {
+		@extend %css-footermenuwrap !optional;
+	}

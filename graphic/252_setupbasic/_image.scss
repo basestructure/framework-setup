@@ -1,0 +1,303 @@
+/* SETUP | GRAPHIC | 252_SETUPBASIC | IMAGE - 2017-10-13 */
+
+// -------------------------------------
+// EXTEND
+
+	// IMAGE WIDTH
+
+	%img {}
+
+	%img-sizethumb {
+		max-width: #{$width-img-thumb}rem;
+		height: auto;
+	}
+	%img-sizemed {
+		width: 100%;
+		max-width: #{$width-img-med}rem;
+		height: auto;
+	}
+	%img-sizelrg {
+		width: 100%;
+		max-width: #{$width-img-lrg}rem;
+		height: auto;
+	}
+	%img-sizexlrg {
+		width: 100%;
+		max-width: #{$width-img-xlrg}rem;
+		height: auto;
+	}
+	%img-sizetml-insidecaption {
+		width: 100% !important;
+		height: auto;
+	}
+
+	%img-sizemax {
+		width: 100% !important;
+		height: auto;
+	}
+	%img-sizemax-alignleft {
+		margin-right: 0;
+		padding-right: 0;
+	}
+	%img-sizemax-alignright {
+		margin-left: 0;
+		padding-left: 0;
+	}
+	%img-sizetwothird {
+		width: 66.3% !important;
+		height: auto;
+	}
+	%img-sizehalf {
+		width: 50% !important;
+		height: auto;
+	}
+	%img-sizethird {
+		width: 33.3% !important;
+		height: auto;
+	}
+	%img-sizefourth {
+		width: 25% !important;
+		height: auto;
+	}
+	%img-sizesixth {
+		width: 16.6% !important;
+		height: auto;
+	}
+	%img-sizeeight {
+		width: 12.5% !important;
+		height: auto;
+	}
+	%img-insidecaption {
+		width: 100% !important;
+		height: auto;
+	}
+
+	// IMAGE ALIGN SPACE
+
+		%imgalignleft {
+			margin-right: #{$space-default}rem;
+			margin-bottom: #{$space-default}rem;
+		}
+		%imgalignright {
+			margin-left: #{$space-default}rem;
+			margin-bottom: #{$space-default}rem;
+		}
+		%imgaligncenter {}
+
+	// IMAGE ICON
+
+	%img20 {
+		width: 20px;
+	}
+	%img30 {
+		width: 30px;
+	}
+	%img60 {
+		width: 60px;
+	}
+
+	// IMAGE ALIGN
+
+	%imageleft {}
+	%imageright {}
+
+		%imageleftalignleft {}
+		%imagerightalignright {}
+		%imagecenteraligncenter {}
+
+// -------------------------------------
+// SELECTORS
+
+	// IMAGE WIDTH
+
+	img {
+		@extend %img !optional;
+	}
+
+	img.size-thumbnail,
+	img.size-thumb {
+		@extend %img-sizethumb !optional;
+	}
+	.wp-caption.size-thumbnail {
+		@extend %img-sizethumb !optional;
+		@extend %img-sizetml-insidecaption !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-medium,
+	img.size-med {
+		@extend %img-sizemed !optional;
+	}
+	.wp-caption.size-medium {
+		@extend %img-sizemed !optional;
+		@extend %img-sizetml-insidecaption !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-large,
+	img.size-lrg {
+		@extend %img-sizelrg !optional;
+	}
+	.wp-caption.size-large,
+	.wp-caption.size-lrg {
+		@extend %img-sizelrg !optional;
+		@extend %img-sizetml-insidecaption !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-xlrg {
+		@extend %img-sizexlrg !optional;
+	}
+	.wp-caption.size-xlrg {
+		@extend %img-sizexlrg !optional;
+		@extend %img-sizetml-insidecaption !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-max {
+		@extend %img-sizemax !optional;
+	}
+	.wp-caption.size-max {
+		@extend %img-sizemax !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+	.wp-caption.size-max.alignleft {
+		@extend %img-sizemax-alignleft !optional;
+	}
+	.wp-caption.size-max.alignright {
+		@extend %img-sizemax-alignright !optional;
+	}
+
+	img.size-twothird {
+		@extend %img-sizetwothird !optional;
+	}
+	.wp-caption.size-twothird {
+		@extend %img-sizetwothird !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-half {
+		@extend %img-sizehalf !optional;
+	}
+	.wp-caption.size-half {
+		@extend %img-sizehalf !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-third {
+		@extend %img-sizethird !optional;
+	}
+	.wp-caption.size-third {
+		@extend %img-sizethird !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-fourth {
+		@extend %img-sizefourth !optional;
+	}
+	.wp-caption.size-fourth {
+		@extend %img-sizefourth !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-sixth {
+		@extend %img-sizesixth !optional;
+	}
+	.wp-caption.size-sixth {
+		@extend %img-sizesixth !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	img.size-eight {
+		@extend %img-sizeeight !optional;
+	}
+	.wp-caption.size-eight {
+		@extend %img-sizeeight !optional;
+	
+		img {
+			@extend %img-insidecaption !optional;
+		}
+	}
+
+	// IMAGE ALIGN SPACE
+
+		img.alignleft {
+			@extend %imgalignleft !optional;
+		}
+
+		img.alignright {
+			@extend %imgalignright !optional;
+		}
+
+		img.aligncenter {
+			@extend %imgaligncenter !optional;
+		}
+
+	// IMAGE ICON
+
+	img.img-20,
+	.img-20 {
+		@extend %img20 !optional;
+	}
+	img.img-30,
+	.img-30 {
+		@extend %img30 !optional;
+	}
+	img.img-60,
+	.img-60 {
+		@extend %img60 !optional;
+	}
+
+	// IMAGE ALIGN
+
+	.imageleft {
+		@extend %imageleft !optional;
+		@extend %alignleft !optional;
+	}
+
+	.imageright {
+		@extend %imageright !optional;
+		@extend %alignright !optional;
+	}
+
+		.imageleft.alignleft {
+			@extend %imageleftalignleft !optional;
+		}
+
+		.imageright.alignright {
+			@extend %imagerightalignright !optional;
+		}
+
+		.imagecenter.aligncenter {
+			@extend %imagecenteraligncenter !optional;
+		}

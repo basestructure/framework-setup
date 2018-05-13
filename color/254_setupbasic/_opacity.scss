@@ -1,0 +1,31 @@
+/* SETUP | COLOR | 254_SETUPBASIC | OPACITY - 2018-02-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%opacity-75 {
+		opacity: 0.75;
+	}
+
+	%opacity-50 {
+		opacity: 0.5;
+	}
+
+	%opacity-25 {
+		opacity: 0.25;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.opacity-75 {
+		@extend %opacity-75 !optional;
+	}
+
+	.opacity-50 {
+		@extend %opacity-50 !optional;
+	}
+
+	.opacity-25 {
+		@extend %opacity-25 !optional;
+	}

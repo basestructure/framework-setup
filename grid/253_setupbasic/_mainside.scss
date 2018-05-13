@@ -1,0 +1,70 @@
+/* SETUP | GRID | 253_SETUPBASIC | MAINSIDE - 2017-12-12 */
+
+// -------------------------------------
+// EXTEND
+
+	%main {
+		grid-area: main;
+	}
+
+	%side {
+		grid-area: side;
+	}
+
+	// TRANSFORM
+
+	%msh-msv {
+		@include responsive-range(tabletbelowdown) {}
+	}
+	%msh-smv {}
+	%smh-msv {}
+	%smh-smv {}
+
+// -------------------------------------
+// SELECTORS
+
+	.main {
+		//@extend %main !optional;
+	}
+
+	.side {
+		//@extend %side !optional;
+	}
+
+	// TRANSFORM
+
+	.third-grid {
+		.main.twothirds {
+			grid-column: span 2;
+		}
+		.side.twothirds {
+			grid-column: span 2;
+		}
+	}
+	.fifth-grid {
+		.main.threefifths {
+			grid-column: span 3;
+		}
+		.main.twofifths {
+			grid-column: span 2;
+		}
+		.side.threefifths {
+			grid-column: span 3;
+		}
+		.side.twofifths {
+			grid-column: span 2;
+		}
+	}
+
+	.msh-msv {
+		@extend %msh-msv !optional;
+	}
+	.msh-smv {
+		@extend %msh-smv !optional;
+	}
+	.smh-msv {
+		@extend %smh-msv !optional;
+	}
+	.smh-smv {
+		@extend %smh-smv !optional;
+	}

@@ -1,0 +1,20 @@
+/* SETUP | FEATURE | 254_SETUPBASIC | FEATURE - 2018-03-15 */
+
+// -------------------------------------
+// EXTEND
+
+	// PIC
+
+	%feature-pic-post {
+		width: 100%;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// PIC
+
+	.feature-pic.pic-post {
+		@extend %feature-pic-post !optional;
+	}

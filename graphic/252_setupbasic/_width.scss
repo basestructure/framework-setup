@@ -1,0 +1,268 @@
+/* SETUP | GRAPHIC | 252_SETUPBASIC | WIDTH - 2017-10-19 */
+
+// -------------------------------------
+// EXTEND
+
+	// HEIGHT
+
+	%height-media-auto {
+		height: auto;
+	}
+
+	// WIDTH
+
+	%width-media-stretch {
+		width: 100%;
+	}
+	%width-media-insidecaption {
+		width: 100% !important;
+	}
+
+	// MEDIA
+
+	%width-media-thumbnail {
+		max-width: #{$width-media-thumbnail}rem;
+	}
+	%width-media-medium {
+		max-width: #{$width-media-medium}rem;
+	}
+	%width-media-large {
+		max-width: #{$width-media-large}rem;
+	}
+	%width-media-full {
+		max-width: #{$width-media-full}rem;
+	}
+
+	// ICON
+
+	%width-icon-tiny {
+		max-width: #{$width-icon-tiny}rem;
+	}
+	%width-icon-xsml {
+		max-width: #{$width-icon-xsml}rem;
+	}
+	%width-icon-sml {
+		max-width: #{$width-icon-sml}rem;
+	}
+	%width-icon-med {
+		max-width: #{$width-icon-med}rem;
+	}
+	%width-icon-lrg {
+		max-width: #{$width-icon-lrg}rem;
+	}
+	%width-icon-xlrg {
+		max-width: #{$width-icon-xlrg}rem;
+	}
+	%width-icon-huge {
+		max-width: #{$width-icon-huge}rem;
+	}
+
+	// PIC
+
+	%width-pic-tiny {
+		max-width: #{$width-pic-tiny}rem;
+	}
+	%width-pic-xsml {
+		max-width: #{$width-pic-xsml}rem;
+	}
+	%width-pic-sml {
+		max-width: #{$width-pic-sml}rem;
+	}
+	%width-pic-med {
+		max-width: #{$width-pic-med}rem;
+	}
+	%width-pic-lrg {
+		max-width: #{$width-pic-lrg}rem;
+	}
+	%width-pic-xlrg {
+		max-width: #{$width-pic-xlrg}rem;
+	}
+	%width-pic-huge {
+		max-width: #{$width-pic-huge}rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// MEDIA
+
+	img.size-thumbnail {
+		@extend %width-media-thumbnail !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-medium {
+		@extend %width-media-medium !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-large {
+		@extend %width-media-large !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-full {
+		@extend %width-media-full !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// MEDIA (WITH CAPTION)
+
+	.wp-caption.size-thumbnail {
+		@extend %width-media-thumbnail !optional;
+		@extend %width-media-insidecaption !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.size-medium {
+		@extend %width-media-medium !optional;
+		@extend %width-media-insidecaption !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.size-large {
+		@extend %width-media-large !optional;
+		@extend %width-media-insidecaption !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.size-full {
+		@extend %width-media-full !optional;
+		@extend %width-media-insidecaption !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+
+	// ICON
+
+	img.icon-tiny {
+		@extend %width-icon-tiny !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-xsml {
+		@extend %width-icon-xsml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-sml {
+		@extend %width-icon-sml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-med {
+		@extend %width-icon-med !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-lrg {
+		@extend %width-icon-lrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-xlrg {
+		@extend %width-icon-xlrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-huge {
+		@extend %width-icon-huge !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// PIC
+
+	img.pic-tiny {
+		@extend %width-pic-tiny !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-xsml {
+		@extend %width-pic-xsml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-sml {
+		@extend %width-pic-sml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-med {
+		@extend %width-pic-med !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-lrg {
+		@extend %width-pic-lrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-xlrg {
+		@extend %width-pic-xlrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-huge {
+		@extend %width-pic-huge !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// PIC (WITH CAPTION)
+
+	.wp-caption.pic-tiny {
+		@extend %width-media-tiny !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-xsml {
+		@extend %width-media-xsml !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-sml {
+		@extend %width-media-sml !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-med {
+		@extend %width-media-med !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-lrg {
+		@extend %width-media-lrg !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-xlrg {
+		@extend %width-media-xlrg !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-huge {
+		@extend %width-media-huge !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}

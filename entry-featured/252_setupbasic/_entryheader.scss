@@ -1,0 +1,44 @@
+/* SETUP | ENTRY-FEATURED | 252_SETUPBASIC | ENTRYHEADER-FEATUREDCONTENT - 2017-09-27 */
+
+// -------------------------------------
+// EXTEND
+
+	%featuredcontent-entryheader {
+		margin-bottom: 1rem;
+	}
+
+	// SIDEBAR-PRIMARY
+	%sidebarprimary-featuredcontent-entryheader {}
+
+	// SIDEBAR-SECONDARY
+	%sidebarsecondary-featuredcontent-entryheader {}
+
+	// FOOTER-WIDGETS
+	%sidebarsecondary-featuredcontent-entryheader {}
+
+// -------------------------------------
+// SELECTORS
+
+	.featured-content {
+		.entry-header {
+			@extend %featuredcontent-entryheader !optional;
+		}
+	}
+
+	.sidebar-primary .featured-content {
+		.entry-header {
+			@extend %sidebarprimary-featuredcontent-entryheader !optional;
+		}
+	}
+
+	.sidebar-secondary .featured-content {
+		.entry-header {
+			@extend %sidebarsecondary-featuredcontent-entryheader !optional;
+		}
+	}
+
+	.footer-widgets .featured-content {
+		.entry-header {
+			@extend %footerwidgets-featuredcontent-entryheader !optional;
+		}
+	}

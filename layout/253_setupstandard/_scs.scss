@@ -1,0 +1,100 @@
+/* SETUP | LAYOUT | 253_SETUPBASIC | SCS - 2017-12-23 */
+
+// -------------------------------------
+// EXTEND
+
+	%scs-siteinner {
+
+		grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+		grid-template-areas:
+		". csw ."
+		". sidebarsecondary .";
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+		}
+
+		// CSS (UP)
+		@include responsive-range(cssup) {
+			grid-template-columns: 1fr minmax(0, #{$width-sidebarsecondary}rem) minmax(0, 2rem) minmax(0, #{$width-cs}rem) 1fr;
+			grid-template-areas:
+			".  sidebarsecondary . csw .";
+		}
+
+	}
+
+	%scs-csw {
+
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"content"
+		"sidebarprimary";
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: minmax(0, #{$width-content}rem) minmax(0, 2rem) minmax(0, #{$width-sidebarprimary}rem);
+			grid-template-areas:
+			"content . sidebarprimary";
+		}
+
+	}
+
+	%scs-content {}
+
+	%scs-sidebarprimary {}
+
+	%scs-sidebarsecondary {}
+
+// -------------------------------------
+// SELECTORS
+
+	.sidebar-content-sidebar .site-inner {
+		@extend %scs-siteinner !optional;
+	}
+
+	.sidebar-content-sidebar .content-sidebar-wrap {
+		@extend %scs-csw !optional;
+	}
+
+	.sidebar-content-sidebar .content {
+		@extend %scs-content !optional;
+	}
+
+	.sidebar-content-sidebar .sidebar-primary {
+		@extend %scs-sidebarprimary !optional;
+	}
+
+	.sidebar-content-sidebar .sidebar-secondary {
+		@extend %scs-sidebarsecondary !optional;
+	}
+
+	// DUPLICATED FROM CSS
+
+	.sidebar-content-sidebar .site-header {
+		@extend %css-siteheader !optional;
+	}
+	.sidebar-content-sidebar .site-header > .wrap {
+		@extend %css-siteheaderwraponly !optional;
+	}
+
+	.sidebar-content-sidebar .site-footer {
+		@extend %css-sitefooter !optional;
+	}
+	.sidebar-content-sidebar .site-footer > .wrap {
+		@extend %css-sitefooterwraponly !optional;
+	}
+
+	.sidebar-content-sidebar .footer-widgets {
+		@extend %css-footerwidgets !optional;
+	}
+	.sidebar-content-sidebar .footer-widgets > .wrap {
+		@extend %css-footerwidgetswraponly !optional;
+	}
+
+	.sidebar-content-sidebar .footer-menu {
+		@extend %css-footermenu !optional;
+	}
+	.sidebar-content-sidebar .footer-menu > .wrap {
+		@extend %css-footermenuwrap !optional;
+	}

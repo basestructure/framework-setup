@@ -1,0 +1,17 @@
+/* SETUP | AREA | 253_SETUPBASIC | AREAFOOTER - 2017-01-20 */
+
+// -------------------------------------
+// EXTEND
+
+	%areafooter {}
+	%areafooterwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.area-footer {
+		@extend %areafooter !optional;
+	}
+	.area-footer > .wrap {
+		@extend %areafooterwrap !optional;
+	}

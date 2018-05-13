@@ -1,9 +1,10 @@
-/* SETUP | VARIABLES | 251_SETUPBASIC | LINEHEIGHT - 2018-08-31 */
+/* SETUP | VARIABLES | 251_SETUPBASIC | LINEHEIGHT - 2017-09-14 */
 
 // -------------------------------------
 // VARIABLES
 
-	$lineheight-default:				1.2;
+	$lineheight-default:				1.5;
+		$lineheight-default-mobile:		1.4;
 
 // TAGS
 
@@ -17,7 +18,8 @@
 	$lineheight-li:						1.0;
 
 	// HEADLINE
-	$lineheight-headline:				null;
+	$lineheight-headline:				1.4;
+		$lineheight-headline-mobile:	1.2;
 	$lineheight-h1:						null;
 	$lineheight-h2:						null;
 	$lineheight-h3:						null;
@@ -51,7 +53,7 @@
 // PAGE & POST
 
 	// ENTRY
-	$lineheight-entrytitle:				null;
+	$lineheight-entrytitle:				1.4;
 	$lineheight-entrymeta:				null;
 
 	// SINGLE
@@ -80,6 +82,19 @@
 	$lineheight-widgettitle:			null;
 
 // RELATIVE
+
+	$lineheight-huge:					1.2;		
+	$lineheight-xxxlrg:					1.2;		
+	$lineheight-xxxlrg:					1.2;		
+	$lineheight-xxlrg:					1.4;		// H1
+	$lineheight-xlrg:					1.4;		// H2
+	$lineheight-lrg:					1.4;		// H3
+	$lineheight-med:					1.4;		// H4
+	$lineheight-sml:					null;		// P
+	$lineheight-xsml:					1.4;		// H5
+	$lineheight-xxsml:					1.4;		// H6
+	$lineheight-xxxsml:					1.4;
+	$lineheight-tiny:					1.2;
 
 	$lineheight-narrower:				0.75;
 	$lineheight-narrow:					1.4;

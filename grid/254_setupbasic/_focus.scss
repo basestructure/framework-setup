@@ -1,0 +1,95 @@
+/* SETUP | GRID | 254_SETUPBASIC | GAP - 2018-04-08 */
+
+// -------------------------------------
+// EXTEND
+
+	%focus {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto;
+
+		background-color: pink;
+	}
+		%focus-right {
+			grid-template-columns: 1fr auto;
+		}
+
+	%focus-sixth {
+		grid-template-columns: 16.67% 1fr;
+	}
+	%focus-fifth {
+		grid-template-columns: 20% 1fr;
+	}
+	%focus-fourth {
+		grid-template-columns: 25% 1fr;
+	}
+	%focus-third {
+		grid-template-columns: 33.33% 1fr;
+	}
+	%focus-half {
+		grid-template-columns: 50% 1fr;
+	}
+	%focus-twothirds {
+		grid-template-columns: 66.66% 1fr;
+	}
+	%focus-threefourths {
+		grid-template-columns: 75% 1fr;
+	}
+
+	%focus-img {
+		align-self: start;
+		width: 100%;
+
+		background-color: red;
+	}
+
+	%focus-item {
+		align-self: start;
+		width: 100%;
+
+		background-color: orange;
+	}
+
+	%focus-info {
+		vertical-align: top;
+
+		background-color: yellow;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.focus {
+		@extend %focus !optional;
+	}
+		.focus.right {
+			@extend %focus-right !optional;
+		}
+
+	.focus.focus-sixth {
+		@extend %focus-sixth !optional;
+	}
+	.focus.focus-fifth {
+		@extend %focus-fifth !optional;
+	}
+	.focus.focus-fourth {
+		@extend %focus-fourth !optional;
+	}
+	.focus.focus-third {
+		@extend %focus-third !optional;
+	}
+	.focus.focus-twothirds {
+		@extend %focus-twothirds !optional;
+	}
+
+	.focus-img {
+		@extend %focus-img !optional;
+	}
+
+	.focus-item {
+		@extend %focus-item !optional;
+	}
+
+	.focus-info {
+		@extend %focus-info !optional;
+	}

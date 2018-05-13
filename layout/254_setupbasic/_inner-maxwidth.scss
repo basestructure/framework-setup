@@ -1,0 +1,143 @@
+/* SETUP | LAYOUT | 254_SETUPBASIC | INNER-MAXWIDTH - 2018-02-21 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner_maxwidth {
+
+		grid-area: inner;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"csw"
+		"sidebarsecondary";
+
+		padding: 0;
+		margin: 0;
+
+		@include responsive-range(desktopsmlup) {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+			"csw"
+			"sidebarsecondary";
+		}
+
+	}
+		%siteinner_cs_maxwidth {
+
+			// DESKTOP SMALL (UP)
+			@include responsive-range(desktopsmlup) {
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				grid-template-areas:
+				"csw"
+				"sidebarsecondary";
+			}
+		}
+		%siteinner_sc_maxwidth {
+			// DESKTOP SMALL (UP)
+			@include responsive-range(desktopsmlup) {
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				grid-template-areas:
+				"csw"
+				"sidebarsecondary";
+			}
+		}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw_maxwidth {
+
+		grid-area: csw;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"content"
+		"sidebarprimary";
+		
+	}
+
+		%csw_cs_maxwidth {
+			grid-area: csw;
+
+			// DESKTOP (UP)
+			@include responsive-range(desktopup) {
+				grid-template-columns: 1fr 32px minmax(0, 300px);
+				grid-template-rows: auto;
+				grid-template-areas:
+				"content . sidebarprimary";
+			}
+		}
+		%csw_sc_maxwidth {
+			grid-area: csw;
+
+			// DESKTOP (UP)
+			@include responsive-range(desktopup) {
+				grid-template-columns: minmax(0, 300px) 32px 1fr;
+				grid-template-rows: auto;
+				grid-template-areas:
+				"sidebarprimary . content";
+			}
+		}
+
+	// CONTENT
+
+	%content_maxwidth {}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary_maxwidth {}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary_maxwidth {}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.maxwidth .site-inner {
+		@extend %siteinner_maxwidth !optional;
+	}
+		.maxwidth.content-sidebar {
+			@extend %siteinner_cs_maxwidth !optional;
+		}
+		.maxwidth.sidebar-content {
+			@extend %siteinner_sc_maxwidth !optional;
+		}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.maxwidth .content-sidebar-wrap {
+		@extend %csw_maxwidth !optional;
+	}
+		.maxwidth.content-sidebar .content-sidebar-wrap {
+			@extend %csw_cs_maxwidth !optional;
+		}
+		.maxwidth.sidebar-content .content-sidebar-wrap {
+			@extend %csw_sc_maxwidth !optional;
+		}
+
+	// CONTENT
+
+	.maxwidth .content {
+		@extend %content_maxwidth !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.maxwidth .sidebar-primary {
+		@extend %sidebarprimary_maxwidth !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.maxwidth .sidebar-secondary {
+		@extend %sidebarsecondary_maxwidth !optional;
+	}

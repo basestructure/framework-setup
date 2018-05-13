@@ -1,0 +1,33 @@
+/* SETUP | ENTRY-ARCHIVE | 252_SETUPBASIC | ARCHIVEDESCRIPTION - 2017-09-27 */
+
+// -------------------------------------
+// EXTEND
+
+	%archivedescription {
+		margin-bottom: 2rem;
+	}
+	%archivetitle {
+		font-weight: $fontweight-archivetitle;
+	}
+	%archivedescription-p {}
+
+	%taxonomydescription {}
+
+// -------------------------------------
+// SELECTORS
+
+	.archive-description {
+		@extend %archivedescription !optional;
+	}
+
+	.archive-title {
+		@extend %archivetitle !optional;
+	}
+
+	.archive-description p {
+		@extend %archivedescription-p !optional;
+	}
+
+	.taxonomy-description {
+		@extend %taxonomydescription !optional;
+	}

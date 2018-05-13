@@ -1,0 +1,13 @@
+/* SETUP | GRAPHIC | 253_SETUPBASIC | IMAGE - 2018-01-13 */
+
+// -------------------------------------
+// EXTEND
+
+	%img {}
+
+// -------------------------------------
+// SELECTORS
+
+	img {
+		@extend %img !optional;
+	}

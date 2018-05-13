@@ -1,0 +1,38 @@
+/* SETUP | LAYOUT | 254_SETUPBASIC | HEADER-FLOAT - 2018-02-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader-float {
+
+		// position
+		position: fixed;
+		top: 0;
+
+		// spacing
+		width: 100%;
+
+		// background
+		background: none;
+
+	}
+	%siteheaderwrap-float {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.siteheader-float .site-header {
+		@extend %siteheader-float !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap-float !optional;
+		}
+	}
+	.siteheader-float .site-header > .wrap {
+		@extend %siteheaderwrap-float !optional;
+	}

@@ -1,0 +1,125 @@
+/* SETUP | ENTRY-ARCHIVE | 254_SETUPBASIC | ENTRY - 2018-3-27 */
+
+// -------------------------------------
+// EXTEND
+
+	%all-entry {
+		margin-bottom: 3rem;
+	}
+		%all-entryfot {}
+
+	%archive-entry {}
+		%archive-entryfot {}
+	%archive-content-entry {
+		padding-top: 0.5rem;
+		border-top: 1px solid #ccc;
+	}
+		%archive-content-entryfot {}
+
+	%category-entry {}
+		%category-entryfot {}
+
+	%tag-entry {}
+		%tag-entryfot {}
+
+	%blog-entry {}
+		%blog-entryfot {}
+
+	%searchresults-entry {}
+		%searchresults-entryfot {}
+
+	%haspostthumbnail-all-entry {}
+
+// -------------------------------------
+// SELECTORS
+
+	// ARCHIVE
+
+	.archive {
+		.entry {
+			@extend %all-entry !optional;
+			@extend %archive-entry !optional;
+		}
+		article.entry:first-of-type {
+			@extend %all-entryfot !optional;
+			@extend %archive-entryfot !optional;
+		}
+		.entry.has-post-thumbnail {
+			@extend %haspostthumbnail-all-entry !optional;
+		}
+	}
+
+	.archive .content {
+		.entry {
+			@extend %archive-content-entry !optional;
+		}
+		article.entry:first-of-type {
+			@extend %archive-content-entryfot !optional;
+		}
+	}
+
+	// CATEGORY
+
+	.category {
+		.entry {
+			@extend %all-entry !optional;
+			@extend %category-entry !optional;
+		}
+		article.entry:first-of-type {
+			@extend %all-entryfot !optional;
+			@extend %category-entryfot !optional;
+		}
+		.entry.has-post-thumbnail {
+			@extend %haspostthumbnail-all-entry !optional;
+		}
+	}
+
+	// TAG
+
+	.tag {
+		.entry {
+			@extend %all-entry !optional;
+			@extend %tag-entry !optional;
+		}
+		article.entry:first-of-type {
+			@extend %all-entryfot !optional;
+			@extend %tag-entryfot !optional;
+		}
+		.entry.has-post-thumbnail {
+			@extend %haspostthumbnail-all-entry !optional;
+		}
+	}
+
+	// BLOG
+
+	.blog {
+		.entry {
+			@extend %all-entry !optional;
+			@extend %blog-entry !optional;
+			@extend %haspostthumbnail-all-entry !optional;
+		}
+		article.entry:first-of-type {
+			@extend %all-entryfot !optional;
+			@extend %blog-entryfot !optional;
+			@extend %haspostthumbnail-all-entryfot !optional;
+		}
+		.entry.has-post-thumbnail {
+			@extend %haspostthumbnail-all-entry !optional;
+		}
+	}
+
+	// ARCHIVE
+
+	.search-results {
+		.entry {
+			@extend %all-entry !optional;
+			@extend %searchresults-entry !optional;
+		}
+		article.entry:first-of-type {
+			@extend %all-entryfot !optional;
+			@extend %searchresults-entryfot !optional;
+		}
+		.entry.has-post-thumbnail {
+			@extend %haspostthumbnail-all-entry !optional;
+		}
+	}

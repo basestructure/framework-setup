@@ -1,0 +1,205 @@
+/* SETUP | GRID | 252_SETUPBASIC | COLUMN - 2017-10-03 */
+
+// -------------------------------------
+// EXTEND
+
+// COLUMN GAP
+
+	%columns-gap {
+		//grid-gap: 1rem;
+	}
+		%columns-column-gap {
+			//grid-column-gap: 1rem;
+		}
+		%columns-row-gap {
+			//grid-row-gap: 1rem;
+		}
+
+// COLUMN CONTAINERS
+
+	%columns {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: auto;
+	}
+		%columns-fifth {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: auto;
+		}
+		%columns-eight {
+			display: grid;
+			grid-template-columns: repeat(8, 1fr);
+			grid-template-rows: auto;
+		}
+
+// FULL
+
+	%column-full {
+		grid-column: span 6;
+		@extend %column-guide !optional;
+	}
+
+// HALF (3 of 6)
+
+	%column-half {
+		grid-column: span 3;
+	}
+
+// THIRD (2 of 6)
+
+	%column-third {
+		grid-column: span 2;
+		@extend %column-guide !optional;
+	}
+		%column-twothirds {
+			grid-column: span 4;
+			@extend %column-guide !optional;
+		}
+
+// FOURTH (2 of 8)
+
+	%column-fourth {
+		grid-column: span 2;
+		@extend %column-guide !optional;
+	}
+		%column-threefourths {
+			grid-column: span 6;
+			@extend %column-guide !optional;
+		}
+
+// FIFTH (1 of 5)
+
+	%column-fifth {
+		grid-column: span 1;
+		@extend %column-guide !optional;
+	}
+		%column-twofifths {
+			grid-column: span 2;
+			@extend %column-guide !optional;
+		}
+		%column-threefifths {
+			grid-column: span 3;
+			@extend %column-guide !optional;
+		}
+		%column-fourfifths {
+			grid-column: span 4;
+			@extend %column-guide !optional;
+		}
+
+// SIXTH (1 of 6)
+
+	%column-sixth {
+		grid-column: span 1;
+		@extend %column-guide !optional;
+	}
+		%column-fivesixths {
+			grid-column: span 5;
+			@extend %column-guide !optional;
+		}
+
+// EIGHT (1 of 8)
+
+	%column-eight {
+		grid-column: span 1;
+		@extend %column-guide !optional;
+	}
+		%column-seveneights {
+			grid-column: span 7;
+			@extend %column-guide !optional;
+		}
+
+// -------------------------------------
+// SELECTORS
+
+// COLUMNS (CONTAINER)
+
+	.columns {
+		@extend %columns !optional;
+		@extend %columns-gap !optional;
+	}
+
+	.columns.columns-fifth {
+		@extend %columns-fifth !optional;
+	}
+
+	.columns.columns-eight {
+		@extend %columns-eight !optional;
+	}
+
+// FULL
+
+	.full {
+		@extend %column-full !optional;
+		@extend %column-gap !optional;
+	}
+
+// HALF
+
+	.half {
+		@extend %column-half !optional;
+		@extend %column-gap !optional;
+	}
+
+// THIRD
+
+	.third {
+		@extend %column-third !optional;
+		@extend %column-gap !optional;
+	}
+		.twothirds {
+			@extend %column-twothirds !optional;
+			@extend %column-gap !optional;
+		}
+
+// FOURTH
+
+	.fourth {
+		@extend %column-fourth !optional;
+		@extend %column-gap !optional;
+	}
+		.threefourths {
+			@extend %column-threefourths !optional;
+			@extend %column-gap !optional;
+		}
+
+// FIFTH
+
+	.fifth {
+		@extend %column-fifth !optional;
+		@extend %column-gap !optional;
+	}
+		.twofifths {
+			@extend %column-twofifths !optional;
+			@extend %column-gap !optional;
+		}
+		.threefifths {
+			@extend %column-threefifths !optional;
+			@extend %column-gap !optional;
+		}
+		.fourfifths {
+			@extend %column-fourfifths !optional;
+			@extend %column-gap !optional;
+		}
+
+// SIXTH
+
+	.sixth {
+		@extend %column-sixth !optional;
+		@extend %column-gap !optional;
+	}
+		.fivesixths {
+			@extend %column-fivesixths !optional;
+			@extend %column-gap !optional;
+		}
+
+// SIXTH
+
+	.eight {
+		@extend %column-eight !optional;
+		@extend %column-gap !optional;
+	}
+		.seveneights {
+			@extend %column-seveneights !optional;
+			@extend %column-gap !optional;
+		}

@@ -1,0 +1,114 @@
+/* SETUP | GUIDE | 260_GUIDE | FOOTER - 2018-04-29 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-FOOTER
+
+	%guide-sitefooter {
+
+		background-color: #a6d2ff;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-sitefooterwrap {
+
+		background-color: #e1f0ff;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+
+	// FOOTER-WIDGETS
+
+	%guide-footerwidgets {
+
+		background-color: #ffc862;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-footerwidgetswrap {
+
+		background-color: #ffdc9d;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+
+	%guide-footerwidgets1 {}
+
+	%guide-footerwidgets2 {}
+
+	%guide-footerwidgets3 {}
+
+	// FOOTER-MENU
+
+	%guide-footermenu {
+
+		background-color: #ffc862;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-footermenuwrap {
+
+		background-color: #ffdc9d;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-footermenuwrap-firstchild {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-FOOTER
+
+	.site-footer {
+		@extend %guide-sitefooter !optional;
+	}
+	.site-footer > .wrap {
+		@extend %guide-sitefooterwrap !optional;
+	}
+
+	// FOOTER-WIDGETS
+
+	.footer-widgets {
+		@extend %guide-footerwidgets !optional;
+	}
+	.footer-widgets > .wrap {
+		@extend %guide-footerwidgetswrap !optional;
+	}
+
+	.footer-widgets-1 {
+		@extend %guide-footerwidgets1 !optional;
+	}
+
+	.footer-widgets-2 {
+		@extend %guide-footerwidgets2 !optional;
+	}
+
+	.footer-widgets-3 {
+		@extend %guide-footerwidgets3 !optional;
+	}
+
+	// FOOTER-MENU
+
+	.footer-menu {
+		@extend %guide-footermenu !optional;
+	}
+	.footer-menu > .wrap {
+		@extend %guide-footermenuwrap !optional;
+	}
+	.footer-menu > .wrap:before {
+		@extend %guide-footermenuwrap-firstchild !optional;
+	}

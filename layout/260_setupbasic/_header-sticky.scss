@@ -1,0 +1,69 @@
+/* SETUP | LAYOUT | 260_SETUPBASIC | HEADER-STICKY - 2018-04-23 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader-sticky {
+
+		// position
+		position: fixed;
+		top: 0;
+
+		// color
+		background: #fff;  /* fallback for old browsers */
+		background-color:rgba(255,255,255,1.0);	
+		-webkit-transition: background-color 0.5s ease-out;
+		-moz-transition: background-color 0.5s ease-out;
+		-o-transition: background-color 0.5s ease-out;
+		transition: background-color 0.5s ease-out;
+		box-shadow: 0 0 8px 0 rgba(0,0,0,.12), 0 4px 8px 0 rgba(0,0,0,.1);
+
+		// spacing
+		width: 100%;
+
+	}
+	%siteheaderwrap-sticky {}
+
+	// SITE-TITLE (HEADER-IMAGE)
+
+	%headerimage-sitetitle-sticky {}
+	%headerimage-sitetitle-a-sticky {
+
+		// graphic logo
+		width: 100px;
+		height: 25px;
+
+	}
+	%headerimage-sitetitle-hvr-sticky {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header.sticky {
+		@extend %siteheader-sticky !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap-sticky !optional;
+		}
+	}
+	.site-header.sticky > .wrap {
+		@extend %siteheaderwrap-sticky !optional;
+	}
+
+	// SITE-TITLE (HEADER IMAGE)
+
+	.header-image .site-header.sticky .site-title {
+		@extend %headerimage-sitetitle-sticky !optional;
+
+		a {
+			@extend %headerimage-sitetitle-a-sticky !optional;
+		}
+		a:hover {
+			@extend %headerimage-sitetitle-hvr-sticky !optional;
+		}
+	}

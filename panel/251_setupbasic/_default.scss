@@ -1,0 +1,129 @@
+/* SETUP | PANEL | 251_SETUPBASIC | DEFAULT - 2017-09-19 */
+
+// -------------------------------------
+// EXTEND
+
+	// PANEL
+
+	%panel {
+		display: grid;
+	}
+
+	// PANEL MAX
+
+	%panel-max {
+		grid-column: 1fr;
+		grid-template-areas: "max";
+	}
+
+	// PANEL BASE
+
+	%panel-base {
+		grid-template-columns: 1fr minmax(0, #{$width-base}rem) 1fr;
+		grid-template-areas: ". base .";
+	}
+
+	%panel-base-huge {
+		grid-template-columns: 1fr minmax(0, #{$width-base-huge}rem) 1fr;
+		grid-template-areas: ". basehuge .";
+	}
+
+	%panel-base-xlrg {
+		grid-template-columns: 1fr minmax(0, #{$width-base-xlrg}rem) 1fr;
+		grid-template-areas: ". basexlrg .";
+	}
+
+	%panel-base-lrg {
+		grid-template-columns: 1fr minmax(0, #{$width-base-lrg}rem) 1fr;
+		grid-template-areas: ". baselrg .";
+	}
+
+	%panel-base-med {
+		grid-template-columns: 1fr minmax(0, #{$width-base-med}rem) 1fr;
+		grid-template-areas: ". basemed .";
+	}
+
+	%panel-base-sml {
+		grid-template-columns: 1fr minmax(0, #{$width-base-sml}rem) 1fr;
+		grid-template-areas: ". basesml .";
+	}
+
+	// PANEL MAX BASE
+
+	%panel-maxbase {
+		grid-template-columns: 1fr minmax(0, #{$width-base}rem);
+		grid-template-areas: "max base";
+	}
+	%panel-basemax {
+		grid-template-columns: minmax(0, #{$width-base}rem) 1fr;
+		grid-template-areas: "base max";
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// PANEL
+	.panel {
+		@extend %panel !optional;
+	}
+
+	// PANEL MAX
+
+	.panel.max {
+		@extend %panel-max !optional;
+	}
+	.panel.max > .base {
+		grid-area: max;
+	}
+
+	// PANEL BASE
+
+	.panel.base {
+		@extend %panel-base !optional;
+	}
+	.panel.base > .base {
+		grid-area: base;
+	}
+
+	.panel.base-huge {
+		@extend %panel-base-huge !optional;
+	}
+	.panel.base-huge > .base {
+		grid-area: basehuge;
+	}
+
+	.panel.base-xlrg {
+		@extend %panel-base-xlrg !optional;
+	}
+	.panel.base-xlrg > .base {
+		grid-area: basexlrg;
+	}
+
+	.panel.base-lrg {
+		@extend %panel-base-lrg !optional;
+	}
+	.panel.base-lrg > .base {
+		grid-area: baselrg;
+	}
+
+	.panel.base-med {
+		@extend %panel-base-med !optional;
+	}
+	.panel.base-med > .base {
+		grid-area: basemed;
+	}
+
+	.panel.base-sml {
+		@extend %panel-base-sml !optional;
+	}
+	.panel.base-sml > .base {
+		grid-area: basesml;
+	}
+
+	// PANEL MAX & BASE
+	.panel.maxbase {
+		@extend %panel-maxbase !optional;
+	}
+	.panel.basemax {
+		@extend %panel-basemax !optional;
+	}

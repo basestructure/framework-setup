@@ -1,0 +1,46 @@
+/* SETUP | PANEL | 251_SETUPBASIC | INNER - 2017-08-31 */
+
+// -------------------------------------
+// EXTEND
+
+	// PANEL
+
+	%panel {
+		display: grid;
+		grid-template-columns: 1fr minmax(0, #{$width-base}rem) 1fr;
+		grid-template-rows: auto;
+	}
+
+	// PANEL BASE
+
+	%panel-base {
+		//grid-area: panel-base;
+		grid-column: 2 / 3;
+	}
+
+	// PANEL MAX
+
+	%panel-max {
+		//grid-area: panel-max;
+		grid-column: 1 / 4;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// PANEL
+	.panel {
+		@extend %panel !optional;
+	}
+
+	// PANEL BASE
+
+	.panel .base {
+		@extend %panel-base !optional;
+	}
+
+	// PANEL MAX
+
+	.panel .max {
+		@extend %panel-max !optional;
+	}

@@ -1,0 +1,119 @@
+/* SETUP | LAYOUT | 253_SETUPBASIC | CS - 2017-11-13 */
+
+// -------------------------------------
+// EXTEND
+
+	%cs-siteinner {
+
+		grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+		grid-template-areas:
+		". csw .";
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+		}
+
+	}
+
+	%cs-csw {
+
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"content"
+		"sidebarprimary";
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: minmax(0, #{$width-content}rem) minmax(0, #{$width-sidebarprimary}rem);
+			grid-template-areas:
+			"content sidebarprimary";
+		}
+
+	}
+
+	%cs-content {}
+
+	%cs-sidebarprimary {}
+
+	// SITE-HEADER
+
+	%cs-siteheader {
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+			grid-template-areas:
+			". headerwrap .";
+		}
+
+	}
+	%cs-siteheaderwraponly {}
+
+	// SITE-FOOTER
+
+	%cs-sitefooter {
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+			grid-template-areas:
+			". footerwrap .";
+		}
+
+	}
+	%cs-sitefooterwraponly {}
+
+	// FOOTER-WIDGETS
+
+	%cs-footerwidgets {
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+			grid-template-areas:
+			". footerwidgetswrap .";			
+		}
+
+	}
+	%cs-footerwidgetswraponly {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar .site-inner {
+		@extend %cs-siteinner !optional;
+	}
+
+	.content-sidebar .content-sidebar-wrap {
+		@extend %cs-csw !optional;
+	}
+
+	.content-sidebar .content {
+		@extend %cs-content !optional;
+	}
+
+	.content-sidebar .sidebar-primary {
+		@extend %cs-sidebarprimary !optional;
+	}
+
+	.content-sidebar .site-header {
+		@extend %cs-siteheader !optional;
+	}
+	.content-sidebar .site-header > .wrap {
+		@extend %cs-siteheaderwraponly !optional;
+	}
+
+	.content-sidebar .site-footer {
+		@extend %cs-sitefooter !optional;
+	}
+	.content-sidebar .site-footer > .wrap {
+		@extend %cs-sitefooterwraponly !optional;
+	}
+
+	.content-sidebar .footer-widgets {
+		@extend %cs-footerwidgets !optional;
+	}
+	.content-sidebar .footer-widgets > .wrap {
+		@extend %cs-footerwidgetswraponly !optional;
+	}

@@ -1,0 +1,139 @@
+/* SETUP | GUIDE | 260_GUIDE | HEADER - 2018-04-29 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%guide-siteheader {
+
+		background-color: #ffff89;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-siteheaderwrap {
+
+		background-color: #ffffc4;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+
+	// TITLE-AREA
+
+	%guide-titlearea {
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+
+	// HEADER-WIDGET-AREA
+
+	%guide-headerwidgetarea {
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+
+	// SITE-TITLE
+
+	%guide-sitetitle {
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-sitetitle-a {}
+	%guide-sitetitle-hvr {}
+
+	// SITE-TITLE (HEADER-IMAGE)
+
+	%guide-headerimage-sitetitle {
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-headerimage-sitetitle-a {}
+	%guide-headerimage-sitetitle-hvr {}
+
+	// SITE-DESCRIPTION
+
+	%guide-sitedescription {
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	%guide-headerimage-sitedescription {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header {
+		@extend %guide-siteheader !optional;
+	}
+	.site-header > .wrap {
+		@extend %guide-siteheaderwrap !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	.header-widget-area {
+		@extend %guide-headerwidgetarea !optional;
+	}
+
+	// TITLE-AREA
+
+	.title-area {
+		@extend %guide-titlearea !optional;
+	}
+
+	// SITE-TITLE
+
+	.site-title {
+		@extend %guide-sitetitle !optional;
+
+		a {
+			@extend %guide-sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %guide-sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-TITLE (HEADER IMAGE)
+
+	.header-image .site-title {
+		@extend %guide-headerimage-sitetitle !optional;
+
+		a {
+			@extend %guide-headerimage-sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %guide-headerimage-sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-DESCRIPTION
+
+	.site-description {
+		@extend %guide-sitedescription !optional;
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	.header-image .site-description {
+		@extend %guide-headerimage-sitedescription !optional;
+	}

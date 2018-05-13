@@ -1,0 +1,78 @@
+/* SETUP | GUIDE | 260_GUIDE | INNER - 2018-04-29 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%guide-siteinner {
+
+		background-color: #ff8686;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%guide-csw {
+
+		background-color: #ffc1c1;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+
+	// CONTENT
+
+	%guide-content {
+		background-color: #ffd5d5;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	%guide-sidebarprimary {
+		background-color: #a6e9f9;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	%guide-sidebarsecondary {
+		background-color: #94f7f2;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.site-inner {
+		@extend %guide-siteinner !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.site-inner .content-sidebar-wrap {
+		@extend %guide-csw !optional;
+	}
+
+	// CONTENT
+
+	.content {
+		@extend %guide-content !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary {
+		@extend %guide-sidebarprimary !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary {
+		@extend %guide-sidebarsecondary !optional;
+	}
+

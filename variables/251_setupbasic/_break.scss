@@ -8,9 +8,9 @@
 
 	$break-outer:						160;		// 2560px
 
-	$break-base:						90;			// 1440px
+	$break-base:						70.25;		// 1124px
 
-	$break-inner:						90;			// 1400px
+	$break-inner:						70.25;		// 1124px
 		$break-inner-large:				64;			// 1024px
 		$break-inner-medium:			48;			// 768px
 		$break-inner-small:				26.563;		// 425px
@@ -18,7 +18,7 @@
 // NOTE: RELATIVE BREAKPOINTS BASED ON OVERALL SCALE
 
 	$break-huge:						160;		// 2560px
-	$break-xlrg:						90;			// 1440px
+	$break-xlrg:						70.25;		// 1124px
 	$break-lrg:							64;			// 1024px
 	$break-med:							48;			// 768px
 	$break-sml:							26.563;		// 425px
@@ -27,7 +27,7 @@
 // NOTE: RELATIVE BREAKPOINTS BASED ON DEVICES
 
 	$break-widescreen:					160;		// 2560px
-	$break-desktop:						90;			// 1440px
+	$break-desktop:						70.25;		// 1124px
 	$break-desktopsml:					64;			// 1024px
 	$break-tablet:						48;			// 768px
 	$break-mobile:						26.563;		// 425px

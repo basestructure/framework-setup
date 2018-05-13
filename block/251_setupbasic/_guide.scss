@@ -1,0 +1,31 @@
+/* SETUP | BLOCK | 251_SETUPBASIC | GUIDE - 2017-09-19 */
+
+// -------------------------------------
+// EXTEND
+
+	%guide-main {
+		background-color: #F9E79F;
+	}
+
+	%guide-side {
+		background-color: #F5B7B1;
+	}
+
+	%guide-extra {
+		background-color: #D7BDE2;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.main {
+		@extend %guide-main !optional;
+	}
+
+	.side {
+		@extend %guide-side !optional;
+	}
+
+	.extra {
+		@extend %guide-extra !optional;
+	}

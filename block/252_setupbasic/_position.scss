@@ -1,0 +1,253 @@
+/* SETUP | BLOCK | 252_SETUPBASIC | POSITION - 2017-10-05 */
+
+// -------------------------------------
+// EXTEND
+
+	// POSITION
+
+	%block-ms {
+		display: grid;
+		grid-template-areas: "main side";
+	}
+
+	%block-sm {
+		display: grid;
+		grid-template-areas: "side main";
+	}
+
+	%block-msv {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"main"
+		"side";
+		align-content: baseline;
+	}
+
+	%block-smv {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"side"
+		"main";
+		align-content: baseline;
+	}
+
+	%block-order-main {
+		grid-column: main;
+	}
+	%block-order-side {
+		grid-column: side;
+	}
+
+	// 6 COLUMNS
+
+	%block-half-ms {
+		grid-template-areas: "main main main side side side";
+	}
+	%block-half-sm {
+		grid-template-areas: "side side side main main main";
+	}
+
+	%block-twothirds-ms {
+		grid-template-areas: "main main main main side side";
+	}
+	%block-twothirds-sm {
+		grid-template-areas: "side side main main main main";
+	}
+
+	%block-third-ms {
+		grid-template-areas: "main main side side side side";
+	}
+	%block-third-sm {
+		grid-template-areas: "side side side side main main";
+	}
+
+	%block-fivesixths-ms {
+		grid-template-areas: "main main main main main side";
+	}
+	%block-fivesixths-sm {
+		grid-template-areas: "side main main main main main";
+	}
+
+	%block-sixth-ms {
+		grid-template-areas: "main side side side side side";
+	}
+	%block-sixth-sm {
+		grid-template-areas: "side side side side side main";
+	}
+
+	// 5 COLUMNS
+
+	%block-fourfifths-ms {
+		grid-template-areas: "main main main main side";
+	}
+	%block-fourfifths-sm {
+		grid-template-areas: "side main main main main";
+	}
+
+	%block-threefifths-ms {
+		grid-template-areas: "main main main side side";
+	}
+	%block-threefifths-sm {
+		grid-template-areas: "side side main main main";
+	}
+
+	%block-twofifths-ms {
+		grid-template-areas: "main main side side side";
+	}
+	%block-twofifths-sm {
+		grid-template-areas: "side side side main main";
+	}
+
+	%block-fifth-ms {
+		grid-template-areas: "main side side side side";
+	}
+	%block-fifth-sm {
+		grid-template-areas: "side side side side main";
+	}
+
+	// 8 COLUMNS
+
+	%block-threefourths-ms {
+		grid-template-areas: "main main main main main main side side";
+	}
+	%block-threefourths-sm {
+		grid-template-areas: "side side main main main main main main";
+	}
+
+	%block-fourth-ms {
+		grid-template-areas: "main main side side side side side side";
+	}
+	%block-fourth-sm {
+		grid-template-areas: "side side side side side side main main";
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// MAIN & SIDE POSITION
+
+	.block-ms {
+		@extend %block-ms !optional;
+
+		.main {
+			@extend %block-order-main !optional;
+		}
+		.side {
+			@extend %block-order-side !optional;
+		}
+	}
+
+	.block-sm {
+		@extend %block-sm !optional;
+
+		.main {
+			@extend %block-order-main !optional;
+		}
+		.side {
+			@extend %block-order-side !optional;
+		}
+	}
+
+	.block-msv {
+		@extend %block-msv !optional;
+
+		.main {
+			@extend %block-order-main !optional;
+		}
+		.side {
+			@extend %block-order-side !optional;
+		}
+	}
+
+	.block-smv {
+		@extend %block-smv !optional;
+
+		.main {
+			@extend %block-order-main !optional;
+		}
+		.side {
+			@extend %block-order-side !optional;
+		}
+	}
+
+	// WIDTH
+
+	.block-half.block-ms {
+		@extend %block-half-ms !optional;
+	}
+	.block-half.block-sm {
+		@extend %block-half-sm !optional;
+	}
+
+	.block-twothirds.block-ms {
+		@extend %block-twothirds-ms !optional;	
+	}
+	.block-twothirds.block-sm {
+		@extend %block-twothirds-sm !optional;	
+	}
+
+	.block-third.block-ms {
+		@extend %block-third-ms !optional;	
+	}
+	.block-third.block-sm {
+		@extend %block-third-sm !optional;	
+	}
+
+	.block-fivesixths.block-ms {
+		@extend %block-fivesixths-ms !optional;		
+	}
+	.block-fivesixths.block-sm {
+		@extend %block-fivesixths-sm !optional;		
+	}
+
+	.block-sixth.block-ms {
+		@extend %block-sixth-ms !optional;		
+	}
+	.block-sixth.block-sm {
+		@extend %block-sixth-sm !optional;		
+	}
+
+	.block-fourfifths.block-ms {
+		@extend %block-fourfifths-ms !optional;		
+	}
+	.block-fourfifths.block-sm {
+		@extend %block-fourfifths-sm !optional;
+	}
+
+	.block-threefifths.block-ms {
+		@extend %block-threefifths-ms !optional;
+	}
+	.block-threefifths.block-sm {
+		@extend %block-threefifths-sm !optional;
+	}
+
+	.block-twofifths.block-ms {
+		@extend %block-twofifths-ms !optional;
+	}
+	.block-twofifths.block-sm {
+		@extend %block-twofifths-sm !optional;
+	}
+
+	.block-fifth.block-ms {
+		@extend %block-fifth-ms !optional;		
+	}
+	.block-fifth.block-sm {
+		@extend %block-fifth-sm !optional;
+	}
+
+	.block-threefourths.block-ms {
+		@extend %block-threefourths-ms !optional;
+	}
+	.block-threefourths.block-sm {
+		@extend %block-threefourths-sm !optional;
+	}
+
+	.block-fourth.block-ms {
+		@extend %block-fourth-ms !optional;
+	}
+	.block-fourth.block-sm {
+		@extend %block-fourth-sm !optional;
+	}

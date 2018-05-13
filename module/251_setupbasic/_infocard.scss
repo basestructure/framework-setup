@@ -1,0 +1,174 @@
+/* SETUP | MODULE | 251_SETUPBASIC | INFOCARD - 2017-09-12 */
+
+// -------------------------------------
+// EXTEND
+
+	// INFOCARD
+	%infocard {}
+
+	// CARD
+	%infocard-card {
+		grid-area: infocard-card;
+	}
+
+	// ICON
+	%infocard-icon {
+		grid-area: infocard-icon;
+	}
+
+	// PRETITLE
+	%infocard-pretitle {
+		grid-area: infocard-pretitle;
+	}
+
+	// PRETITLE
+	%infocard-maintitle {
+		grid-area: infocard-maintitle;
+	}
+
+	// SUBTITLE
+	%infocard-subtitle {
+		grid-area: infocard-subtitle;
+	}
+
+	// SUMMARY
+	%infocard-summary {
+		grid-area: infocard-summary;
+	}
+
+	// CTA
+	%infocard-cta {
+		grid-area: infocard-cta;
+	}
+
+	// TEXTLINK
+	%infocard-textlink {
+		grid-area: infocard-textlink;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// INFOCARD
+	.infocard {
+		@extend %infocard !optional;
+	}
+
+	// CARD
+	.infocard .card {
+		@extend %infocard-card !optional;
+	}
+
+	// ICON
+	.infocard .icon {
+		@extend %infocard-icon !optional;
+	}
+
+	// PRETITLE
+	.infocard .pretitle {
+		@extend %infocard-pretitle !optional;
+	}
+
+	// PRETITLE
+	.infocard .maintitle {
+		@extend %infocard-maintitle !optional;
+	}
+
+	// SUBTITLE
+	.infocard .subtitle {
+		@extend %infocard-subtitle !optional;
+	}
+
+	// SUMMARY
+	.infocard .summary {
+		@extend %infocard-summary !optional;
+	}
+
+	// CTA
+	.infocard .cta {
+		@extend %infocard-cta !optional;
+	}
+
+	// TEXTLINK
+	.infocard .textlink {
+		@extend %infocard-textlink !optional;
+	}
+
+// -------------------------------------
+// GRIDSETUP
+
+	// CARD-MAINTITLE-SUMMARY
+	.card-maintitle-summary .infocard {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"infocard-card"
+		"infocard-maintitle"
+		"infocard-summary";
+	}
+
+	// CARD-PRETITLE-MAINTITLE-SUMMARY
+	.card-pretitle-maintitle-summary .infocard {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"infocard-card"
+		"infocard-pretitle"
+		"infocard-maintitle"
+		"infocard-summary";
+	}
+
+	// CARD-MAINTITLE-SUBTITLE-SUMMARY
+	.card-maintitle-subtitle-summary .infocard {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"infocard-card"
+		"infocard-maintitle"
+		"infocard-subtitle"
+		"infocard-summary";
+	}
+
+	// CARD-PRETITLE-MAINTITLE
+	.card-pretitle-maintitle .infocard {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"infocard-card"
+		"infocard-pretitle"
+		"infocard-maintitle";
+	}
+
+	// CARD-MAINTITLE-SUBTITLE
+	.card-maintitle-subtitle .infocard {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"infocard-card"
+		"infocard-maintitle"
+		"infocard-subtitle";
+	}
+
+	// PRETITLE-CARD-MAINTITLE-SUBTITLE-SUMMARY
+	.pretitle-card-maintitle-subtitle-summary .infocard {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"infocard-pretitle"
+		"infocard-card"
+		"infocard-maintitle"
+		"infocard-subtitle"
+		"infocard-summary";
+	}
+
+	// CARD-PRETITLE-MAINTITLE-SUBTITLE-SUMMARY
+	.card-pretitle-maintitle-subtitle-summary .infocard {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"infocard-card"
+		"infocard-pretitle"
+		"infocard-maintitle"
+		"infocard-subtitle"
+		"infocard-summary";
+	}

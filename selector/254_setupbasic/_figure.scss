@@ -1,0 +1,16 @@
+/* SETUP | SELECTOR | 254_SETUPBASIC | FIGURE - 2018-04-08 */
+
+// -------------------------------------
+// EXTEND
+
+	%figure {
+		padding: 0;
+		margin: 0;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	figure {
+		@extend %figure !optional;
+	}

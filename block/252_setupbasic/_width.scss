@@ -1,0 +1,121 @@
+/* SETUP | BLOCK | 252_SETUPBASIC | WIDTH - 2017-10-05 */
+
+// -------------------------------------
+// EXTEND
+
+// -------------------------------------
+// SELECTORS
+
+	.block-half {
+		@extend %columns !optional;
+	}
+
+	.block-half {
+		@extend %columns !optional;
+	}
+		.block-half .main {
+			@extend %column-half !optional;		
+		}
+		.block-half .side {
+			@extend %column-half !optional;		
+		}
+
+	.block-twothirds {
+		@extend %columns !optional;
+	}
+		.block-twothirds .main {
+			@extend %column-twothirds !optional;		
+		}
+		.block-twothirds .side {
+			@extend %column-third !optional;		
+		}
+
+	.block-third {
+		@extend %columns !optional;
+	}
+		.block-third .main {
+			@extend %column-third !optional;		
+		}
+		.block-third .side {
+			@extend %column-twothirds !optional;		
+		}
+
+	.block-fivesixths {
+		@extend %columns !optional;
+	}
+		.block-fivesixths .main {
+			@extend %column-fivesixths !optional;
+		}
+		.block-fivesixths .side {
+			@extend %column-sixth !optional;
+		}
+
+	.block-sixth {
+		@extend %columns !optional;
+	}
+		.block-sixth .main {
+			@extend %column-sixth !optional;
+		}
+		.block-sixth .side {
+			@extend %column-fivesixths !optional;
+		}
+
+	.block-fourfifths {
+		@extend %columns-fifth !optional;
+	}
+		.block-fourfifths .main {
+			@extend %column-fourfifths !optional;	
+		}
+		.block-fourfifths .side {
+			@extend %column-fourfifths !optional;	
+		}
+
+	.block-threefifths {
+		@extend %columns-fifth !optional;
+	}
+		.block-threefifths .main {
+			@extend %column-threefifths !optional;	
+		}
+		.block-threefifths .side {
+			@extend %column-twofifths !optional;	
+		}
+
+	.block-twofifths {
+		@extend %columns-fifth !optional;
+	}
+		.block-twofifths .main {
+			@extend %column-twofifths !optional;	
+		}
+		.block-twofifths .side {
+			@extend %column-threefifths !optional;	
+		}
+
+	.block-fifth {
+		@extend %columns-fifth !optional;
+	}
+		.block-fifth .main {
+			@extend %column-fifth !optional;	
+		}
+		.block-fifth .side {
+			@extend %column-fourfifths !optional;	
+		}
+
+	.block-fourth {
+		@extend %columns-eight !optional;
+	}
+		.block-fourth .main {
+			@extend %column-fourth !optional;	
+		}
+		.block-fourth .side {
+			@extend %column-threefourths !optional;	
+		}
+
+	.block-threefourths {
+		@extend %columns-eight !optional;
+	}
+		.block-threefourths .main {
+			@extend %column-threefourths !optional;	
+		}
+		.block-threefourths .side {
+			@extend %column-fourth !optional;	
+		}

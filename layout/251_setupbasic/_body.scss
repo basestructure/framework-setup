@@ -1,4 +1,4 @@
-/* SETUP | LAYOUT | 251_SETUPBASIC | BODY - 2018-08-31 */
+/* SETUP | LAYOUT | 251_SETUPBASIC | BODY - 2017-09-14 */
 
 // -------------------------------------
 // EXTEND
@@ -10,10 +10,15 @@
 	// BODY
 
 	%body_layout {
-		font-family: $fontfamily-body;
-		color: $color-body;
-		background-color: $bgcolor-body;
-		line-height: $lineheight-body;
+		font-family: $fontfamily-default;
+		color: $color-default;
+		background-color: $bgcolor-default;
+		line-height: $lineheight-default;
+
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$fontsize-default-mobile}rem;
+			line-height: $lineheight-default-mobile;
+		}
 	}
 
 

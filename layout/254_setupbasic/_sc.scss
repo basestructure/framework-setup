@@ -1,0 +1,86 @@
+/* SETUP | LAYOUT | 254_SETUPBASIC | SC - 2018-03-07 */
+
+// -------------------------------------
+// EXTEND
+
+	%sc-siteinner {
+
+		grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+		grid-template-areas:
+		". csw .";
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+		}
+
+	}
+
+	%sc-csw {
+
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"content"
+		"sidebarprimary";
+
+		// CS (UP)
+		@include responsive-range(csup) {
+			grid-template-columns: minmax(0, #{$width-sidebarprimary}rem) 1fr minmax(0, #{$width-content}rem);
+			grid-template-areas:
+			"sidebarprimary . content";
+		}
+
+	}
+
+	%sc-content {}
+
+	%sc-sidebarprimary {}
+
+// -------------------------------------
+// SELECTORS
+
+	.sidebar-content .site-inner {
+		@extend %sc-siteinner !optional;
+	}
+
+	.sidebar-content .content-sidebar-wrap {
+		@extend %sc-csw !optional;
+	}
+
+	.sidebar-content .content {
+		@extend %sc-content !optional;
+	}
+
+	.sidebar-content .sidebar-primary {
+		@extend %sc-sidebarprimary !optional;
+	}
+
+	// DUPLICATED FROM CS
+
+	.sidebar-content .site-header {
+		@extend %cs-siteheader !optional;
+	}
+	.sidebar-content .site-header > .wrap {
+		@extend %cs-siteheaderwraponly !optional;
+	}
+
+	.sidebar-content .site-footer {
+		@extend %cs-sitefooter !optional;
+	}
+	.sidebar-content .site-footer > .wrap {
+		@extend %cs-sitefooterwraponly !optional;
+	}
+
+	.sidebar-content .footer-widgets {
+		@extend %cs-footerwidgets !optional;
+	}
+	.sidebar-content .footer-widgets > .wrap {
+		@extend %cs-footerwidgetswraponly !optional;
+	}
+
+	.sidebar-content .footer-menu {
+		@extend %cs-footermenu !optional;
+	}
+	.sidebar-content .footer-menu > .wrap {
+		@extend %cs-footermenuwrap !optional;
+	}

@@ -1,0 +1,253 @@
+/* SETUP | VARIABLES | 260_SETUPBASIC | RESPONSIVE-RANGE - 2018-04-20 */
+
+// -------------------------------------
+// USAGE
+
+	// RANGE UP
+	// FROM: MED & UP						@include responsive-range(medup) {}
+
+	// RANGE DOWN
+	// FROM: MED & DOWN						@include responsive-range(meddown) {}
+
+	// ZERO TO MED
+	// FROM: MED & DOWN						@include responsive-range(zero-med) {}
+
+
+	// $width-huge: 	90;					// 1440px
+	// $width-xlrg:		80;					// 1280px
+	// $width-lrg:		64;					// 1024px
+	// $width-med:		48;					// 768px
+	// $width-sml:		26.563;				// 425px
+	// $width-xsml:		20;					// 320px
+
+// -------------------------------------
+// MIXIN
+
+	@mixin responsive-range($range) {
+	
+	// RANGE UP
+
+	// FROM: ZERO & UP						@include responsive-range(zeroup) {}
+	// FROM: XSML & UP						@include responsive-range(xsmlup) {}
+	// FROM: SML & UP						@include responsive-range(smlup) {}
+	// FROM: MED & UP						@include responsive-range(medup) {}
+	// FROM: LRG & UP						@include responsive-range(lrgup) {}
+	// FROM: XLRG & UP						@include responsive-range(xlrgup) {}
+	// FROM: HUGE & UP						@include responsive-range(hugeup) {}
+
+		// ZERO & UP
+		@if $range == zeroup {
+			@media only screen and (min-width: $width-zero) { @content; }
+		}
+		// XSML & UP
+		@else if $range == xsmlup {
+			@media only screen and (min-width: #{$width-xsml}rem) { @content; }
+		}
+		// SML & UP
+		@else if $range == smlup {
+			@media only screen and (min-width: #{$width-sml}rem) { @content; }
+		}
+		// MED & UP
+		@else if $range == medup {
+			@media only screen and (min-width: #{$width-med}rem) { @content; }
+		}
+		// LRG & UP
+		@else if $range == lrgup {
+			@media only screen and (min-width: #{$width-lrg}rem) { @content; }
+		}
+		// XLRG & UP
+		@else if $range == xlrgup {
+			@media only screen and (min-width: #{$width-xlrg}rem) { @content; }
+		}
+		// HUGE & UP
+		@else if $range == hugeup {
+			@media only screen and (min-width: #{$width-huge}rem) { @content; }
+		}
+
+	// RANGE DOWN
+
+	// FROM: ZERO & DOWN					@include responsive-range(zerodown) {}
+	// FROM: XSML & DOWN					@include responsive-range(xsmldown) {}
+	// FROM: SML & DOWN						@include responsive-range(smldown) {}
+	// FROM: MED & DOWN						@include responsive-range(meddown) {}
+	// FROM: LRG & DOWN						@include responsive-range(lrgdown) {}
+	// FROM: XLRG & DOWN					@include responsive-range(xlrgdown) {}
+	// FROM: HUGE & DOWN					@include responsive-range(hugedown) {}
+
+		// ZERO & DOWN
+		@else if $range == zerodown {
+			@media only screen and (max-width: $width-zero) { @content; }
+		}
+		// XSML & DOWN
+		@else if $range == xsmldown {
+			@media only screen and (max-width: #{$width-xsml}rem) { @content; }
+		}
+		// SML & DOWN
+		@else if $range == smldown {
+			@media only screen and (max-width: #{$width-sml}rem) { @content; }
+		}
+		// MED & DOWN
+		@else if $range == meddown {
+			@media only screen and (max-width: #{$width-med}rem) { @content; }
+		}
+		// LRG & DOWN
+		@else if $range == lrgdown {
+			@media only screen and (max-width: #{$width-lrg}rem) { @content; }
+		}
+		// XLRG & DOWN
+		@else if $range == xlrgdown {
+			@media only screen and (max-width: #{$width-xlrg}rem) { @content; }
+		}
+		// HUGE & DOWN
+		@else if $range == hugedown {
+			@media only screen and (max-width: #{$width-huge}rem) { @content; }
+		}
+
+	// ZERO TO RANGE
+
+	// ZERO TO HUGE
+	// ZERO TO XLRG
+	// ZERO TO LRG
+	// ZERO TO MED
+	// ZERO TO SML
+	// ZERO TO XSML
+
+		// ZERO-HUGE (ABOVE & BELOW)
+		@else if $range == zero-huge {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-huge}rem) { @content; }
+		}
+		@else if $range == zero-hugeabove {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-huge + $width-pixel}rem) { @content; }
+		}
+		@else if $range == zero-hugebelow {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-huge - $width-pixel}rem) { @content; }
+		}
+
+		// ZERO-XLRG (ABOVE & BELOW)
+		@else if $range == zero-xlrg {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-xlrg}rem) { @content; }
+		}
+		@else if $range == zero-xlrgabove {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-xlrg + $width-pixel}rem) { @content; }
+		}
+		@else if $range == zero-xlrgbelow {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-xlrg - $width-pixel}rem) { @content; }
+		}
+
+		// ZERO-LRG (ABOVE & BELOW)
+		@else if $range == zero-lrg {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-lrg}rem) { @content; }
+		}
+		@else if $range == zero-lrgabove {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-lrg + $width-pixel}rem) { @content; }
+		}
+		@else if $range == zero-lrgbelow {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-lrg - $width-pixel}rem) { @content; }
+		}
+
+		// ZERO-MED (ABOVE & BELOW)
+		@else if $range == zero-med {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-med}rem) { @content; }
+		}
+		@else if $range == zero-medabove {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-med + $width-pixel}rem) { @content; }
+		}
+		@else if $range == zero-medbelow {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-med - $width-pixel}rem) { @content; }
+		}
+
+		// ZERO-SML (ABOVE & BELOW)
+		@else if $range == zero-sml {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-sml}rem) { @content; }
+		}
+		@else if $range == zero-smlabove {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-sml + $width-pixel}rem) { @content; }
+		}
+		@else if $range == zero-smlbelow {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-sml - $width-pixel}rem) { @content; }
+		}
+
+		// ZERO-XSML (ABOVE & BELOW)
+		@else if $range == zero-xsml {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-xsml}rem) { @content; }
+		}
+		@else if $range == zero-xsmlabove {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-xsml + $width-pixel}rem) { @content; }
+		}
+		@else if $range == zero-xsmlbelow {
+			@media only screen and (min-width: $width-zero) and (max-width: #{$width-xsml - $width-pixel}rem) { @content; }
+		}
+
+	// CUSTOMONE (LAYOUT)
+
+	// FROM: CUSTOMONE & UP (ABOVE) 		@include responsive-range(customoneaboveup) {}
+	// FROM: CUSTOMONE & UP 				@include responsive-range(customoneup) {}
+	// CUSTOMONE --------------------
+	// FROM: CUSTOMONE & DOWN 				@include responsive-range(customonedown) {}
+	// FROM: CUSTOMONE & DOWN (BELOW) 		@include responsive-range(customonebelowdown) {}
+
+		// CUSTOMONE & UP
+		@else if $range == customoneaboveup {
+			@media only screen and (min-width: #{$width-customone + $width-pixel}rem) { @content; }
+		}
+		@else if $range == customoneup {
+			@media only screen and (min-width: #{$width-customone}rem) { @content; }
+		}
+
+		// CUSTOMONE & DOWN
+		@else if $range == customonedown {
+			@media only screen and (max-width: #{$width-customone}rem) { @content; }
+		}
+		@else if $range == customonebelowdown {
+			@media only screen and (max-width: #{$width-customone - $width-pixel}rem) { @content; }
+		}
+
+	// CUSTOMTWO (LAYOUT)
+
+	// FROM: CUSTOMTWO & UP (ABOVE) 		@include responsive-range(customtwoaboveup) {}
+	// FROM: CUSTOMTWO & UP 				@include responsive-range(customtwoup) {}
+	// CUSTOMTWO --------------------
+	// FROM: CUSTOMTWO & DOWN 				@include responsive-range(customtwodown) {}
+	// FROM: CUSTOMTWO & DOWN (BELOW) 		@include responsive-range(customtwobelowdown) {}
+
+		// CUSTOMTWO & UP
+		@else if $range == customtwoaboveup {
+			@media only screen and (min-width: #{$width-customtwo + $width-pixel}rem) { @content; }
+		}
+		@else if $range == customtwoup {
+			@media only screen and (min-width: #{$width-customtwo}rem) { @content; }
+		}
+
+		// CUSTOMTWO & DOWN
+		@else if $range == customtwodown {
+			@media only screen and (max-width: #{$width-customtwo}rem) { @content; }
+		}
+		@else if $range == customtwobelowdown {
+			@media only screen and (max-width: #{$width-customtwo - $width-pixel}rem) { @content; }
+		}
+
+	// CUSTOMTHREE (LAYOUT)
+
+	// FROM: CUSTOMTHREE & UP (ABOVE) 		@include responsive-range(customthreeaboveup) {}
+	// FROM: CUSTOMTHREE & UP 				@include responsive-range(customthreeup) {}
+	// CUSTOMTHREE --------------------
+	// FROM: CUSTOMTHREE & DOWN 			@include responsive-range(customthreedown) {}
+	// FROM: CUSTOMTHREE & DOWN (BELOW) 	@include responsive-range(customthreebelowdown) {}
+
+		// CUSTOMTHREE & UP
+		@else if $range == customthreeaboveup {
+			@media only screen and (min-width: #{$width-customthree + $width-pixel}rem) { @content; }
+		}
+		@else if $range == customthreeup {
+			@media only screen and (min-width: #{$width-customthree}rem) { @content; }
+		}
+
+		// CUSTOMTHREE & DOWN
+		@else if $range == customthreedown {
+			@media only screen and (max-width: #{$width-customthree}rem) { @content; }
+		}
+		@else if $range == customthreebelowdown {
+			@media only screen and (max-width: #{$width-customthree - $width-pixel}rem) { @content; }
+		}
+
+	}

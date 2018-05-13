@@ -1,0 +1,63 @@
+/* SETUP | VARIABLES | 252_SETUPBASIC | BREAK - 2017-09-25 */
+
+// -------------------------------------
+// VARIABLES
+
+	// RELATIVE (BASED ON OVERALL SCALE)
+
+	$break-huge:						90;			// 1440px
+	$break-xlrg:						70;			// 1280px
+	$break-lrg:							64;			// 1024px
+	$break-med:							48;			// 768px
+	$break-sml:							26.563;		// 425px
+	$break-xsml:						20;			// 320px
+
+	// BASE
+
+	$break-base:						64;			// 1024px
+		$break-base-huge:				90;			// 1440px
+		$break-base-xlrg:				70;			// 1280px
+		$break-base-lrg:				64;			// 1024px - BASE
+		$break-base-med:				48;			// 768px
+		$break-base-sml:				26.563;		// 425px
+		$break-base-xsml:				20;			// 320px
+
+	// INNER
+
+	$break-outer:						160;		// 2560px
+	$break-inner:						64;			// 1024px
+		$break-inner-huge:				90;			// 1440px
+		$break-inner-xlrg:				70;			// 1280px
+		$break-inner-lrg:				64;			// 1024px
+		$break-inner-med:				48;			// 768px
+		$break-inner-sml:				26.563;		// 425px
+		$break-inner-xsml:				20;			// 320px
+
+	// SITE PARTS
+
+	$break-content:						48;			// 768px
+	$break-csw:							48;			// 768px
+	$break-csw-ms:						64;			// 1024px
+	$break-csw-mss:						70;			// 1280px
+	$break-sidebarprimary:				16;			// 256px
+	$break-sidebarsecondary:			16;			// 256px
+
+	// GUTTER
+
+	$break-gutter:						2;			// 32px
+	$break-gutter-lrg:					4;			// 64px
+	$break-gutter-sml:					1;			// 16px
+
+// NOTE: RELATIVE BREAKPOINTS BASED ON DEVICES
+
+	$break-widescreen:					160;		// 2560px
+	$break-desktop:						70.25;		// 1280px
+	$break-desktopsml:					64;			// 1024px
+	$break-tablet:						48;			// 768px
+	$break-mobile:						26.563;		// 425px
+	$break-mobilesml:					20;			// 320px
+
+// NOTE: FUNCTIONAL BREAKPOINTS
+
+	$break-pixel:						0.0625;		// 1px
+	$break-zero: 						0;

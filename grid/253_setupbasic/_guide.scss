@@ -1,0 +1,45 @@
+/* SETUP | GRID | 253_SETUPBASIC | GUIDE - 2017-12-08 */
+
+// -------------------------------------
+// EXTEND
+
+	%guide-grid {
+		background-color: #F9E79F;
+	}
+
+	%guide-column {
+		background-color: #F5B7B1;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// GRID
+
+	.full-grid > div {
+		@extend %guide-grid !optional;
+	}
+	.half-grid > div {
+		@extend %guide-grid !optional;
+	}
+	.third-grid > div {
+		@extend %guide-grid !optional;
+	}
+	.fourth-grid > div {
+		@extend %guide-grid !optional;
+	}
+	.fifth-grid > div {
+		@extend %guide-grid !optional;
+	}
+	.sixth-grid > div {
+		@extend %guide-grid !optional;
+	}
+	.eight-grid > div {
+		@extend %guide-grid !optional;
+	}
+
+	// GRID
+
+	.columns > div {
+		@extend %guide-column !optional;
+	}

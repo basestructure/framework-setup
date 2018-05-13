@@ -1,0 +1,55 @@
+/* SETUP | BLOCK | 252_SETUPBASIC | MAINSIDE - 2017-10-05 */
+
+// -------------------------------------
+// EXTEND
+
+	%main {
+		grid-area: main;
+	}
+
+	%side {
+		grid-area: side;
+	}
+
+	%mainside-ms {
+		grid-template-areas: "main side";
+	}
+	%mainside-sm {
+		grid-template-areas: "side main";
+	}
+	%mainside-msv {
+		grid-template-areas:
+		"main"
+		"side";
+	}
+	%mainside-smv {
+		grid-template-areas:
+		"side"
+		"main";
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.main {
+		@extend %main !optional;
+	}
+
+	.side {
+		@extend %side !optional;
+	}
+
+	// MS
+
+	.mainside.ms {
+		@extend %mainside-ms !optional;
+	}
+	.mainside.sm {
+		@extend %mainside-sm !optional;
+	}
+	.mainside.msv {
+		@extend %mainside-msv !optional;
+	}
+	.mainside.smv {
+		@extend %mainside-smv !optional;
+	}

@@ -1,0 +1,124 @@
+/* SETUP | LAYOUT | 252_SETUPBASIC | HEADER - 2017-09-26 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader {
+
+		grid-area: header;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"headerwrap";
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-base}rem) 1fr;
+			grid-template-areas:
+			". headerwrap .";
+		}
+
+	}
+	%siteheaderwrap {}
+	%siteheaderwraponly {
+
+		grid-area: headerwrap;
+
+	}
+
+	// HEADER-WIDGET-AREA
+
+	%headerwidgetarea {
+
+		grid-area: headerwidgetarea;
+
+	}
+
+	// TITLE-AREA
+
+	%titlearea {
+
+		grid-area: titlearea;
+
+	}
+
+	// SITE-TITLE
+
+	%sitetitle {
+
+		grid-area: sitetitle;
+
+		font-family: $fontfamily-sitetitle;				// fontfamily
+		font-size: #{$fontsize-sitetitle}rem;			// fontsize
+		font-weight: $fontweight-thick;
+		line-height: 1;
+		margin-bottom: 0;
+
+	}
+	%sitetitle-a {}
+	%sitetitle-hvr {}
+
+	// SITE-DESCRIPTION
+
+	%sitedescription {
+
+		grid-area: sitedescription;
+
+		font-family: $fontfamily-sitedescription;		// fontfamily
+		font-size: #{$fontsize-sitedescription}rem;		// fontsize
+		font-weight: $fontweight-thin;
+		line-height: 1;
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header {
+		@extend %siteheader !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap !optional;
+		}
+	}
+	.site-header > .wrap {
+		@extend %siteheaderwraponly !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	.header-widget-area {
+		@extend %headerwidgetarea !optional;
+	}
+
+	// TITLE-AREA
+
+	.title-area {
+		@extend %titlearea !optional;
+	}
+
+	// SITE-TITLE
+
+	.site-title {
+		@extend %sitetitle !optional;
+
+		a {
+			@extend %sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-DESCRIPTION
+
+	.site-description {
+		@extend %sitedescription !optional;
+	}

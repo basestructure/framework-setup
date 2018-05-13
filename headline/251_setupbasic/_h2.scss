@@ -1,10 +1,14 @@
-/* SETUP | HEADLINE | 251_SETUPBASIC | H2 - 2017-08-31 */
+/* SETUP | HEADLINE | 251_SETUPBASIC | H2 - 2017-09-14 */
 
 // -------------------------------------
 // EXTEND
 
 	%h2 {
 		font-size: #{$fontsize-h2}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$fontsize-h2-mobile}rem;
+		}
 	}
 
 // -------------------------------------

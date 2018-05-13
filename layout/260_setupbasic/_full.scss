@@ -1,0 +1,73 @@
+/* SETUP | LAYOUT | 260_SETUPBASIC | FULL - 2018-04-20 */
+
+// -------------------------------------
+// EXTEND
+
+	%full-siteinner {}
+
+	%full-csw {}
+
+	%full-content {}
+
+	// SITE-HEADER
+
+	%full-siteheader {}
+	%full-siteheaderwrap {}
+
+	// SITE-FOOTER
+
+	%full-sitefooter {}
+	%full-sitefooterwrap {}
+
+	// FOOTER-WIDGETS
+
+	%full-footerwidgets {}
+	%full-footerwidgetswrap {}
+
+	// FOOTER-MENU
+
+	%full-footermenu {}
+	%full-footermenu {}
+
+// -------------------------------------
+// SELECTORS
+
+	.full-width-content .site-inner {
+		@extend %full-siteinner !optional;
+	}
+
+	.full-width-content .content-sidebar-wrap {
+		@extend %full-csw !optional;
+	}
+
+	.full-width-content .content {
+		@extend %full-content !optional;
+	}
+
+	.full-width-content .site-header {
+		@extend %full-siteheader !optional;
+	}
+	.full-width-content .site-header > .wrap {
+		@extend %full-siteheaderwrap !optional;
+	}
+
+	.full-width-content .site-footer {
+		@extend %full-sitefooter !optional;
+	}
+	.full-width-content .site-footer > .wrap {
+		@extend %full-sitefooterwrap !optional;
+	}
+
+	.full-width-content .footer-widgets {
+		@extend %full-footerwidgets !optional;
+	}
+	.full-width-content .footer-widgets > .wrap {
+		@extend %full-footerwidgetswrap !optional;
+	}
+
+	.full-width-content .footer-menu {
+		@extend %full-footermenu !optional;
+	}
+	.full-width-content .footer-menu > .wrap {
+		@extend %full-footermenuwrap !optional;
+	}

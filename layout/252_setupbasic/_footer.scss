@@ -1,0 +1,144 @@
+/* SETUP | LAYOUT | 252_SETUPBASIC | FOOTER - 2017-09-26 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-FOOTER
+
+	%sitefooter_layout {
+
+		grid-area: footer;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"footerwrap";
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-base}rem) 1fr;
+			grid-template-areas:
+			". footerwrap .";
+		}
+
+	}
+	%sitefooterwrap_layout {}
+	%sitefooterwraponly_layout {
+
+		grid-area: footerwrap;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"siteby"
+		"copyright";
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-area: footerwrap;
+
+			grid-template-columns: 1fr #{$width-gutter}rem 120px;
+			grid-template-areas:
+			"copyright . siteby";
+		}
+
+	}
+
+	// FOOTER-WIDGETS
+
+	%footerwidgets_layout {
+
+		grid-area: footerwidgets;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"footerwidgetswrap";
+
+
+		// TABLET (UP)
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr minmax(0, #{$width-base}rem) 1fr;
+			grid-template-areas:
+			". footerwidgetswrap .";			
+		}
+
+	}
+	%footerwidgetswrap_layout {}
+	%footerwidgetswraponly_layout {
+
+		grid-area: footerwidgetswrap;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"footer1"
+		"footer2"
+		"footer3";
+
+		// TABLET +1 (UP)
+		@include responsive-range(tabletup) {
+			grid-area: footerwidgetswrap;
+			display: grid;
+			grid-template-columns: 1fr #{$width-gutter}rem 1fr #{$width-gutter}rem 1fr;
+			grid-template-areas:
+			"footer1 . footer2 . footer3";
+		}
+
+	}
+
+	%footerwidgets1_layout {
+
+		grid-area: footer1;
+
+	}
+
+	%footerwidgets2_layout {
+
+		grid-area: footer2;
+
+	}
+
+	%footerwidgets3_layout {
+
+		grid-area: footer3;
+
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-FOOTER
+
+	.site-footer {
+		@extend %sitefooter_layout !optional;
+
+		.wrap {
+			@extend %sitefooterwrap_layout !optional;
+		}
+	}
+	.site-footer > .wrap {
+		@extend %sitefooterwraponly_layout !optional;
+	}
+
+	// FOOTER-WIDGETS
+
+	.footer-widgets {
+		@extend %footerwidgets_layout !optional;
+
+		.wrap {
+			@extend %footerwidgetswrap_layout !optional;
+		}
+	}
+	.footer-widgets > .wrap {
+		@extend %footerwidgetswraponly_layout !optional;
+	}
+
+	.footer-widgets-1 {
+		@extend %footerwidgets1_layout !optional;
+	}
+
+	.footer-widgets-2 {
+		@extend %footerwidgets2_layout !optional;
+	}
+
+	.footer-widgets-3 {
+		@extend %footerwidgets3_layout !optional;
+	}

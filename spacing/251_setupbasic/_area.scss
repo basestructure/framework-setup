@@ -1,0 +1,391 @@
+/* SETUP | AREA | 251_SETUPBASIC | AREA - 2017-9-14 */
+
+// -------------------------------------
+// EXTEND
+
+	// AREA UP
+
+	%area-up {
+		margin-top: #{$area-default}rem;
+	}
+	%area-sml-up {
+		margin-top: #{$space-sml}rem;
+	}
+	%area-med-up {
+		margin-top: #{$space-med}rem;
+	}
+	%area-lrg-up {
+		margin-top: #{$space-lrg}rem;
+	}
+	%area-xlrg-up {
+		margin-top: #{$space-xlrg}rem;
+	}
+	%area-huge-up {
+		margin-top: #{$space-huge}rem;
+	}
+
+	// AREA DOWN
+
+	%area-down {
+		margin-bottom: #{$area-default}rem;
+	}
+	%area-sml-down {
+		margin-bottom: #{$space-sml}rem;
+	}
+	%area-med-down {
+		margin-bottom: #{$space-med}rem;
+	}
+	%area-lrg-down {
+		margin-bottom: #{$space-lrg}rem;
+	}
+	%area-xlrg-down {
+		margin-bottom: #{$space-xlrg}rem;
+	}
+	%area-huge-down {
+		margin-bottom: #{$space-huge}rem;
+	}
+
+	// AREA LEFT
+
+	%area-left {
+		margin-top: #{$area-default}rem;
+	}
+	%area-sml-left {
+		margin-top: #{$space-sml}rem;
+	}
+	%area-med-left {
+		margin-top: #{$space-med}rem;
+	}
+	%area-lrg-left {
+		margin-top: #{$space-lrg}rem;
+	}
+	%area-xlrg-left {
+		margin-top: #{$space-xlrg}rem;
+	}
+	%area-huge-left {
+		margin-top: #{$space-huge}rem;
+	}
+
+	// AREA RIGHT
+
+	%area-right {
+		margin-top: #{$area-default}rem;
+	}
+	%area-sml-right {
+		margin-top: #{$space-sml}rem;
+	}
+	%area-med-right {
+		margin-top: #{$space-med}rem;
+	}
+	%area-lrg-right {
+		margin-top: #{$space-lrg}rem;
+	}
+	%area-xlrg-right {
+		margin-top: #{$space-xlrg}rem;
+	}
+	%area-huge-right {
+		margin-top: #{$space-huge}rem;
+	}
+
+	// AREAINNER UP
+
+	%areainner-up {
+		margin-top: #{$area-default}rem;
+	}
+	%areainner-sml-up {
+		margin-top: #{$space-sml}rem;
+	}
+	%areainner-med-up {
+		margin-top: #{$space-med}rem;
+	}
+	%areainner-lrg-up {
+		margin-top: #{$space-lrg}rem;
+	}
+	%areainner-xlrg-up {
+		margin-top: #{$space-xlrg}rem;
+	}
+	%areainner-huge-up {
+		margin-top: #{$space-huge}rem;
+	}
+
+	// AREAINNER DOWN
+
+	%areainner-down {
+		margin-bottom: #{$area-default}rem;
+	}
+	%areainner-sml-down {
+		margin-bottom: #{$space-sml}rem;
+	}
+	%areainner-med-down {
+		margin-bottom: #{$space-med}rem;
+	}
+	%areainner-lrg-down {
+		margin-bottom: #{$space-lrg}rem;
+	}
+	%areainner-xlrg-down {
+		margin-bottom: #{$space-xlrg}rem;
+	}
+	%areainner-huge-down {
+		margin-bottom: #{$space-huge}rem;
+	}
+
+	// AREAINNER LEFT
+
+	%areainner-left {
+		margin-top: #{$area-default}rem;
+	}
+	%areainner-sml-left {
+		margin-top: #{$space-sml}rem;
+	}
+	%areainner-med-left {
+		margin-top: #{$space-med}rem;
+	}
+	%areainner-lrg-left {
+		margin-top: #{$space-lrg}rem;
+	}
+	%areainner-xlrg-left {
+		margin-top: #{$space-xlrg}rem;
+	}
+	%areainner-huge-left {
+		margin-top: #{$space-huge}rem;
+	}
+
+	// AREAINNER RIGHT
+
+	%areainner-right {
+		margin-top: #{$area-default}rem;
+	}
+	%areainner-sml-right {
+		margin-top: #{$space-sml}rem;
+	}
+	%areainner-med-right {
+		margin-top: #{$space-med}rem;
+	}
+	%areainner-lrg-right {
+		margin-top: #{$space-lrg}rem;
+	}
+	%areainner-xlrg-right {
+		margin-top: #{$space-xlrg}rem;
+	}
+	%areainner-huge-right {
+		margin-top: #{$space-huge}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// AREA
+
+	.area {
+		@extend %area-up !optional;
+		@extend %area-down !optional;
+		@extend %area-left !optional;
+		@extend %area-right !optional;
+	}
+
+	.area-sml {
+		@extend %area-sml-up !optional;
+		@extend %area-sml-down !optional;
+		@extend %area-sml-left !optional;
+		@extend %area-sml-right !optional;
+	}
+
+	.area-med {
+		@extend %area-med-up !optional;
+		@extend %area-med-down !optional;
+		@extend %area-med-left !optional;
+		@extend %area-med-right !optional;
+	}
+
+	.area-lrg {
+		@extend %area-lrg-up !optional;
+		@extend %area-lrg-down !optional;
+		@extend %area-lrg-left !optional;
+		@extend %area-lrg-right !optional;
+	}
+
+	.area-xlrg {
+		@extend %area-xlrg-up !optional;
+		@extend %area-xlrg-down !optional;
+		@extend %area-xlrg-left !optional;
+		@extend %area-xlrg-right !optional;
+	}
+
+	.area-huge {
+		@extend %area-huge-up !optional;
+		@extend %area-huge-down !optional;
+		@extend %area-huge-left !optional;
+		@extend %area-huge-right !optional;
+	}
+
+	// AREA-VERTICAL
+
+	.areax {
+		@extend %area-left !optional;
+		@extend %area-right !optional;
+	}
+
+	.areax-sml {
+		@extend %area-sml-left !optional;
+		@extend %area-sml-right !optional;
+	}
+
+	.areax-med {
+		@extend %area-med-left !optional;
+		@extend %area-med-right !optional;
+	}
+
+	.areax-lrg {
+		@extend %area-lrg-left !optional;
+		@extend %area-lrg-right !optional;
+	}
+
+	.areax-xlrg {
+		@extend %area-xlrg-left !optional;
+		@extend %area-xlrg-right !optional;
+	}
+
+	.areax-huge {
+		@extend %area-huge-left !optional;
+		@extend %area-huge-right !optional;
+	}
+
+	// AREA-Y
+
+	.areay {
+		@extend %area-up !optional;
+		@extend %area-down !optional;
+	}
+
+	.areay-sml {
+		@extend %area-sml-up !optional;
+		@extend %area-sml-down !optional;
+	}
+
+	.areay-med {
+		@extend %area-med-up !optional;
+		@extend %area-med-down !optional;
+	}
+
+	.areay-lrg {
+		@extend %area-lrg-up !optional;
+		@extend %area-lrg-down !optional;
+	}
+
+	.areay-xlrg {
+		@extend %area-xlrg-up !optional;
+		@extend %area-xlrg-down !optional;
+	}
+
+	.areay-huge {
+		@extend %area-huge-up !optional;
+		@extend %area-huge-down !optional;
+	}
+
+	// AREA
+
+	.areainner {
+		@extend %areainner-up !optional;
+		@extend %areainner-down !optional;
+		@extend %areainner-left !optional;
+		@extend %areainner-right !optional;
+	}
+
+	.areainner-sml {
+		@extend %areainner-sml-up !optional;
+		@extend %areainner-sml-down !optional;
+		@extend %areainner-sml-left !optional;
+		@extend %areainner-sml-right !optional;
+	}
+
+	.areainner-med {
+		@extend %areainner-med-up !optional;
+		@extend %areainner-med-down !optional;
+		@extend %areainner-med-left !optional;
+		@extend %areainner-med-right !optional;
+	}
+
+	.areainner-lrg {
+		@extend %areainner-lrg-up !optional;
+		@extend %areainner-lrg-down !optional;
+		@extend %areainner-lrg-left !optional;
+		@extend %areainner-lrg-right !optional;
+	}
+
+	.areainner-xlrg {
+		@extend %areainner-xlrg-up !optional;
+		@extend %areainner-xlrg-down !optional;
+		@extend %areainner-xlrg-left !optional;
+		@extend %areainner-xlrg-right !optional;
+	}
+
+	.areainner-huge {
+		@extend %areainner-huge-up !optional;
+		@extend %areainner-huge-down !optional;
+		@extend %areainner-huge-left !optional;
+		@extend %areainner-huge-right !optional;
+	}
+
+	// AREA-VERTICAL
+
+	.areainnerx {
+		@extend %areainner-left !optional;
+		@extend %areainner-right !optional;
+	}
+
+	.areainnerx-sml {
+		@extend %areainner-sml-left !optional;
+		@extend %areainner-sml-right !optional;
+	}
+
+	.areainnerx-med {
+		@extend %areainner-med-left !optional;
+		@extend %areainner-med-right !optional;
+	}
+
+	.areainnerx-lrg {
+		@extend %areainner-lrg-left !optional;
+		@extend %areainner-lrg-right !optional;
+	}
+
+	.areainnerx-xlrg {
+		@extend %areainner-xlrg-left !optional;
+		@extend %areainner-xlrg-right !optional;
+	}
+
+	.areainnerx-huge {
+		@extend %areainner-huge-left !optional;
+		@extend %areainner-huge-right !optional;
+	}
+
+	// AREA-Y
+
+	.areainnery {
+		@extend %areainner-up !optional;
+		@extend %areainner-down !optional;
+	}
+
+	.areainnery-sml {
+		@extend %areainner-sml-up !optional;
+		@extend %areainner-sml-down !optional;
+	}
+
+	.areainnery-med {
+		@extend %areainner-med-up !optional;
+		@extend %areainner-med-down !optional;
+	}
+
+	.areainnery-lrg {
+		@extend %areainner-lrg-up !optional;
+		@extend %areainner-lrg-down !optional;
+	}
+
+	.areainnery-xlrg {
+		@extend %areainner-xlrg-up !optional;
+		@extend %areainner-xlrg-down !optional;
+	}
+
+	.areainnery-huge {
+		@extend %areainner-huge-up !optional;
+		@extend %areainner-huge-down !optional;
+	}

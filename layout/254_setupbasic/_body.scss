@@ -1,0 +1,38 @@
+/* SETUP | LAYOUT | 254_SETUPBASIC | BODY - 2018-03-30 */
+
+// -------------------------------------
+// EXTEND
+
+	// HTML
+
+	%html_layout {}
+
+	// BODY
+
+	%body_layout {
+		font-family: $fontfamily-default;
+		color: $color-default;
+		//background-color: $bgcolor-default;
+		line-height: $lineheight-default;
+
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$fontsize-default-mobile}rem;
+			line-height: $lineheight-default-mobile;
+		}
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// HTML
+
+	html {
+		@extend %html_layout !optional;
+	}
+
+	// BODY
+
+	body {
+		@extend %body_layout !optional;
+	}

@@ -1,0 +1,55 @@
+/* SETUP | MENU | 260_SETUPBASIC | GUIDE - 2018-04-23 */
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-PRIMARY (MENU-HEADER Container)
+
+	%navprimary {
+		background-color: #ffccff; // pink
+	}
+	%navprimarywrap {}
+
+	// NAV-SECONDARY (MENU-TOP Container)
+
+	%navsecondary {
+		background-color: #ccff66; // green
+	}
+	%navsecondarywrap {}
+
+	// NAV-FOOTER
+
+	%navfooter {
+		background-color: #ccffff; // blue
+	}
+	%navfooterwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %navprimary !optional;
+	}
+	.nav-primary > .wrap {
+		@extend %navprimarywrap !optional;
+	}
+
+	// NAV-SECONDARY
+
+	.nav-secondary {
+		@extend %navsecondary !optional;
+	}
+	.nav-secondary > .wrap {
+		@extend %navsecondarywrap !optional;
+	}
+
+	// NAV-FOOTER
+
+	.nav-footer {
+		@extend %navfooter !optional;
+	}
+	.nav-footer > .wrap {
+		@extend %navfooterwrap !optional;
+	}

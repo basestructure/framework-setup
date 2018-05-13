@@ -1,0 +1,79 @@
+/* SETUP | LAYOUT | 260_SETUPBASIC | SC - 2018-04-20 */
+
+// -------------------------------------
+// EXTEND
+
+	%sc-siteinner {}
+
+	%sc-csw {}
+
+	%sc-content {}
+
+	%sc-sidebarprimary {}
+
+	// SITE-HEADER
+
+	%sc-siteheader {}
+	%sc-siteheaderwrap {}
+
+	// SITE-FOOTER
+
+	%sc-sitefooter {}
+	%sc-sitefooterwrap {}
+
+	// FOOTER-WIDGETS
+
+	%sc-footerwidgets {}
+	%sc-footerwidgetswrap {}
+
+	// FOOTER-MENU
+
+	%sc-footermenu {}
+	%sc-footermenuwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar .site-inner {
+		@extend %sc-siteinner !optional;
+	}
+
+	.content-sidebar .content-sidebar-wrap {
+		@extend %sc-csw !optional;
+	}
+
+	.content-sidebar .content {
+		@extend %sc-content !optional;
+	}
+
+	.content-sidebar .sidebar-primary {
+		@extend %sc-sidebarprimary !optional;
+	}
+
+	.content-sidebar .site-header {
+		@extend %sc-siteheader !optional;
+	}
+	.content-sidebar .site-header > .wrap {
+		@extend %sc-siteheaderwrap !optional;
+	}
+
+	.content-sidebar .site-footer {
+		@extend %sc-sitefooter !optional;
+	}
+	.content-sidebar .site-footer > .wrap {
+		@extend %sc-sitefooterwrap !optional;
+	}
+
+	.content-sidebar .footer-widgets {
+		@extend %sc-footerwidgets !optional;
+	}
+	.content-sidebar .footer-widgets > .wrap {
+		@extend %sc-footerwidgetswrap !optional;
+	}
+
+	.content-sidebar .footer-menu {
+		@extend %sc-footermenu !optional;
+	}
+	.content-sidebar .footer-menu > .wrap {
+		@extend %sc-footermenuwrap !optional;
+	}

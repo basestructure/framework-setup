@@ -1,0 +1,17 @@
+/* SETUP | BLOCK | 251_SETUPBASIC | WIDTH - 2017-09-19 */
+
+// -------------------------------------
+// EXTEND
+
+	%width-half {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "main side";
+		grid-column-gap: 2rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.block.half {
+		@extend %width-ms !optional;
+	}

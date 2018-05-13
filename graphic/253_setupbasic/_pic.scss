@@ -1,0 +1,160 @@
+/* SETUP | GRAPHIC | 252_SETUPBASIC | PIC - 2017-10-22 */
+
+// -------------------------------------
+// EXTEND
+
+	// PIC
+
+	%width-pic-tiny {
+		max-width: #{$width-pic-tiny}rem;
+	}
+	%width-pic-xsml {
+		max-width: #{$width-pic-xsml}rem;
+	}
+	%width-pic-sml {
+		max-width: #{$width-pic-sml}rem;
+	}
+	%width-pic-med {
+		max-width: #{$width-pic-med}rem;
+	}
+	%width-pic-lrg {
+		max-width: #{$width-pic-lrg}rem;
+	}
+	%width-pic-xlrg {
+		max-width: #{$width-pic-xlrg}rem;
+	}
+	%width-pic-huge {
+		max-width: #{$width-pic-huge}rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// PIC
+
+	.pic-tiny {
+		@extend %width-pic-tiny !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	.pic-xsml {
+		@extend %width-pic-xsml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	.pic-sml {
+		@extend %width-pic-sml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	.pic-med {
+		@extend %width-pic-med !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	.pic-lrg {
+		@extend %width-pic-lrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	.pic-xlrg {
+		@extend %width-pic-xlrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	.pic-huge {
+		@extend %width-pic-huge !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// PIC (WITH IMAGE)
+
+	img.pic-tiny {
+		@extend %width-pic-tiny !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-xsml {
+		@extend %width-pic-xsml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-sml {
+		@extend %width-pic-sml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-med {
+		@extend %width-pic-med !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-lrg {
+		@extend %width-pic-lrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-xlrg {
+		@extend %width-pic-xlrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.pic-huge {
+		@extend %width-pic-huge !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// PIC (WITH CAPTION)
+
+	.wp-caption.pic-tiny {
+		@extend %width-pic-tiny !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-xsml {
+		@extend %width-pic-xsml !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-sml {
+		@extend %width-pic-sml !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-med {
+		@extend %width-pic-med !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-lrg {
+		@extend %width-pic-lrg !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-xlrg {
+		@extend %width-pic-xlrg !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.pic-huge {
+		@extend %width-pic-huge !optional;
+		@extend %width-media-stretch !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}

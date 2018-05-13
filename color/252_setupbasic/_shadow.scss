@@ -1,0 +1,27 @@
+/* SETUP | COLOR | 252_SETUPBASIC | SHADOW - 2017-10-17 */
+
+// -------------------------------------
+// EXTEND
+
+	%shadow-inner {
+		-webkit-box-shadow: inset 0px 50px 50px -20px rgba(221,221,221,0.25);
+		-moz-box-shadow: 	inset 0px 50px 50px -20px rgba(221,221,221,0.25);
+		box-shadow: 		inset 0px 50px 50px -20px rgba(221,221,221,0.25);
+	}
+
+	%shadow-inner-dark {
+		-webkit-box-shadow: inset 0px 200px 300px -100px rgba(0,0,0,0.5);
+		-moz-box-shadow: 	inset 0px 200px 300px -100px rgba(0,0,0,0.5);
+		box-shadow: 		inset 0px 200px 300px -100px rgba(0,0,0,0.5);
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.shadow-inner {
+		@extend %shadow-inner !optional;
+	}
+
+	.shadow-inner-dark {
+		@extend %shadow-inner-dark !optional;
+	}

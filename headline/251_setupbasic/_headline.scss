@@ -1,4 +1,4 @@
-/* SETUP | HEADLINE | 251_SETUPBASIC | HEADLINE - 2017-08-31 */
+/* SETUP | HEADLINE | 251_SETUPBASIC | HEADLINE - 2017-09-14 */
 
 // -------------------------------------
 // EXTEND
@@ -8,6 +8,10 @@
 		line-height: $lineheight-headline;
 		line-height: $letterspacing-headline;
 		margin: 0;
+
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$lineheight-headline-mobile}rem;
+		}
 	}
 
 // -------------------------------------

@@ -1,0 +1,106 @@
+/* SETUP | GRAPHIC | 252_SETUPBASIC | PERCENT - 2017-10-21 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	// MAX
+
+	img.size-max {
+		@extend %percent-width-max !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// HALF
+
+	img.size-half {
+		@extend %percent-width-half !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// THIRD
+
+	img.size-third {
+		@extend %percent-width-third !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+		img.size-twothirds {
+			@extend %percent-width-twothirds !optional;
+			@extend %height-media-auto !optional;
+			@extend %width-media-stretch !optional;
+		}
+
+	// FOURTH
+
+	img.size-fourth {
+		@extend %percent-width-fourth !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+		img.size-threefourths {
+			@extend %percent-width-threefourths !optional;
+			@extend %height-media-auto !optional;
+			@extend %width-media-stretch !optional;
+		}
+
+	// FIFTH
+
+	img.size-fifth {
+		@extend %percent-width-fifth !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+		img.size-twofifths {
+			@extend %percent-width-twofifths !optional;
+			@extend %height-media-auto !optional;
+			@extend %width-media-stretch !optional;
+		}
+
+		img.size-threefifths {
+			@extend %percent-width-threefifths !optional;
+			@extend %height-media-auto !optional;
+			@extend %width-media-stretch !optional;
+		}
+
+		img.size-fourfifths {
+			@extend %percent-width-fourfifths !optional;
+			@extend %height-media-auto !optional;
+			@extend %width-media-stretch !optional;
+		}
+
+	// SIXTH
+
+	img.size-sixth {
+		@extend %percent-width-sixth !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+		img.size-fivesixths {
+			@extend %percent-width-fivesixths !optional;
+			@extend %height-media-auto !optional;
+			@extend %width-media-stretch !optional;
+		}
+
+	// EIGHT
+
+	img.size-eight {
+		@extend %percent-width-eight !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+		img.size-seveneights {
+			@extend %percent-width-seveneights !optional;
+			@extend %height-media-auto !optional;
+			@extend %width-media-stretch !optional;
+		}

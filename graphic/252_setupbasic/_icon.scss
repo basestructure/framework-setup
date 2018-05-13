@@ -1,0 +1,70 @@
+/* SETUP | GRAPHIC | 252_SETUPBASIC | ICON - 2017-10-20 */
+
+// -------------------------------------
+// EXTEND
+
+	// ICON
+
+	%width-icon-tiny {
+		max-width: #{$width-icon-tiny}rem;
+	}
+	%width-icon-xsml {
+		max-width: #{$width-icon-xsml}rem;
+	}
+	%width-icon-sml {
+		max-width: #{$width-icon-sml}rem;
+	}
+	%width-icon-med {
+		max-width: #{$width-icon-med}rem;
+	}
+	%width-icon-lrg {
+		max-width: #{$width-icon-lrg}rem;
+	}
+	%width-icon-xlrg {
+		max-width: #{$width-icon-xlrg}rem;
+	}
+	%width-icon-huge {
+		max-width: #{$width-icon-huge}rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// ICON
+
+	img.icon-tiny {
+		@extend %width-icon-tiny !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-xsml {
+		@extend %width-icon-xsml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-sml {
+		@extend %width-icon-sml !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-med {
+		@extend %width-icon-med !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-lrg {
+		@extend %width-icon-lrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-xlrg {
+		@extend %width-icon-xlrg !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.icon-huge {
+		@extend %width-icon-huge !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}

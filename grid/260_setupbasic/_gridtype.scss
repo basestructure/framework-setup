@@ -1,0 +1,29 @@
+/* SETUP | GRID | 260_SETUPBASIC | GRIDTYPE - 2018-04-30 */
+
+// -------------------------------------
+// EXTEND
+
+	%gridtype-widget {}
+	%gridtype-widgetentry {
+		grid-area: gridtype-widget;
+		grid-column: span 1;
+	}
+
+	%gridtype-widget-half {
+		grid-template-areas:
+		"gridtype-widget gridtype-widget";
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.grid-widget {
+		@extend %gridtype-widget !optional;
+	}
+	.grid-widget > .widget {
+		@extend %gridtype-widgetentry !optional;
+	}
+
+	.grid-widget.grid-half {
+		@extend %gridtype-widget-half !optional;
+	}

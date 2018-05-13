@@ -1,0 +1,50 @@
+/* SETUP | BLOCK | 252_SETUPBASIC | COMMON - 2017-10-05 */
+
+// -------------------------------------
+// EXTEND
+
+	%block-1col {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.block-1col {
+		@extend %block-1col !optional;
+	}
+
+	.block-2col-1col {
+		@extend %block-1col !optional;
+
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: #{$space-lrg}rem;
+		}
+	}
+
+	.block-3col-1col {
+		@extend %block-1col !optional;
+
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-column-gap: #{$space-lrg}rem;
+		}
+	}
+
+	.block-4col-2col-1col {
+		@extend %block-1col !optional;
+
+		@include responsive-range(mobileup) {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: #{$space-med}rem;
+		}
+
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-column-gap: #{$space-lrg}rem;
+		}
+	}

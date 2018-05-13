@@ -1,0 +1,104 @@
+/* SETUP | MENU | 260_SETUPBASIC | MEGAMENU - 2018-04-23 */
+
+// GUIDE
+// -------------------------------------
+
+	// #mega-menu-wrap-primary 		#mega-menu-primary		
+	// #mega-menu-wrap-secondary	#mega-menu-secondary	
+	// #mega-menu-wrap-footer		#mega-menu-footer
+
+		// > li.mega-menu-item
+
+			// > a.mega-menu-link
+
+
+// -------------------------------------
+// EXTEND
+
+	// MEGA-MENU-ITEM
+
+	%megamenuitem {}
+
+	// MEGA-MENU-LINK
+
+	%megamenulink {}
+
+	// NAV-PRIMARY
+
+	%primary-megamenuitem-lvl1 {
+		text-transform: uppercase;
+	}
+	%primary-megamenulink-lvl1 {}
+
+	%primary-megamenuitem {}
+	%primary-megamenulink {}
+
+	// NAV-SECONDARY
+
+	%secondary-megamenuitem-lvl1 {}
+	%secondary-megamenulink-lvl1 {}
+
+	%secondary-megamenuitem {}
+	%secondary-megamenulink {}
+
+	// NAV-FOOTER
+
+	%footer-megamenuitem-lvl1 {}
+	%footer-megamenulink-lvl1 {}
+
+	%footer-megamenuitem {}
+	%footer-megamenulink {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.mega-menu-item {
+		@extend %megamenuitem !optional;
+	}
+
+	.mega-menu-link {
+		@extend %megamenulink !optional;
+	}
+
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item  {
+		@extend %primary-megamenuitem-lvl1 !optional;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+		@extend %primary-megamenulink-lvl1 !optional;
+	}
+
+		#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item  {
+			@extend %primary-megamenuitem !optional;
+		}
+		#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item a.mega-menu-link {
+			@extend %primary-megamenulink !optional;
+		}
+
+	#mega-menu-wrap-secondary #mega-menu-secondary > li.mega-menu-item  {
+		@extend %secondary-megamenuitem-lvl1 !optional;
+	}
+	#mega-menu-wrap-secondary #mega-menu-secondary > li.mega-menu-item > a.mega-menu-link {
+		@extend %secondary-megamenulink-lvl1 !optional;
+	}
+
+		#mega-menu-wrap-secondary #mega-menu-secondary li.mega-menu-item  {
+			@extend %secondary-megamenuitem !optional;
+		}
+		#mega-menu-wrap-secondary #mega-menu-secondary li.mega-menu-item a.mega-menu-link {
+			@extend %secondary-megamenulink !optional;
+		}
+
+	#mega-menu-wrap-footer #mega-menu-footer > li.mega-menu-item  {
+		@extend %footer-megamenuitem-lvl1 !optional;
+	}
+	#mega-menu-wrap-footer #mega-menu-footer > li.mega-menu-item > a.mega-menu-link {
+		@extend %footer-megamenulink-lvl1 !optional;
+	}
+
+		#mega-menu-wrap-footer #mega-menu-footer li.mega-menu-item  {
+			@extend %footer-megamenuitem !optional;
+		}
+		#mega-menu-wrap-footer #mega-menu-footer li.mega-menu-item a.mega-menu-link {
+			@extend %footer-megamenulink !optional;
+		}

@@ -1,0 +1,66 @@
+/* SETUP | VARIABLES | 252_SETUPBASIC | SPACE - 2018-09-14 */
+
+// -------------------------------------
+// VARIABLES
+
+// SPACE
+
+	$space:								1.0;		// 16px
+
+// SCALE SCALE
+
+	$space-tiny:						0.0625;		// 1px	TINY
+	$space-xxxsml:						0.125;		// 2px	XXXSML
+	$space-xxsml:						0.25;		// 4px	XXSML / QUARTER
+		$space-quarter:					0.25;		// 4px
+	$space-xsml:						0.3125;		// 5px	XSML
+	$space-sml:							0.5;		// 8px	SML / HALF
+		$space-half:					0.5;		// 8px
+	$space-default:						1.0;		// 16px
+	$space-med:							1.5; 		// 24px	MED
+	$space-lrg:							2;			// 32px	LRG / DOUBLE
+		$space-double:					2.0;		// 32px
+	$space-xlrg:						3;			// 48px	XLRG / TRIPLE
+		$space-triple:					3;			// 48px
+	$space-huge:						4;			// 64px
+
+// MARGIN
+
+	$margin-default:					1.0;		// 16px
+	$margin-half:						0.5;		// 8px
+	$margin-quarter:					0.25;		// 4px
+	$margin-double:						2.0;		// 32px
+	$margin-triple:						3.0;		// 48px
+
+// PADDING
+
+	$padding:							1.0;		// 16px
+	$padding-default:					1.0;		// 16px
+	$padding-half:						0.5;		// 8px
+	$padding-quarter:					0.25;		// 4px
+	$padding-double:					2.0;		// 32px
+	$padding-triple:					3.0;		// 48px
+
+// BORDER
+
+	$border:							1.0;		// 16px
+	$border-default:					1.0;		// 16px
+	$border-half:						0.5;		// 8px
+	$border-quarter:					0.25;		// 4px
+	$border-double:						2.0;		// 32px
+	$border-triple:						3.0;		// 48px
+
+// AREA
+
+	$area:								1.0;		// 16px
+	$area-default:						1.0;		// 16px
+	$area-quarter:						0.25;		// 4px
+	$area-half:							0.5;		// 8px
+	$area-double:						2.0;		// 32px
+	$area-triple:						3.0;		// 48px
+
+	$area-sml:							0.25;		// 4px
+	$area-med:							0.5;		// 8px
+	$area-lrg:							2.0;		// 32px
+	$area-xlrg:							3.0;		// 48px
+	$area-huge:							5.0;		// 80px

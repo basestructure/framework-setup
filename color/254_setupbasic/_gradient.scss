@@ -1,0 +1,51 @@
+/* SETUP | COLOR | 254_SETUPBASIC | GRADIENT - 2018-02-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%gradient-top {
+		background: #06253a; /* fallback for old browsers */
+		background: -webkit-linear-gradient(top, #06253a, #147FC4);
+		background: -o-linear-gradient(top, #06253a, #147FC4);
+		background: linear-gradient(to bottom, #06253a, #147FC4);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+	%gradient-bottom {
+		background: #06253a; /* fallback for old browsers */
+		background: -webkit-linear-gradient(bottom, #06253a, #147FC4);
+		background: -o-linear-gradient(bottom, #06253a, #147FC4);
+		background: linear-gradient(to top, #06253a, #147FC4);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+	%gradient-right {
+		background: #06253a; /* fallback for old browsers */
+		background: -webkit-linear-gradient(right, #06253a, #147FC4);
+		background: -o-linear-gradient(right, #06253a, #147FC4);
+		background: linear-gradient(to left, #06253a, #147FC4);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+	%gradient-left {
+		background: #06253a; /* fallback for old browsers */
+		background: -webkit-linear-gradient(left, #06253a, #147FC4);
+		background: -o-linear-gradient(left, #06253a, #147FC4);
+		background: linear-gradient(to right, #06253a, #147FC4);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.gradient-right {
+		@extend %gradient-right !optional;
+	}
+
+	.gradient-top {
+		@extend %gradient-top !optional;
+	}
+
+	.gradient-bottom {
+		@extend %gradient-bottom !optional;
+	}
+
+	.gradient-left {
+		@extend %gradient-left !optional;
+	}

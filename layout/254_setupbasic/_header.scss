@@ -1,0 +1,264 @@
+/* SETUP | LAYOUT | 254_SETUPBASIC | HEADER - 2018-02-23 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader {
+
+		grid-area: header;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"headerwrap";
+
+		// spacing
+		padding: 0.5rem;
+
+		// color
+		background: #fff;  /* fallback for old browsers */
+		background-color:rgba(255,255,255,1.0);
+
+		// LRG (UP)
+		@include responsive-range(lrgup) {}
+
+	}
+	%siteheaderwrap {
+
+		grid-area: headerwrap;
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+		grid-template-areas:
+		". titlearea ."
+		". headerwidgetarea .";
+
+		// LRG (UP)
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr minmax(0, #{$width-gutter}rem) 1fr;
+			grid-template-areas:
+			"titlearea . headerwidgetarea";
+		}
+
+	}
+
+	// HEADER-WIDGET-AREA
+
+	%headerwidgetarea {
+
+		grid-area: headerwidgetarea;
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+		grid-template-areas:
+		". navprimary .";
+		align-self: center;
+
+		// LRG (UP)
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr auto;
+			grid-template-areas:
+			". navprimary";
+		}
+
+	}
+
+	// TITLE-AREA
+
+	%titlearea {
+
+		grid-area: titlearea;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"sitetitle"
+		"sitedescription";
+
+		// LRG (UP)
+		@include responsive-range(lrgup) {
+			grid-template-columns: auto 1rem auto 1fr;
+			grid-template-areas:
+			"sitetitle . sitedescription .";
+		}
+
+	}
+	%full-titlearea {}
+
+	// SITE-TITLE
+
+	%sitetitle {
+
+		grid-area: sitetitle;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"sitetitlelink";
+
+		// typography
+		font-family: $fontfamily-sitetitle;				// fontfamily
+		font-size: #{$fontsize-sitetitle}rem;			// fontsize
+		font-weight: $fontweight-thick;
+		line-height: 1;
+		text-align: center;
+
+		// spacing
+		margin-bottom: 0;
+
+		// LRG (UP)
+		@include responsive-range(lrgup) {
+			text-align: left;
+			align-self: center;
+		}
+
+	}
+	%sitetitle-a {
+
+		grid-area: sitetitlelink;
+	}
+	%sitetitle-hvr {}
+
+	// SITE-TITLE (HEADER-IMAGE)
+
+	%headerimage-sitetitle {
+
+		grid-template-columns: 1fr auto 1fr;
+		grid-template-areas:
+		". sitetitlelink .";
+
+		// graphic logo
+		color: transparent;
+
+		// LRG (UP)
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+			"sitetitlelink";
+			align-self: center;			
+		}
+
+	}
+	%headerimage-sitetitle-a {
+
+		// graphic logo
+		width: 200px;
+		height: 50px;
+
+		display: block;
+		color: transparent;
+		background-size: contain !important;
+
+	}
+	%headerimage-sitetitle-hvr {}
+
+	// SITE-DESCRIPTION
+
+	%sitedescription {
+
+		grid-area: sitedescription;
+
+		// typography
+		font-family: $fontfamily-sitedescription;		// fontfamily
+		font-size: #{$fontsize-sitedescription}rem;		// fontsize
+		font-weight: $fontweight-thin;
+		line-height: 1;
+		text-align: center;
+
+		// spacing
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+
+		// LRG (UP)
+		@include responsive-range(lrgup) {
+			text-align: left;
+			align-self: center;
+			margin-top: 0;
+		}
+
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	%headerimage-sitedescription {
+		
+		// spacing
+		margin-top: 1rem;
+
+		// LRG (UP)
+		@include responsive-range(lrgup) {
+			margin-top: 0;
+		}
+
+	}
+		%full-headerimage-sitedescription {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header {
+		@extend %siteheader !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap !optional;
+		}
+	}
+	.site-header > .wrap {
+		@extend %siteheaderwraponly !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	.header-widget-area {
+		@extend %headerwidgetarea !optional;
+	}
+
+	// TITLE-AREA
+
+	.title-area {
+		@extend %titlearea !optional;
+	}
+		.full-width-content .title-area {
+			@extend %full-titlearea !optional;
+		}
+
+	// SITE-TITLE
+
+	.site-title {
+		@extend %sitetitle !optional;
+
+		a {
+			@extend %sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-TITLE (HEADER IMAGE)
+
+	.header-image .site-title {
+		@extend %headerimage-sitetitle !optional;
+
+		a {
+			@extend %headerimage-sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %headerimage-sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-DESCRIPTION
+
+	.site-description {
+		@extend %sitedescription !optional;
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	.header-image .site-description {
+		@extend %headerimage-sitedescription !optional;
+	}
+		.full-width-content .site-description {
+			@extend %full-headerimage-sitedescription !optional;
+		}

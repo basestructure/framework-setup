@@ -1,4 +1,4 @@
-/* SETUP | TYPE | 251_SETUPBASIC | SIZE - 2017-08-31 */
+/* SETUP | TYPE | 251_SETUPBASIC | SIZE - 2017-09-14 */
 
 // -------------------------------------
 // EXTEND
@@ -46,36 +46,62 @@
 
 	%fontsize-tiny {
 		font-size: #{$fontsize-tiny}rem;
+		line-height: $lineheight-tiny;
 	}
 	%fontsize-xxxsml {
 		font-size: #{$fontsize-xxxsml}rem;
+		line-height: $lineheight-xxxsml;
 	}
 	%fontsize-xxsml {
 		font-size: #{$fontsize-xxsml}rem;
+		line-height: $lineheight-xxsml;
 	}
 	%fontsize-xsml {
 		font-size: #{$fontsize-xsml}rem;
+		line-height: $lineheight-xsml;
 	}
 	%fontsize-sml {
 		font-size: #{$fontsize-sml}rem;
+		line-height: $lineheight-sml;
 	}
 	%fontsize-med {
 		font-size: #{$fontsize-med}rem;
+		line-height: $lineheight-med;
 	}
 	%fontsize-lrg {
 		font-size: #{$fontsize-lrg}rem;
+		line-height: $lineheight-lrg;
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$fontsize-lrg-mobile}rem;
+		}
 	}
 	%fontsize-xlrg {
 		font-size: #{$fontsize-xlrg}rem;
+		line-height: $lineheight-xlrg;
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$fontsize-xlrg-mobile}rem;
+		}
 	}
 	%fontsize-xxlrg {
 		font-size: #{$fontsize-xxlrg}rem;
+		line-height: $lineheight-xxlrg;
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$fontsize-xxlrg-mobile}rem;
+		}
 	}
 	%fontsize-xxxlrg {
 		font-size: #{$fontsize-xxxlrg}rem;
+		line-height: $lineheight-xxxlrg;
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$fontsize-xxxlrg-mobile}rem;
+		}
 	}
 	%fontsize-huge {
 		font-size: #{$fontsize-huge}rem;
+		line-height: $lineheight-huge;
+		@include responsive-range(tabletbelowdown) {
+			font-size: #{$fontsize-huge-mobile}rem;
+		}
 	}
 
 // -------------------------------------

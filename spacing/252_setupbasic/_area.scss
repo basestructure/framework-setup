@@ -1,0 +1,285 @@
+/* SETUP | SPACING | 252_SETUPBASIC | AREA - 2017-9-21 */
+
+// -------------------------------------
+// EXTEND
+
+// -------------------------------------
+// SELECTORS
+
+	// AREA-UPDOWN
+
+	.area {
+		@extend %space-up !optional;
+		@extend %space-down !optional;
+		@extend %space-left !optional;
+		@extend %space-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin: #{$space-sml}rem;
+		}
+	}
+	.area-y {
+		@extend %space-up !optional;
+		@extend %space-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-sml}rem;
+			margin-bottom: #{$space-sml}rem;
+		}
+	}
+	.area-up {
+		@extend %space-up !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-sml}rem;
+		}
+	}
+	.area-down {
+		@extend %space-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-bottom: #{$space-sml}rem;
+		}
+	}
+	.area-left {
+		@extend %space-left !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-left: #{$space-sml}rem;
+		}
+	}
+	.area-right {
+		@extend %space-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-right: #{$space-sml}rem;
+		}
+	}
+
+	// AREA-SML-UPDOWN
+
+	.area-sml {
+		@extend %space-sml-up !optional;
+		@extend %space-sml-down !optional;
+		@extend %space-sml-left !optional;
+		@extend %space-sml-right !optional;
+	}
+	.area-sml-y {
+		@extend %space-sml-up !optional;
+		@extend %space-sml-down !optional;
+	}
+	.area-sml-up {
+		@extend %space-sml-up !optional;
+	}
+	.area-sml-down {
+		@extend %space-sml-down !optional;
+	}
+	.area-sml-left {
+		@extend %space-sml-left !optional;
+	}
+	.area-sml-right {
+		@extend %space-sml-right !optional;
+	}
+
+	// AREA-MED-UPDOWN
+
+	.area-med {
+		@extend %space-med-up !optional;
+		@extend %space-med-down !optional;
+		@extend %space-med-left !optional;
+		@extend %space-med-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin: #{$space-default}rem;
+		}
+	}
+	.area-med-y {
+		@extend %space-med-up !optional;
+		@extend %space-med-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-default}rem;
+			margin-bottom: #{$space-default}rem;
+		}
+	}
+	.area-med-up {
+		@extend %space-med-up !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-default}rem;
+		}
+	}
+	.area-med-down {
+		@extend %space-med-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-bottom: #{$space-default}rem;
+		}
+	}
+	.area-med-left {
+		@extend %space-med-left !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-left: #{$space-default}rem;
+		}
+	}
+	.area-med-right {
+		@extend %space-med-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-right: #{$space-default}rem;
+		}
+	}
+
+	// AREA-LRG-UPDOWN
+
+	.area-lrg {
+		@extend %space-lrg-up !optional;
+		@extend %space-lrg-down !optional;
+		@extend %space-lrg-left !optional;
+		@extend %space-lrg-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin: #{$space-default}rem;
+		}
+	}
+	.area-lrg-y {
+		@extend %space-lrg-up !optional;
+		@extend %space-lrg-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-default}rem;
+			margin-bottom: #{$space-default}rem;
+		}
+	}
+	.area-lrg-up {
+		@extend %space-lrg-up !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-default}rem;
+		}
+	}
+
+	.area-lrg-down {
+		@extend %space-lrg-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-bottom: #{$space-default}rem;
+		}
+	}
+	.area-lrg-left {
+		@extend %space-lrg-left !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-left: #{$space-default}rem;
+		}
+	}
+
+	.area-lrg-right {
+		@extend %space-lrg-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-right: #{$space-default}rem;
+		}
+	}
+
+
+	// AREA-XLRG-UPDOWN
+
+	.area-xlrg {
+		@extend %space-xlrg-up !optional;
+		@extend %space-xlrg-down !optional;
+		@extend %space-xlrg-left !optional;
+		@extend %space-xlrg-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin: #{$space-med}rem;
+		}
+	}
+	.area-xlrg-y {
+		@extend %space-xlrg-up !optional;
+		@extend %space-xlrg-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-med}rem;
+			margin-bottom: #{$space-med}rem;
+		}
+	}
+	.area-xlrg-up {
+		@extend %space-xlrg-up !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-med}rem;
+		}
+	}
+	.area-xlrg-down {
+		@extend %space-xlrg-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-bottom: #{$space-med}rem;
+		}
+	}
+	.area-xlrg-left {
+		@extend %space-xlrg-left !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-left: #{$space-med}rem;
+		}
+	}
+	.area-xlrg-right {
+		@extend %space-xlrg-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-right: #{$space-med}rem;
+		}
+	}
+
+	// AREA-HUGE-UPDOWN
+
+	.area-huge {
+		@extend %space-huge-up !optional;
+		@extend %space-huge-down !optional;
+		@extend %space-huge-left !optional;
+		@extend %space-huge-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin: #{$space-med}rem;
+		}
+	}
+	.area-huge-y {
+		@extend %space-huge-up !optional;
+		@extend %space-huge-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-med}rem;
+			margin-bottom: #{$space-med}rem;
+		}
+	}
+	.area-huge-up {
+		@extend %space-huge-up !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-top: #{$space-med}rem;
+		}
+	}
+	.area-huge-down {
+		@extend %space-huge-down !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-bottom: #{$space-med}rem;
+		}
+	}
+	.area-huge-left {
+		@extend %space-huge-left !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-left: #{$space-med}rem;
+		}
+	}
+	.area-huge-right {
+		@extend %space-huge-right !optional;
+		
+		@include responsive-range(tabletbelowdown) {
+			margin-right: #{$space-med}rem;
+		}
+	}

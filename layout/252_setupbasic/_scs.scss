@@ -1,0 +1,55 @@
+/* SETUP | LAYOUT | 252_SETUPBASIC | SCS - 2017-09-25 */
+
+// -------------------------------------
+// EXTEND
+
+	%scs-siteinner {
+
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {
+			grid-template-columns: 1fr minmax(0, #{$width-sidebarsecondary}rem) minmax(0, #{$width-csw-ms}rem) 1fr;
+			grid-template-areas:
+			". sidebarsecondary csw ."
+		}
+
+	}
+
+	%scs-csw {
+
+		// MOBILE (UP)
+		@include responsive-range(mobileup) {
+			grid-template-columns: minmax(0, #{$width-sidebarprimary}rem) minmax(0, #{$width-content}rem);
+			grid-template-areas:
+			"sidebarprimary content"
+		}
+
+	}
+
+	%scs-content {}
+
+	%scs-sidebarprimary {}
+
+	%scs-sidebarsecondary {}
+
+// -------------------------------------
+// SELECTORS
+
+	.sidebar-content-sidebar .site-inner {
+		@extend %scs-siteinner !optional;
+	}
+
+	.sidebar-content-sidebar .content-sidebar-wrap {
+		@extend %scs-csw !optional;
+	}
+
+	.sidebar-content-sidebar .content {
+		@extend %scs-content !optional;
+	}
+
+	.sidebar-content-sidebar .sidebar-primary {
+		@extend %scs-sidebarprimary !optional;
+	}
+
+	.sidebar-content-sidebar .sidebar-secondary {
+		@extend %scs-sidebarsecondary !optional;
+	}

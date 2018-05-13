@@ -1,0 +1,255 @@
+/* SETUP | GRID | 254_SETUPBASIC | SECTION - 2018-04-09 */
+
+// -------------------------------------
+// EXTEND
+
+	%section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+	}
+
+	// VERTICAL
+
+	%section-top {
+		//grid-area: section-top;
+	}
+	%section-bottom {
+		//grid-area: section-bottom;
+	}
+
+	// HORIZONTAL
+
+	%section-left {
+		grid-area: section-left;
+	}
+	%section-center {
+		grid-area: section-center;
+	}
+	%section-right {
+		grid-area: section-right;
+	}
+
+	// MAIN & SIDE
+
+	%section-main {
+		grid-area: section-main;
+		align-self: start;
+		width: 100%;
+	}
+	%section-side {
+		grid-area: section-side;
+		align-self: start;
+		width: 100%;
+	}
+
+	%section-mainside {
+		grid-template-columns: auto 1fr;
+		grid-template-areas:
+		"section-main section-side";
+	}
+
+	%section-mainside-vertical {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"section-main"
+		"section-side";
+	}
+
+	%section-sidemain {
+		grid-template-columns: 1fr auto;
+		grid-template-areas:
+		"section-side section-main";
+	}
+
+	%section-sidemain-vertical {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"section-side"
+		"section-main";
+	}
+
+	// WIDTH MAIN
+
+	%section-eight {
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-areas:
+		"section-main section-side section-side section-side section-side section-side section-side section-side";
+	}
+	%section-sixth {
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-areas:
+		"section-main section-side section-side section-side section-side section-side";
+	}
+	%section-fifth {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-areas:
+		"section-main section-side section-side section-side section-side";
+	}
+	%section-twofifths {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-areas:
+		"section-main section-main section-side section-side section-side";
+	}
+	%section-fourth {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+		"section-main section-side section-side section-side";
+	}
+	%section-third {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+		"section-main section-side section-side";
+	}
+	%section-twofifths {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-areas:
+		"section-main section-main section-side section-side section-side";
+	}
+	%section-half {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+		"section-main section-side";
+	}
+	%section-twothirds {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+		"section-main section-main section-side";
+	}
+	%section-threefourths {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+		"section-main section-main section-main section-side";
+	}
+	%section-threefifths {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-areas:
+		"section-main section-main section-main section-side section-side";
+	}
+	%section-fourfifths {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-areas:
+		"section-main section-main section-main section-main section-side";
+	}
+	%section-fivesixths {
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-areas:
+		"section-main section-main section-main section-main section-main section-side";
+	}
+	%section-seveneights {
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-areas:
+		"section-main section-main section-main section-main section-main section-main section-main section-side";
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.section {
+		@extend %section !optional;
+	}
+
+	// VERTICAL
+
+	.section-top {
+		@extend %section-top !optional;
+	}
+	.section-bottom {
+		@extend %section-bottom !optional;
+	}
+
+	// HORIZONTAL
+
+	.section-left {
+		@extend %section-left !optional;
+	}
+	.section-center {
+		@extend %section-center !optional;
+	}
+	.section-right {
+		@extend %section-right !optional;
+	}
+
+	// MAIN & SIDE
+
+	.section > .main {
+		@extend %section-main !optional;
+	}
+	.section > .side {
+		@extend %section-side !optional;
+	}
+
+	// HORIZONTAL
+
+	.section.mainside {
+		@extend %section-mainside !optional;
+	}
+	.section.sidemain {
+		@extend %section-sidemain !optional;
+	}
+
+	// VERTICAL
+
+	.section.mainside.vertical {
+		@extend %section-mainside-vertical !optional;
+	}
+	.section.sidemain.vertical {
+		@extend %section-sidemain-vertical !optional;
+	}
+
+	// WIDTH MAIN
+
+	.section.section-eight {
+		@extend %section-eight !optional;
+	}
+		.section.section-eight {
+			@extend %section-eight !optional;
+		}
+
+	.section.section-sixth {
+		@extend %section-sixth !optional;
+	}
+
+	.section.section-fifth {
+		@extend %section-fifth !optional;
+	}
+
+	.section.section-fourth {
+		@extend %section-fourth !optional;
+	}
+
+	.section.section-third {
+		@extend %section-third !optional;
+	}
+
+	.section.section-half {
+		@extend %section-half !optional;
+	}
+
+	.section.section-twofifths {
+		@extend %section-twofifths !optional;
+	}
+
+	.section.section-twothirds {
+		@extend %section-twothirds !optional;
+	}
+
+	.section.section-threefourths {
+		@extend %section-threefourths !optional;
+	}
+
+	.section.section-threefifths {
+		@extend %section-threefifths !optional;
+	}
+
+	.section.section-fourfifths {
+		@extend %section-fourfifths !optional;
+	}
+
+	.section.section-fivesixths {
+		@extend %section-fivesixths !optional;
+	}
+
+	.section.section-seveneights {
+		@extend %section-seveneights !optional;
+	}

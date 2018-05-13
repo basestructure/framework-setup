@@ -1,0 +1,23 @@
+/* SETUP | GRID | 253_SETUPBASIC | CENTER - 2018-01-21 */
+
+// -------------------------------------
+// EXTEND
+
+	%grid-centered-parent {
+		grid-area: grid-centered;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+		". . ."
+		". grid-item ."
+		". . .";
+	}
+
+	%grid-centered-child {
+		grid-area: grid-item;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.grid-centered {}

@@ -1,0 +1,116 @@
+/* SETUP | MENU | 260_SETUPBASIC | NAV - 2018-05-01 */
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-PRIMARY (MENU-HEADER Container)
+
+	%navprimary {
+		grid-area: navprimary;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"navprimarywrap";
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr auto 1fr;
+			grid-template-areas:
+			"."
+			"navprimarywrap"
+			".";
+		}
+
+	}
+	%navprimarywrap {
+		grid-area: navprimarywrap;
+	}
+
+	// NAV-SECONDARY (MENU-TOP Container)
+
+	%navsecondary {
+		grid-area: navsecondary;
+		display: grid;
+		grid-template-columns: 1rem 1fr 1rem;
+		grid-template-rows: 1rem auto 1rem;
+		grid-template-areas:
+		". . ."
+		". navsecondarywrap ."
+		". . .";
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			grid-template-columns: 1rem 1fr minmax(0, #{$width-secondarymenuwrap}rem) 1fr 1rem;
+			grid-template-rows: 1rem auto 1rem;
+			grid-template-areas:
+			". . . . ."
+			". . navsecondarywrap . ."
+			". . . . .";
+		}
+
+	}
+	%navsecondarywrap {
+		grid-area: navsecondarywrap;
+	}
+
+	// NAV-FOOTER
+
+	%navfooter {
+		grid-area: navfooter;
+		display: grid;
+		grid-template-columns: 1rem 1fr 1rem;
+		grid-template-rows: 1rem auto 1rem;
+		grid-template-areas:
+		". . ."
+		". navfooterwrap ."
+		". . .";
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			grid-template-columns: 1rem 1fr minmax(0, #{$width-footermenuwrap}rem) 1fr 1rem;
+			grid-template-rows: 1rem auto 1rem;
+			grid-template-areas:
+			". . . . ."
+			". . navfooterwrap . ."
+			". . . . .";
+		}
+
+	}
+	%navfooterwrap {
+		grid-area: navfooterwrap;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %navprimary !optional;
+	}
+	.nav-primary > .wrap {
+		@extend %navprimarywrap !optional;
+	}
+
+	// NAV-SECONDARY
+
+	.nav-secondary {
+		@extend %navsecondary !optional;
+	}
+	.nav-secondary > .wrap {
+		@extend %navsecondarywrap !optional;
+	}
+
+	// NAV-FOOTER
+
+	.nav-footer {
+		@extend %navfooter !optional;
+	}
+	.nav-footer > .wrap {
+		@extend %navfooterwrap !optional;
+	}
+		#mega-menu-wrap-footer.mega-menu-wrap {
+			@extend %navfooterwrap !optional;
+		}

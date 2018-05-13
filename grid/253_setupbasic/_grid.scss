@@ -1,0 +1,254 @@
+/* SETUP | GRID | 253_SETUPBASIC | GRID - 2017-12-07 */
+
+// -------------------------------------
+// EXTEND
+
+// DISPLAY GRID
+
+	%grid {
+		display: grid;
+	}
+
+// FULL
+
+	%grid-full {
+		grid-template-columns: 1fr;
+	}
+
+// HALF (GRID)
+
+	%grid-half {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+// THIRD
+
+	%grid-third {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+// FOURTH
+
+	%grid-fourth {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+// FIFTH
+
+	%grid-fifth {
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+// SIXTH
+
+	%grid-sixth {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+// EIGHT
+
+	%grid-eight {
+		grid-template-columns: repeat(8, 1fr);
+	}
+
+// -------------------------------------
+// SELECTORS
+
+// FULL
+
+	.full-grid {
+		@extend %grid !optional;
+		@extend %grid-full !optional;
+		@extend %gap-default !optional;
+	}
+
+// HALF
+
+	.half-grid {
+		@extend %grid !optional;
+		@extend %grid-half !optional;
+		@extend %gap-default !optional;
+
+		@include responsive-range(medbelowdown) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.half-grid > .full {
+		grid-column: span 2;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+
+// THIRD
+
+	.third-grid {
+		@extend %grid !optional;
+		@extend %grid-third !optional;
+		@extend %gap-default !optional;
+
+		@include responsive-range(medbelowdown) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.third-grid > .full {
+		grid-column: span 3;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.third-grid > .twothirds {
+		grid-column: span 2;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+
+// FOURTH
+
+	.fourth-grid {
+		@extend %grid !optional;
+		@extend %grid-fourth !optional;
+		@extend %gap-default !optional;
+
+		@include responsive-range(medbelowdown) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.fourth-grid > .full {
+		grid-column: span 4;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.fourth-grid > .threefourths {
+		grid-column: span 3;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.fourth-grid > .half {
+		grid-column: span 2;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+
+// FIFTH
+
+	.fifth-grid {
+		@extend %grid !optional;
+		@extend %grid-fifth !optional;
+		@extend %gap-default !optional;
+
+		@include responsive-range(medbelowdown) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.fifth-grid > .full {
+		grid-column: span 5;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.fifth-grid > .fourfifths {
+		grid-column: span 4;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.fifth-grid > .threefifths {
+		grid-column: span 3;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.fifth-grid > .twofifths {
+		grid-column: span 2;
+
+		@include responsive-range(medbelowdown) {
+			grid-column: span 1;
+		}
+	}
+
+// SIXTH
+
+	.sixth-grid {
+		@extend %grid !optional;
+		@extend %grid-sixth !optional;
+		@extend %gap-default !optional;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.sixth-grid > .fivesixths {
+		grid-column: span 5;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.sixth-grid > .twothirds {
+		grid-column: span 4;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.sixth-grid > .half {
+		grid-column: span 3;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.sixth-grid > .third {
+		grid-column: span 2;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column: span 1;
+		}
+	}
+
+// EIGHT
+
+	.eight-grid {
+		@extend %grid !optional;
+		@extend %grid-eight !optional;
+		@extend %gap-default !optional;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.eight-grid > .half {
+		grid-column: span 4;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.eight-grid > .threeeights {
+		grid-column: span 3;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column: span 1;
+		}
+	}
+	.eight-grid > .fourth {
+		grid-column: span 2;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column: span 1;
+		}
+	}

@@ -1,0 +1,41 @@
+/* SETUP | SELECTOR | 254_FLEX | DISPLAY - 2018-01-29 */
+
+// -------------------------------------
+// EXTEND
+
+	%flex {
+		display: flex;
+	}
+
+	%flex-wrap {
+		flex-flow: flex-wrap;
+	}
+
+	%flex-fullscreen {
+		min-height: 100vh;
+		min-width: 100vw;
+	}
+
+	%flex-twothirds {
+		min-height: 66.67vh;
+		//min-width: 100vw;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.flex {
+		@extend %flex !optional;
+	}
+
+	.flex-wrap {
+		@extend %flex-wrap !optional;
+	}
+
+	.flex-fullscreen {
+		@extend %flex-fullscreen !optional;
+	}
+
+	.flex-twothirds {
+		@extend %flex-twothirds !optional;
+	}

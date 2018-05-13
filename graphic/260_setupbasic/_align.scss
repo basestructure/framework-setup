@@ -1,0 +1,171 @@
+/* SETUP | GRAPHIC | 260_SETUPBASIC | ALIGN - 2018-05-09 */
+
+// -------------------------------------
+// EXTEND
+
+	// ALIGN
+
+	%align-img-aligncenter {
+		float: none;
+		margin-top: 0;
+		margin-right: auto;
+		margin-bottom: #{$space}rem;
+		margin-left: auto;
+
+		@include responsive-range(medbelowdown) {
+			float: none;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+		}
+	}
+
+	%align-img-alignleft {
+		float: left;
+		margin-top: 0;
+		margin-right: #{$space}rem;
+		margin-bottom: #{$space}rem;
+		margin-left: 0;
+
+		@include responsive-range(medbelowdown) {
+			float: none;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+		}
+	}
+
+	%align-img-alignright {
+		float: right;
+		margin-top: 0;
+		margin-right: 0;
+		margin-bottom: #{$space}rem;
+		margin-left: #{$space}rem;
+
+		@include responsive-range(medbelowdown) {
+			float: none;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+		}
+	}
+
+	%align-img-alignnone {
+		float: none;
+		margin-top: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+
+		@include responsive-range(medbelowdown) {
+			float: none;
+			display: block;
+		}
+	}
+
+	%align-img-noalign {
+		float: none;
+	}
+	%align-img-nospace {
+		margin-right: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	%align-img-space-zero {
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	%align-img-space-zero-bottom {
+		margin-bottom: 0;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// IMG
+
+	img.aligncenter {
+		@extend %align-img-aligncenter !optional;
+	}
+	img.alignleft {
+		@extend %align-img-alignleft !optional;
+	}
+	img.alignright {
+		@extend %align-img-alignright !optional;
+	}
+	img.alignnone {
+		@extend %align-img-alignnone !optional;
+	}
+
+	// CAPTION
+
+	figure.aligncenter.wp-caption {
+		@extend %align-img-aligncenter !optional;
+	}
+	figure.alignleft.wp-caption {
+		@extend %align-img-alignleft !optional;
+	}
+	figure.alignright.wp-caption {
+		@extend %align-img-alignright !optional;
+	}
+	figure.alignnone.wp-caption {
+		@extend %align-img-alignnone !optional;
+	}
+
+	// NO-ALIGN
+
+	img.no-align,
+	img.aligncenter.no-align,
+	img.alignleft.no-align,
+	img.alignright.no-align,
+	figure.aligncenter.wp-caption.no-align,
+	figure.alignleft.wp-caption.no-align,
+	figure.alignright.wp-caption.no-align {
+		@extend %align-img-noalign !optional;
+		@extend %align-img-nospace !optional;
+	}
+
+	// NO-SPACE
+
+	img.no-space,
+	img.aligncenter.no-space,
+	img.alignleft.no-space,
+	img.alignright.no-space,
+	img.alignnone.no-space,
+	figure.aligncenter.wp-caption.no-space,
+	figure.alignleft.wp-caption.no-space,
+	figure.alignright.wp-caption.no-space,
+	figure.alignnone.wp-caption.no-space {
+		@extend %align-img-nospace !optional;
+	}
+
+	// SPACE-ZERO
+
+	img.space-zero,
+	img.aligncenter.space-zero,
+	img.alignleft.space-zero,
+	img.alignright.space-zero,
+	img.alignnone.space-zero,
+	figure.aligncenter.wp-caption.space-zero,
+	figure.alignleft.wp-caption.space-zero,
+	figure.alignright.wp-caption.space-zero,
+	figure.alignnone.wp-caption.space-zero {
+		@extend %align-img-space-zero !optional;
+	}
+
+	// SPACE-ZERO-BOTTOM
+
+	img.space-zero-bottom,
+	img.aligncenter.space-zero-bottom,
+	img.alignleft.space-zero-bottom,
+	img.alignright.space-zero-bottom,
+	img.alignnone.space-zero-bottom,
+	figure.aligncenter.wp-caption.space-zero-bottom,
+	figure.alignleft.wp-caption.space-zero-bottom,
+	figure.alignright.wp-caption.space-zero-bottom,
+	figure.alignnone.wp-caption.space-zero-bottom {
+		@extend %align-img-space-zero-bottom !optional;
+	}

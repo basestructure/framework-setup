@@ -1,0 +1,72 @@
+/* SETUP | MENU | 253_SETUPBASIC | MENUITEM-FOOTERMENU - 2017-11-28 */
+
+// -------------------------------------
+// EXTEND
+
+	// MENU-ITEM
+	%footermenu-menu-menuitem {}
+	%footermenu-menu-menuitem-a {}
+	%footermenu-menu-menuitem-hvr {}
+		
+		// LEVEL 1 MENU-ITEM
+		%footermenu-menu-menuitemlvlone {}
+		%footermenu-menu-menuitemlvlone-a {}
+		%footermenu-menu-menuitemlvlone-hvr {}
+		
+		// MENU-ITEM MENU-ITEM-HAS-CHILDREN
+		%footermenu-menu-menuitemhaschildren {}
+		%footermenu-menu-menuitemhaschildren-a {}
+		%footermenu-menu-menuitemhaschildren-hvr {}
+		
+		// SUB-MENU MENU-ITEM
+		%footermenu-submenu-menuitem {}
+		%footermenu-submenu-menuitem-a {}
+		%footermenu-submenu-menuitem-hvr {}
+
+// -------------------------------------
+// SELECTORS
+
+	// MENU-ITEM
+	.footer-menu .menu .menu-item {
+		@extend %footerwidgets-menu-menuitem !optional;
+	
+		a {
+			@extend %footerwidgets-menu-menuitem-a !optional;
+		
+			&:hover {
+				@extend %footerwidgets-menu-menuitem-hvr !optional;
+			}
+		}
+	}
+		// LEVEL 1 MENU-ITEM
+		.footer-menu .menu > .menu-item {
+			@extend %footerwidgets-menu-menuitemlvlone !optional;
+		}
+		.footer-menu .menu > .menu-item > a {
+			@extend %footerwidgets-menu-menuitemlvlone-a !optional;
+		}
+		.footer-menu .menu > .menu-item > a:hover {
+			@extend %footerwidgets-menu-menuitemlvlone-hvr !optional;
+		}
+
+		// MENU-ITEM.MENU-ITEM-HAS-CHILDREN
+		.footer-menu .menu-item.menu-item-has-children {
+			@extend %footerwidgets-menu-menuitemhaschildren !optional;
+		}
+		.footer-menu .menu-item.menu-item-has-children > a {
+			@extend %footerwidgets-menu-menuitemhaschildren-a !optional;
+		}
+		.footer-menu .menu-item.menu-item-has-children > a:hover {
+			@extend %footerwidgets-menu-menuitemhaschildren-hvr !optional;
+		}
+
+		// .SUB-MENU MENU-ITEM
+		.footer-menu .sub-menu > .menu-item {
+			@extend %footerwidgets-submenu-menuitem !optional;
+		}
+		.footer-menu .sub-menu > .menu-item > a {
+			@extend %footerwidgets-submenu-menuitem-a !optional;
+		}
+		.footer-menu .sub-menu > .menu-item > a:hover {
+			@extend %footerwidgets-submenu-menuitem-hvr !optional;
+		}

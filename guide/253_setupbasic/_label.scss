@@ -1,0 +1,163 @@
+/* SETUP | GUIDE | 253_SETUPBASIC | DEMO - 2018-02-10 */
+
+// -------------------------------------
+// EXTEND
+
+	%guide-indent {
+		margin-left: 2rem;
+	}
+
+	%guide-label {
+		font-size: #{$fontsize-xxsml}rem;
+		padding: 5px 10px;
+		color: white;
+		background-color: #e5565d;
+		display: inline-block;
+	}
+
+	%guide-label-sub {
+		background-color: #ef989d;
+	}
+
+	%guide-label-end {
+		float: right;
+		clear: both;
+	}
+
+	%guide-line {
+		border-top: 1px solid #e5565d;
+	}
+
+	%guide-line-sub {
+		border-top: 1px solid #ef989d;
+	}
+
+	%guide-summary {
+		font-size: #{$fontsize-xsml}rem;
+		padding: 5px 10px;
+		background-color: #eee;
+		border-left: 5px solid #e5565d;
+	}
+
+	%guide-summary-sub {
+		background-color: #f3f3f3;
+		border-left: 5px solid #ef989d;
+	}
+
+	%guide-box {
+		border-top: 1px solid #e5565d;
+		border-right: 1px solid #e5565d;
+		border-bottom: 1px solid #e5565d;
+		border-left: 1px solid #e5565d;
+	}
+
+	%guide-box-sub {
+		border-top: 1px solid #ef989d;
+		border-right: 1px solid #ef989d;
+		border-bottom: 1px solid #ef989d;
+		border-left: 1px solid #ef989d;
+	}
+
+	%guide-box-corner {
+		border-top: 1px solid #e5565d;
+		border-right: 0;
+		border-left: 1px solid #e5565d;
+		border-bottom: 0;
+	}
+	%guide-box-corner-sub {
+		border-top: 1px solid #ef989d;
+		border-left: 1px solid #ef989d;
+	}
+
+	%guide-box-vertical {
+		border-top: 1px solid #e5565d;
+		border-right: 0;
+		border-bottom: 1px solid #e5565d;
+		border-left: 0;
+	}
+
+	%guide-box-vertical-sub {
+		border-top: 1px solid #ef989d;
+		border-bottom: 1px solid #ef989d;
+	}
+
+	%guide-container {}
+
+	%guide-divider {}
+
+// -------------------------------------
+// SELECTORS
+
+	.guide-label {
+		@extend %guide-label !optional;
+	}
+
+		.guide-label.indent {
+			@extend %guide-indent !optional;
+		}
+		.guide-label.sub {
+			@extend %guide-label-sub !optional;
+		}
+
+		.guide-label.end {
+			@extend %guide-label !optional;
+			@extend %guide-label-end !optional;
+		}
+
+	.guide-line {
+		@extend %guide-line !optional;
+	}
+
+		.guide-line.indent {
+			@extend %guide-indent !optional;
+		}
+
+	.guide-summary {
+		@extend %guide-summary !optional;
+	}
+
+		.guide-summary.sub {
+			@extend %guide-summary-sub !optional;
+		}
+
+		.guide-summary.indent {
+			@extend %guide-indent !optional;
+		}
+
+	.guide-box {
+		@extend %guide-box !optional;
+	}
+
+		.guide-box.sub {
+			@extend %guide-box-sub !optional;
+		}
+
+		.guide-box.vertical {
+			@extend %guide-box-vertical !optional;
+		}
+		.guide-box.vertical.sub {
+			@extend %guide-box-vertical-sub !optional;
+		}
+
+		.guide-box.corner {
+			@extend %guide-box-corner !optional;
+		}
+		.guide-box.corner.sub {
+			@extend %guide-box-corner-sub !optional;
+		}
+
+		.guide-box.indent {
+			@extend %guide-indent !optional;
+		}
+
+	.guide-container {
+		@extend %guide-container !optional;
+	}
+
+	.guide-divider {
+		@extend %guide-divider !optional;
+	}
+
+	.guide-area.top {}
+
+	.guide-area.bottom {}

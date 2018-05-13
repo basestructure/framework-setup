@@ -1,0 +1,85 @@
+/* SETUP | BLOCK | 253_SETUPBASIC | TRANSFORM - 2017-12-05 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	// INFOCARD VERTICAL TO WIDE
+
+	.block-threefifths.tform-smv-ms {
+
+		@extend %columns-fifth !optional;
+		grid-template-areas:
+		"main main main side side";
+		grid-column-gap: #{$space-lrg}rem;
+
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+			"side"
+			"main";
+			grid-column-gap: 0;
+		}
+
+		.main {
+			grid-column: main;
+		}
+
+		.side {
+			grid-column: side;
+		}
+
+	}
+
+	.block-threefifths.tform-smv-sm {
+
+		@extend %columns-fifth !optional;
+		grid-template-areas:
+		"side side main main main";
+		grid-column-gap: #{$space-lrg}rem;
+
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+			"side"
+			"main";
+			grid-column-gap: 0;
+		}
+
+		.main {
+			grid-column: main;
+		}
+
+		.side {
+			grid-column: side;
+		}
+
+	}
+
+	.tform-3col-1col {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		@include responsive-range(tabletup) {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-column-gap: #{$space-lrg}rem;
+		}
+	}
+
+	// INFOCARD VERTICAL TO WIDE
+
+	.block-threefifths.tform-ms-smv {
+
+		@include responsive-range(tabletbelowdown) {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+			"side"
+			"main";
+			grid-column-gap: 0;
+		}
+
+	}

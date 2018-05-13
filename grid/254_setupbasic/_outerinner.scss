@@ -1,0 +1,132 @@
+/* SETUP | GRID | 254_SETUPBASIC | OUTERINNER - 2018-04-17 */
+
+// -------------------------------------
+// EXTEND
+
+	// OUTER
+
+	%outer {
+		grid-area: gridouter;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		grid-template-areas:
+		". gridinner .";
+	}
+
+	%outer-inner-base {
+		grid-template-columns: 1fr minmax(auto, #{$width-base}rem) 1fr;
+	}
+
+	%outer-inner-sml {
+		grid-template-columns: 1fr minmax(auto, #{$width-sml}rem) 1fr;
+	}
+
+	%outer-inner-med {
+		grid-template-columns: 1fr minmax(auto, #{$width-med}rem) 1fr;
+	}
+
+	%outer-inner-lrg {
+		grid-template-columns: 1fr minmax(auto, #{$width-lrg}rem) 1fr;
+	}
+
+	%outer-inner-xlrg {
+		grid-template-columns: 1fr minmax(auto, #{$width-xlrg}rem) 1fr;
+	}
+
+	%outer-inner-huge {
+		grid-template-columns: 1fr minmax(auto, #{$width-huge}rem) 1fr;
+	}
+
+	%outer-inner-full {
+		grid-template-columns: 1fr;
+	}
+
+	// INNER
+
+	%inner {
+		grid-area: gridinner;
+	}
+
+	%inner-center {}
+
+	%inner-base {}
+
+	%inner-sml {}
+
+	%inner-med {}
+
+	%inner-lrg {}
+
+	%inner-xlrg {}
+
+	%inner-huge {}
+
+	%inner-full {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// OUTER
+
+	.outer {
+		@extend %outer !optional;
+	}
+
+	// OUTER FULL
+
+	.outer.base {
+		@extend %outer-inner-base !optional;
+	}
+	.outer.full {
+		@extend %outer-inner-full !optional;
+	}
+	.outer.sml {
+		@extend %outer-inner-sml !optional;
+	}
+	.outer.med {
+		@extend %outer-inner-med !optional;
+	}
+	.outer.lrg {
+		@extend %outer-inner-lrg !optional;
+	}
+	.outer.xlrg {
+		@extend %outer-inner-xlrg !optional;
+	}
+	.outer.huge {
+		@extend %outer-inner-huge !optional;
+	}
+
+	// INNER
+
+	.inner {
+		@extend %inner !optional;
+	}
+	.outer.base > .inner {
+		@extend %inner-base !optional;
+		@extend %inner-center !optional;
+	}
+	.outer.sml > .inner {
+		@extend %inner-sml !optional;
+		@extend %inner-center !optional;
+	}
+	.outer.med > .inner {
+		@extend %inner-med !optional;
+		@extend %inner-center !optional;
+	}
+	.outer.lrg > .inner {
+		@extend %inner-lrg !optional;
+		@extend %inner-center !optional;
+	}
+	.outer.xlrg > .inner {
+		@extend %inner-xlrg !optional;
+		@extend %inner-center !optional;
+	}
+	.outer.huge > .inner {
+		@extend %inner-huge !optional;
+		@extend %inner-center !optional;
+	}
+	.outer.full > .inner {
+		@extend %inner-full !optional;
+	}

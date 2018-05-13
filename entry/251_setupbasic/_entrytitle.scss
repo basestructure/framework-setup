@@ -6,7 +6,7 @@
 	%entrytitle {
 		font-family: $fontfamily-entrytitle;
 		font-weight: $fontweight-entrytitle;
-		line-height: 1.2;
+		line-height: $lineheight-entrytitle;
 	}
 		%entrytitle-a {}
 		%entrytitle-hvr {}

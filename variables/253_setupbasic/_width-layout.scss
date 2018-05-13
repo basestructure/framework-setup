@@ -1,0 +1,56 @@
+/* SETUP | VARIABLES | 253_SETUPBASIC | WIDTH-LAYOUT - 2017-11-13 */
+
+// -------------------------------------
+// VARIABLES
+
+	// RELATIVE (BASED ON OVERALL SCALE)
+
+	$width-huge:						90;			// 1440px
+	$width-xlrg:						80;			// 1280px
+	$width-lrg:							64;			// 1024px
+	$width-med:							48;			// 768px
+	$width-sml:							26.563;		// 425px
+	$width-xsml:						20;			// 320px
+
+	// BASE
+
+	$width-base:						48;			// 768px
+		$width-base-huge:				90;			// 1440px
+		$width-base-xlrg:				80;			// 1280px
+		$width-base-lrg:				64;			// 1024px
+		$width-base-med:				48;			// 768px
+		$width-base-sml:				26.563;		// 425px
+		$width-base-xsml:				20;			// 320px
+
+	// INNER
+
+	$width-outer:						160;		// 1440px
+	$width-inner:						64;			// 1024px
+		$width-inner-huge:				90;			// 1440px
+		$width-inner-xlrg:				80;			// 1280px
+		$width-inner-lrg:				64;			// 1024px
+		$width-inner-med:				48;			// 768px
+		$width-inner-sml:				26.563;		// 425px
+		$width-inner-xsml:				20;			// 320px
+
+	// SITE PARTS
+
+	$width-content:						48;			// 768px
+	$width-csw:							48;			// 768px
+		$width-csw-full:				48;			// 768px
+		$width-csw-ms:					64;			// 1024px
+		$width-csw-mss:					70;			// 1280px
+	$width-sidebarprimary:				16;			// 256px
+	$width-sidebarsecondary:			16;			// 256px
+
+	// LAYOUT
+
+	$width-full:						48;			// 768px
+	$width-cs:							64;			// 1024px
+	$width-css:							80;			// 1280px
+
+	// CUSTOM
+
+	$width-customone:					48;			// 768px
+	$width-customtwo:					64;			// 1024px
+	$width-customthree:					80;			// 1280px

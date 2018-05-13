@@ -1,0 +1,17 @@
+/* SETUP | AREA | 253_SETUPBASIC | AREAFEATURE - 2018-02-22 */
+
+// -------------------------------------
+// EXTEND
+
+	%areafeature {}
+	%areafeaturewrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.area-feature {
+		@extend %areafeature !optional;
+	}
+	.area-feature > .wrap {
+		@extend %areafeaturewrap !optional;
+	}

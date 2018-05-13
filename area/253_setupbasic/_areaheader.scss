@@ -1,0 +1,17 @@
+/* SETUP | AREA | 253_SETUPBASIC | AREAHEADER - 2017-01-20 */
+
+// -------------------------------------
+// EXTEND
+
+	%areaheader {}
+	%areaheaderwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.area-header {
+		@extend %areaheader !optional;
+	}
+	.area-header > .wrap {
+		@extend %areaheaderwrap !optional;
+	}

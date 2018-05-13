@@ -1,0 +1,79 @@
+/* SETUP | GUIDE | 260_GUIDE | NAV - 2018-04-29 */
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-PRIMARY (MENU-HEADER Container)
+
+	%guide-navprimary {
+
+		background-color: #dcbaff;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-navprimarywrap {
+		background-color: #e3c8ff;
+	}
+
+	// NAV-SECONDARY (MENU-TOP Container)
+
+	%guide-navsecondary {
+
+		background-color: #dcbaff;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-navsecondarywrap {
+		background-color: #e3c8ff;
+	}
+
+	// NAV-FOOTER
+
+	%guide-navfooter {
+
+		background-color: #dcbaff;
+
+		// MED (UP)
+		@include responsive-range(medup) {}
+
+	}
+	%guide-navfooterwrap {
+		background-color: #e3c8ff;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %guide-navprimary !optional;
+	}
+	.nav-primary > .wrap {
+		@extend %guide-navprimarywrap !optional;
+	}
+
+	// NAV-SECONDARY
+
+	.nav-secondary {
+		@extend %guide-navsecondary !optional;
+	}
+	.nav-secondary > .wrap {
+		@extend %guide-navsecondarywrap !optional;
+	}
+
+	// NAV-FOOTER
+
+	.nav-footer {
+		@extend %guide-navfooter !optional;
+	}
+	.nav-footer > .wrap {
+		@extend %guide-navfooterwrap !optional;
+	}
+		#mega-menu-wrap-footer.mega-menu-wrap {
+			@extend %guide-navfooterwrap !optional;
+		}

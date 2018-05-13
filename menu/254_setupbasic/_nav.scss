@@ -1,0 +1,76 @@
+/* SETUP | MENU | 254_SETUPBASIC | NAV - 2018-02-24 */
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-PRIMARY (MENU-HEADER Container)
+
+	%navprimary {
+		background-color: #ffccff; // pink
+		grid-area: navprimary;
+	}
+	%navprimarywrap {
+		grid-area: navprimarywrap;
+	}
+
+	// NAV-SECONDARY (MENU-TOP Container)
+
+	%navsecondary {
+		background-color: #ccff66; // green
+		grid-area: navsecondary;
+	}
+	%navsecondarywrap {
+		grid-area: navsecondarywrap;
+	}
+
+	// NAV-FOOTER
+
+	%navfooter {
+		background-color: #ccffff; // blue
+		grid-area: navfooter;
+	}
+	%navfooterwrap {
+		grid-area: navfooterwrap;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %navprimary !optional;
+
+		.wrap {
+			@extend %navprimarywrap !optional;
+		}
+	}
+	.nav-primary > .wrap {
+		@extend %navprimarywrap !optional;
+	}
+
+	// NAV-SECONDARY
+
+	.nav-secondary {
+		@extend %navsecondary !optional;
+
+		.wrap {
+			@extend %navsecondarywrap !optional;
+		}
+	}
+	.nav-secondary > .wrap {
+		@extend %navsecondarywrap !optional;
+	}
+
+	// NAV-FOOTER
+
+	.nav-footer {
+		@extend %navfooter !optional;
+
+		.wrap {
+			@extend %navfooterwrap !optional;
+		}
+	}
+	.nav-footer > .wrap {
+		@extend %navfooterwrap !optional;
+	}

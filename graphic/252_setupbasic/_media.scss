@@ -1,0 +1,92 @@
+/* SETUP | GRAPHIC | 252_SETUPBASIC | MEDIA - 2017-10-19 */
+
+// -------------------------------------
+// EXTEND
+
+	// HEIGHT
+
+	%height-media-auto {
+		height: auto;
+	}
+
+	// WIDTH
+
+	%width-media-stretch {
+		width: 100% !important;
+	}
+	%width-media-insidecaption {
+		width: 100% !important;
+	}
+
+	// MEDIA
+
+	%width-media-thumbnail {
+		max-width: #{$width-media-thumbnail}rem;
+	}
+	%width-media-medium {
+		max-width: #{$width-media-medium}rem;
+	}
+	%width-media-large {
+		max-width: #{$width-media-large}rem;
+	}
+	%width-media-full {
+		max-width: #{$width-media-full}rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// MEDIA
+
+	img.size-thumbnail {
+		@extend %width-media-thumbnail !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-medium {
+		@extend %width-media-medium !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-large {
+		@extend %width-media-large !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-full {
+		@extend %width-media-full !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// MEDIA (WITH CAPTION)
+
+	.wp-caption.size-thumbnail {
+		@extend %width-media-thumbnail !optional;
+		@extend %width-media-insidecaption !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.size-medium {
+		@extend %width-media-medium !optional;
+		@extend %width-media-insidecaption !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.size-large {
+		@extend %width-media-large !optional;
+		@extend %width-media-insidecaption !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}
+	.wp-caption.size-full {
+		@extend %width-media-full !optional;
+		@extend %width-media-insidecaption !optional;
+		img {
+			@extend %width-media-insidecaption !optional;
+		}
+	}

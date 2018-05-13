@@ -1,0 +1,51 @@
+/* SETUP | LAYOUT | 252_SETUPBASIC | CS - 2017-10-05 */
+
+// -------------------------------------
+// EXTEND
+
+	%cs-siteinner {
+
+		grid-template-columns: 1fr minmax(0, #{$width-csw-ms}rem) 1fr;
+		grid-template-areas:
+		". csw ."
+
+	}
+
+	%cs-csw {
+
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"content"
+		"sidebarprimary";
+
+		// BASE (UP)
+		@include responsive-range(baseup) {
+			grid-template-columns: minmax(0, #{$width-content}rem) minmax(0, #{$width-sidebarprimary}rem);
+			grid-template-areas:
+			"content sidebarprimary";
+		}
+
+	}
+
+	%cs-content {}
+
+	%cs-sidebarprimary {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar .site-inner {
+		@extend %cs-siteinner !optional;
+	}
+
+	.content-sidebar .content-sidebar-wrap {
+		@extend %cs-csw !optional;
+	}
+
+	.content-sidebar .content {
+		@extend %cs-content !optional;
+	}
+
+	.content-sidebar .sidebar-primary {
+		@extend %cs-sidebarprimary !optional;
+	}

@@ -1,0 +1,205 @@
+/* SETUP | SPACING | 254_SETUPBASIC | SPACEIN - 2018-01-24 */
+
+// -------------------------------------
+// GUIDE
+
+	// SPACE VARIABLES
+
+	// $space:				1.0;		16px
+
+	// $space-tiny:			0.0625;		1px		TINY
+	// $space-xxxsml:		0.125;		2px		XXXSML
+	// $space-xxsml:		0.25;		4px		XXSML / QUARTER
+	// $space-quarter:		0.25;		4px
+	// $space-xsml:			0.3125;		5px		XSML
+	// $space-sml:			0.5;		8px		SML / HALF
+	// $space-half:			0.5;		8px
+	// $space-default:		1.0;		16px	DEFAULT
+	// $space-med:			1.5; 		24px	MED
+	// $space-lrg:			2;			32px	LRG / DOUBLE
+	// $space-double:		2.0;		32px
+	// $space-xlrg:			3;			48px	XLRG / TRIPLE
+	// $space-triple:		3;			48px
+	// $space-huge:			4;			64px
+
+
+// -------------------------------------
+// EXTEND
+
+	// SPACE
+
+	.spacein-med {
+		@include responsive-range(medbelowdown) {
+			padding: #{$space-default}rem;
+		}
+	}
+
+	.spacein-lrg {
+		@include responsive-range(medbelowdown) {
+			padding: #{$space-med}rem;
+		}
+	}
+
+	.spacein-xlrg {
+		@include responsive-range(medbelowdown) {
+			padding: #{$space-lrg}rem;
+		}
+	}
+
+	.spacein-huge {
+		@include responsive-range(medbelowdown) {
+			padding: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-HORIZONTAL
+
+	.spacein-med-x {
+		@include responsive-range(medbelowdown) {
+			padding-right: #{$space-default}rem;
+			padding-left: #{$space-default}rem;
+		}
+	}
+
+	.spacein-lrg-x {
+		@include responsive-range(medbelowdown) {
+			padding-right: #{$space-med}rem;
+			padding-left: #{$space-med}rem;
+		}
+	}
+
+	.spacein-xlrg-x {
+		@include responsive-range(medbelowdown) {
+			padding-right: #{$space-xlrg}rem;
+			padding-left: #{$space-xlrg}rem;
+		}
+	}
+
+	.spacein-huge-x {
+		@include responsive-range(medbelowdown) {
+			padding-right: #{$space-huge}rem;
+			padding-left: #{$space-huge}rem;
+		}
+	}
+
+	// SPACE-VERTICAL
+
+	.spacein-med-y {
+		@include responsive-range(medbelowdown) {
+			padding-top: #{$space-default}rem;
+			padding-bottom: #{$space-default}rem;
+		}
+	}
+
+	.spacein-lrg-y {
+		@include responsive-range(medbelowdown) {
+			padding-top: #{$space-med}rem;
+			padding-bottom: #{$space-med}rem;
+		}
+	}
+
+	.spacein-xlrg-y {
+		@include responsive-range(medbelowdown) {
+			padding-top: #{$space-lrg}rem;
+			padding-bottom: #{$space-lrg}rem;
+		}
+	}
+
+	.spacein-huge-y {
+		@include responsive-range(medbelowdown) {
+			padding-top: #{$space-xlrg}rem;
+			padding-bottom: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-TOP
+
+	.spacein-med-top {
+		@include responsive-range(medbelowdown) {
+			padding-top: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-top {
+		@include responsive-range(medbelowdown) {
+			padding-top: #{$space-med}rem;
+		}
+	}
+	.spacein-xlrg-top {
+		@include responsive-range(medbelowdown) {
+			padding-top: #{$space-lrg}rem;
+		}
+	}
+	.spacein-huge-top {
+		@include responsive-range(medbelowdown) {
+			padding-top: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-BOTTOM
+
+	.spacein-med-bottom {
+		@include responsive-range(medbelowdown) {
+			padding-bottom: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-bottom {
+		@include responsive-range(medbelowdown) {
+			padding-bottom: #{$space-med}rem;
+		}
+	}
+	.spacein-xlrg-bottom {
+		@include responsive-range(medbelowdown) {
+			padding-bottom: #{$space-lrg}rem;
+		}
+	}
+	.spacein-huge-bottom {
+		@include responsive-range(medbelowdown) {
+			padding-bottom: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-LEFT
+
+	.spacein-med-left {
+		@include responsive-range(medbelowdown) {
+			padding-left: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-left {
+		@include responsive-range(medbelowdown) {
+			padding-left: #{$space-med}rem;
+		}
+	}
+	.spacein-xlrg-left {
+		@include responsive-range(medbelowdown) {
+			padding-left: #{$space-lrg}rem;
+		}
+	}
+	.spacein-huge-left {
+		@include responsive-range(medbelowdown) {
+			padding-left: #{$space-xlrg}rem;
+		}
+	}
+
+	// SPACE-RIGHT
+
+	.spacein-med-right {
+		@include responsive-range(medbelowdown) {
+			padding-right: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-right {
+		@include responsive-range(medbelowdown) {
+			padding-right: #{$space-med}rem;
+		}
+	}
+	.spacein-xlrg-right {
+		@include responsive-range(medbelowdown) {
+			padding-right: #{$space-lrg}rem;
+		}
+	}
+	.spacein-huge-right {
+		@include responsive-range(medbelowdown) {
+			padding-right: #{$space-xlrg}rem;
+		}
+	}
