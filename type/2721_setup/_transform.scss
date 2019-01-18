@@ -1,0 +1,31 @@
+/* SETUP | TYPE | 2721_SETUP | TRANSFORM - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%transform-lowercase {
+		text-transform: lowercase;
+	}
+
+	%transform-uppercase {
+		text-transform: uppercase;
+	}
+
+	%transform-capitalize {
+		text-transform: capitalize;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.text-lowercase {
+		@extend %transform-lowercase !optional;
+	}
+
+	.text-uppercase {
+		@extend %transform-uppercase !optional;
+	}
+
+	.text-capitalize {
+		@extend %transform-capitalize !optional;
+	}

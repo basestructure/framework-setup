@@ -1,0 +1,100 @@
+/* SETUP | MENU | 261_SETUPPROFILE | NAV - 2018-06-12 */
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-PRIMARY (MENU-HEADER Container)
+
+	%navprimary {
+
+		// HOOK
+		-ms-grid-column: 2;
+		grid-column: 2;
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+
+		// grid-area: navprimary;
+
+	}
+	%navprimarywrap {
+
+		// grid-area: navprimarywrap;
+
+	}
+
+	// NAV-SECONDARY (MENU-TOP Container)
+
+	%navsecondary {
+
+		// HOOK
+		-ms-grid-column: 2;
+		grid-column: 2;
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+
+		// grid-area: navsecondary;
+
+	}
+	%navsecondarywrap {
+		
+		// grid-area: navsecondarywrap;
+
+	}
+
+	// NAV-FOOTER
+
+	%navfooter {
+
+		// HOOK
+		-ms-grid-column: 2;
+		grid-column: 2;
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+
+		// grid-area: navfooter;
+
+	}
+	%navfooterwrap {
+		
+		// grid-area: navfooterwrap;
+
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %navprimary !optional;
+	}
+	.nav-primary > .wrap {
+		@extend %navprimarywrap !optional;
+	}
+
+	// NAV-SECONDARY
+
+	.nav-secondary {
+		@extend %navsecondary !optional;
+	}
+	.nav-secondary > .wrap {
+		@extend %navsecondarywrap !optional;
+	}
+
+	// NAV-FOOTER
+
+	.nav-footer {
+		@extend %navfooter !optional;
+	}
+	.nav-footer > .wrap {
+		@extend %navfooterwrap !optional;
+	}
+		#mega-menu-wrap-footer.mega-menu-wrap {
+			@extend %navfooterwrap !optional;
+		}

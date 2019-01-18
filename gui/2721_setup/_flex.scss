@@ -1,0 +1,48 @@
+/* SETUP | GUI | 2721_SETUP | FLEX - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%flex {
+		display: flex;
+	}
+
+	%flex-wrap {
+		flex-flow: flex-wrap;
+	}
+
+	%flex-fullscreen {
+		min-height: 100vh;
+		min-width: 100vw;
+	}
+
+	%flex-twothirds {
+		min-height: 66.67vh;
+	}
+
+	%flex-half {
+		min-height: 50vh;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.flex {
+		@extend %flex !optional;
+	}
+
+	.flex-wrap {
+		@extend %flex-wrap !optional;
+	}
+
+	.flex-fullscreen {
+		@extend %flex-fullscreen !optional;
+	}
+
+	.flex-twothirds {
+		@extend %flex-twothirds !optional;
+	}
+
+	.flex-half {
+		@extend %flex-half !optional;
+	}

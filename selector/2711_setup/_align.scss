@@ -1,0 +1,106 @@
+/* SETUP | SELECTOR | 2711_SETUP | ALIGN - 2018-12-08 */
+
+// -------------------------------------
+// EXTEND
+
+	// ALIGN
+
+	%alignleft {
+		float: left;
+	}
+	%alignright {
+		float: right;
+	}
+	%aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	%alignfull {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+		width: auto;
+		max-width: 1000%;
+	}
+	%alignwide {
+		margin-left: calc(25% - 25vw);
+		margin-right: calc(25% - 25vw);
+		width: auto;
+		max-width: 1000%;
+	}
+	%alignnone {
+		float: none;
+	}
+	%aligncenter-item {
+		display: block;
+	}
+
+	// TEXTALIGN
+
+	%textleft {
+		text-align: left;
+	}
+	%textright {
+		text-align: right;
+	}
+	%textcenter {
+		text-align: center;
+	}
+	%textjustify {
+		text-align: justify;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// TEXT-ALIGN (bootstrap)
+
+	.textleft {
+		@extend %textleft !optional;
+	}
+	.textright {
+		@extend %textright !optional;
+	}
+	.textcenter {
+		@extend %textcenter !optional;
+	}
+	.textjustify {
+		@extend %textjustify !optional;
+	}
+
+	// ALIGN
+
+	.alignleft {
+		@extend %alignleft !optional;
+	}
+	.alignright {
+		@extend %alignright !optional;
+	}
+	.aligncenter {
+		@extend %aligncenter !optional;
+		@extend %aligncenter-item !optional;
+	}
+	.alignfull {
+		@extend %alignfull !optional;
+	}
+	.alignwide {
+		@extend %alignwide !optional;
+	}
+	.alignnone {
+		@extend %alignnone !optional;
+	}
+
+	// IMG.ALIGN
+
+	img.alignleft {
+		@extend .alignleft !optional;
+	}
+	img.alignright {
+		@extend .alignright !optional;
+	}
+	img.aligncenter {
+		@extend %aligncenter !optional;
+		@extend %aligncenter-item !optional;
+	}
+	.img.alignnone {
+		@extend %alignnone !optional;
+	}

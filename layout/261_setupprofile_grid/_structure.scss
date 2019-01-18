@@ -1,0 +1,40 @@
+/* SETUP | LAYOUT | 261_SETUPPROFILE_GRID | STRUCTURE - 2018-06-08 */
+
+//		@include responsive-range(lrgup) {}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer {
+
+		//grid-area: sitecontainer;
+
+		// IE
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@include responsive-range(lrgup) {
+			// IE
+			-ms-grid-columns: minmax(0, 320rem) minmax(0, 768rem) 1fr;
+			
+			// GRID
+			grid-template-columns: minmax(0, 320rem) minmax(0, 768rem) 1fr;
+		}
+		
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.site-container {
+		@extend %sitecontainer !optional;
+	}

@@ -1,0 +1,108 @@
+/* SETUP | LAYOUT | 261_SETUPBASIC_GRID | INNER - 2018-06-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner {
+
+		//grid-area: inner;
+
+		// IE
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+		-ms-grid-rows: auto;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: 1fr minmax(0, #{$width-csw}rem) 1fr;
+			grid-template-columns: 1fr minmax(0, #{$width-csw}rem) 1fr;
+		}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw {
+
+		//grid-area: csw;
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+	}
+
+	// CONTENT
+
+	%content {
+
+		//grid-area: content;
+
+	}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary {
+
+		//grid-area: sidebarprimary;
+
+	}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary {
+
+		//grid-area: sidebarsecondary;
+
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.site-inner {
+		@extend %siteinner !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.site-inner .content-sidebar-wrap {
+		@extend %csw !optional;
+	}
+
+	// CONTENT
+
+	.content {
+		@extend %content !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary {
+		@extend %sidebarprimary !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary {
+		@extend %sidebarsecondary !optional;
+	}
+

@@ -1,0 +1,558 @@
+/* SETUP | SPACING | 2611_SETUP | SPACEIN - 2018-10-31 */
+
+// -------------------------------------
+// GUIDE
+
+	// SPACE VARIABLES
+
+	// $space:				1.0;		16px
+
+	// $space-tiny:			0.0625;		1px		TINY
+	// $space-xxxsml:		0.125;		2px		XXXSML
+	// $space-xxsml:		0.25;		4px		XXSML / QUARTER
+	// $space-quarter:		0.25;		4px
+	// $space-xsml:			0.3125;		5px		XSML
+	// $space-sml:			0.5;		8px		SML / HALF
+	// $space-half:			0.5;		8px
+	// $space-default:		1.0;		16px	DEFAULT
+	// $space-med:			1.5; 		24px	MED
+	// $space-lrg:			2;			32px	LRG / DOUBLE
+	// $space-xlrg:			3;			48px	XLRG / TRIPLE
+	// $space-xxlrg:		4;			64px	XXLRG
+	// $space-xxxlrg:		6;			96px	XXXHUGE
+	// $space-huge:			8;			128px	HUGE
+	// $space-xhuge:		10;			160px	XHUGE
+
+
+// -------------------------------------
+// EXTEND
+
+	// SPACE TOP
+
+	%spacein-top {
+		padding-top: #{$space-default}rem;
+	}
+	%spacein-sml-top {
+		padding-top: #{$space-sml}rem;
+	}
+	%spacein-med-top {
+		padding-top: #{$space-med}rem;
+	}
+	%spacein-lrg-top {
+		padding-top: #{$space-lrg}rem;
+	}
+	%spacein-xlrg-top {
+		padding-top: #{$space-xlrg}rem;
+	}
+	%spacein-xxlrg-top {
+		padding-top: #{$space-xxlrg}rem;
+	}
+	%spacein-xxxlrg-top {
+		padding-top: #{$space-xxxlrg}rem;
+	}
+	%spacein-huge-top {
+		padding-top: #{$space-huge}rem;
+	}
+	%spacein-xhuge-top {
+		padding-top: #{$space-xhuge}rem;
+	}
+	%spacein-zero-top {
+		padding-top: 0;
+	}
+
+	// SPACE BOTTOM
+
+	%spacein-bottom {
+		padding-bottom: #{$space-default}rem;
+	}
+	%spacein-sml-bottom {
+		padding-bottom: #{$space-sml}rem;
+	}
+	%spacein-med-bottom {
+		padding-bottom: #{$space-med}rem;
+	}
+	%spacein-lrg-bottom {
+		padding-bottom: #{$space-lrg}rem;
+	}
+	%spacein-xlrg-bottom {
+		padding-bottom: #{$space-xlrg}rem;
+	}
+	%spacein-xxlrg-bottom {
+		padding-bottom: #{$space-xxlrg}rem;
+	}
+	%spacein-xxxlrg-bottom {
+		padding-bottom: #{$space-xxxlrg}rem;
+	}
+	%spacein-huge-bottom {
+		padding-bottom: #{$space-huge}rem;
+	}
+	%spacein-xhuge-bottom {
+		padding-bottom: #{$space-xhuge}rem;
+	}
+	%spacein-zero-bottom {
+		padding-bottom: 0;
+	}
+
+	// SPACE LEFT
+
+	%spacein-left {
+		padding-left: #{$space-default}rem;
+	}
+	%spacein-sml-left {
+		padding-left: #{$space-sml}rem;
+	}
+	%spacein-med-left {
+		padding-left: #{$space-med}rem;
+	}
+	%spacein-lrg-left {
+		padding-left: #{$space-lrg}rem;
+	}
+	%spacein-xlrg-left {
+		padding-left: #{$space-xlrg}rem;
+	}
+	%spacein-xxlrg-left {
+		padding-left: #{$space-xxlrg}rem;
+	}
+	%spacein-xxxlrg-left {
+		padding-left: #{$space-xxxlrg}rem;
+	}
+	%spacein-huge-left {
+		padding-left: #{$space-huge}rem;
+	}
+	%spacein-xhuge-left {
+		padding-left: #{$space-xhuge}rem;
+	}
+	%spacein-zero-left {
+		padding-left: 0;
+	}
+
+	// SPACE RIGHT
+
+	%spacein-right {
+		padding-right: #{$space-default}rem;
+	}
+	%spacein-sml-right {
+		padding-right: #{$space-sml}rem;
+	}
+	%spacein-med-right {
+		padding-right: #{$space-med}rem;
+	}
+	%spacein-lrg-right {
+		padding-right: #{$space-lrg}rem;
+	}
+	%spacein-xlrg-right {
+		padding-right: #{$space-xlrg}rem;
+	}
+	%spacein-xxlrg-right {
+		padding-right: #{$space-xxlrg}rem;
+	}
+	%spacein-xxxlrg-right {
+		padding-right: #{$space-xxxlrg}rem;
+	}
+	%spacein-huge-right {
+		padding-right: #{$space-huge}rem;
+	}
+	%spacein-xhuge-right {
+		padding-right: #{$space-xhuge}rem;
+	}
+	%spacein-zero-right {
+		padding-right: 0;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SPACE
+
+	.spacein {
+		@extend %spacein-top !optional;
+		@extend %spacein-bottom !optional;
+		@extend %spacein-left !optional;
+		@extend %spacein-right !optional;
+	}
+	.spacein-sml {
+		@extend %spacein-sml-top !optional;
+		@extend %spacein-sml-bottom !optional;
+		@extend %spacein-sml-left !optional;
+		@extend %spacein-sml-right !optional;
+	}
+	.spacein-med {
+		@extend %spacein-med-top !optional;
+		@extend %spacein-med-bottom !optional;
+		@extend %spacein-med-left !optional;
+		@extend %spacein-med-right !optional;
+	}
+	.spacein-lrg {
+		@extend %spacein-lrg-top !optional;
+		@extend %spacein-lrg-bottom !optional;
+		@extend %spacein-lrg-left !optional;
+		@extend %spacein-lrg-right !optional;
+	}
+	.spacein-xlrg {
+		@extend %spacein-xlrg-top !optional;
+		@extend %spacein-xlrg-bottom !optional;
+		@extend %spacein-xlrg-left !optional;
+		@extend %spacein-xlrg-right !optional;
+	}
+	.spacein-xxlrg {
+		@extend %spacein-xxlrg-top !optional;
+		@extend %spacein-xxlrg-bottom !optional;
+		@extend %spacein-xxlrg-left !optional;
+		@extend %spacein-xxlrg-right !optional;
+	}
+	.spacein-xxxlrg {
+		@extend %spacein-xxxlrg-top !optional;
+		@extend %spacein-xxxlrg-bottom !optional;
+		@extend %spacein-xxxlrg-left !optional;
+		@extend %spacein-xxxlrg-right !optional;
+	}
+	.spacein-huge {
+		@extend %spacein-huge-top !optional;
+		@extend %spacein-huge-bottom !optional;
+		@extend %spacein-huge-left !optional;
+		@extend %spacein-huge-right !optional;
+	}
+	.spacein-xhuge {
+		@extend %spacein-xhuge-top !optional;
+		@extend %spacein-xhuge-bottom !optional;
+		@extend %spacein-xhuge-left !optional;
+		@extend %spacein-xhuge-right !optional;
+	}
+	.spacein-zero {
+		@extend %spacein-zero-top !optional;
+		@extend %spacein-zero-bottom !optional;
+		@extend %spacein-zero-left !optional;
+		@extend %spacein-zero-right !optional;
+	}
+
+	// SPACE-HORIZONTAL
+
+	.spacein-x {
+		@extend %spacein-left !optional;
+		@extend %spacein-right !optional;
+	}
+	.spacein-sml-x {
+		@extend %spacein-sml-left !optional;
+		@extend %spacein-sml-right !optional;
+	}
+	.spacein-med-x {
+		@extend %spacein-med-left !optional;
+		@extend %spacein-med-right !optional;
+	}
+	.spacein-lrg-x {
+		@extend %spacein-lrg-left !optional;
+		@extend %spacein-lrg-right !optional;
+	}
+	.spacein-xlrg-x {
+		@extend %spacein-xlrg-left !optional;
+		@extend %spacein-xlrg-right !optional;
+	}
+	.spacein-xxlrg-x {
+		@extend %spacein-xxlrg-left !optional;
+		@extend %spacein-xxlrg-right !optional;
+	}
+	.spacein-xxxlrg-x {
+		@extend %spacein-xxxlrg-left !optional;
+		@extend %spacein-xxxlrg-right !optional;
+	}
+	.spacein-huge-x {
+		@extend %spacein-huge-left !optional;
+		@extend %spacein-huge-right !optional;
+	}
+	.spacein-xhuge-x {
+		@extend %spacein-xhuge-left !optional;
+		@extend %spacein-xhuge-right !optional;
+	}
+	.spacein-zero-x {
+		@extend %spacein-zero-left !optional;
+		@extend %spacein-zero-right !optional;
+	}
+
+	// SPACE-VERTICAL
+
+	.spacein-y {
+		@extend %spacein-top !optional;
+		@extend %spacein-bottom !optional;
+	}
+	.spacein-sml-y {
+		@extend %spacein-sml-top !optional;
+		@extend %spacein-sml-bottom !optional;
+	}
+	.spacein-med-y {
+		@extend %spacein-med-top !optional;
+		@extend %spacein-med-bottom !optional;
+	}
+	.spacein-lrg-y {
+		@extend %spacein-lrg-top !optional;
+		@extend %spacein-lrg-bottom !optional;
+	}
+	.spacein-xlrg-y {
+		@extend %spacein-xlrg-top !optional;
+		@extend %spacein-xlrg-bottom !optional;
+	}
+	.spacein-xxlrg-y {
+		@extend %spacein-xxlrg-top !optional;
+		@extend %spacein-xxlrg-bottom !optional;
+	}
+	.spacein-xxxlrg-y {
+		@extend %spacein-xxxlrg-top !optional;
+		@extend %spacein-xxxlrg-bottom !optional;
+	}
+	.spacein-huge-y {
+		@extend %spacein-huge-top !optional;
+		@extend %spacein-huge-bottom !optional;
+	}
+	.spacein-xhuge-y {
+		@extend %spacein-xhuge-top !optional;
+		@extend %spacein-xhuge-bottom !optional;
+	}
+	.spacein-zero-y {
+		@extend %spacein-zero-top !optional;
+		@extend %spacein-zero-bottom !optional;
+	}
+
+	// SPACE-TOP
+
+	.spacein-top {
+		@extend %spacein-top !optional;
+	}
+	.spacein-sml-top {
+		@extend %spacein-sml-top !optional;
+	}
+	.spacein-med-top {
+		@extend %spacein-med-top !optional;
+	}
+	.spacein-lrg-top {
+		@extend %spacein-lrg-top !optional;
+	}
+	.spacein-xlrg-top {
+		@extend %spacein-xlrg-top !optional;
+	}
+	.spacein-xxlrg-top {
+		@extend %spacein-xxlrg-top !optional;
+	}
+	.spacein-xxxlrg-top {
+		@extend %spacein-xxxlrg-top !optional;
+	}
+	.spacein-huge-top {
+		@extend %spacein-huge-top !optional;
+	}
+	.spacein-xhuge-top {
+		@extend %spacein-xhuge-top !optional;
+	}
+	.spacein-zero-top {
+		@extend %spacein-zero-top !optional;
+	}
+
+	// SPACE-BOTTOM
+
+	.spacein-bottom {
+		@extend %spacein-bottom !optional;
+	}
+	.spacein-sml-bottom {
+		@extend %spacein-sml-bottom !optional;
+	}
+	.spacein-med-bottom {
+		@extend %spacein-med-bottom !optional;
+	}
+	.spacein-lrg-bottom {
+		@extend %spacein-lrg-bottom !optional;
+	}
+	.spacein-xlrg-bottom {
+		@extend %spacein-xlrg-bottom !optional;
+	}
+	.spacein-xxlrg-bottom {
+		@extend %spacein-xxlrg-bottom !optional;
+	}
+	.spacein-xxxlrg-bottom {
+		@extend %spacein-xxxlrg-bottom !optional;
+	}
+	.spacein-huge-bottom {
+		@extend %spacein-huge-bottom !optional;
+	}
+	.spacein-xhuge-bottom {
+		@extend %spacein-xhuge-bottom !optional;
+	}
+	.spacein-zero-bottom {
+		@extend %spacein-zero-bottom !optional;
+	}
+
+	// SPACE-LEFT
+
+	.spacein-left {
+		@extend %spacein-left !optional;
+	}
+	.spacein-sml-left {
+		@extend %spacein-sml-left !optional;
+	}
+	.spacein-med-left {
+		@extend %spacein-med-left !optional;
+	}
+	.spacein-lrg-left {
+		@extend %spacein-lrg-left !optional;
+	}
+	.spacein-xlrg-left {
+		@extend %spacein-xlrg-left !optional;
+	}
+	.spacein-xxlrg-left {
+		@extend %spacein-xxlrg-left !optional;
+	}
+	.spacein-xxxlrg-left {
+		@extend %spacein-xxxlrg-left !optional;
+	}
+	.spacein-huge-left {
+		@extend %spacein-huge-left !optional;
+	}
+	.spacein-xhuge-left {
+		@extend %spacein-xhuge-left !optional;
+	}
+	.spacein-zero-left {
+		@extend %spacein-zero-left !optional;
+	}
+
+	// SPACE-RIGHT
+
+	.spacein-right {
+		@extend %spacein-right !optional;
+	}
+	.spacein-sml-right {
+		@extend %spacein-sml-right !optional;
+	}
+	.spacein-med-right {
+		@extend %spacein-med-right !optional;
+	}
+	.spacein-lrg-right {
+		@extend %spacein-lrg-right !optional;
+	}
+	.spacein-xlrg-right {
+		@extend %spacein-xlrg-right !optional;
+	}
+	.spacein-xxlrg-right {
+		@extend %spacein-xxlrg-right !optional;
+	}
+	.spacein-xxxlrg-right {
+		@extend %spacein-xxxlrg-right !optional;
+	}
+	.spacein-huge-right {
+		@extend %spacein-huge-right !optional;
+	}
+	.spacein-xhuge-right {
+		@extend %spacein-xhuge-right !optional;
+	}
+	.spacein-zero-right {
+		@extend %spacein-zero-right !optional;
+	}
+
+	// SPACE-TOPLESS
+
+	.spacein-topless {
+		//@extend %spacein-top !optional;
+		@extend %spacein-bottom !optional;
+		@extend %spacein-left !optional;
+		@extend %spacein-right !optional;
+	}
+	.spacein-sml-topless {
+		//@extend %spacein-sml-top !optional;
+		@extend %spacein-sml-bottom !optional;
+		@extend %spacein-sml-left !optional;
+		@extend %spacein-sml-right !optional;
+	}
+	.spacein-med-topless {
+		//@extend %spacein-med-top !optional;
+		@extend %spacein-med-bottom !optional;
+		@extend %spacein-med-left !optional;
+		@extend %spacein-med-right !optional;
+	}
+	.spacein-lrg-topless {
+		//@extend %spacein-lrg-top !optional;
+		@extend %spacein-lrg-bottom !optional;
+		@extend %spacein-lrg-left !optional;
+		@extend %spacein-lrg-right !optional;
+	}
+	.spacein-xlrg-topless {
+		//@extend %spacein-xlrg-top !optional;
+		@extend %spacein-xlrg-bottom !optional;
+		@extend %spacein-xlrg-left !optional;
+		@extend %spacein-xlrg-right !optional;
+	}
+	.spacein-xxlrg-topless {
+		//@extend %spacein-xxlrg-top !optional;
+		@extend %spacein-xxlrg-bottom !optional;
+		@extend %spacein-xxlrg-left !optional;
+		@extend %spacein-xxlrg-right !optional;
+	}
+	.spacein-xxxlrg-topless {
+		//@extend %spacein-xxxlrg-top !optional;
+		@extend %spacein-xxxlrg-bottom !optional;
+		@extend %spacein-xxxlrg-left !optional;
+		@extend %spacein-xxxlrg-right !optional;
+	}
+	.spacein-huge-topless {
+		//@extend %spacein-huge-top !optional;
+		@extend %spacein-huge-bottom !optional;
+		@extend %spacein-huge-left !optional;
+		@extend %spacein-huge-right !optional;
+	}
+	.spacein-xhuge-topless {
+		//@extend %spacein-xhuge-top !optional;
+		@extend %spacein-xhuge-bottom !optional;
+		@extend %spacein-xhuge-left !optional;
+		@extend %spacein-xhuge-right !optional;
+	}
+
+	// SPACE-BOTTOMLESS
+
+	.spacein-bottomless {
+		@extend %spacein-top !optional;
+		//@extend %spacein-bottom !optional;
+		@extend %spacein-left !optional;
+		@extend %spacein-right !optional;
+	}
+	.spacein-sml-bottomless {
+		@extend %spacein-sml-top !optional;
+		//@extend %spacein-sml-bottom !optional;
+		@extend %spacein-sml-left !optional;
+		@extend %spacein-sml-right !optional;
+	}
+	.spacein-med-bottomless {
+		@extend %spacein-med-top !optional;
+		//@extend %spacein-med-bottom !optional;
+		@extend %spacein-med-left !optional;
+		@extend %spacein-med-right !optional;
+	}
+	.spacein-lrg-bottomless {
+		@extend %spacein-lrg-top !optional;
+		//@extend %spacein-lrg-bottom !optional;
+		@extend %spacein-lrg-left !optional;
+		@extend %spacein-lrg-right !optional;
+	}
+	.spacein-xlrg-bottomless {
+		@extend %spacein-xlrg-top !optional;
+		//@extend %spacein-xlrg-bottom !optional;
+		@extend %spacein-xlrg-left !optional;
+		@extend %spacein-xlrg-right !optional;
+	}
+	.spacein-xxlrg-bottomless {
+		@extend %spacein-xxlrg-top !optional;
+		//@extend %spacein-xxlrg-bottom !optional;
+		@extend %spacein-xxlrg-left !optional;
+		@extend %spacein-xxlrg-right !optional;
+	}
+	.spacein-xxxlrg-bottomless {
+		@extend %spacein-xxxlrg-top !optional;
+		//@extend %spacein-xxxlrg-bottom !optional;
+		@extend %spacein-xxxlrg-left !optional;
+		@extend %spacein-xxxlrg-right !optional;
+	}
+	.spacein-huge-bottomless {
+		@extend %spacein-huge-top !optional;
+		//@extend %spacein-huge-bottom !optional;
+		@extend %spacein-huge-left !optional;
+		@extend %spacein-huge-right !optional;
+	}
+	.spacein-xhuge-bottomless {
+		@extend %spacein-xhuge-top !optional;
+		//@extend %spacein-xhuge-bottom !optional;
+		@extend %spacein-xhuge-left !optional;
+		@extend %spacein-xhuge-right !optional;
+	}

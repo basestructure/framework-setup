@@ -1,0 +1,173 @@
+/* SETUP | LAYOUT | 262_SETUPBASIC_GRID | CSS - 2018-06-20 */
+
+// -------------------------------------
+// EXTEND
+
+	// STRUCTURE
+	
+	%css-body {}
+	%css-structure {}
+
+	// INNER
+
+	%css-siteinner {
+
+		// GRID
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: 1fr minmax(0, #{$width-cs}rem) minmax(0, #{$width-sidebarsecondary}rem) 1fr;
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) minmax(0, #{$width-sidebarsecondary}rem) 1fr;
+		}
+
+	}
+
+	%css-csw {
+
+		// GRID
+
+		// IE
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+		-ms-grid-rows: auto;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: minmax(0, #{$width-content}rem) minmax(0, #{$width-sidebarprimary}rem);
+			grid-template-columns: minmax(0, #{$width-content}rem) minmax(0, #{$width-sidebarprimary}rem);
+		}
+
+		// HOOK
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+
+	}
+
+	%css-content {
+
+		// HOOK
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+
+	}
+
+	%css-sidebarprimary {
+
+		// HOOK
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+
+	}
+
+	%css-sidebarsecondary {
+
+		// HOOK
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 3;
+			grid-column: 3;
+		}
+
+	}
+
+	// SITE-HEADER
+
+	%css-siteheader {}
+	%css-siteheaderwrap {}
+
+	// SITE-FOOTER
+
+	%css-sitefooter {}
+	%css-sitefooterwrap {}
+
+	// FOOTER-WIDGETS
+
+	%css-footerwidgets {}
+	%css-footerwidgetswrap {}
+
+	// FOOTER-MENU
+
+	%css-footermenu {}
+	%css-footermenuwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar-sidebar .body {
+		@extend %css-body !optional;
+	}
+
+	.content-sidebar-sidebar .structure {
+		@extend %css-structure !optional;
+	}
+
+	.content-sidebar-sidebar .site-inner {
+		@extend %css-siteinner !optional;
+	}
+
+	.content-sidebar-sidebar .content-sidebar-wrap {
+		@extend %css-csw !optional;
+	}
+
+	.content-sidebar-sidebar .content {
+		@extend %css-content !optional;
+	}
+
+	.content-sidebar-sidebar .sidebar-primary {
+		@extend %css-sidebarprimary !optional;
+	}
+
+	.content-sidebar-sidebar .sidebar-secondary {
+		@extend %css-sidebarsecondary !optional;
+	}
+
+	.content-sidebar-sidebar .site-header {
+		@extend %css-siteheader !optional;
+	}
+	.content-sidebar-sidebar .site-header > .wrap {
+		@extend %css-siteheaderwrap !optional;
+	}
+
+	.content-sidebar-sidebar .site-footer {
+		@extend %css-sitefooter !optional;
+	}
+	.content-sidebar-sidebar .site-footer > .wrap {
+		@extend %css-sitefooterwrap !optional;
+	}
+
+	.content-sidebar-sidebar .footer-widgets {
+		@extend %css-footerwidgets !optional;
+	}
+	.content-sidebar-sidebar .footer-widgets > .wrap {
+		@extend %css-footerwidgetswrap !optional;
+	}
+
+	.content-sidebar-sidebar .footer-menu {
+		@extend %css-footermenu !optional;
+	}
+	.content-sidebar-sidebar .footer-menu > .wrap {
+		@extend %css-footermenuwrap !optional;
+	}

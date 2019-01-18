@@ -1,0 +1,271 @@
+/* SETUP | GUI | 263_SETUPBASIC | SECTION - 2018-06-23 */
+
+// -------------------------------------
+// EXTEND
+
+	// SECTION (PARENT)
+
+	%section {
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+		%section-outerinner {
+			-ms-grid-columns: 1fr auto 1fr;
+			grid-template-columns: 1fr auto 1fr;
+		}
+		%section-max {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+		}
+		%section-3col {
+			-ms-grid-columns: 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		%section-2col {
+			-ms-grid-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
+		}
+		%section-mainside {
+			-ms-grid-columns: auto 1fr;
+			grid-template-columns: auto 1fr;
+		}
+		%section-sidemain {
+			-ms-grid-columns: 1fr auto;
+			grid-template-columns: 1fr auto;
+		}
+		%section-topdown {}
+
+		// SECTION (PARENT) ALIGNMENT
+
+		%section-align-left {
+			-ms-grid-template-columns: auto 1fr;
+			grid-template-columns: auto 1fr;
+		}
+		%section-align-center {
+			-ms-grid-template-columns: 1fr auto 1fr;
+			grid-template-columns: 1fr auto 1fr;
+		}
+		%section-align-right {
+			-ms-grid-template-columns: 1fr auto;
+			grid-template-columns: 1fr auto;
+		}
+
+
+	// SECTION (CHILDREN)
+
+	%section-child {
+		-ms-grid-column: 1;
+		grid-column: 1;
+	}
+
+	// Note: This levels the rows between main, side, left, right and center 
+	%section-child-1row {
+		-ms-grid-row: 1;
+		grid-row: 1;
+	}
+
+		// OUTER INNER
+		%section-child-outerinner {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+
+		// OUTER INNER
+		// deprecated
+		%section-child-outerinner-inner {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+
+		// MAX
+		%section-child-max {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+
+		// MAIN & SIDE
+		%section-child-main {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+		%section-child-side {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+
+		// MAINSIDE > MAIN & SIDE
+		%section-mainside-child-main {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+		%section-mainside-child-side {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+
+		// MAINSIDE > SIDE & MAIN
+		%section-sidemain-child-main {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+		%section-sidemain-child-side {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+
+		// LEFT, CENTER, RIGHT
+		%section-child-left {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+		%section-child-center {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+		%section-child-right {
+			// Note: this is due to the fact that left and right based alignments use only 2 columns
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+		%section-child-right-3col {
+			-ms-grid-column: 3;
+			grid-column: 3;
+		}
+
+		// TOP & BOTTOM
+		%section-child-top {}
+		%section-child-bottom {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SECTION (PARENT)
+
+	.section {
+		@extend %section !optional;
+	}
+		.section.section-outerinner {
+			@extend %section-outerinner !optional;
+		}
+		.section.section-max {
+			@extend %section-max !optional;
+		}
+		.section.section-3col {
+			@extend %section-3col !optional;
+		}
+		.section.section-2col {
+			@extend %section-2col !optional;
+		}
+		.section.section-mainside {
+			@extend %section-mainside !optional;
+		}
+		.section.section-sidemain {
+			@extend %section-sidemain !optional;
+		}
+		.section.section-topdown {
+			@extend %section-topdown !optional;
+		}
+		.section.section-left {
+			@extend %section-align-left !optional;
+		}
+		.section.section-center {
+			@extend %section-align-center !optional;
+		}
+		.section.section-right {
+			@extend %section-align-right !optional;
+		}
+
+	// SECTION (CHILDREN)
+
+	.section > .inner {
+		@extend %section-child !optional;
+	}
+	.section > .main {
+		@extend %section-child-main !optional;
+	}
+	.section > .side {
+		@extend %section-child-side !optional;
+	}
+
+	// SECTION (OUTERINNER)
+
+	.section.section-outerinner > .inner {
+		@extend %section-child-outerinner !optional;
+	}
+
+	// SECTION (MAX)
+
+	.section.section-max > .inner {
+		@extend %section-child-max !optional;
+	}
+
+	// SECTION (2COL)
+
+	.section.section-2col > .left {
+		@extend %section-child-left !optional;
+	}
+	.section.section-2col > .right {
+		@extend %section-child-right !optional;
+	}
+
+	// SECTION (3COL)
+
+	.section.section-3col > .left {
+		@extend %section-child-left !optional;
+	}
+	.section.section-3col > .center {
+		@extend %section-child-center !optional;
+	}
+	.section.section-3col > .right {
+		@extend %section-child-right-3col !optional;
+	}
+
+	// SECTION (MAINSIDE)
+
+	.section.section-mainside > .main {
+		@extend %section-mainside-child-main !optional;
+		@extend %section-child-1row !optional;
+	}
+	.section.section-mainside > .side {
+		@extend %section-mainside-child-side !optional;
+		@extend %section-child-1row !optional;
+	}
+
+	// SECTION (SIDEMAIN)
+
+	.section.section-sidemain > .main {
+		@extend %section-sidemain-child-main !optional;
+		@extend %section-child-1row !optional;
+	}
+	.section.section-sidemain > .side {
+		@extend %section-sidemain-child-side !optional;
+		@extend %section-child-1row !optional;
+	}
+
+	// SECTION (ALIGN) INNER
+
+	.section.section-left > .inner {
+		@extend %section-child-left !optional;
+	}
+	.section.section-center > .inner {
+		@extend %section-child-center !optional;
+	}
+	.section.section-right > .inner {
+		@extend %section-child-right !optional;
+	}
+
+	// SECTION (ALIGN) MAIN
+
+	.section.section-left > .main {
+		@extend %section-child-left !optional;
+	}
+	.section.section-center > .main {
+		@extend %section-child-center !optional;
+	}
+	.section.section-right > .main {
+		@extend %section-child-right !optional;
+	}

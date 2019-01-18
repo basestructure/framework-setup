@@ -1,0 +1,133 @@
+/* SETUP | LAYOUT | 2611_SETUP_GRID | FULL - 2018-11-14 */
+
+// -------------------------------------
+// EXTEND
+
+	// STRUCTURE
+	
+	%full-body {}
+	%full-structure {}
+
+	// INNER
+
+	%full-siteinner {
+
+		// GRID
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+			grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+		}
+
+	}
+
+	%full-csw {
+
+		// GRID
+
+		// IE
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+		-ms-grid-rows: auto;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: minmax(0, #{$width-content}rem);
+			grid-template-columns: minmax(0, #{$width-content}rem);
+		}
+
+	}
+
+	%full-content {
+
+		// HOOK
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+
+	}
+
+	%full-sidebarprimary {}
+
+	// SITE-HEADER
+
+	%full-siteheader {}
+	%full-siteheaderwrap {}
+
+	// SITE-FOOTER
+
+	%full-sitefooter {}
+	%full-sitefooterwrap {}
+
+	// FOOTER-WIDGETS
+
+	%full-footerwidgets {}
+	%full-footerwidgetswrap {}
+
+	// FOOTER-MENU
+
+	%full-footermenu {}
+	%full-footermenuwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.full-width-content .body {
+		@extend %full-body !optional;
+	}
+
+	.full-width-content .structure {
+		@extend %full-structure !optional;
+	}
+
+	.full-width-content .site-inner {
+		@extend %full-siteinner !optional;
+	}
+
+	.full-width-content-wrap {
+		@extend %full-csw !optional;
+	}
+
+	.full-width-content .content {
+		@extend %full-content !optional;
+	}
+
+	.full-width-content .sidebar-primary {
+		@extend %full-sidebarprimary !optional;
+	}
+
+	.full-width-content .site-header {
+		@extend %full-siteheader !optional;
+	}
+	.full-width-content .site-header > .wrap {
+		@extend %full-siteheaderwrap !optional;
+	}
+
+	.full-width-content .site-footer {
+		@extend %full-sitefooter !optional;
+	}
+	.full-width-content .site-footer > .wrap {
+		@extend %full-sitefooterwrap !optional;
+	}
+
+	.full-width-content .footer-widgets {
+		@extend %full-footerwidgets !optional;
+	}
+	.full-width-content .footer-widgets > .wrap {
+		@extend %full-footerwidgetswrap !optional;
+	}
+
+	.full-width-content .footer-menu {
+		@extend %full-footermenu !optional;
+	}
+	.full-width-content .footer-menu > .wrap {
+		@extend %full-footermenuwrap !optional;
+	}

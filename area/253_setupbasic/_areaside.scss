@@ -1,0 +1,17 @@
+/* SETUP | AREA | 253_SETUPBASIC | AREASIDE - 2018-06-25 */
+
+// -------------------------------------
+// EXTEND
+
+	%areaside {}
+	%areasidewrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.area-side {
+		@extend %areaside !optional;
+	}
+	.area-side > .wrap {
+		@extend %areasidewrap !optional;
+	}

@@ -1,0 +1,449 @@
+/* SETUP | SPACING | 2611_SETUP | SPACEIN - 2018-10-31 */
+
+// -------------------------------------
+// GUIDE
+
+	// SPACE VARIABLES
+
+	// $space:				1.0;		16px
+
+	// $space-tiny:			0.0625;		1px		TINY
+	// $space-xxxsml:		0.125;		2px		XXXSML
+	// $space-xxsml:		0.25;		4px		XXSML / QUARTER
+	// $space-quarter:		0.25;		4px
+	// $space-xsml:			0.3125;		5px		XSML
+	// $space-sml:			0.5;		8px		SML / HALF
+	// $space-half:			0.5;		8px
+	// $space-default:		1.0;		16px	DEFAULT
+	// $space-med:			1.5; 		24px	MED
+	// $space-lrg:			2;			32px	LRG / DOUBLE
+	// $space-xlrg:			3;			48px	XLRG / TRIPLE
+	// $space-xxlrg:		4;			64px	XXLRG
+	// $space-xxxlrg:		6;			96px	XXXHUGE
+	// $space-huge:			8;			128px	HUGE
+	// $space-xhuge:		10;			160px	XHUGE
+
+
+// -------------------------------------
+// EXTEND
+
+// -------------------------------------
+// SELECTORS
+
+	// SPACE
+
+	.spacein-med {
+		@include responsive-range(meddown) {
+			padding: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg {
+		@include responsive-range(meddown) {
+			padding: #{$space-med}rem;
+		}
+		@include responsive-range(smldown) {
+			padding: #{$space-default}rem;
+		}
+	}
+	.spacein-xlrg {
+		@include responsive-range(meddown) {
+			padding: #{$space-lrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding: #{$space-med}rem;
+		}
+	}
+	.spacein-xxlrg {
+		@include responsive-range(meddown) {
+			padding: #{$space-xlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding: #{$space-lrg}rem;
+		}
+	}
+	.spacein-xxxlrg {
+		@include responsive-range(meddown) {
+			padding: #{$space-xxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding: #{$space-xlrg}rem;
+		}
+	}
+	.spacein-huge {
+		@include responsive-range(meddown) {
+			padding: #{$space-xxxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding: #{$space-xxlrg}rem;
+		}
+	}
+	.spacein-xhuge {
+		@include responsive-range(meddown) {
+			padding: #{$space-huge}rem;
+		}
+		@include responsive-range(smldown) {
+			padding: #{$space-xxxlrg}rem;
+		}
+	}
+
+	// SPACE-HORIZONTAL
+
+	.spacein-med-x {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-default}rem;
+			padding-left: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-x {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-med}rem;
+			padding-left: #{$space-med}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-default}rem;
+			padding-left: #{$space-default}rem;
+		}
+	}
+	.spacein-xlrg-x {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-lrg}rem;
+			padding-left: #{$space-lrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-med}rem;
+			padding-left: #{$space-med}rem;
+		}
+	}
+	.spacein-xxlrg-x {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-xlrg}rem;
+			padding-left: #{$space-xlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-lrg}rem;
+			padding-left: #{$space-lrg}rem;
+		}
+	}
+	.spacein-xxxlrg-x {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-xxlrg}rem;
+			padding-left: #{$space-xxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-xlrg}rem;
+			padding-left: #{$space-xlrg}rem;
+		}
+	}
+	.spacein-huge-x {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-xxxlrg}rem;
+			padding-left: #{$space-xxxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-xxlrg}rem;
+			padding-left: #{$space-xxlrg}rem;
+		}
+	}
+	.spacein-xhuge-x {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-huge}rem;
+			padding-left: #{$space-huge}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-xxxlrg}rem;
+			padding-left: #{$space-xxxlrg}rem;
+		}
+	}
+
+	// SPACE-VERTICAL
+
+	.spacein-med-y {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-default}rem;
+			padding-bottom: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-y {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-med}rem;
+			padding-bottom: #{$space-med}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-default}rem;
+			padding-bottom: #{$space-default}rem;
+		}
+	}
+	.spacein-xlrg-y {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-lrg}rem;
+			padding-bottom: #{$space-lrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-med}rem;
+			padding-bottom: #{$space-med}rem;
+		}
+	}
+	.spacein-xxlrg-y {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-xlrg}rem;
+			padding-bottom: #{$space-xlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-lrg}rem;
+			padding-bottom: #{$space-lrg}rem;
+		}
+	}
+	.spacein-xxxlrg-y {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-xxlrg}rem;
+			padding-bottom: #{$space-xxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-xlrg}rem;
+			padding-bottom: #{$space-xlrg}rem;
+		}
+	}
+	.spacein-huge-y {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-xxxlrg}rem;
+			padding-bottom: #{$space-xxxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-xxlrg}rem;
+			padding-bottom: #{$space-xxlrg}rem;
+		}
+	}
+	.spacein-xhuge-y {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-huge}rem;
+			padding-bottom: #{$space-huge}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-xxxlrg}rem;
+			padding-bottom: #{$space-xxxlrg}rem;
+		}
+	}
+
+	// SPACE-TOP
+
+	.spacein-med-top {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-top {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-med}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-default}rem;
+		}
+	}
+	.spacein-xlrg-top {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-lrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-med}rem;
+		}
+	}
+	.spacein-xxlrg-top {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-xlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-lrg}rem;
+		}
+	}
+	.spacein-xxxlrg-top {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-xxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-xlrg}rem;
+		}
+	}
+	.spacein-huge-top {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-xxxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-xxlrg}rem;
+		}
+	}
+	.spacein-xhuge-top {
+		@include responsive-range(meddown) {
+			padding-top: #{$space-huge}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: #{$space-xxxlrg}rem;
+		}
+	}
+
+	// SPACE-BOTTOM
+
+	.spacein-med-bottom {
+		@include responsive-range(meddown) {
+			padding-bottom: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-bottom {
+		@include responsive-range(meddown) {
+			padding-bottom: #{$space-med}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-bottom: #{$space-default}rem;
+		}
+	}
+	.spacein-xlrg-bottom {
+		@include responsive-range(meddown) {
+			padding-bottom: #{$space-lrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-bottom: #{$space-med}rem;
+		}
+	}
+	.spacein-xxlrg-bottom {
+		@include responsive-range(meddown) {
+			padding-bottom: #{$space-xlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-bottom: #{$space-lrg}rem;
+		}
+	}
+	.spacein-xxxlrg-bottom {
+		@include responsive-range(meddown) {
+			padding-bottom: #{$space-xxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-bottom: #{$space-xlrg}rem;
+		}
+	}
+	.spacein-huge-bottom {
+		@include responsive-range(meddown) {
+			padding-bottom: #{$space-xxxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-bottom: #{$space-xxlrg}rem;
+		}
+	}
+	.spacein-xhuge-bottom {
+		@include responsive-range(meddown) {
+			padding-bottom: #{$space-huge}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-bottom: #{$space-xxxlrg}rem;
+		}
+	}
+
+	// SPACE-LEFT
+
+	.spacein-med-left {
+		@include responsive-range(meddown) {
+			padding-left: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-left {
+		@include responsive-range(meddown) {
+			padding-left: #{$space-med}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-left: #{$space-default}rem;
+		}
+	}
+	.spacein-xlrg-left {
+		@include responsive-range(meddown) {
+			padding-left: #{$space-lrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-left: #{$space-med}rem;
+		}
+	}
+	.spacein-xxlrg-left {
+		@include responsive-range(meddown) {
+			padding-left: #{$space-xlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-left: #{$space-lrg}rem;
+		}
+	}
+	.spacein-xxxlrg-left {
+		@include responsive-range(meddown) {
+			padding-left: #{$space-xxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-left: #{$space-xlrg}rem;
+		}
+	}
+	.spacein-huge-left {
+		@include responsive-range(meddown) {
+			padding-left: #{$space-xxxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-left: #{$space-xxlrg}rem;
+		}
+	}
+	.spacein-xhuge-left {
+		@include responsive-range(meddown) {
+			padding-left: #{$space-huge}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-left: #{$space-xxxlrg}rem;
+		}
+	}
+
+	// SPACE-RIGHT
+
+	.spacein-med-right {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-default}rem;
+		}
+	}
+	.spacein-lrg-right {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-med}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-default}rem;
+		}
+	}
+	.spacein-xlrg-right {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-lrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-med}rem;
+		}
+	}
+	.spacein-xxlrg-right {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-xlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-lrg}rem;
+		}
+	}
+	.spacein-xxxlrg-right {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-xxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-xlrg}rem;
+		}
+	}
+	.spacein-huge-right {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-xxxlrg}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-xxlrg}rem;
+		}
+	}
+	.spacein-xhuge-right {
+		@include responsive-range(meddown) {
+			padding-right: #{$space-huge}rem;
+		}
+		@include responsive-range(smldown) {
+			padding-right: #{$space-xxxlrg}rem;
+		}
+	}

@@ -1,0 +1,259 @@
+/* SETUP | GRID | 261_SETUPBASIC_GRID | COLUMN - 2018-06-11 */
+
+// -------------------------------------
+// EXTEND
+
+// COLUMN CONTAINERS
+
+	%columns {
+		//display: -ms-grid;
+		//-ms-grid-columns: repeat(12, 1fr);
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+	}
+		%columns-fifth {
+			//-ms-grid-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(5, 1fr);
+		}
+		%columns-eight {
+			//-ms-grid-template-columns: repeat(8, 1fr);
+			grid-template-columns: repeat(8, 1fr);
+		}
+
+// FULL
+
+	%column-full {
+		//-ms-grid-column: span 12;
+		grid-column: span 12;
+	}
+
+// HALF (3 of 6)
+
+	%column-half {
+		//-ms-grid-column: span 6;
+		grid-column: span 6;
+	}
+
+// THIRD (2 of 6)
+
+	%column-third {
+		//-ms-grid-column: span 4;
+		grid-column: span 4;
+	}
+		%column-twothirds {
+			//-ms-grid-column: span 8;
+			grid-column: span 8;
+		}
+
+// FOURTH (2 of 8)
+
+	%column-fourth {
+		//-ms-grid-column: span 3;
+		grid-column: span 3;
+	}
+		%column-threefourths {
+			//-ms-grid-column: span 9;
+			grid-column: span 9;
+		}
+
+// FIFTH (1 of 5)
+
+	%column-fifth {
+		//-ms-grid-column: span 1;
+		grid-column: span 1;
+	}
+		%column-fifth-full {
+			//-ms-grid-column: span 5;
+			grid-column: span 5;
+		}
+		%column-fifth-half {
+			//-ms-grid-column: span 2;
+			grid-column: span 2;
+		}
+		%column-twofifths {
+			//-ms-grid-column: span 2;
+			grid-column: span 2;
+		}
+		%column-threefifths {
+			//-ms-grid-column: span 3;
+			grid-column: span 3;
+		}
+		%column-fourfifths {
+			//-ms-grid-column: span 4;
+			grid-column: span 4;
+		}
+
+// SIXTH (1 of 6)
+
+	%column-sixth {
+		//-ms-grid-column: span 2;
+		grid-column: span 2;
+	}
+		%column-fivesixths {
+			//-ms-grid-column: span 10;
+			grid-column: span 10;
+		}
+
+// EIGHT (1 of 8)
+
+	%column-eight {
+		//-ms-grid-column: span 1;
+		grid-column: span 1;
+	}
+		%column-seveneights {
+			//-ms-grid-column: span 7;
+			grid-column: span 7;
+		}
+		%column-fiveeights {
+			//-ms-grid-column: span 5;
+			grid-column: span 5;
+		}
+		%column-threeeights {
+			//-ms-grid-column: span 3;
+			grid-column: span 3;
+		}
+
+		%column-eight-full {
+			//-ms-grid-column: span 8;
+			grid-column: span 8;
+		}
+		%column-eight-half {
+			//-ms-grid-column: span 4;
+			grid-column: span 4;
+		}
+		%column-eight-fourth {
+			//-ms-grid-column: span 2;
+			grid-column: span 2;
+		}
+		%column-eight-threefourths {
+			//-ms-grid-column: span 6;
+			grid-column: span 6;
+		}
+
+// -------------------------------------
+// SELECTORS
+
+// COLUMNS (CONTAINER)
+
+	.columns {
+		@extend %columns !optional;
+		@extend %gap-default !optional;
+	}
+
+	.columns.columns-fifth {
+		@extend %columns-fifth !optional;
+	}
+
+	.columns.columns-eight {
+		@extend %columns-eight !optional;
+	}
+
+// FULL
+
+	.full {
+		@extend %column-full !optional;
+		@extend %guide-column !optional;
+	}
+
+// HALF
+
+	.half {
+		@extend %column-half !optional;
+		@extend %guide-column !optional;
+	}
+		.columns-fifth > .half {
+			@extend %column-fifth-half !optional;
+			@extend %guide-column !optional;
+		}
+		.columns-eight > .half {
+			@extend %column-eight-half !optional;
+			@extend %guide-column !optional;
+		}
+
+// THIRD
+
+	.third {
+		@extend %column-third !optional;
+		@extend %guide-column !optional;
+	}
+		.twothirds {
+			@extend %column-twothirds !optional;
+			@extend %guide-column !optional;
+		}
+
+// FOURTH
+
+	.fourth {
+		@extend %column-fourth !optional;
+		@extend %guide-column !optional;
+	}
+	.threefourths {
+		@extend %column-threefourths !optional;
+		@extend %guide-column !optional;
+	}
+
+// FIFTH
+
+	.fifth {
+		@extend %column-fifth !optional;
+		@extend %guide-column !optional;
+	}
+		.columns-fifth > .full {
+			@extend %column-fifth-full !optional;
+			@extend %guide-column !optional;
+		}
+		.fourfifths {
+			@extend %column-fourfifths !optional;
+			@extend %guide-column !optional;
+		}
+		.threefifths {
+			@extend %column-threefifths !optional;
+			@extend %guide-column !optional;
+		}
+		.twofifths {
+			@extend %column-twofifths !optional;
+			@extend %guide-column !optional;
+		}
+
+// SIXTH
+
+	.sixth {
+		@extend %column-sixth !optional;
+		@extend %guide-column !optional;
+	}
+		.fivesixths {
+			@extend %column-fivesixths !optional;
+			@extend %guide-column !optional;
+		}
+
+// EIGHT
+
+	.eight {
+		@extend %column-eight !optional;
+		@extend %guide-column !optional;
+	}
+		.columns-eight > .full {
+			@extend %column-eight-full !optional;
+			@extend %guide-column !optional;
+		}
+		.seveneights {
+			@extend %column-seveneights !optional;
+			@extend %guide-column !optional;
+		}
+		.columns-eight > .threefourths {
+			@extend %column-eight-threefourths !optional;
+			@extend %guide-column !optional;
+		}
+		.fiveeights {
+			@extend %column-fiveeights !optional;
+			@extend %guide-column !optional;
+		}
+		.threeeights {
+			@extend %column-threeeights !optional;
+			@extend %guide-column !optional;
+		}
+		.columns-eight > .fourth {
+			@extend %column-eight-fourth !optional;
+			@extend %guide-column !optional;
+		}

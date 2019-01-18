@@ -1,0 +1,120 @@
+/* SETUP | CTA | 262_SETUPBASIC | BUTTON - 2018-07-06 */
+
+// -------------------------------------
+// EXTEND
+
+// BUTTON
+
+	%button {
+		@extend %fontfamily-bold !optional;
+		@extend %fontweight-thick !optional;
+		@extend %lineheight-single !optional;
+		@extend %textcenter !optional;
+
+		border-width: 0;
+		border-radius: 3pt;
+		cursor: pointer;
+		display: inline-block;
+		color: $button-color-link;
+		background-color: $button-bgcolor-link;
+		padding: #{$space-half}rem #{$space-default}rem;
+		text-transform: uppercase;
+	}
+
+	%button-link {
+		color: $button-color-link;
+		background-color: $button-bgcolor-link;
+		text-decoration: none;
+	}
+
+	%button-active {}
+
+	%button-hover {
+		color: $button-color-hover;
+		background-color: $button-bgcolor-hover;
+		text-decoration: none;
+	}
+
+// BUTTON-SIZE
+
+	%button-tiny {
+		padding: #{$space-tiny}rem;
+	}
+	%button-xsml {
+		padding: #{$space-xxxsml}rem;
+	}
+	%button-sml {
+		padding: #{$space-xxsml}rem;
+	}
+	%button-med {
+		padding: #{$space-xsml}rem;
+	}
+	%button-lrg {
+		padding: #{$space-default}rem;
+	}
+	%button-xlrg {
+		padding: #{$space-double}rem;
+	}
+	%button-huge {
+		padding: #{$space-triple}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+// BUTTON
+
+	.button,
+	a.button {
+		@extend %button !optional;
+	}
+
+	.button:link,
+	a.button:link {
+		@extend %button-link !optional;
+	}
+
+	.button:active,
+	a.button:active {
+		@extend %button-active !optional;
+	}
+
+	.button:hover,
+	a.button:hover {
+		@extend %button-hover !optional;
+	}
+
+	.button.valigntop {
+		@extend %verticalaligntop !optional;
+	}
+	.button.valignbottom {
+		@extend %verticalalignbottom !optional;
+	}
+
+	.button.display-block {
+		@extend %display-block !optional;
+	}
+
+// BUTTON-SIZE
+
+	.button-tiny {
+		@extend %button-tiny !optional;
+	}
+	.button-xsml {
+		@extend %button-xsml !optional;
+	}
+	.button-sml {
+		@extend %button-sml !optional;
+	}
+	.button-med {
+		@extend %button-med !optional;
+	}
+	.button-lrg {
+		@extend %button-lrg !optional;
+	}
+	.button-xlrg {
+		@extend %button-xlrg !optional;
+	}
+	.button-huge {
+		@extend %button-huge !optional;
+	}

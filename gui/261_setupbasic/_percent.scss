@@ -1,0 +1,147 @@
+/* SETUP | GUI | 261_SETUPBASIC | PERCENT - 2018-06-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// MAX
+
+	%percent-width-max {
+		width: 100% !important;
+	}
+
+	// HALF
+
+	%percent-width-half {
+		width: 50% !important;
+	}
+
+	// THIRD
+
+	%percent-width-third {
+		width: 33.3% !important;
+	}
+
+		%percent-width-twothirds {
+			width: 66.3% !important;
+		}
+
+	// FOURTH
+
+	%percent-width-fourth {
+		width: 25% !important;
+	}
+
+		%percent-width-threefourths {
+			width: 75% !important;
+		}
+
+	// FIFTH
+
+	%percent-width-fifth {
+		width: 20% !important;
+	}
+
+		%percent-width-twofifths {
+			width: 40% !important;
+		}
+
+		%percent-width-threefifths {
+			width: 60% !important;
+		}
+
+		%percent-width-fourfifths {
+			width: 80% !important;
+		}
+
+	// SIXTH
+
+	%percent-width-sixth {
+		width: 16.6% !important;
+	}
+
+		%percent-width-fivesixths {
+			width: 83.33% !important;
+		}
+
+	// EIGHT
+
+	%percent-width-eight {
+		width: 12.5% !important;
+	}
+
+		%percent-width-seveneights {
+			width: 87.5% !important;
+		}
+
+// -------------------------------------
+// SELECTORS
+
+	// MAX
+
+	.percent-max {
+		@extend %percent-width-max !optional;
+	}
+
+	// HALF
+
+	.percent-half {
+		@extend %percent-width-half !optional;
+	}
+
+	// THIRD
+
+	.percent-third {
+		@extend %percent-width-third !optional;
+	}
+
+		.percent-twothirds {
+			@extend %percent-width-twothirds !optional;
+		}
+
+	// FOURTH
+
+	.percent-fourth {
+		@extend %percent-width-fourth !optional;
+	}
+
+		.percent-threefourths {
+			@extend %percent-width-threefourths !optional;
+		}
+
+	// FIFTH
+
+	.percent-fifth {
+		@extend %percent-width-fifth !optional;
+	}
+
+		.percent-twofifths {
+			@extend %percent-width-twofifths !optional;
+		}
+
+		.percent-threefifths {
+			@extend %percent-width-threefifths !optional;
+		}
+
+		.percent-fourfifths {
+			@extend %percent-width-fourfifths !optional;
+		}
+
+	// SIXTH
+
+	.percent-sixth {
+		@extend %percent-width-sixth !optional;
+	}
+
+		.percent-fivesixths {
+			@extend %percent-width-fivesixths !optional;
+		}
+
+	// EIGHT
+
+	.percent-eight {
+		@extend %percent-width- !optional;
+	}
+
+		.percent-seveneights {
+			@extend %percent-width-seveneights !optional;
+		}	

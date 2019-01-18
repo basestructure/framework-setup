@@ -1,0 +1,89 @@
+/* SETUP | VARIABLES | 2721_SETUP | LETTERSPACING - 2018-12-14 */
+
+// -------------------------------------
+// VARIABLES
+
+	$letterspacing-default:				null;
+
+// TAGS
+
+	$letterspacing-body:				null;
+	$letterspacing-p:					null;
+	
+	// LIST
+	$letterspacing-list:				null;
+	$letterspacing-ul:					null;
+	$letterspacing-ol:					null;
+	$letterspacing-li:					null;
+
+	// HEADLINE
+	$letterspacing-headline:			null;
+	$letterspacing-h1:					null;
+	$letterspacing-h2:					null;
+	$letterspacing-h3:					null;
+	$letterspacing-h4:					null;
+	$letterspacing-h5:					null;
+	$letterspacing-h6:					null;
+
+// PURPOSE
+
+	// QUOTES
+	$letterspacing-blockquote:			null;
+	$letterspacing-quote:				null;
+	$letterspacing-cite:				null;
+
+	// CAPTION
+	$letterspacing-caption:				null;
+	
+	// TITLES
+	$letterspacing-sitetitle:			null;
+	$letterspacing-sitedescription:		null;
+	$letterspacing-titlepage:			null;
+	$letterspacing-titlepost:			null;
+	$letterspacing-titlewidget:			null;
+	$letterspacing-titlearchive:		null;
+
+	// META
+	$letterspacing-meta:				null;
+	$letterspacing-copyright:			null;
+	$letterspacing-breadcrumb:			null;
+
+// PAGE & POST
+
+	// ENTRY
+	$letterspacing-entrytitle:			null;
+	$letterspacing-entrymeta:			null;
+
+	// SINGLE
+	$letterspacing-single-entrytitle:	null;
+	$letterspacing-single-entrymeta:	null;
+
+	// PAGE
+	$letterspacing-page-entrytitle:		null;
+	$letterspacing-page-entrymeta:		null;
+
+	// BLOG
+	$letterspacing-blog-entrytitle:		null;
+	$letterspacing-blog-entrymeta:		null;
+
+	// ARCHIVE
+	$letterspacing-archivetitle:		null;
+	$letterspacing-archivedescription:	null;
+
+	// COMMENTS
+	$letterspacing-commentstitle:		null;
+
+	// REPLY
+	$letterspacing-replytitle:			null;
+
+	// WIDGET
+	$letterspacing-widgettitle:			0.25;
+
+
+// RELATIVE
+
+	$letterspacing-narrower:			-0.125;
+	$letterspacing-narrow:				-0.0875;
+	$letterspacing-normal:				0;
+	$letterspacing-wide:				0.0625;
+	$letterspacing-wider:				0.125;

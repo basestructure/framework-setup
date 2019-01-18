@@ -1,0 +1,71 @@
+/* SETUP | LAYOUT | 2721_SETUP | INNER - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner {
+
+		// SPACING
+		margin: 0 auto;
+		padding: 3rem 1rem;
+
+		// WIDTH
+		max-width: 1140px;
+
+		// GENESIS
+		//clear: both;
+		//margin: 0 auto;
+		//padding: 60px 30px 0;
+
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw {}
+
+	// CONTENT
+
+	%content {}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary {}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary {}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.site-inner {
+		@extend %siteinner !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.site-inner .content-sidebar-wrap {
+		@extend %csw !optional;
+	}
+
+	// CONTENT
+
+	.content {
+		@extend %content !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary {
+		@extend %sidebarprimary !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary {
+		@extend %sidebarsecondary !optional;
+	}

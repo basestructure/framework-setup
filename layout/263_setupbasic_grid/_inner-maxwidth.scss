@@ -1,0 +1,105 @@
+/* SETUP | LAYOUT | 263_SETUPBASIC_GRID | INNER-MAXWIDTH - 2018-09-24 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner_maxwidth {
+
+		// grid-area: inner;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+	}
+		%siteinner_cs_maxwidth {}
+		%siteinner_sc_maxwidth {}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw_maxwidth {
+
+		// grid-area: csw;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		// HOOK
+		grid-column: 1;
+			// IE
+			-ms-grid-column: 1;
+		
+	}
+
+		%csw_cs_maxwidth {}
+		%csw_sc_maxwidth {}
+
+	// CONTENT
+
+	%content_maxwidth {}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary_maxwidth {}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary_maxwidth {}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.maxwidth .site-inner {
+		@extend %siteinner_maxwidth !optional;
+	}
+		.maxwidth.content-sidebar {
+			@extend %siteinner_cs_maxwidth !optional;
+		}
+		.maxwidth.sidebar-content {
+			@extend %siteinner_sc_maxwidth !optional;
+		}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.maxwidth .content-sidebar-wrap {
+		@extend %csw_maxwidth !optional;
+	}
+		.maxwidth.content-sidebar .content-sidebar-wrap {
+			@extend %csw_cs_maxwidth !optional;
+		}
+		.maxwidth.sidebar-content .content-sidebar-wrap {
+			@extend %csw_sc_maxwidth !optional;
+		}
+
+	// CONTENT
+
+	.maxwidth .content {
+		@extend %content_maxwidth !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.maxwidth .sidebar-primary {
+		@extend %sidebarprimary_maxwidth !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.maxwidth .sidebar-secondary {
+		@extend %sidebarsecondary_maxwidth !optional;
+	}

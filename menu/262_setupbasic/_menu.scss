@@ -1,0 +1,89 @@
+/* SETUP | MENU | 262_SETUPBASIC | MENU - 2018-06-27 */
+
+// -------------------------------------
+// EXTEND
+
+	// MENU
+	%menu {}
+
+	// MENU
+	%menu-all {
+		list-style-type: none;			// removes bullets from 3 menu ul
+		margin-left: 0;					// removes left space from gnm ul
+	}
+
+	// MENU-PRIMARY | MENU-HEADER
+	%menumenuprimary {}
+
+	// MENU-SECONDARY | MENU-TOP
+	%menumenusecondary {}
+
+	// MENU-FOOTER
+	%menumenufooter {}
+
+	// WIDGET MENU
+	%menu-widget {}
+
+	// SIDEBAR MENU
+	%menu-sidebar {}
+
+	// FOOTER-WIDGETS MENU
+	%menu-footerwidgets {}
+
+	// FOOTER-MENU MENU
+	%menu-footermenu {}
+
+	// GENESIS-NAV-MENU
+	%menugnm {}
+
+	// PREFIX MENU
+	%menu-prefix {}
+
+// -------------------------------------
+// SELECTORS
+
+	.menu {
+		@extend %menu !optional;
+	}
+
+	.menu-primary {
+		@extend %menu-all !optional;
+		@extend %menumenuprimary !optional;
+	}
+
+	.menu-secondary {
+		@extend %menu-all !optional;
+		@extend %menumenusecondary !optional;
+	}
+
+	.menu-footer {
+		@extend %menu-all !optional;
+		@extend %menumenufooter !optional;
+	}
+
+	.widget .menu {
+		@extend %menu-all !optional;
+		@extend %menu-widget !optional;
+	}
+
+	.sidebar .menu {
+		@extend %menu-all !optional;
+		@extend %menu-sidebar !optional;
+	}
+
+	.footer-widgets .menu {
+		@extend %menu-footerwidgets !optional;
+	}
+
+	.footer-menu .menu {
+		@extend %menu-all !optional;
+		@extend %menu-footermenu !optional;
+	}
+
+	.genesis-nav-menu {
+		@extend %menugnm !optional;
+	}
+
+	.prefix .menu {
+		@extend %menu-prefix !optional;
+	}

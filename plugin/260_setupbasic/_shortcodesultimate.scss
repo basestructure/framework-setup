@@ -1,0 +1,123 @@
+/* SETUP | PLUGIN | 260_SETUPBASIC | SHORTCODESULTIMATE - 2018-06-03 */
+
+// -------------------------------------
+// EXTEND
+
+	// SU-ACCORDION
+
+	%su-accordion {
+		margin-top: 0;
+		margin-bottom: #{$fontsize-default}rem;
+	}
+
+	// SU-ACCORDION-SPOILER
+
+	%su-accordion-spoiler {
+		margin-bottom: 0;
+	}
+
+	// SU-SPOILER
+
+	%su-spoiler {}
+
+	// SU-SPOILER-TITLE
+
+	%su-spoiler-title {
+		padding-top: 0;
+		padding-bottom: 0;
+		font-size: 1rem;
+		padding-left: 1rem;
+	}
+
+		%spoiler-style-default-su-spoiler-title {
+			padding-left: 1rem;
+		}
+
+	// SU-SPOILER-CONTENT
+
+	%su-spoiler-content {
+		padding: 0;
+		padding-top: 1rem;
+	}
+
+		%su-spoiler-style-default-su-spoiler-content {
+			padding: 0;
+			padding-top: 1rem;
+		}
+
+	// SU-SPOILER-ICON
+
+	%su-spoiler-icon {
+		font-size: 0.85rem;
+		top: 0;
+		width: 0;
+		height: 0;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SU-ACCORDION
+	
+	body .su-accordion {
+		@extend %su-accordion !optional;
+	}
+
+	// SU-ACCORDION-SPOILER
+
+	body .su-accordion .su-spoiler {
+		@extend %su-accordion-spoiler !optional;
+	}
+
+	// SU-SPOILER
+
+	body .su-spoiler {
+		@extend %su-spoiler !optional;
+	}
+
+	// SU-SPOILER-TITLE
+
+	body .su-spoiler-title {
+		@extend %su-spoiler-title !optional;
+	}
+
+		body .su-spoiler.su-fontsize-sml > .su-spoiler-title {
+			@extend %fontsize-sml !optional;
+		}
+		body .su-spoiler.su-fontsize-xsml > .su-spoiler-title {
+			@extend %fontsize-xsml !optional;
+		}
+		body .su-spoiler.su-fontsize-xxsml > .su-spoiler-title {
+			@extend %fontsize-xxsml !optional;
+		}
+
+	body .su-spoiler-style-default > .su-spoiler-title {
+		@extend %spoiler-style-default-su-spoiler-title !optional;
+	}
+
+	// SU-SPOILER-CONTENT
+
+	body .su-spoiler-content {
+		@extend %su-spoiler-content !optional;
+	}
+
+		body .su-spoiler-style-default > .su-spoiler-content {
+			@extend %su-spoiler-style-default-su-spoiler-content !optional;
+		}
+
+	// SU-SPOILER-ICON
+
+	body .su-spoiler-icon {
+		@extend %su-spoiler-icon !optional;
+	}
+
+		body .su-spoiler.su-fontsize-sml > .su-spoiler-title > .su-spoiler-icon {
+			@extend %fontsize-sml !optional;
+		}
+		body .su-spoiler.su-fontsize-xsml > .su-spoiler-title > .su-spoiler-icon {
+			@extend %fontsize-xsml !optional;
+		}
+		body .su-spoiler.su-fontsize-xxsml > .su-spoiler-title > .su-spoiler-icon {
+			@extend %fontsize-xxsml !optional;
+		}

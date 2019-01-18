@@ -1,0 +1,18 @@
+/* SETUP | PLUGIN | 260_SETUPBASIC | WOOCOMMERCE - 2018-05-30 */
+
+// -------------------------------------
+// EXTEND
+
+	// WOOCOMMERCE CONTENT
+
+	%wc-content {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// WOOCOMMERCE CONTENT
+	
+	.woocommerce .content {
+		@extend %wc-content !optional;
+	}

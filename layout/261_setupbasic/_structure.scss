@@ -1,0 +1,14 @@
+/* SETUP | LAYOUT | 261_SETUPBASIC | STRUCTURE - 2018-06-08 */
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.site-container {
+		@extend %sitecontainer !optional;
+	}

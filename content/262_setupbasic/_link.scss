@@ -1,0 +1,39 @@
+/* SETUP | CONTENT | 262_SETUPBASIC | LINK - 2018-07-06 */
+
+// -------------------------------------
+// EXTEND
+
+	%link {
+		color: $color-link;
+		text-decoration: none;
+	}
+
+	%hover {
+		color: $color-hover;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	%active {}
+
+	%visited {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	a {
+		@extend %link !optional;
+	}
+
+	a:hover {
+		@extend %hover !optional;
+	}
+
+	a:active {
+		@extend %active !optional;
+	}
+
+	a:visited {
+		@extend %visited !optional;
+	}

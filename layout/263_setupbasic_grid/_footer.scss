@@ -1,0 +1,236 @@
+/* SETUP | LAYOUT | 263_SETUPBASIC_GRID | FOOTER - 2018-09-12 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-FOOTER
+
+	%sitefooter {
+
+		//grid-area: footer;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;	
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr minmax(0, #{$width-sitefooterwrap}rem) 1fr;
+				// IE
+				-ms-grid-columns: 1fr minmax(0, #{$width-sitefooterwrap}rem) 1fr;
+		}
+
+		// SPACING
+		padding: 0.5rem 1rem;
+
+	}
+	%sitefooterwrap {
+
+		//grid-area: footerwrap;
+
+		// HOOK
+		grid-column: 1;
+			// IE
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+				// IE 
+				-ms-grid-column: 2;
+		}
+
+	}
+
+	// FOOTER-WIDGETS
+
+	%footerwidgets {
+
+		//grid-area: footerwidgets;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr minmax(0, #{$width-footerwidgetswrap}rem) 1fr;
+				// IE 
+				-ms-grid-columns: 1fr minmax(0, #{$width-footerwidgetswrap}rem) 1fr;
+		}
+
+		// SPACING
+		padding: 1rem;
+
+	}
+	%footerwidgetswrap {
+
+		//grid-area: footerwidgetswrap;
+
+		// HOOK
+		grid-column: 1;
+			// IE 
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+				// IE
+				-ms-grid-column: 2;
+		}
+
+	}
+
+	%footerwidgets1 {
+		//grid-area: footer1;
+	}
+
+	%footerwidgets2 {
+		//grid-area: footer2;
+	}
+
+	%footerwidgets3 {
+		//grid-area: footer3;
+	}
+
+	// FOOTER-MENU
+
+	%footermenu {
+
+		//grid-area: footermenu;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr minmax(0, #{$width-sitefooterwrap}rem) 1fr;
+				// IE
+				-ms-grid-columns: 1fr minmax(0, #{$width-sitefooterwrap}rem) 1fr;
+		}
+
+		// SPACING
+		padding: 1rem;
+
+	}
+	%footermenuwrap {
+
+		//grid-area: footermenuwrap;
+
+		// HOOK
+		grid-column: 1;
+			// IE
+			-ms-grid-column: 1;
+
+		// GRID
+		display: grid;
+		@extend %gap !optional;
+			// IE
+			//display: -ms-grid;
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				display: flex;
+				flex-wrap: wrap;
+				@include grid-container;
+				@include grid-collapse;
+			}
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+				// IE
+				-ms-grid-column: 2;
+
+			// GRID
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+	}
+	%footermenuwrap-child {
+		// IE
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			//@include grid-column(3);
+			@include grid-column(3, $grids-neat-grid);
+		}
+	}
+
+	%footermenuwrap-firstchild {
+		grid-column: -1;
+		display: none;
+	}
+	%footermenu-link {}
+	%footermenu-hover {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-FOOTER
+
+	.site-footer {
+		@extend %sitefooter !optional;
+	}
+	.site-footer > .wrap {
+		@extend %sitefooterwrap !optional;
+	}
+
+	// FOOTER-WIDGETS
+
+	.footer-widgets {
+		@extend %footerwidgets !optional;
+	}
+	.footer-widgets > .wrap {
+		@extend %footerwidgetswrap !optional;
+	}
+
+	.footer-widgets-1 {
+		@extend %footerwidgets1 !optional;
+	}
+
+	.footer-widgets-2 {
+		@extend %footerwidgets2 !optional;
+	}
+
+	.footer-widgets-3 {
+		@extend %footerwidgets3 !optional;
+	}
+
+	// FOOTER-MENU
+
+	.footer-menu {
+		@extend %footermenu !optional;
+	}
+	.footer-menu > .wrap {
+		@extend %footermenuwrap !optional;
+	}
+	.footer-menu > .wrap:before {
+		@extend %footermenuwrap-firstchild !optional;
+	}
+
+	.footer-menu > .wrap > div,
+	.footer-menu > .wrap > section {
+		@extend %footermenuwrap-child !optional;
+	}
+
+	.footer-menu a,
+	.footer-menu a:link {
+		@extend %footermenu-link !optional;
+	}
+	.footer-menu a:hover {
+		@extend %footermenu-hover !optional;
+	}

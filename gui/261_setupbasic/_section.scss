@@ -1,0 +1,642 @@
+/* SETUP | GUI | 261_SETUPBASIC | SECTION - 2018-06-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// SECTION
+
+	%section {
+		display: grid;
+		grid-area: section;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"section-inner";
+	}
+
+
+	// SECTION-INNER
+
+	%section-inner {
+		grid-area: section-inner;
+	}
+
+
+	// SECTION ALIGNMENT
+
+	%section-center {
+		grid-template-columns: 1fr auto 1fr;
+		grid-template-areas:
+		". section-inner .";
+	}
+	%section-left {
+		grid-template-columns: auto 1fr;
+		grid-template-areas:
+		"section-inner .";
+	}
+	%section-right {
+		grid-template-columns: 1fr auto;
+		grid-template-areas:
+		". section-inner";
+	}
+
+
+	// MAIN & SIDE
+
+	%section-main {
+		grid-area: section-main;
+	}
+	%section-side {
+		grid-area: section-side;
+	}
+
+	%section-mainside {
+		grid-template-areas:
+		"section-main section-side";
+	}
+	%section-sidemain {
+		grid-template-areas:
+		"section-side section-main";
+	}
+
+	// SECTION WIDTH MAX
+	// Pointless in the sense that the original structure is already a maximum fraction
+
+	%section-max {
+		grid-template-columns: 1fr;
+	}
+		%section-max-center {
+			grid-template-areas:
+			"section-inner section-inner section-inner";
+		}
+		%section-max-left {
+			grid-template-areas:
+			"section-inner section-inner";
+		}
+		%section-max-right {
+			grid-template-areas:
+			"section-inner section-inner";
+		}
+
+	// WIDTH RELATIVE
+
+	%section-huge {
+		grid-template-columns: minmax(0, #{$width-huge}rem);
+	}
+		%section-huge-center {
+			grid-template-columns: 1fr minmax(0, #{$width-huge}rem) 1fr;
+		}
+		%section-huge-left {
+			grid-template-columns: minmax(0, #{$width-huge}rem) 1fr;
+		}
+		%section-huge-right {
+			grid-template-columns: 1fr minmax(0, #{$width-huge}rem);
+		}
+
+	%section-xlrg {
+		grid-template-columns: minmax(0, #{$width-xlrg}rem);
+	}
+		%section-xlrg-center {
+			grid-template-columns: 1fr minmax(0, #{$width-xlrg}rem) 1fr;
+		}
+		%section-xlrg-left {
+			grid-template-columns: minmax(0, #{$width-xlrg}rem) 1fr;
+		}
+		%section-xlrg-right {
+			grid-template-columns: 1fr minmax(0, #{$width-xlrg}rem);
+		}
+
+	%section-lrg {
+		grid-template-columns: minmax(0, #{$width-lrg}rem);
+	}
+		%section-lrg-center {
+			grid-template-columns: 1fr minmax(0, #{$width-lrg}rem) 1fr;
+		}
+		%section-lrg-left {
+			grid-template-columns: minmax(0, #{$width-lrg}rem) 1fr;
+		}
+		%section-lrg-right {
+			grid-template-columns: 1fr minmax(0, #{$width-lrg}rem);
+		}
+
+	%section-med {
+		grid-template-columns: minmax(0, #{$width-med}rem);
+	}
+		%section-med-center {
+			grid-template-columns: 1fr minmax(0, #{$width-med}rem) 1fr;
+		}
+		%section-med-left {
+			grid-template-columns: minmax(0, #{$width-med}rem) 1fr;
+		}
+		%section-med-right {
+			grid-template-columns: 1fr minmax(0, #{$width-med}rem);
+		}
+
+	%section-sml {
+		grid-template-columns: minmax(0, #{$width-sml}rem);
+	}
+		%section-sml-center {
+			grid-template-columns: 1fr minmax(0, #{$width-sml}rem) 1fr;
+		}
+		%section-sml-left {
+			grid-template-columns: minmax(0, #{$width-sml}rem) 1fr;
+		}
+		%section-sml-right {
+			grid-template-columns: 1fr minmax(0, #{$width-sml}rem);
+		}
+
+	%section-xsml {
+		grid-template-columns: minmax(0, #{$width-xsml}rem);
+	}
+		%section-xsml-center {
+			grid-template-columns: 1fr minmax(0, #{$width-xsml}rem) 1fr;
+		}
+		%section-xsml-left {
+			grid-template-columns: minmax(0, #{$width-xsml}rem) 1fr;
+		}
+		%section-xsml-right {
+			grid-template-columns: 1fr minmax(0, #{$width-xsml}rem);
+		}
+
+	%section-tiny {
+		grid-template-columns: minmax(0, #{$width-tiny}rem);
+	}
+		%section-tiny-center {
+			grid-template-columns: 1fr minmax(0, #{$width-tiny}rem) 1fr;
+		}
+		%section-tiny-left {
+			grid-template-columns: minmax(0, #{$width-tiny}rem) 1fr;
+		}
+		%section-tiny-right {
+			grid-template-columns: 1fr minmax(0, #{$width-tiny}rem);
+		}
+
+
+
+	// WIDTH MEDIA
+
+	%section-mediamedium {
+		grid-template-columns: minmax(0, #{$width-media-medium}rem);
+	}
+		%section-mediamedium-center {
+			grid-template-columns: 1fr minmax(0, #{$width-media-medium}rem) 1fr;
+		}
+		%section-mediamedium-left {
+			grid-template-columns: minmax(0, #{$width-media-medium}rem) 1fr;
+		}
+		%section-mediamedium-right {
+			grid-template-columns: 1fr minmax(0, #{$width-media-medium}rem);
+		}
+
+	%section-mediathumbnail {
+		grid-template-columns: minmax(0, #{$width-media-thumbnail}rem);
+	}
+		%section-mediathumbnail-center {
+			grid-template-columns: 1fr minmax(0, #{$width-media-thumbnail}rem) 1fr;
+		}
+		%section-mediathumbnail-left {
+			grid-template-columns: minmax(0, #{$width-media-thumbnail}rem) 1fr;
+		}
+		%section-mediathumbnail-right {
+			grid-template-columns: 1fr minmax(0, #{$width-media-thumbnail}rem);
+		}
+
+
+	// WIDTH PERCENTAGE
+
+	%section-eight {}
+		%section-eight-main {}
+		%section-eight-side {}
+
+	%section-sixth {}
+		%section-sixth-main {}
+		%section-sixth-side {}
+
+	%section-fifth {}
+		%section-fifth-main {}
+		%section-fifth-side {}
+
+	%section-twofifths {}
+		%section-twofifths-main {}
+		%section-twofifths-side {}
+
+	%section-fourth {}
+		%section-fourth-main {}
+		%section-fourth-side {}
+
+	%section-third {}
+		%section-third-main {}
+		%section-third-side {}
+
+	%section-twofifths {}
+		%section-twofifths-main {}
+		%section-twofifths-side {}
+
+	%section-half {}
+		%section-half-main {}
+		%section-half-side {}
+
+	%section-twothirds {}
+		%section-twothirds-main {}
+		%section-twothirds-side {}
+
+	%section-threefourths {}
+		%section-threefourths-main {}
+		%section-threefourths-side {}
+
+	%section-threefifths {}
+		%section-threefifths-main {}
+		%section-threefifths-side {}
+
+	%section-fourfifths {}
+		%section-fourfifths-main {}
+		%section-fourfifths-side {}
+
+	%section-fivesixths {}
+		%section-fivesixths-main {}
+		%section-fivesixths-side {}
+
+	%section-seveneights {}
+		%section-seveneights-main {}
+		%section-seveneights-side {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.section {
+		@extend %section !optional;
+	}
+
+	.section > .inner {
+		@extend %section-inner !optional;
+	}
+
+	// ALIGNMENT
+
+	.section-left {
+		@extend %section-left !optional;
+	}
+	.section-center {
+		@extend %section-center !optional;		
+	}
+	.section-right {
+		@extend %section-right !optional;
+	}
+
+	// MAIN & SIDE
+
+	.section > .main {
+		@extend %section-main !optional;
+	}
+	.section > .side {
+		@extend %section-side !optional;
+	}
+
+	.section.section-mainside {
+		@extend %section-mainside !optional;
+	}
+	.section.section-sidemain {
+		@extend %section-sidemain !optional;
+	}
+
+	// WIDTH MAX
+
+	.section.section-max {
+		@extend %section-max !optional;
+	}
+		.section.section-max.section-center {
+			@extend %section-center !optional;
+			@extend %section-max-center !optional;
+		}
+		.section.section-max.section-left {
+			@extend %section-left !optional;
+			@extend %section-max-left !optional;
+		}
+		.section.section-max.section-right {
+			@extend %section-right !optional;
+			@extend %section-max-right !optional;
+		}
+
+
+	// WIDTH RELATIVE
+
+	.section.section-huge {
+		@extend %section-huge !optional;
+	}
+		.section.section-huge.section-center {
+			@extend %section-center !optional;
+			@extend %section-huge-center !optional;
+		}
+		.section.section-huge.section-left {
+			@extend %section-left !optional;
+			@extend %section-huge-left !optional;
+		}
+		.section.section-huge.section-right {
+			@extend %section-right !optional;
+			@extend %section-huge-right !optional;
+		}
+
+	.section.section-xlrg {
+		@extend %section-xlrg !optional;
+	}
+		.section.section-xlrg.section-center {
+			@extend %section-center !optional;
+			@extend %section-xlrg-center !optional;
+		}
+		.section.section-xlrg.section-left {
+			@extend %section-left !optional;
+			@extend %section-xlrg-left !optional;
+		}
+		.section.section-xlrg.section-right {
+			@extend %section-right !optional;
+			@extend %section-xlrg-right !optional;
+		}
+
+	.section.section-lrg {
+		@extend %section-lrg !optional;
+	}
+		.section.section-lrg.section-center {
+			@extend %section-center !optional;
+			@extend %section-lrg-center !optional;
+		}
+		.section.section-lrg.section-left {
+			@extend %section-left !optional;
+			@extend %section-lrg-left !optional;
+		}
+		.section.section-lrg.section-right {
+			@extend %section-right !optional;
+			@extend %section-lrg-right !optional;
+		}
+
+	.section.section-med {
+		@extend %section-med !optional;
+	}
+		.section.section-med.section-center {
+			@extend %section-center !optional;
+			@extend %section-med-center !optional;
+		}
+		.section.section-med.section-left {
+			@extend %section-left !optional;
+			@extend %section-med-left !optional;
+		}
+		.section.section-med.section-right {
+			@extend %section-right !optional;
+			@extend %section-med-right !optional;
+		}
+
+	.section.section-sml {
+		@extend %section-sml !optional;
+	}
+		.section.section-sml.section-center {
+			@extend %section-center !optional;
+			@extend %section-sml-center !optional;
+		}
+		.section.section-sml.section-left {
+			@extend %section-left !optional;
+			@extend %section-sml-left !optional;
+		}
+		.section.section-sml.section-right {
+			@extend %section-right !optional;
+			@extend %section-sml-right !optional;
+		}
+
+	.section.section-xsml {
+		@extend %section-xsml !optional;
+	}
+		.section.section-xsml.section-center {
+			@extend %section-center !optional;
+			@extend %section-xsml-center !optional;
+		}
+		.section.section-xsml.section-left {
+			@extend %section-left !optional;
+			@extend %section-xsml-left !optional;
+		}
+		.section.section-xsml.section-right {
+			@extend %section-right !optional;
+			@extend %section-xsml-right !optional;
+		}
+
+	.section.section-tiny {
+		@extend %section-tiny !optional;
+	}
+		.section.section-tiny.section-center {
+			@extend %section-center !optional;
+			@extend %section-tiny-center !optional;
+		}
+		.section.section-tiny.section-left {
+			@extend %section-left !optional;
+			@extend %section-tiny-left !optional;
+		}
+		.section.section-tiny.section-right {
+			@extend %section-right !optional;
+			@extend %section-tiny-right !optional;
+		}
+
+	// WIDTH MEDIA
+
+	.section.section-mediamedium {
+		@extend %section-mediamedium !optional;
+	}
+		.section.section-mediamedium.section-center {
+			@extend %section-center !optional;
+			@extend %section-mediamedium-center !optional;
+		}
+		.section.section-mediamedium.section-left {
+			@extend %section-left !optional;
+			@extend %section-mediamedium-left !optional;
+		}
+		.section.section-mediamedium.section-right {
+			@extend %section-right !optional;
+			@extend %section-mediamedium-right !optional;
+		}
+
+	.section.section-mediathumbnail {
+		@extend %section-mediathumbnail !optional;
+	}
+		.section.section-mediathumbnail.section-center {
+			@extend %section-center !optional;
+			@extend %section-mediathumbnail-center !optional;
+		}
+		.section.section-mediathumbnail.section-left {
+			@extend %section-left !optional;
+			@extend %section-mediathumbnail-left !optional;
+		}
+		.section.section-mediathumbnail.section-right {
+			@extend %section-right !optional;
+			@extend %section-mediathumbnail-right !optional;
+		}
+
+	// WIDTH PERCENTAGE
+
+	.section.section-eight {
+		@extend %columns-eight !optional;
+		@extend %section-eight !optional;
+	}
+		.section.section-eight > .inner {
+			@extend %column-eight !optional;
+			@extend %section-eight-main !optional;
+		}
+		.section.section-eight > .main {
+			@extend %column-eight !optional;
+			@extend %section-eight-main !optional;
+		}
+		.section.section-eight > .side {
+			@extend %column-seveneights !optional;
+			@extend %section-eight-side !optional;
+		}
+
+	.section.section-sixth {
+		@extend %columns !optional;
+		@extend %section-sixth !optional;
+	}
+		.section.section-sixth > .main {
+			@extend %column-sixth !optional;
+			@extend %section-sixth-main !optional;
+		}
+		.section.section-sixth > .side {
+			@extend %column-fivesixths !optional;
+			@extend %section-sixth-side !optional;
+		}
+
+	.section.section-fifth {
+		@extend %columns-fifth !optional;
+		@extend %section-fifth !optional;
+	}
+		.section.section-fifth > .main {
+			@extend %column-fifth !optional;
+			@extend %section-fifth-main !optional;
+		}
+		.section.section-fifth > .side {
+			@extend %column-fourfifths !optional;
+			@extend %section-fifth-side !optional;
+		}
+
+	.section.section-fourth {
+		@extend %columns !optional;
+		@extend %section-fourth !optional;
+	}
+		.section.section-fourth > .main {
+			@extend %column-fourth !optional;
+			@extend %section-fourth-main !optional;
+		}
+		.section.section-fourth > .side {
+			@extend %column-threefourths !optional;
+			@extend %section-fourth-side !optional;
+		}
+
+	.section.section-third {
+		@extend %columns !optional;
+		@extend %section-third !optional;
+	}
+		.section.section-third > .main {
+			@extend %column-third !optional;
+			@extend %section-third-main !optional;
+		}
+		.section.section-third > .side {
+			@extend %column-twothirds !optional;
+			@extend %section-third-side !optional;
+		}
+
+	.section.section-half {
+		@extend %columns !optional;
+		@extend %section-half !optional;
+	}
+		.section.section-half > .main {
+			@extend %column-half !optional;
+			@extend %section-half-main !optional;
+		}
+		.section.section-half > .side {
+			@extend %column-half !optional;
+			@extend %section-half-side !optional;
+		}
+
+	.section.section-twofifths {
+		@extend %columns-fifth !optional;
+		@extend %section-twofifths !optional;
+	}
+		.section.section-twofifths > .main {
+			@extend %column-twofifths !optional;
+			@extend %section-twofifths-main !optional;
+		}
+		.section.section-twofifths > .side {
+			@extend %column-threefifths !optional;
+			@extend %section-twofifths-side !optional;
+		}
+
+	.section.section-twothirds {
+		@extend %columns !optional;
+		@extend %section-twothirds !optional;
+	}
+		.section.section-twothirds > .main {
+			@extend %column-twothirds !optional;
+			@extend %section-twothirds-main !optional;
+		}
+		.section.section-twothirds > .side {
+			@extend %column-third !optional;
+			@extend %section-twothirds-side !optional;
+		}
+
+	.section.section-threefourths {
+		@extend %columns !optional;
+		@extend %section-threefourths !optional;
+	}
+		.section.section-threefourths > .main {
+			@extend %column-threefourths !optional;
+			@extend %section-threefourths-main !optional;
+		}
+		.section.section-threefourths > .side {
+			@extend %column-fourth !optional;
+			@extend %section-threefourths-side !optional;
+		}
+
+	.section.section-threefifths {
+		@extend %columns-fifth !optional;
+		@extend %section-threefifths !optional;
+	}
+		.section.section-threefifths > .main {
+			@extend %column-threefifths !optional;
+			@extend %section-threefifths-main !optional;
+		}
+		.section.section-threefifths > .side {
+			@extend %column-twofifths !optional;
+			@extend %section-threefifths-side !optional;
+		}
+
+	.section.section-fourthfifths {
+		@extend %columns-fifth !optional;
+		@extend %section-fourthfifths !optional;
+	}
+		.section.section-fourthfifths > .main {
+			@extend %column-fourthfifths !optional;
+			@extend %section-fourthfifths-main !optional;
+		}
+		.section.section-fourthfifths > .side {
+			@extend %column-fifth !optional;
+			@extend %section-fourthfifths-side !optional;
+		}
+
+	.section.section-fivesixths {
+		@extend %columns !optional;
+		@extend %section-fivesixths !optional;
+	}
+		.section.section-fivesixths > .main {
+			@extend %column-fivesixths !optional;
+			@extend %section-fivesixths-main !optional;
+		}
+		.section.section-fivesixths > .side {
+			@extend %column-sixth !optional;
+			@extend %section-fivesixths-side !optional;
+		}
+
+	.section.section-seveneights {
+		@extend %columns-eight !optional;
+		@extend %section-seveneights !optional;
+	}
+		.section.section-seveneights > .main {
+			@extend %column-seveneights !optional;
+			@extend %section-seveneights-main !optional;
+		}
+		.section.section-seveneights > .side {
+			@extend %column-eight !optional;
+			@extend %section-seveneights-side !optional;
+		}

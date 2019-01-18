@@ -1,0 +1,113 @@
+/* SETUP | GRID | 261_SETUPBASIC | GRID-RESPONSIVE - 2018-06-05 */
+
+// -------------------------------------
+// EXTEND
+
+// -------------------------------------
+// SELECTORS
+
+// FULL
+
+	.grid-full {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-full !optional;
+	}
+
+// HALF
+
+	.grid-half {
+		@include responsive-range(xsmldown) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-half > .full {}
+
+// THIRD
+
+	.grid-third {
+		@include responsive-range(smldown) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-third > .full {}
+	.grid-third > .twothirds {}
+
+// FOURTH
+
+	.grid-fourth {
+		@include responsive-range(meddown) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include responsive-range(smldown) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-fourth > .full {}
+	.grid-fourth > .threefourths {}
+	.grid-fourth > .half {}
+
+// FIFTH
+
+	.grid-fifth {
+		@include responsive-range(meddown) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include responsive-range(smldown) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-fifth > .full {}
+	.grid-fifth > .fourfifths {}
+	.grid-fifth > .threefifths {}
+	.grid-fifth > .half {}
+	.grid-fifth > .twofifths {}
+
+// SIXTH
+
+	.grid-sixth {
+		@include responsive-range(meddown) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include responsive-range(smldown) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-sixth > .full {}
+	.grid-sixth > .fivesixths {}
+	.grid-sixth > .twothirds {}
+	.grid-sixth > .half {}
+	.grid-sixth > .third {}
+
+// EIGHT
+
+	.grid-eight {
+		@include responsive-range(meddown) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@include responsive-range(smldown) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-eight > .full {}
+	.grid-eight > .seveneights {}
+	.grid-eight > .threefourths {}
+	.grid-eight > .fiveeights {}
+	.grid-eight > .half {}
+	.grid-eight > .threeeights {}
+	.grid-eight > .fourth {}

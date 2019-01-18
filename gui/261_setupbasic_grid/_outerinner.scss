@@ -1,0 +1,198 @@
+/* SETUP | GUI | 261_SETUPBASIC_GRID | OUTERINNER - 2018-06-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// OUTER
+
+	%outer {
+		//grid-area: outer;
+	}
+
+
+	// INNER
+
+	%outer-inner {
+		//grid-area: outer-inner;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// OUTER
+
+	.outer {
+		@extend %section !optional;
+	}
+
+	// OUTER RELATIVE
+
+	.outer.max {
+		@extend %section-max !optional;
+	}
+		.outer.max.center {
+			@extend %section-center !optional;
+			@extend %section-max-center !optional;
+		}
+		.outer.max.left {
+			@extend %section-left !optional;
+			@extend %section-max-left !optional;
+		}
+		.outer.max.right {
+			@extend %section-right !optional;
+			@extend %section-max-right !optional;
+		}
+
+	.outer.huge {
+		@extend %section-huge !optional;
+	}
+		.outer.huge.center {
+			@extend %section-center !optional;
+			@extend %section-huge-center !optional;
+		}
+		.outer.huge.left {
+			@extend %section-left !optional;
+			@extend %section-huge-left !optional;
+		}
+		.outer.huge.right {
+			@extend %section-right !optional;
+			@extend %section-huge-right !optional;
+		}
+
+	.outer.xlrg {
+		@extend %section-xlrg !optional;
+	}
+		.outer.xlrg.center {
+			@extend %section-center !optional;
+			@extend %section-xlrg-center !optional;
+		}
+		.outer.xlrg.left {
+			@extend %section-left !optional;
+			@extend %section-xlrg-left !optional;
+		}
+		.outer.xlrg.right {
+			@extend %section-right !optional;
+			@extend %section-xlrg-right !optional;
+		}
+
+	.outer.lrg {
+		@extend %section-lrg !optional;
+	}
+		.outer.lrg.center {
+			@extend %section-center !optional;
+			@extend %section-lrg-center !optional;
+		}
+		.outer.lrg.left {
+			@extend %section-left !optional;
+			@extend %section-lrg-left !optional;
+		}
+		.outer.lrg.right {
+			@extend %section-right !optional;
+			@extend %section-lrg-right !optional;
+		}
+
+	.outer.med {
+		@extend %section-med !optional;
+	}
+		.outer.med.center {
+			@extend %section-center !optional;
+			@extend %section-med-center !optional;
+		}
+		.outer.med.left {
+			@extend %section-left !optional;
+			@extend %section-med-left !optional;
+		}
+		.outer.med.right {
+			@extend %section-right !optional;
+			@extend %section-med-right !optional;
+		}
+
+	.outer.sml {
+		@extend %outer-sml !optional;
+	}
+		.outer.sml.center {
+			@extend %section-center !optional;
+			@extend %section-sml-center !optional;
+		}
+		.outer.sml.left {
+			@extend %section-left !optional;
+			@extend %section-sml-left !optional;
+		}
+		.outer.sml.right {
+			@extend %section-right !optional;
+			@extend %section-sml-right !optional;
+		}
+
+	.outer.xsml {
+		@extend %section-xsml !optional;
+	}
+		.outer.xsml.center {
+			@extend %section-center !optional;
+			@extend %section-xsml-center !optional;
+		}
+		.outer.xsml.left {
+			@extend %section-left !optional;
+			@extend %section-xsml-left !optional;
+		}
+		.outer.xsml.right {
+			@extend %section-right !optional;
+			@extend %section-xsml-right !optional;
+		}
+
+	.outer.tiny {
+		@extend %section-tiny !optional;
+	}
+		.outer.tiny.center {
+			@extend %section-center !optional;
+			@extend %section-tiny-center !optional;
+		}
+		.outer.tiny.left {
+			@extend %section-left !optional;
+			@extend %section-tiny-left !optional;
+		}
+		.outer.tiny.right {
+			@extend %section-right !optional;
+			@extend %section-tiny-right !optional;
+		}
+
+	// OUTER MEDIA
+
+	.outer.mediamedium {
+		@extend %section-mediamedium !optional;
+	}
+		.outer.mediamedium.center {
+			@extend %section-center !optional;
+			@extend %section-mediamedium-center !optional;
+		}
+		.outer.mediamedium.left {
+			@extend %section-left !optional;
+			@extend %section-mediamedium-left !optional;
+		}
+		.outer.mediamedium.right {
+			@extend %section-right !optional;
+			@extend %section-mediamedium-right !optional;
+		}
+
+	.outer.mediathumbnail {
+		@extend %section-mediathumbnail !optional;
+	}
+		.outer.mediathumbnail.center {
+			@extend %section-center !optional;
+			@extend %section-mediathumbnail-center !optional;
+		}
+		.outer.mediathumbnail.left {
+			@extend %section-left !optional;
+			@extend %section-mediathumbnail-left !optional;
+		}
+		.outer.mediathumbnail.right {
+			@extend %section-right !optional;
+			@extend %section-mediathumbnail-right !optional;
+		}
+
+
+	// INNER
+
+	.outer > .inner {
+		@extend %outer-inner !optional;
+	}

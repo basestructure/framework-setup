@@ -1,0 +1,163 @@
+/* SETUP | LAYOUT | 263_SETUPBASIC_GRID | CREDIT - 2018-09-10 */
+
+// -------------------------------------
+// EXTEND
+
+	// CREDIT
+
+	%credit {
+
+		//grid-area: credit;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr auto;
+				// IE
+				-ms-grid-columns: 1fr auto;
+		}
+
+	}
+
+
+	// SITEFOR
+
+	%sitefor {
+
+		//grid-area: sitefor;
+
+		// HOOK
+		grid-column: 1;
+			// IE
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 1;
+				// IE
+				-ms-grid-column: 1;
+		}
+
+		// TYPOLOGY
+		color: $color-gray;
+		font-size: #{$fontsize-xsml}rem;
+		line-height: 1.4;
+
+		// DISPLAY
+		display: block;
+
+	}
+		%sitefor-a {}
+		%sitefor-hvr {}
+
+	// CREDIT-BRAND
+	%credit-brand {}
+
+	// CREDIT-COPYRIGHT
+	%credit-copyright {}
+
+	// CREDIT-DESIGNBY
+	%credit-designby {
+
+		// TYPOLOGY
+		font-size: #{$fontsize-xxxsml}rem;
+
+	}
+
+
+	// SITEBY
+
+	%siteby {
+
+		//grid-area: siteby;
+
+		// HOOK
+		grid-column: 1;
+			// IE
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+				// IE
+				-ms-grid-column: 2;
+
+			// SPACING
+			margin-top: 0;
+		}
+
+		// SPACING
+		margin-top: 1rem;
+
+	}
+		%siteby-a {
+			background-image: url("https://smarterwebpackages.com/brand/smarterwebpackages-240x60.png");
+			background-repeat: no-repeat;
+		 	background-position: center;
+		 	background-attachment: scroll;
+			background-size: 120px;
+			width: 120px;
+			height: 30px;
+			display: block;
+			overflow: hidden;
+			text-decoration: none;
+			text-indent: -9999px;
+		}
+		%siteby-hvr {
+			text-decoration: none;
+		}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// CREDIT
+	.credit {
+		@extend %credit !optional;
+	}
+
+	// SITEFOR
+
+	.sitefor {
+		@extend %sitefor !optional;
+
+		a {
+			@extend %sitefor-a !optional;
+
+			&:hover {
+				@extend %sitefor-hvr !optional;
+			}
+		}
+	}
+
+	.credit-brand {
+		@extend %credit-brand !optional;
+	}
+	.credit-copyright {
+		@extend %credit-copyright !optional;
+	}
+	.credit-designby {
+		@extend %credit-designby !optional;
+	}
+
+	// SITEBY
+
+	.siteby {
+		@extend %siteby !optional;
+
+		a {
+			@extend %siteby-a !optional;
+
+			&:hover {
+				@extend %siteby-hvr !optional;
+			}
+		}
+	}

@@ -1,0 +1,30 @@
+/* SETUP | LAYOUT | 261_SETUPBASIC_GRID | STRUCTURE - 2018-06-08 */
+
+//		@include responsive-range(lrgup) {}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer {
+
+		//grid-area: sitecontainer;
+
+//		@include responsive-range(lrgup) {}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+		
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.site-container {
+		@extend %sitecontainer !optional;
+	}

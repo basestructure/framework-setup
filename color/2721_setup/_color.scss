@@ -1,0 +1,160 @@
+/* SETUP | COLOR | 2721_SETUP | COLOR - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	// SOLID
+
+	%color-white {
+		color: $color-white;
+	}
+	%color-black {
+		color: $color-black;
+	}
+	%color-lightgray {
+		color: $color-lightgray;
+	}
+	%color-gray {
+		color: $color-gray;
+	}
+	%color-darkgray {
+		color: $color-darkgray;
+	}
+
+	// FUNCTIONAL
+
+	%color-default {
+		color: $color-default;
+	}
+	%color-link {
+		color: $color-link;
+	}
+	%color-hover {
+		color: $color-hover;
+	}
+
+	// SHADES
+
+	%color-lightest {
+		color: $color-lightest;
+	}
+	%color-light {
+		color: $color-light;
+	}
+	%color-lighter {
+		color: $color-lighter;
+	}
+	%color-middle {
+		color: $color-middle;
+	}
+	%color-dark {
+		color: $color-dark;
+	}
+	%color-darker {
+		color: $color-darker;
+	}
+	%color-darkest {
+		color: $color-darkest;
+	}
+
+	// RAINBOW
+
+	%color-red {
+		color: $color-red;
+	}
+	%color-orange {
+		color: $color-orange;
+	}
+	%color-yellow {
+		color: $color-yellow;
+	}
+	%color-green {
+		color: $color-green;
+	}
+	%color-violet {
+		color: $color-violet;
+	}
+	%color-blue {
+		color: $color-blue;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SOLID
+
+	.color-white {
+		@extend %color-white !optional;
+	}
+	.color-black {
+		@extend %color-black !optional;
+	}
+	.color-lightgray {
+		@extend %color-lightgray !optional;
+	}
+	.color-gray {
+		@extend %color-gray !optional;
+	}
+	.color-mediumgray {
+		@extend %color-gray !optional;
+	}
+	.color-darkgray {
+		@extend %color-darkgray !optional;
+	}
+
+	// FUNCTIONAL
+
+	.color-default {
+		@extend %color-default !optional;
+	}
+	.color-link {
+		@extend %color-link !optional;
+	}
+	.color-hover {
+		@extend %color-hover !optional;
+	}
+
+	// SHADES
+
+	.color-lightest {
+		@extend %color-lightest !optional;
+	}
+	.color-light {
+		@extend %color-light !optional;
+	}
+	.color-lighter {
+		@extend %color-lighter !optional;
+	}
+	.color-middle {
+		@extend %color-middle !optional;
+	}
+	.color-dark {
+		@extend %color-dark !optional;
+	}
+	.color-darker {
+		@extend %color-darker !optional;
+	}
+	.color-darkest {
+		@extend %color-darkest !optional;
+	}
+
+	// RAINBOW
+
+	.color-red {
+		@extend %color-red !optional;
+	}
+	.color-orange {
+		@extend %color-orange !optional;
+	}
+	.color-yellow {
+		@extend %color-yellow !optional;
+	}
+	.color-green {
+		@extend %color-green !optional;
+	}
+	.color-violet {
+		@extend %color-violet !optional;
+	}
+	.color-blue {
+		@extend %color-blue !optional;
+	}

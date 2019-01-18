@@ -1,0 +1,76 @@
+/* SETUP | MENU | 262_SETUPBASIC | MENUITEM-FOOTERMENU - 2018-06-27 */
+
+// -------------------------------------
+// EXTEND
+
+	// MENU-ITEM
+	// .footer-menu .menu-item
+	%footermenu-menuitem {}
+	%footermenu-menuitem-a {}
+	%footermenu-menuitem-hvr {}
+		
+		// LEVEL 1 MENU-ITEM
+		// .footer-menu.menu > .menu-item
+		%footermenu-menuitemlvlone {}
+		%footermenu-menuitemlvlone-a {}
+		%footermenu-menuitemlvlone-hvr {}
+		
+		// MENU-ITEM MENU-ITEM-HAS-CHILDREN
+		// .footer-menu .menu-item.menu-item-has-children
+		%footermenu-menuitemhaschildren {}
+		%footermenu-menuitemhaschildren-a {}
+		%footermenu-menuitemhaschildren-hvr {}
+		
+		// SUB-MENU MENU-ITEM
+		// .footer-menu .menu-item.menu-item-has-children
+		%footermenu-submenu-menuitem {}
+		%footermenu-submenu-menuitem-a {}
+		%footermenu-submenu-menuitem-hvr {}
+
+// -------------------------------------
+// SELECTORS
+
+	// MENU-ITEM
+	.footer-menu .menu-item {
+		@extend %footermenu-menuitem !optional;
+	
+		a {
+			@extend %footermenu-menuitem-a !optional;
+		
+			&:hover {
+				@extend %footermenu-menuitem-hvr !optional;
+			}
+		}
+	}
+		// LEVEL 1 MENU-ITEM
+		.footer-menu .menu > .menu-item {
+			@extend %footermenu-menuitemlvlone !optional;
+		}
+		.footer-menu .menu > .menu-item > a {
+			@extend %footermenu-menuitemlvlone-a !optional;
+		}
+		.footer-menu .menu > .menu-item > a:hover {
+			@extend %footermenu-menuitemlvlone-hvr !optional;
+		}
+
+		// MENU-ITEM.MENU-ITEM-HAS-CHILDREN
+		.footer-menu .menu-item.menu-item-has-children {
+			@extend %footermenu-menuitemhaschildren !optional;
+		}
+		.footer-menu .menu-item.menu-item-has-children > a {
+			@extend %footermenu-menuitemhaschildren-a !optional;
+		}
+		.footer-menu .menu-item.menu-item-has-children > a:hover {
+			@extend %footermenu-menuitemhaschildren-hvr !optional;
+		}
+
+		// SUB-MENU MENU-ITEM
+		.footer-menu .sub-menu .menu-item {
+			@extend %footermenu-submenu-menuitem !optional;
+		}
+		.footer-menu .sub-menu .menu-item > a {
+			@extend %footermenu-submenu-menuitem-a !optional;
+		}
+		.footer-menu .sub-menu .menu-item > a:hover {
+			@extend %footermenu-submenu-menuitem-hvr !optional;
+		}

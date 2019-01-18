@@ -1,0 +1,219 @@
+/* SETUP | GRID | 262_SETUPBASIC_GRID | GRID-RESPONSIVE - 2018-06-18 */
+
+// -------------------------------------
+// EXTEND
+
+// -------------------------------------
+// SELECTORS
+
+// FULL
+
+	.grid-full {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-full !optional;
+	}
+
+// HALF
+
+	.grid-half {
+		@include responsive-range(xsmldown) {
+			-ms-grid-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-half > .full {
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+
+// THIRD
+
+	.grid-third {
+		@include responsive-range(smldown) {
+			-ms-grid-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			-ms-grid-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-third > .full,
+	.grid-third > .twothirds {
+		@include responsive-range(smldown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+
+// FOURTH
+
+	.grid-fourth {
+		@include responsive-range(meddown) {
+			-ms-grid-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include responsive-range(smldown) {
+			-ms-grid-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			-ms-grid-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-fourth > .full,
+	.grid-fourth > .threefourths {
+		@include responsive-range(meddown) {
+			grid-column: span 3;
+		}
+		@include responsive-range(smldown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+	.grid-fourth > .half {
+		@include responsive-range(meddown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(smldown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+
+// FIFTH
+
+	.grid-fifth {
+		@include responsive-range(meddown) {
+			-ms-grid-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include responsive-range(smldown) {
+			-ms-grid-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			-ms-grid-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-fifth > .full,
+	.grid-fifth > .threefifths,
+	.grid-fifth > .fourfifths {
+		@include responsive-range(meddown) {
+			grid-column: span 3;
+		}
+		@include responsive-range(smldown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+	.grid-fifth > .half,
+	.grid-fifth > .twofifths {
+		@include responsive-range(meddown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(smldown) {
+			grid-column: span 1;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+
+// SIXTH
+
+	.grid-sixth {
+		@include responsive-range(meddown) {
+			-ms-grid-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include responsive-range(smldown) {
+			-ms-grid-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			-ms-grid-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-sixth > .full,
+	.grid-sixth > .fivesixths,
+	.grid-sixth > .twothirds {
+		@include responsive-range(meddown) {
+			grid-column: span 3;
+		}
+		@include responsive-range(smldown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+	.grid-sixth > .half,
+	.grid-sixth > .third {
+		@include responsive-range(meddown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(smldown) {
+			grid-column: span 1;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+
+// EIGHT
+
+	.grid-eight {
+		@include responsive-range(meddown) {
+			-ms-grid-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@include responsive-range(smldown) {
+			-ms-grid-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include responsive-range(xsmldown) {
+			-ms-grid-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.grid-eight > .full,
+	.grid-eight > .seveneights,
+	.grid-eight > .threefourths,
+	.grid-eight > .fiveeights {
+		@include responsive-range(meddown) {
+			grid-column: span 4;
+		}
+		@include responsive-range(smldown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}
+	.grid-eight > .half,
+	.grid-eight > .threeeights,
+	.grid-eight > .fourth {
+		@include responsive-range(meddown) {
+			grid-column: span 2;
+		}
+		@include responsive-range(smldown) {
+			grid-column: span 1;
+		}
+		@include responsive-range(xsmldown) {
+			grid-column: span 1;
+		}
+	}

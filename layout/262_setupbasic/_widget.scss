@@ -1,0 +1,210 @@
+/* SETUP | LAYOUT | 262_SETUPBASIC | WIDGET - 2018-06-28 */
+
+// -------------------------------------
+// EXTEND
+
+	// WIDGET
+
+	%widgetarea {}
+
+	%widget {}
+
+	%widgetwrap {}
+
+	%widgettitle {}
+
+
+	// ALL WIDGET
+
+	%widgetarea-all {}
+	%widget-all {
+		margin-bottom: 2rem;
+	}
+	%widgetwrap-all {}
+	%widgettitle-all {
+		font-size: #{$fontsize-widgettitle}rem;
+		font-weight: $fontweight-widgettitle;
+		line-height: $lineheight-widgettitle;
+		letter-spacing: #{$letterspacing-widgettitle}rem;
+		margin-bottom: 1rem;
+	}
+
+
+	// HEADER WIDGET
+
+	%header-widgetarea {}
+	%header-widget {}
+	%header-widgetwrap {}
+	%header-widgettitle {}
+
+
+	// SIDEBAR WIDGET
+
+	%sidebar-widgetarea {}
+	%sidebar-widget {}
+	%sidebar-widgetwrap {}
+	%sidebar-widgettitle {}
+
+
+	// SIDEBAR-PRIMARY WIDGET
+
+	%sidebarprimary-widgetarea {}
+	%sidebarprimary-widget {}
+	%sidebarprimary-widgetwrap {}
+	%sidebarprimary-widgettitle {}
+
+
+	// SIDEBAR-SECONDARY WIDGET
+
+	%sidebarsecondary-widgetarea {}
+	%sidebarsecondary-widget {}
+	%sidebarsecondary-widgetwrap {}
+	%sidebarsecondary-widgettitle {}
+
+
+	// FOOTERWIDGETS WIDGET
+
+	%footer-widgetarea {}
+	%footer-widget {}
+	%footer-widgetwrap {}
+	%footer-widgettitle {}
+
+
+	// FOOTERMENU WIDGET
+
+	%footermenu-widget {}
+	%footermenu-widgetwrap {}
+	%footermenu-widgettitle {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// WIDGET
+
+	.widget-area {
+		@extend %widgetarea-all !optional;
+		@extend %widget !optional;
+	}
+	.widget {
+		@extend %widget-all !optional;
+		@extend %widget !optional;
+	}
+	.widget-wrap {
+		@extend %widgetwrap-all !optional;
+		@extend %widgetwrap !optional;
+	}
+	.widget-title {
+		@extend %widgettitle-all !optional;
+		@extend %widgettitle !optional;
+	}
+
+	// HEADER WIDGET
+
+	.header-widget-area {
+		@extend %widgetarea-all !optional;
+		@extend %header-widgetarea !optional;
+	}
+	.header-widget-area .widget {
+		@extend %widget-all !optional;
+		@extend %header-widget !optional;
+	}
+	.header-widget-area .widget-wrap {
+		@extend %widgetwrap-all !optional;
+		@extend %header-widgetwrap !optional;
+	}
+	.header-widget-area .widget-title {
+		@extend %widgettitle-all !optional;
+		@extend %header-widgettitle !optional;
+	}
+
+	// SIDEBAR
+
+	.sidebar.widget-area {
+		@extend %widgetarea-all !optional;
+		@extend %sidebar-widgetarea !optional;
+	}
+	.sidebar.widget-area .widget {
+		@extend %widget-all !optional;
+		@extend %sidebar-widget !optional;
+	}
+	.sidebar.widget-area .widget-wrap {
+		@extend %widgetwrap-all !optional;
+		@extend %sidebar-widgetwrap !optional;
+	}
+	.sidebar.widget-area .widget-title {
+		@extend %widgettitle-all !optional;
+		@extend %sidebar-widgettitle !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary.widget-area {
+		@extend %widgetarea-all !optional;
+		@extend %sidebarprimary-widgetarea !optional;
+	}
+	.sidebar-primary.widget-area .widget {
+		@extend %widget-all !optional;
+		@extend %sidebarprimary-widget !optional;
+	}
+	.sidebar-primary.widget-area .widget-wrap {
+		@extend %widgetwrap-all !optional;
+		@extend %sidebarprimary-widgetwrap !optional;
+	}
+	.sidebar-primary.widget-area .widget-title {
+		@extend %widgettitle-all !optional;
+		@extend %sidebarprimary-widgettitle !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary.widget-area {
+		@extend %widgetarea-all !optional;
+		@extend %sidebarsecondary-widgetarea !optional;
+	}
+	.sidebar-secondary.widget-area .widget {
+		@extend %widget-all !optional;
+		@extend %sidebarsecondary-widget !optional;
+	}
+	.sidebar-secondary.widget-area .widget-wrap {
+		@extend %widgetwrap-all !optional;
+		@extend %sidebarsecondary-widgetwrap !optional;
+	}
+	.sidebar-secondary.widget-area .widget-title {
+		@extend %widgettitle-all !optional;
+		@extend %sidebarsecondary-widgettitle !optional;
+	}
+
+	// FOOTER WIDGET
+
+	.footer-widget-area {
+		@extend %widgetarea-all !optional;
+		@extend %footer-widgetarea !optional;
+	}
+	.footer-widget-area .widget {
+		@extend %widget-all !optional;
+		@extend %footer-widget !optional;
+	}
+	.footer-widget-area .widget-wrap {
+		@extend %widgetwrap-all !optional;
+		@extend %footer-widgetwrap !optional;
+	}
+	.footer-widget-area .widget-title {
+		@extend %widgettitle-all !optional;
+		@extend %footer-widgettitle !optional;
+	}
+
+	// FOOTERMENU WIDGET
+
+	.footer-menu .widget {
+		@extend %widget-all !optional;
+		@extend %footermenu-widget !optional;
+	}
+	.footer-menu .widget-wrap {
+		@extend %widgetwrap-all !optional;
+		@extend %footermenu-widgetwrap !optional;
+	}
+	.footer-menu .widget-title {
+		@extend %widgettitle-all !optional;
+		@extend %footermenu-widgettitle !optional;
+	}

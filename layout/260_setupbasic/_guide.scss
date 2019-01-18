@@ -1,0 +1,60 @@
+/* SETUP | LAYOUT | 260_SETUPBASIC | GUIDE - 2018-06-04 */
+
+// -------------------------------------
+// EXTEND
+
+	// PARENT CHILD
+
+	%structure {
+
+		grid-area: structure;
+		display: grid;
+		grid-template-columns: 1rem 1fr 1rem;
+		grid-template-rows: 1rem auto 1rem;
+		grid-template-areas:
+		". . ."
+		". structurewrap ."
+		". . .";
+
+		// XSML (UP)
+		@include responsive-range(xsmlup) {
+			grid-template-columns: 1rem 1fr minmax(0, #{$width-structurewrap}rem) 1fr 1rem;
+			grid-template-rows: 1rem auto 1rem;
+			grid-template-areas:
+			". . . . ."
+			". . structurewrap . ."
+			". . . . .";
+		}
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			grid-template-columns: 1rem 1fr minmax(0, #{$width-structurewrap}rem) 1fr 1rem;
+			grid-template-rows: 1rem auto 1rem;
+			grid-template-areas:
+			". . . . ."
+			". . structurewrap . ."
+			". . . . .";
+		}
+
+	}
+	%structurewrap {
+
+		grid-area: structurewrap;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"siteby"
+		"copyright";
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			grid-template-columns: 1fr #{$width-gutter}rem 120px;
+			grid-template-areas:
+			"copyright . siteby";
+		}
+
+	}
+
+// -------------------------------------
+// SELECTORS
+

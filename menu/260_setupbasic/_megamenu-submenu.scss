@@ -1,0 +1,129 @@
+/* SETUP | MENU | 260_SETUPBASIC | MEGAMENU-SUBMENU - 2018-05-21 */
+
+// PENDING
+
+
+// GUIDE
+// -------------------------------------
+
+	// #mega-menu-wrap-primary #mega-menu-primary.mega-menu.mega-menu-horizontal  > li.mega-menu-item
+	// #mega-menu-wrap-secondary #mega-menu-secondary.mega-menu.mega-menu-horizontal  > li.mega-menu-item
+	// #mega-menu-wrap-footer #mega-menu-footer.mega-menu.mega-menu-horizontal  > li.mega-menu-item
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-PRIMARY
+
+	%primary-megamenu-horizontal {
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			text-align: right;
+		}
+	}
+	%primary-megamenu-horizontal-menuitem {
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			margin-right: 2rem;
+			letter-spacing: 1px;
+		}
+
+	}
+		%primary-megamenu-horizontal-li-firstitem {}
+		%primary-megamenu-horizontal-li-lastitem {
+
+			// MED (UP)
+			@include responsive-range(medup) {
+				margin-right: 0rem;
+			}
+
+		}
+
+	// NAV-SECONDARY
+
+	%secondary-megamenu-horizontal {}
+	%secondary-megamenu-horizontal-menuitem {
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			margin-right: 2rem;
+			letter-spacing: 1px;
+		}
+
+	}
+		%secondary-megamenu-horizontal-li-firstitem {}
+		%secondary-megamenu-horizontal-li-lastitem {
+			
+			// MED (UP)
+			@include responsive-range(medup) {
+				margin-right: 0rem;
+			}
+
+		}
+
+	// NAV-FOOTER
+
+	%footer-megamenu-horizontal {}
+	%footer-megamenu-horizontal-menuitem {
+
+		// MED (UP)
+		@include responsive-range(medup) {
+			margin-right: 2rem;
+			letter-spacing: 1px;
+		}
+
+	}
+		%footer-megamenu-horizontal-li-firstitem {}
+		%footer-megamenu-horizontal-li-lastitem {
+
+			// MED (UP)
+			@include responsive-range(medup) {
+				margin-right: 0rem;
+			}
+
+		}
+
+
+// -------------------------------------
+// SELECTORS
+
+	#mega-menu-wrap-primary #mega-menu-primary.mega-menu.mega-menu-horizontal {
+		@extend %primary-megamenu-horizontal !optional;
+	}
+	#mega-menu-wrap-primary #mega-menu-primary.mega-menu.mega-menu-horizontal > li.mega-menu-item {
+		@extend %primary-megamenu-horizontal-menuitem !optional;
+	}
+		#mega-menu-wrap-primary #mega-menu-primary.mega-menu.mega-menu-horizontal > li:first-child {
+			@extend %primary-megamenu-horizontal-li-firstitem !optional;
+		}
+		#mega-menu-wrap-primary #mega-menu-primary.mega-menu.mega-menu-horizontal > li:last-child {
+			@extend %primary-megamenu-horizontal-li-lastitem !optional;
+		}
+
+	#mega-menu-wrap-secondary #mega-menu-secondary.mega-menu.mega-menu-horizontal {
+		@extend %secondary-megamenu-horizontal !optional;
+	}
+	#mega-menu-wrap-secondary #mega-menu-secondary.mega-menu.mega-menu-horizontal > li.mega-menu-item {
+		@extend %secondary-megamenu-horizontal-menuitem !optional;
+	}
+		#mega-menu-wrap-secondary #mega-menu-secondary.mega-menu.mega-menu-horizontal > li:first-child {
+			@extend %secondary-megamenu-horizontal-li-firstitem !optional;
+		}
+		#mega-menu-wrap-secondary #mega-menu-secondary.mega-menu.mega-menu-horizontal > li:last-child {
+			@extend %secondary-megamenu-horizontal-li-lastitem !optional;
+		}
+
+	#mega-menu-wrap-footer #mega-menu-footer.mega-menu.mega-menu-horizontal {
+		@extend %footer-megamenu-horizontal !optional;
+	}
+	#mega-menu-wrap-footer #mega-menu-footer.mega-menu.mega-menu-horizontal > li.mega-menu-item {
+		@extend %footer-megamenu-horizontal-menuitem !optional;
+	}
+		#mega-menu-wrap-footer #mega-menu-footer.mega-menu.mega-menu-horizontal > li:first-child {
+			@extend %footer-megamenu-horizontal-li-firstitem !optional;
+		}
+		#mega-menu-wrap-footer #mega-menu-footer.mega-menu.mega-menu-horizontal > li:last-child {
+			@extend %footer-megamenu-horizontal-li-lastitem !optional;
+		}

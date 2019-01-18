@@ -1,0 +1,146 @@
+/* SETUP | LIST | 2721_SETUP | LIST - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%li {
+		list-style-type: none;
+	}
+
+	%liul {
+		margin-bottom: 0;
+	}
+	%liol {
+		margin-bottom: 0;
+	}
+
+	%li-noliststyle {
+		list-style-type: none;
+	}
+
+	%ol {}
+
+	%ul {}
+
+	%uol {
+		margin: 0;
+		padding: 0;
+	}
+	%uol-noliststyle {
+		list-style-type: none;
+	}
+
+	%entrycontent-ol {}
+
+	%entrycontent-ol-li {
+		list-style-type: decimal;
+	}
+
+	%entrycontent-ol-ol {}
+
+	%entrycontent-ul {}
+
+	%entrycontent-ul-li {
+		list-style-type: disc;
+	}
+	%entrycontent-uol-ul-li {
+		list-style-type: circle;
+	}
+
+	%entrycontent-ul-ul {}
+
+	%entrycontent-uol {
+		margin-bottom: #{$space-med}rem;
+		list-style-position: inside;
+	}
+	%entrycontent-uoluol {
+		margin-bottom: 0;
+		margin-left: #{$space-med}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// LI
+
+	li {
+		@extend %li !optional;
+	}
+	li > ul {
+		@extend %liul !optional;
+	}
+	li > ol {
+		@extend %liol !optional;
+	}
+
+	// LI
+
+	li.no-liststyle {
+		@extend %li-noliststyle !optional;
+	}
+
+	// OL
+
+	ol {
+		@extend %ol !optional;
+		@extend %uol !optional;
+	}
+	.entry-content ol {
+		@extend %entrycontent-ol !optional;
+		@extend %entrycontent-uol !optional;
+	}
+	.entry-content ol > li {
+		@extend %entrycontent-ol-li !optional;
+	}
+	.entry-content ol ul > li {
+		@extend %entrycontent-uol-ul-li !optional;
+	}
+
+	ol.no-liststyle {
+		@extend %uol-noliststyle !optional;
+	}
+	.entry-content ol.no-liststyle > li {
+		@extend %uol-noliststyle !optional;
+	}
+
+	ol ol,
+	ol ul {
+		@extend %uoluol !optional;
+	}
+	.entry-content ol ol,
+	.entry-content ol ul {
+		@extend %entrycontent-uoluol !optional;
+	}
+
+	// UL
+
+	ul {
+		@extend %ul !optional;
+		@extend %uol !optional;
+	}
+	.entry-content ul {
+		@extend %entrycontent-ul !optional;
+		@extend %entrycontent-uol !optional;
+	}
+	.entry-content ul > li {
+		@extend %entrycontent-ul-li !optional;
+	}
+	.entry-content ul ul > li {
+		@extend %entrycontent-uol-ul-li !optional;
+	}
+
+	ul.no-liststyle {
+		@extend %uol-noliststyle !optional;
+	}
+	.entry-content ul.no-liststyle > li {
+		@extend %uol-noliststyle !optional;
+	}
+
+	ul ol,
+	ul ul {
+		@extend %uoluol !optional;
+	}
+	.entry-content ul ul,
+	.entry-content ul ol {
+		@extend %entrycontent-uoluol !optional;
+	}

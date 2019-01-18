@@ -1,0 +1,72 @@
+/* SETUP | LAYOUT | 261_SETUPBASIC | FOOTER - 2018-06-08 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-FOOTER
+
+	%sitefooter {}
+	%sitefooterwrap {}
+
+	// FOOTER-WIDGETS
+
+	%footerwidgets {}
+	%footerwidgetswrap {}
+
+	%footerwidgets1 {}
+
+	%footerwidgets2 {}
+
+	%footerwidgets3 {}
+
+	// FOOTER-MENU
+
+	%footermenu {}
+	%footermenuwrap {}
+	%footermenuwrap-firstchild {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-FOOTER
+
+	.site-footer {
+		@extend %sitefooter !optional;
+	}
+	.site-footer > .wrap {
+		@extend %sitefooterwrap !optional;
+	}
+
+	// FOOTER-WIDGETS
+
+	.footer-widgets {
+		@extend %footerwidgets !optional;
+	}
+	.footer-widgets > .wrap {
+		@extend %footerwidgetswrap !optional;
+	}
+
+	.footer-widgets-1 {
+		@extend %footerwidgets1 !optional;
+	}
+
+	.footer-widgets-2 {
+		@extend %footerwidgets2 !optional;
+	}
+
+	.footer-widgets-3 {
+		@extend %footerwidgets3 !optional;
+	}
+
+	// FOOTER-MENU
+
+	.footer-menu {
+		@extend %footermenu !optional;
+	}
+	.footer-menu > .wrap {
+		@extend %footermenuwrap !optional;
+	}
+	.footer-menu > .wrap:before {
+		@extend %footermenuwrap-firstchild !optional;
+	}

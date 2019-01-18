@@ -1,0 +1,114 @@
+/* SETUP | MODULE | 251_SETUPBASIC | INFOLIST - 2017-09-12 */
+
+// -------------------------------------
+// EXTEND
+
+	// INFOLIST
+	%infolist {}
+
+	// CARD
+	%infolist-card {
+		grid-area: infolist-card;
+	}
+
+	// ICON
+	%infolist-icon {
+		grid-area: infolist-icon;
+	}
+
+	// PRETITLE
+	%infolist-pretitle {
+		grid-area: infolist-pretitle;
+	}
+
+	// PRETITLE
+	%infolist-maintitle {
+		grid-area: infolist-maintitle;
+	}
+
+	// SUBTITLE
+	%infolist-subtitle {
+		grid-area: infolist-subtitle;
+	}
+
+	// SUMMARY
+	%infolist-summary {
+		grid-area: infolist-summary;
+	}
+
+	// CTA
+	%infolist-cta {
+		grid-area: infolist-cta;
+	}
+
+	// TEXTLINK
+	%infolist-textlink {
+		grid-area: infolist-textlink;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// INFOLIST
+	.infolist {
+		@extend %infolist !optional;
+	}
+
+	// CARD
+	.infolist .card {
+		@extend %infolist-card !optional;
+	}
+
+	// ICON
+	.infolist .icon {
+		@extend %infolist-icon !optional;
+	}
+
+	// PRETITLE
+	.infolist .pretitle {
+		@extend %infolist-pretitle !optional;
+	}
+
+	// PRETITLE
+	.infolist .maintitle {
+		@extend %infolist-maintitle !optional;
+	}
+
+	// SUBTITLE
+	.infolist .subtitle {
+		@extend %infolist-subtitle !optional;
+	}
+
+	// SUMMARY
+	.infolist .summary {
+		@extend %infolist-summary !optional;
+	}
+
+	// CTA
+	.infolist .cta {
+		@extend %infolist-cta !optional;
+	}
+
+	// TEXTLINK
+	.infolist .textlink {
+		@extend %infolist-textlink !optional;
+	}
+
+// -------------------------------------
+// GRIDSETUP
+
+	// ICON+TITLE+CTA
+	.icon-title-cta .infolist {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"infolist-icon infolist-maintitle infolist-cta";
+	}
+
+	// ICON+TITLE+CTA
+	.title-icon-cta .infolist {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"infolist-maintitle infolist-icon infolist-cta";
+	}

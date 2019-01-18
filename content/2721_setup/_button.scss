@@ -1,0 +1,188 @@
+/* SETUP | CONTENT | 2721_SETUP | BUTTON - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+// BUTTON
+
+	%button {
+
+		// COLOR
+		color: $button-color-link;
+		background-color: $button-bgcolor-link;
+		
+		// MISC
+		border: 0;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		width: auto;
+	}
+	%button-selector {
+		display: inline-block;
+	}
+	%button-link {
+		color: $button-color-link;
+		background-color: $button-bgcolor-link;
+		text-decoration: none;
+	}
+	%button-active {}
+	%button-hover {
+		color: $button-color-hover;
+		background-color: $button-bgcolor-hover;
+		text-decoration: none;
+	}
+
+// BUTTON-ALT
+
+	%button-alt {
+
+		// COLOR
+		color: $button-color-link-alt;
+		background-color: $button-bgcolor-link-alt;
+		
+		// MISC
+		border: 0;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		width: auto;
+	}
+	%button-link-alt {
+		color: $button-color-link-alt;
+		background-color: $button-bgcolor-link-alt;
+		text-decoration: none;
+	}
+	%button-active-alt {}
+	%button-hover-alt {
+		color: $button-color-hover-alt;
+		background-color: $button-bgcolor-hover-alt;
+		text-decoration: none;
+	}
+
+// BUTTON-SIZE
+
+	%button-default {
+		padding: #{$space-default}rem #{$space-double}rem;
+	}
+	%button-tiny {
+		padding: #{$space-tiny}rem;
+	}
+	%button-xsml {
+		padding: #{$space-xsml}rem;
+	}
+	%button-sml {
+		padding: #{$space-sml}rem;
+	}
+	%button-med {
+		padding: #{$space-med}rem;
+	}
+	%button-lrg {
+		padding: #{$space-lrg}rem;
+	}
+	%button-xlrg {
+		padding: #{$space-xlrg}rem;
+	}
+	%button-huge {
+		padding: #{$space-huge}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+// BUTTON
+
+	.button,
+	a.button {
+		@extend %button !optional;
+		@extend %button-selector !optional;
+	}
+
+	.button:link,
+	a.button:link {
+		@extend %button !optional;
+		@extend %button-link !optional;
+	}
+
+	.button:active,
+	a.button:active {
+		@extend %button !optional;
+		@extend %button-active !optional;
+	}
+
+	.button:hover,
+	a.button:hover {
+		@extend %button !optional;
+		@extend %button-hover !optional;
+	}
+
+// BUTTON-ALT
+
+	.button.button-alt,
+	a.button.button-alt {
+		@extend %button-alt !optional;
+		@extend %button-selector !optional;
+	}
+
+	.button.button-alt:link,
+	a.button.button-alt:link {
+		@extend %button-alt !optional;
+		@extend %button-link-alt !optional;
+	}
+
+	.button.button-alt:active,
+	a.button.button-alt:active {
+		@extend %button-alt !optional;
+		@extend %button-active-alt !optional;
+	}
+
+	.button.button-alt:hover,
+	a.button.button-alt:hover {
+		@extend %button-alt !optional;
+		@extend %button-hover-alt !optional;
+	}
+
+	.button.valigntop {
+		@extend %verticalaligntop !optional;
+	}
+	.button.valignbottom {
+		@extend %verticalalignbottom !optional;
+	}
+
+	.button.display-block {
+		@extend %display-block !optional;
+	}
+
+// BUTTON-SIZE
+
+	.button {
+		@extend %button-default !optional;
+	}
+	.button-tiny,
+	.button-tiny.button {
+		@extend %button-tiny !optional;
+	}
+	.button-xsml,
+	.button-xsml.button {
+		@extend %button-xsml !optional;
+	}
+	.button-sml,
+	.button-sml.button {
+		@extend %button-sml !optional;
+	}
+	.button-med,
+	.button-med.button {
+		@extend %button-med !optional;
+	}
+	.button-lrg,
+	.button-lrg.button {
+		@extend %button-lrg !optional;
+	}
+	.button-xlrg,
+	.button-xlrg.button {
+		@extend %button-xlrg !optional;
+	}
+	.button-huge,
+	.button-huge.button {
+		@extend %button-huge !optional;
+	}

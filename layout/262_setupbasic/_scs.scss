@@ -1,0 +1,100 @@
+/* SETUP | LAYOUT | 262_SETUPBASIC | SCS - 2018-06-20 */
+
+// -------------------------------------
+// EXTEND
+
+	// STRUCTURE
+	
+	%scs-body {}
+	%scs-structure {}
+
+	// INNER
+
+	%scs-siteinner {}
+
+	%scs-csw {}
+
+	%scs-content {}
+
+	%scs-sidebarprimary {}
+
+	%scss-sidebarsecondary {}
+
+	// SITE-HEADER
+
+	%scs-siteheader {}
+	%scs-siteheaderwrap {}
+
+	// SITE-FOOTER
+
+	%scs-sitefooter {}
+	%scs-sitefooterwrap {}
+
+	// FOOTER-WIDGETS
+
+	%scs-footerwidgets {}
+	%scs-footerwidgetswrap {}
+
+	// FOOTER-MENU
+
+	%scs-footermenu {}
+	%scs-footermenuwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.sidebar-content-sidebar .body {
+		@extend %cs-body !optional;
+	}
+
+	.sidebar-content-sidebar .structure {
+		@extend %cs-structure !optional;
+	}
+
+	.sidebar-content-sidebar .site-inner {
+		@extend %scs-siteinner !optional;
+	}
+
+	.sidebar-content-sidebar .content-sidebar-wrap {
+		@extend %scs-csw !optional;
+	}
+
+	.sidebar-content-sidebar .content {
+		@extend %scs-content !optional;
+	}
+
+	.sidebar-content-sidebar .sidebar-primary {
+		@extend %scs-sidebarprimary !optional;
+	}
+
+	.sidebar-content-sidebar .sidebar-secondary {
+		@extend %scs-sidebarsecondary !optional;
+	}
+
+	.sidebar-content-sidebar .site-header {
+		@extend %scs-siteheader !optional;
+	}
+	.sidebar-content-sidebar .site-header > .wrap {
+		@extend %scs-siteheaderwrap !optional;
+	}
+
+	.sidebar-content-sidebar .site-footer {
+		@extend %scs-sitefooter !optional;
+	}
+	.sidebar-content-sidebar .site-footer > .wrap {
+		@extend %scs-sitefooterwrap !optional;
+	}
+
+	.sidebar-content-sidebar .footer-widgets {
+		@extend %scs-footerwidgets !optional;
+	}
+	.sidebar-content-sidebar .footer-widgets > .wrap {
+		@extend %scs-footerwidgetswrap !optional;
+	}
+
+	.sidebar-content-sidebar .footer-menu {
+		@extend %scs-footermenu !optional;
+	}
+	.sidebar-content-sidebar .footer-menu > .wrap {
+		@extend %scs-footermenuwrap !optional;
+	}

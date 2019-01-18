@@ -1,0 +1,58 @@
+/* SETUP | LAYOUT | 261_SETUPBASIC | INNER - 2018-06-08 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner {}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw {}
+
+	// CONTENT
+
+	%content {}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary {}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary {}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.site-inner {
+		@extend %siteinner !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.site-inner .content-sidebar-wrap {
+		@extend %csw !optional;
+	}
+
+	// CONTENT
+
+	.content {
+		@extend %content !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary {
+		@extend %sidebarprimary !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary {
+		@extend %sidebarsecondary !optional;
+	}
+

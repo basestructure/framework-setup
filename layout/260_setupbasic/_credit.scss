@@ -7,7 +7,7 @@
 
 	%copyright {
 
-		grid-area: copyright;
+		//grid-area: copyright;
 
 		// typography
 		color: $color-gray;
@@ -28,7 +28,7 @@
 
 	%siteby {
 
-		grid-area: siteby;
+		//grid-area: siteby;
 
 		// MED (UP)
 		@include responsive-range(medup) {}

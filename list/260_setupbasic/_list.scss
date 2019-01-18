@@ -1,0 +1,37 @@
+/* SETUP | LIST | 260_SETUPBASIC | LIST - 2018-06-02 */
+
+// -------------------------------------
+// EXTEND
+
+	%li {}
+	%liul {
+		margin-bottom: 0;
+	}
+	%liol {
+		margin-bottom: 0;
+	}
+
+	%li-noliststyle {
+		list-style-type: none;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// LI
+
+	li {
+		@extend %li !optional;
+	}
+	li > ul {
+		@extend %liul !optional;
+	}
+	li > ol {
+		@extend %liol !optional;
+	}
+
+	// LI
+
+	li.no-liststyle {
+		@extend %li-noliststyle !optional;
+	}

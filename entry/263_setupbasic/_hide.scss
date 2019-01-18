@@ -1,0 +1,16 @@
+/* SETUP | ENTRY | 263_SETUPBASIC | HIDE - 2018-07-01 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	.hide-entryheader header.entry-header {
+		@extend %hide !optional;
+	}
+
+	.hide-entryfooter footer.entry-footer {
+		@extend %hide !optional;
+	}

@@ -1,0 +1,39 @@
+/* SETUP | CONTENT | 2721_SETUP | PARAGRAPH - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%paragraph {
+		font-family: $fontfamily-p;
+		//font-size: #{$fontsize-p}rem;
+		line-height: $lineheight-p;
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: #{$space-med}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	p {
+		@extend %paragraph !optional;
+	}
+
+	p.space-top {
+		@extend %space-top !optional;
+	}
+
+	p.space-bottom {
+		@extend %space-bottom !optional;
+	}
+	p.space-zero-bottom {
+		@extend %space-zero-bottom !optional;
+	}
+
+	p.space-left {
+		@extend %space-left !optional;
+	}
+
+	p.space-right {
+		@extend %space-right !optional;
+	}

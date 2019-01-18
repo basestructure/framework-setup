@@ -1,0 +1,30 @@
+/* SETUP | STRUCTURE | 2611_SETUP | STRUCTURE - 2018-10-30 */
+
+//		@include responsive-range(lrgup) {}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer {
+
+		//grid-area: sitecontainer;
+
+//		@include responsive-range(lrgup) {}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+		
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.site-container {
+		@extend %sitecontainer !optional;
+	}

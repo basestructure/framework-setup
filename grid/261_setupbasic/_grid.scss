@@ -1,0 +1,261 @@
+/* SETUP | GRID | 261_SETUPBASIC | GRID - 2018-06-05 */
+
+// -------------------------------------
+// EXTEND
+
+// GRID CONTAINERS
+
+	%grid {
+		display: grid;
+	}
+
+// GRID GAP
+
+	%grid-gap {
+		grid-column-gap: #{$space-default}rem;
+		grid-row-gap: #{$space-default}rem;
+
+		@include responsive-range(tabletbelowdown) {
+			grid-column-gap: #{$space-sml}rem;
+			grid-row-gap: #{$space-sml}rem;
+		}
+	}
+
+// FULL
+
+	%grid-full {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+// HALF (GRID)
+
+	%grid-half {
+		grid-template-columns: repeat(2, 1fr);
+	}
+		%grid-half-full {
+			grid-column: span 2;
+		}
+
+// THIRD
+
+	%grid-third {
+		grid-template-columns: repeat(3, 1fr);
+	}
+		%grid-third-full {
+			grid-column: span 3;
+		}
+		%grid-third-twothirds {
+			grid-column: span 2;
+		}
+
+// FOURTH
+
+	%grid-fourth {
+		grid-template-columns: repeat(4, 1fr);
+	}
+		%grid-fourth-full {
+			grid-column: span 4;
+		}
+		%grid-fourth-threefourths {
+			grid-column: span 3;
+		}
+		%grid-fourth-half {
+			grid-column: span 2;
+		}
+
+// FIFTH
+
+	%grid-fifth {
+		grid-template-columns: repeat(5, 1fr);
+	}
+		%grid-fifth-full {
+			grid-column: span 5;
+		}
+		%grid-fifth-fourfifths {
+			grid-column: span 4;
+		}
+		%grid-fifth-threefifths {
+			grid-column: span 3;
+		}	
+		%grid-fifth-half {
+			grid-column: span 2;
+		}
+		%grid-fifth-twofifths {
+			grid-column: span 2;
+		}
+
+// SIXTH
+
+	%grid-sixth {
+		grid-template-columns: repeat(6, 1fr);
+	}
+		%grid-sixth-full {
+			grid-column: span 6;
+		}
+		%grid-sixth-fivesixths {
+			grid-column: span 5;
+		}
+		%grid-sixth-twothirds {
+			grid-column: span 4;
+		}
+		%grid-sixth-half {
+			grid-column: span 3;
+		}
+		%grid-sixth-third {
+			grid-column: span 2;
+		}
+
+// EIGHT
+
+	%grid-eight {
+		grid-template-columns: repeat(8, 1fr);
+	}
+		%grid-eight-full {
+			grid-column: span 8;
+		}
+		%grid-eight-seveneights {
+			grid-column: span 7;
+		}
+		%grid-eight-threefourths {
+			grid-column: span 6;
+		}		
+		%grid-eight-fiveeights {
+			grid-column: span 5;
+		}
+		%grid-eight-half {
+			grid-column: span 4;
+		}
+		%grid-eight-threeeights {
+			grid-column: span 3;
+		}
+		%grid-eight-fourth {
+			grid-column: span 2;
+		}
+
+// -------------------------------------
+// SELECTORS
+
+// FULL
+
+	.grid-full {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-full !optional;
+	}
+
+// HALF
+
+	.grid-half {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-half !optional;
+	}
+	.grid-half > .full {
+		@extend %grid-half-full !optional;
+	}
+
+// THIRD
+
+	.grid-third {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-third !optional;
+	}
+	.grid-third > .full {
+		@extend %grid-third-full !optional;
+	}
+	.grid-third > .twothirds {
+		@extend %grid-third-twothirds !optional;
+	}
+
+// FOURTH
+
+	.grid-fourth {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-fourth !optional;
+	}
+	.grid-fourth > .full {
+		@extend %grid-fourth-full !optional;
+	}
+	.grid-fourth > .threefourths {
+		@extend %grid-fourth-threefourths !optional;
+	}
+	.grid-fourth > .half {
+		@extend %grid-fourth-half !optional;
+	}
+
+// FIFTH
+
+	.grid-fifth {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-fifth !optional;
+	}
+	.grid-fifth > .full {
+		@extend %grid-fifth-full !optional;
+	}
+	.grid-fifth > .fourfifths {
+		@extend %grid-fifth-fourfifths !optional;
+	}
+	.grid-fifth > .threefifths {
+		@extend %grid-fifth-threefifths !optional;
+	}
+	.grid-fifth > .half {
+		@extend %grid-fifth-half !optional;
+	}
+	.grid-fifth > .twofifths {
+		@extend %grid-fifth-twofifths !optional;
+	}
+
+// SIXTH
+
+	.grid-sixth {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-sixth !optional;
+	}
+	.grid-sixth > .full {
+		@extend %grid-sixth-full !optional;
+	}
+	.grid-sixth > .fivesixths {
+		@extend %grid-sixth-fivesixths !optional;
+	}
+	.grid-sixth > .twothirds {
+		@extend %grid-sixth-twothirds !optional;
+	}
+	.grid-sixth > .half {
+		@extend %grid-sixth-half !optional;
+	}
+	.grid-sixth > .third {
+		@extend %grid-sixth-third !optional;
+	}
+
+// EIGHT
+
+	.grid-eight {
+		@extend %grid !optional;
+		@extend %grid-gap !optional;
+		@extend %grid-eight !optional;
+	}
+	.grid-eight > .full {
+		@extend %grid-eight-full !optional;
+	}
+	.grid-eight > .seveneights {
+		@extend %grid-eight-seveneights !optional;
+	}
+	.grid-eight > .threefourths {
+		@extend %grid-eight-threefourths !optional;
+	}
+	.grid-eight > .fiveeights {
+		@extend %grid-eight-fiveeights !optional;
+	}
+	.grid-eight > .half {
+		@extend %grid-eight-half !optional;
+	}
+	.grid-eight > .threeeights {
+		@extend %grid-eight-threeeights !optional;
+	}
+	.grid-eight > .fourth {
+		@extend %grid-eight-fourth !optional;
+	}

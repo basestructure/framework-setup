@@ -1,0 +1,189 @@
+/* SETUP | COLOR | 2721_SETUP | TINT - 2019-01-01 */
+
+// The simple method of adding transparent tint color above images
+// These tint colors can be added with hover for focused effect
+
+// -------------------------------------
+// EXTEND
+
+	// TINE COVER
+
+	%tint {
+		position: relative;
+		cursor: pointer;
+	}
+
+	%tint-before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0, 0.5);
+		transition: all .3s linear;
+	}
+
+	// TINT - HOVEROFF
+
+	%tint-hoveroff-before {}
+
+	%tint-hoveroff-before-hover {
+		background: none;
+	}
+
+	// TINT - HOVERON
+
+	%tint-hoveron-before {
+		background: none;
+	}
+	%tint-hoveron-before-hover {
+		background: rgba(0,0,0, 0.5);
+		transition: all .3s linear;
+	}
+
+	// TINT
+
+	%tint-lightest {
+		background: rgba(0,0,0, 0.15);
+	}
+	%tint-lighter {
+		background: rgba(0,0,0, 0.25);
+	}
+	%tint-light {
+		background: rgba(0,0,0, 0.35);
+	}
+	%tint-middle {
+		background: rgba(0,0,0, 0.5);
+	}
+	%tint-dark {
+		background: rgba(0,0,0, 0.65);
+	}
+	%tint-darker {
+		background: rgba(0,0,0, 0.75);
+	}
+	%tint-darkest {
+		background: rgba(0,0,0, 0.85);
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// TINT COVER
+
+	.tint {
+		@extend %tint !optional;
+	}
+	.tint:before {
+		@extend %tint-before !optional;
+	}
+	.tint-hoveroff:before {
+		@extend %tint-hoveroff-before !optional;
+	}
+	.tint-hoveroff:hover:before {
+		@extend %tint-hoveroff-before-hover !optional;
+	}
+	.tint-hoveron:before {
+		@extend %tint-hoveron-before !optional;
+	}
+	.tint-hoveron:hover:before {
+		@extend %tint-hoveron-before-hover !optional;
+	}
+
+	// TINT 
+
+	.tint-lightest:before {
+		@extend %tint-lightest !optional;
+	}
+	.tint-lighter:before {
+		@extend %tint-lighter !optional;
+	}
+	.tint-light:before {
+		@extend %tint-light !optional;
+	}
+	.tint-middle:before {
+		@extend %tint-middle !optional;
+	}
+	.tint-dark:before {
+		@extend %tint-dark !optional;
+	}
+	.tint-darker:before {
+		@extend %tint-darker !optional;
+	}
+	.tint-darkest:before {
+		@extend %tint-darkest !optional;
+	}
+
+	// TINT + BGTINT
+
+	.tint-lightest.bgtint {
+		@extend %tint-lightest !optional;
+	}
+	.tint-lighter.bgtint {
+		@extend %tint-lighter !optional;
+	}
+	.tint-light.bgtint {
+		@extend %tint-light !optional;
+	}
+	.tint-middle.bgtint {
+		@extend %tint-middle !optional;
+	}
+	.tint-dark.bgtint {
+		@extend %tint-dark !optional;
+	}
+	.tint-darker.bgtint {
+		@extend %tint-darker !optional;
+	}
+	.tint-darkest.bgtint {
+		@extend %tint-darkest !optional;
+	}
+
+	// TINT-HOVERON
+
+	.tint-hoveron.tint-lightest:before {
+		@extend %tint-hoveron-before !optional;
+	}
+	.tint-hoveron.tint-lighter:before {
+		@extend %tint-hoveron-before !optional;
+	}
+	.tint-hoveron.tint-light:before {
+		@extend %tint-hoveron-before !optional;
+	}
+	.tint-hoveron.tint-middle:before {
+		@extend %tint-hoveron-before !optional;
+	}
+	.tint-hoveron.tint-dark:before {
+		@extend %tint-hoveron-before !optional;
+	}
+	.tint-hoveron.tint-darker:before {
+		@extend %tint-hoveron-before !optional;
+	}
+	.tint-hoveron.tint-darkest:before {
+		@extend %tint-hoveron-before !optional;
+	}
+
+	// TINT-HOVERON HOVER
+
+	.tint-hoveron.tint-lightest:hover:before {
+		@extend %tint-lightest !optional;
+	}
+	.tint-hoveron.tint-lighter:hover:before {
+		@extend %tint-lighter !optional;
+	}
+	.tint-hoveron.tint-light:hover:before {
+		@extend %tint-light !optional;
+	}
+	.tint-hoveron.tint-middle:hover:before {
+		@extend %tint-middle !optional;
+	}
+	.tint-hoveron.tint-dark:hover:before {
+		@extend %tint-dark !optional;
+	}
+	.tint-hoveron.tint-darker:hover:before {
+		@extend %tint-darker !optional;
+	}
+	.tint-hoveron.tint-darkest:hover:before {
+		@extend %tint-darkest !optional;
+	}

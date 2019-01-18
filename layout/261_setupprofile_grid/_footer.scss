@@ -1,0 +1,152 @@
+/* SETUP | LAYOUT | 261_SETUPPROFILE_GRID | FOOTER - 2018-06-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-FOOTER
+
+	%sitefooter {
+
+		//grid-area: footer;
+
+		// IE HOOK
+		-ms-grid-column: 1;
+		-ms-grid-row: 5;
+		// GRID HOOK
+		grid-column: 1;
+		grid-row: 5;
+
+		@include responsive-range(lrgup) {
+			// IE HOOK
+			-ms-grid-column: 2;
+			-ms-grid-row: 5;
+			// GRID HOOK
+			grid-column: 2;
+			grid-row: 5;
+		}
+
+	}
+	%sitefooterwrap {
+
+		//grid-area: footerwrap;
+		
+	}
+
+	// FOOTER-WIDGETS
+
+	%footerwidgets {
+
+		//grid-area: footerwidgets;
+
+		// IE HOOK
+		-ms-grid-column: 1;
+		-ms-grid-row: 3;
+		// GRID HOOK
+		grid-column: 1;
+		grid-row: 3;
+
+		@include responsive-range(lrgup) {
+			// IE HOOK
+			-ms-grid-column: 2;
+			-ms-grid-row: 3;
+			// GRID HOOK
+			grid-column: 2;
+			grid-row: 3;
+		}
+
+	}
+	%footerwidgetswrap {
+
+		//grid-area: footerwidgetswrap;
+
+	}
+
+	%footerwidgets1 {
+
+		//grid-area: footer1;
+
+	}
+
+	%footerwidgets2 {
+
+		//grid-area: footer2;
+
+	}
+
+	%footerwidgets3 {
+
+		//grid-area: footer3;
+
+	}
+
+	// FOOTER-MENU
+
+	%footermenu {
+
+		//grid-area: footermenu;
+
+		// IE HOOK
+		-ms-grid-column: 1;
+		-ms-grid-row: 4;
+		// GRID HOOK
+		grid-column: 1;
+		grid-row: 4;
+
+		@include responsive-range(lrgup) {
+			// IE HOOK
+			-ms-grid-column: 2;
+			-ms-grid-row: 4;
+			// GRID HOOK
+			grid-column: 2;
+			grid-row: 4;
+		}
+
+	}
+	%footermenuwrap {}
+	%footermenuwrap-firstchild {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-FOOTER
+
+	.site-footer {
+		@extend %sitefooter !optional;
+	}
+	.site-footer > .wrap {
+		@extend %sitefooterwrap !optional;
+	}
+
+	// FOOTER-WIDGETS
+
+	.footer-widgets {
+		@extend %footerwidgets !optional;
+	}
+	.footer-widgets > .wrap {
+		@extend %footerwidgetswrap !optional;
+	}
+
+	.footer-widgets-1 {
+		@extend %footerwidgets1 !optional;
+	}
+
+	.footer-widgets-2 {
+		@extend %footerwidgets2 !optional;
+	}
+
+	.footer-widgets-3 {
+		@extend %footerwidgets3 !optional;
+	}
+
+	// FOOTER-MENU
+
+	.footer-menu {
+		@extend %footermenu !optional;
+	}
+	.footer-menu > .wrap {
+		@extend %footermenuwrap !optional;
+	}
+	.footer-menu > .wrap:before {
+		@extend %footermenuwrap-firstchild !optional;
+	}

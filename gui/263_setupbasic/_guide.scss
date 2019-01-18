@@ -1,0 +1,71 @@
+/* SETUP | GUI | 263_SETUPBASIC | GUIDE - 2018-05-23 */
+
+// -------------------------------------
+// EXTEND
+
+	%guide-outer {
+		background-color: #ffd900;
+	}
+
+	%guide-inner {
+		background-color: #ffaf00;
+	}
+
+	%guide-main {
+		background-color: #4d85ff;
+	}
+
+	%guide-side {
+		background-color: #ff6e4d;
+	}
+
+	%guide-left {
+		background-color: #9ab9ff;
+	}
+
+	%guide-right {
+		background-color: #ffac9a;
+	}
+
+	%guide-center {
+		background-color: #b9ff9a;
+	}
+
+	%guide-outer {
+		background-color: pink;
+	}
+
+	%guide-inner {
+		background-color: yellow;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.outer {
+		@extend %guide-outer !optional;
+	}
+
+	.inner {
+		@extend %guide-inner !optional;
+	}
+
+	.main {
+		@extend %guide-main !optional;
+	}
+
+	.side {
+		@extend %guide-side !optional;
+	}
+
+	.left {
+		@extend %guide-left !optional;
+	}
+
+	.right {
+		@extend %guide-right !optional;
+	}
+
+	.center {
+		@extend %guide-center !optional;
+	}

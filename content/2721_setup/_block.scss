@@ -1,0 +1,54 @@
+/* SETUP | CONTENT | 2721_SETUP | BLOCK - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%block-zero-bottom {
+		margin-bottom: 0;
+	}
+
+	%wpblockcolumns {}
+
+	%wpblockcolumns-spacezero {
+		margin: 0;
+	}
+	%wpblockcolumns-spaceinzero {
+		padding: 0;
+	}
+
+	%wpblockcolumns-wpblockcolumn-spacezero {
+		margin: 0;
+	}
+
+	%wpblockcolumns-alignfull {}
+
+
+// -------------------------------------
+// SELECTORS
+
+// HEADLINE
+
+	.wp-block-columns {}
+
+	.wp-block-columns.space-zero {
+		@extend %wpblockcolumns-spacezero !optional;
+	}
+	.wp-block-columns.spacein-zero {
+		@extend %wpblockcolumns-spaceinzero !optional;
+	}
+
+	.wp-block-columns.space-zero .wp-block-column {
+		@extend %wpblockcolumns-wpblockcolumn-spacezero !optional;
+	}
+
+	.entry-content .wp-block-columns.alignfull.space-zero {}
+
+	.entry-content .wp-block-columns.alignfull.spacein-zero {
+		@extend %wpblockcolumns-spaceinzero !optional;
+	}
+
+	.wp-block-cover {}
+
+	.wp-block-cover.space-zero-bottom {
+		@extend %block-zero-bottom !optional;
+	}

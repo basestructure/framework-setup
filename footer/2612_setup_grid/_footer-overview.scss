@@ -1,0 +1,258 @@
+/* SETUP | FOOTER | 2612_SETUP_GRID | FOOTER-OVERVIEW - 2018-11-16 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-FOOTER
+
+	%sitefooter {
+
+		// GRID
+		grid-area: footer;
+		display: grid;
+			display: -ms-grid;
+
+		// GRID-PARENT
+		grid-template-columns: 1fr;
+			-ms-grid-columns: 1fr;
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr auto 1fr;
+				-ms-grid-columns: 1fr auto 1fr;
+		}
+
+		// SPACING
+		padding: 1rem;
+
+	}
+	%sitefooterwrap {
+
+		// GRID
+		grid-area: footerwrap;
+		display: grid;
+			display: -ms-grid;	
+
+		// GRID-HOOK
+		grid-column: 1;
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			grid-column: 2;
+				-ms-grid-column: 2;
+		}
+
+		// GRID-PARENT
+		grid-template-columns: 1fr;
+			-ms-grid-columns: 1fr;
+		grid-template-rows: auto;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: auto;
+				-ms-grid-columns: auto;
+		}
+
+	}
+
+	// FOOTER-WIDGETS
+
+	%footerwidgets {
+
+		// GRID
+		grid-area: footerwidgets;
+		display: grid;
+			display: -ms-grid;
+
+		// GRID-PARENT
+		grid-template-columns: 1fr;
+			-ms-grid-columns: 1fr;
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr auto 1fr;
+				-ms-grid-columns: 1fr auto 1fr;
+		}
+
+		// SPACING
+		padding: 1rem;
+
+	}
+	%footerwidgetswrap {
+
+		// GRID
+		grid-area: footerwidgetswrap;
+		display: grid;
+			display: -ms-grid;	
+
+		// GRID-HOOK
+		grid-column: 1;
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			grid-column: 2;
+				-ms-grid-column: 2;
+		}
+
+		// GRID-PARENT
+		grid-template-columns: 1fr;
+			-ms-grid-columns: 1fr;
+		grid-template-rows: auto;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: auto;
+				-ms-grid-columns: auto;
+		}
+
+	}
+
+	%footerwidgets1 {
+
+		// GRID
+		//grid-area: footerwidgets1;
+
+	}
+
+	%footerwidgets2 {
+
+		// GRID
+		//grid-area: footerwidgets2;
+
+	}
+
+	%footerwidgets3 {
+
+		// GRID
+		//grid-area: footerwidgets3;
+
+	}
+
+	// FOOTER-MENU
+
+	%footermenu {
+
+		// GRID
+		grid-area: footermenu;
+		display: grid;
+			display: -ms-grid;
+
+		// GRID-PARENT
+		grid-template-columns: 1fr;
+			-ms-grid-columns: 1fr;
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr;
+				-ms-grid-columns: 1fr;
+		}
+
+		// SPACING
+		padding: 1rem;
+
+		// BG
+		background-color: #ddd;
+
+	}
+	%footermenuwrap {
+
+		// GRID
+		grid-area: footermenuwrap;
+		display: grid;
+			display: -ms-grid;	
+
+		// GRID-HOOK
+		grid-column: 1;
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			grid-column: 1;
+				-ms-grid-column: 1;
+		}
+
+		// GRID-PARENT
+		grid-template-columns: 1fr;
+			-ms-grid-columns: 1fr;
+		grid-template-rows: auto;
+			-ms-grid-rows: auto;
+		grid-gap: 1.5rem;
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+				-ms-grid-columns:  1fr 1fr 1fr 1fr 1fr;
+		}
+
+	}
+	%footermenuwrap-child {
+		//grid-column: auto;
+	}
+
+	%footermenuwrap-before {
+		display: none;
+	}
+	%footermenuwrap-after {
+		display: none;
+	}
+
+	%footermenu-link {}
+	%footermenu-hover {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-FOOTER
+
+	.site-footer {
+		@extend %sitefooter !optional;
+	}
+	.site-footer > .wrap {
+		@extend %sitefooterwrap !optional;
+	}
+
+	// FOOTER-WIDGETS
+
+	.footer-widgets {
+		@extend %footerwidgets !optional;
+	}
+	.footer-widgets > .wrap {
+		@extend %footerwidgetswrap !optional;
+	}
+
+	.footer-widgets-1 {
+		@extend %footerwidgets1 !optional;
+	}
+
+	.footer-widgets-2 {
+		@extend %footerwidgets2 !optional;
+	}
+
+	.footer-widgets-3 {
+		@extend %footerwidgets3 !optional;
+	}
+
+	// FOOTER-MENU
+
+	.footer-menu {
+		@extend %footermenu !optional;
+	}
+	.footer-menu > .wrap {
+		@extend %footermenuwrap !optional;
+	}
+
+	.footer-menu > .wrap:before {
+		@extend %footermenuwrap-before !optional;
+	}
+	.footer-menu > .wrap:after {
+		@extend %footermenuwrap-after !optional;
+	}
+
+	.footer-menu > .wrap > div,
+	.footer-menu > .wrap > section {
+		@extend %footermenuwrap-child !optional;
+	}
+
+	.footer-menu a,
+	.footer-menu a:link {
+		@extend %footermenu-link !optional;
+	}
+	.footer-menu a:hover {
+		@extend %footermenu-hover !optional;
+	}

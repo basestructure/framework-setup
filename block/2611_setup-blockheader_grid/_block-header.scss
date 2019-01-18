@@ -1,0 +1,119 @@
+/* SETUP | HEADER | 2611_SETUP-BLOCKHEADER_GRID | BLOCK-HEADER - 2018-11-08 */
+
+// -------------------------------------
+// EXTEND
+
+	// BLOCK-HEADER
+
+	%blockheader {
+		// BACKGROUND
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+	}
+
+	// BLOCK-HEADER \ SITE-HEADER
+
+	%blockheader-siteheader {
+		// BACKGROUND
+		background-color: transparent;
+
+		// HOOK
+		grid-column: 1;
+		grid-row: 1;
+			// IE
+			-ms-grid-column: 1;
+			-ms-grid-row: 1;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto 1fr;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr minmax(0, #{$width-siteheaderwrap}rem) 1fr;
+				// IE 
+				-ms-grid-columns: 1fr minmax(0, #{$width-siteheaderwrap}rem) 1fr;
+		}
+
+	}
+	%blockheader-siteheaderwrap {
+		// HOOK
+		grid-column: 1;
+		grid-row: 1;
+			// IE
+			-ms-grid-column: 1;
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+				// IE
+				-ms-grid-column: 2;
+		}
+	}
+
+	// XSCREEN-HEADER BLOCK-HEADER
+
+	%fullscreenheader-blockheader {
+		// FULLSCREEN
+		min-height: 100vh;
+		min-width: 100vw;
+	}
+	%halfscreenheader-blockheader {
+		// FULLSCREEN
+		min-height: 50vh;
+		min-width: 100vw;
+	}
+	%twothirdsscreenheader-blockheader {
+		// FULLSCREEN
+		min-height: 75vh;
+		min-width: 100vw;
+	}
+
+	// MODULE-HEADER
+
+	%moduleheader {}
+	
+
+// -------------------------------------
+// SELECTORS
+
+	.block-header {
+		@extend %blockheader !optional;
+	}
+
+	.block-header .site-header {
+		@extend %blockheader-siteheader !optional;
+	}
+	.block-header .site-header > .wrap {
+		@extend %blockheader-siteheaderwrap !optional;
+	}
+
+	.header-fullscreen .block-header {
+		@extend %fullscreenheader-blockheader !optional;
+	}
+	.header-halfscreen .block-header {
+		@extend %halfscreenheader-blockheader !optional;
+	}
+	.header-twothirdsscreen .block-header {
+		@extend %twothirdsscreenheader-blockheader !optional;
+	}
+
+	.module-header {
+		@extend %moduleheader !optional;
+	}

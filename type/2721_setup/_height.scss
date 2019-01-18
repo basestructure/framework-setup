@@ -1,0 +1,138 @@
+/* SETUP | TYPE | 2721_SETUP | HEIGHT - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%lineheight-default {
+		line-height: $lineheight-default;
+	}
+	%lineheight-regular {
+		line-height: $lineheight-regular;
+	}
+
+// TAGS
+
+	%lineheight-body {
+		line-height: $lineheight-body;
+	}
+	%lineheight-p {
+		line-height: $lineheight-p;
+	}
+	
+	// LIST
+	%lineheight-list {
+		line-height: $lineheight-list;
+	}
+
+	// HEADLINE
+	%lineheight-headline {
+		line-height: $lineheight-headline;
+	}
+
+// PURPOSE
+
+	// QUOTES
+	%lineheight-quote {
+		line-height: $lineheight-quote;
+	}
+	%lineheight-cite {
+		line-height: $lineheight-cite;
+	}
+
+	// CAPTION
+	%lineheight-caption {
+		line-height: $lineheight-caption;
+	}
+
+// RELATIVE
+
+	%lineheight-narrower {
+		line-height: $lineheight-narrower;
+	}
+	%lineheight-narrow {
+		line-height: $lineheight-narrow;
+	}
+	%lineheight-normal {
+		line-height: $lineheight-normal;
+	}
+	%lineheight-wide {
+		line-height: $lineheight-wide;
+	}
+	%lineheight-wider {
+		line-height: $lineheight-wider;
+	}
+
+	// PERCENTAGE
+	%lineheight-half {
+		line-height: $lineheight-half;
+	}
+	%lineheight-threefourth {}
+	%lineheight-single {
+		line-height: $lineheight-single;
+	}
+	%lineheight-onehalf {
+		line-height: $lineheight-onehalf;
+	}
+	%lineheight-onequarter {
+		line-height: $lineheight-onequarter;
+	}
+	%lineheight-onefifth {
+		line-height: $lineheight-onefifth;
+	}
+	%lineheight-double {
+		line-height: $lineheight-double;
+	}
+	%lineheight-triple {}
+
+// -------------------------------------
+// SELECTORS
+
+	.lineheight-default {
+		@extend %lineheight-default !optional;
+	}
+	.lineheight-body {
+		@extend %lineheight-body !optional;
+	}
+
+	// RELATIVE
+
+	.lineheight-narrower {
+		@extend %lineheight-narrower !optional;
+	}
+	.lineheight-narrow {
+		@extend %lineheight-narrow !optional;
+	}
+	.lineheight-normal {
+		@extend %lineheight-normal !optional;
+	}
+	.lineheight-wide {
+		@extend %lineheight-wide !optional;
+	}
+	.lineheight-wider {
+		@extend %lineheight-wider !optional;
+	}
+
+	.lineheight-half {
+		@extend %lineheight-half !optional;
+	}
+	.lineheight-threefourth {
+		@extend %lineheight-threefourth !optional;
+	}
+	.lineheight-single {
+		@extend %lineheight-single !optional;
+	}
+	.lineheight-onehalf {
+		@extend %lineheight-onehalf !optional;
+	}
+	.lineheight-onequarter {
+		@extend %lineheight-onequarter !optional;
+	}
+	.lineheight-onefifth {
+		@extend %lineheight-onefifth !optional;
+	}
+	.lineheight-double {
+		@extend %lineheight-double !optional;
+	}
+	.lineheight-triple {
+		@extend %lineheight-triple !optional;
+	}

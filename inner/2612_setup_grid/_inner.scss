@@ -1,0 +1,106 @@
+/* SETUP | LAYOUT | 2612_SETUP_GRID | INNER - 2018-11-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner {
+
+		// GRID
+		grid-area: inner;
+		display: grid;
+			display: -ms-grid;
+
+		// GRID-PARENT
+		grid-template-columns: 1fr;
+			-ms-grid-columns: 1fr;
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr minmax(0, #{$width-csw}rem) 1fr;
+				-ms-grid-columns: 1fr minmax(0, #{$width-csw}rem) 1fr;
+		}
+
+		// SPACING
+		padding: 1rem;
+
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw {
+
+		// GRID
+		grid-area: csw;
+
+		// GRID-HOOK
+		grid-column: 1;
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			grid-column: 2;
+				-ms-grid-column: 2;
+		}
+
+	}
+
+	// CONTENT
+
+	%content {
+
+		// GRID
+		grid-area: content;
+
+	}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary {
+
+		// GRID
+		grid-area: sidebarprimary;
+
+	}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary {
+
+		// GRID
+		grid-area: sidebarsecondary;
+
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.site-inner {
+		@extend %siteinner !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.site-inner .content-sidebar-wrap {
+		@extend %csw !optional;
+	}
+
+	// CONTENT
+
+	.content {
+		@extend %content !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary {
+		@extend %sidebarprimary !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary {
+		@extend %sidebarsecondary !optional;
+	}
+

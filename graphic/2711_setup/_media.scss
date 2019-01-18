@@ -1,0 +1,101 @@
+/* SETUP | GRAPHIC | 2711_SETUP_GRID | MEDIA - 2018-11-24 */
+
+// -------------------------------------
+// EXTEND
+
+	// HEIGHT
+
+	%height-media-auto {
+		height: auto;
+	}
+
+	// WIDTH
+
+	%width-media-stretch {
+		width: 100% !important;
+	}
+	%width-media-insidecaption {
+		width: 100% !important;
+	}
+
+	// IMG
+
+	%img {}
+
+	%img-crisp {
+		image-rendering: -moz-crisp-edges;         /* Firefox */
+		image-rendering:   -o-crisp-edges;         /* Opera */
+		image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+		image-rendering: crisp-edges;
+		-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+	}
+
+	// MEDIA
+
+	%width-media-thumbnail {
+		max-width: #{$width-media-thumbnail}rem;
+	}
+	%width-media-medium {
+		max-width: #{$width-media-medium}rem;
+	}
+	%width-media-large {
+		max-width: #{$width-media-large}rem;
+	}
+	%width-media-full {
+		max-width: #{$width-media-full}rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// IMG
+
+	img {
+		@extend %img !optional;
+	}
+	img.crisp {
+		@extend %img-crisp !optional;
+	}
+
+	// MEDIA
+
+	img.size-thumbnail {
+		@extend %width-media-thumbnail !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-medium {
+		@extend %width-media-medium !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-large {
+		@extend %width-media-large !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+	img.size-full {
+		@extend %width-media-full !optional;
+		@extend %height-media-auto !optional;
+		@extend %width-media-stretch !optional;
+	}
+
+	// MEDIA (WITH CAPTION)
+
+	figure.wp-caption {
+		@extend %width-media-stretch !optional;
+	}
+
+	figure.wp-caption img.size-thumbnail {
+		@extend %width-media-insidecaption !optional;
+	}
+	figure.wp-caption img.size-medium {
+		@extend %width-media-insidecaption !optional;
+	}
+	figure.wp-caption img.size-large {
+		@extend %width-media-insidecaption !optional;
+	}
+	figure.wp-caption img.size-full {
+		@extend %width-media-insidecaption !optional;
+	}

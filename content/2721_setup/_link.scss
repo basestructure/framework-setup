@@ -1,0 +1,40 @@
+/* SETUP | CONTENT | 2721_SETUP | LINK - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%link {
+		color: $color-link;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	}
+
+	%hover {
+		color: $color-hover;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	%active {}
+
+	%visited {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	a {
+		@extend %link !optional;
+	}
+
+	a:hover {
+		@extend %hover !optional;
+	}
+
+	a:active {
+		@extend %active !optional;
+	}
+
+	a:visited {
+		@extend %visited !optional;
+	}

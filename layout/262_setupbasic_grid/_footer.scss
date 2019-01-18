@@ -1,0 +1,215 @@
+/* SETUP | LAYOUT | 262_SETUPBASIC_GRID | FOOTER - 2018-07-19 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-FOOTER
+
+	%sitefooter {
+
+		//grid-area: footer;
+
+		// IE
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+		-ms-grid-rows: auto;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: 1fr minmax(0, #{$width-sitefooterwrap}rem) 1fr;
+			grid-template-columns: 1fr minmax(0, #{$width-sitefooterwrap}rem) 1fr;
+		}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+	}
+	%sitefooterwrap {
+
+		//grid-area: footerwrap;
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+	}
+
+	// FOOTER-WIDGETS
+
+	%footerwidgets {
+
+		//grid-area: footerwidgets;
+
+		// IE
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+		-ms-grid-rows: auto;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: 1fr minmax(0, #{$width-footerwidgetswrap}rem) 1fr;
+			grid-template-columns: 1fr minmax(0, #{$width-footerwidgetswrap}rem) 1fr;
+		}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+	}
+	%footerwidgetswrap {
+
+		//grid-area: footerwidgetswrap;
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+	}
+
+	%footerwidgets1 {
+
+		//grid-area: footer1;
+
+	}
+
+	%footerwidgets2 {
+
+		//grid-area: footer2;
+
+	}
+
+	%footerwidgets3 {
+
+		//grid-area: footer3;
+
+	}
+
+	// FOOTER-MENU
+
+	%footermenu {
+
+		//grid-area: footermenu;
+
+		// IE
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+		-ms-grid-rows: auto;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: 1fr minmax(0, #{$width-sitefooterwrap}rem) 1fr;
+			grid-template-columns: 1fr minmax(0, #{$width-sitefooterwrap}rem) 1fr;
+		}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+	}
+	%footermenuwrap {
+
+		//grid-area: footermenuwrap;
+
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 2;
+			grid-column: 2;
+
+			display: -ms-grid;
+			display: grid;
+			-ms-grid-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(4, 1fr);
+		}
+//		@include responsive-range(lrgdownbelow) {}
+//		@include responsive-range(meddown) {}
+//		@include responsive-range(smldown) {}
+//		@include responsive-range(xsmldown) {}
+
+	}
+	%footermenuwrap-firstchild {
+		grid-column: -1;
+		display: none;
+	}
+	%footermenu-link {}
+	%footermenu-hover {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-FOOTER
+
+	.site-footer {
+		@extend %sitefooter !optional;
+	}
+	.site-footer > .wrap {
+		@extend %sitefooterwrap !optional;
+	}
+
+	// FOOTER-WIDGETS
+
+	.footer-widgets {
+		@extend %footerwidgets !optional;
+	}
+	.footer-widgets > .wrap {
+		@extend %footerwidgetswrap !optional;
+	}
+
+	.footer-widgets-1 {
+		@extend %footerwidgets1 !optional;
+	}
+
+	.footer-widgets-2 {
+		@extend %footerwidgets2 !optional;
+	}
+
+	.footer-widgets-3 {
+		@extend %footerwidgets3 !optional;
+	}
+
+	// FOOTER-MENU
+
+	.footer-menu {
+		@extend %footermenu !optional;
+	}
+	.footer-menu > .wrap {
+		@extend %footermenuwrap !optional;
+	}
+	.footer-menu > .wrap:before {
+		@extend %footermenuwrap-firstchild !optional;
+	}
+	.footer-menu a,
+	.footer-menu a:link {
+		@extend %footermenu-link !optional;
+	}
+	.footer-menu a:hover {
+		@extend %footermenu-hover !optional;
+	}

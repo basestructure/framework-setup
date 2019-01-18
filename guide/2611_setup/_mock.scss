@@ -1,0 +1,26 @@
+/* SETUP | GUIDE | 2611_SETUP | MOCK - 2018-10-21 */
+
+// -------------------------------------
+// EXTEND
+
+	%guide-mock-entryheader {}
+
+	%guide-mock-entrytitle {
+		font-size: #{$fontsize-med}rem;
+		padding: 5px 10px;
+		color: white;
+		background-color: #e5565d;
+		display: block;
+		text-align: center;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	body .entry-header {
+		@extend %guide-mock-entryheader !optional;
+	}
+
+	body .entry-title {
+		@extend %guide-mock-entrytitle !optional;
+	}

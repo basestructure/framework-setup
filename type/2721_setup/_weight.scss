@@ -1,0 +1,97 @@
+/* SETUP | TYPE | 2721_SETUP | WEIGHT - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%fontweight-default {
+		font-weight: $fontweight-default;		// 400
+	}
+
+// RELATIVE
+
+	%fontweight-extralight {
+		font-weight: $fontweight-extralight;	// 100
+	}
+	%fontweight-light {
+		font-weight: $fontweight-light;			// 300
+	}
+	%fontweight-regular {
+		font-weight: $fontweight-regular;		// 400
+	}
+	%fontweight-semibold {
+		font-weight: $fontweight-semibold;		// 600
+	}
+	%fontweight-bold {
+		font-weight: $fontweight-bold;			// 700
+	}
+	%fontweight-black {
+		font-weight: $fontweight-black;			// 900
+	}
+
+// OBSOLETE
+
+	%fontweight-thinnest { font-weight: $fontweight-thinnest; }
+	%fontweight-thinner { font-weight: $fontweight-thinner; }
+	%fontweight-thin { font-weight: $fontweight-thin; }
+	%fontweight-normal { font-weight: $fontweight-normal; }
+	%fontweight-thick { font-weight: $fontweight-thick; }
+	%fontweight-thicker { font-weight: $fontweight-thicker; }
+	%fontweight-thickest { font-weight: $fontweight-thickest; }
+
+// -------------------------------------
+// SELECTORS
+
+	.fontweight-extralight {
+		@extend %fontweight-extralight !optional;
+	}
+
+	.fontweight-light {
+		@extend %fontweight-light !optional;
+	}
+
+	.fontweight-regular {
+		@extend %fontweight-regular !optional;
+	}
+
+	.fontweight-semibold {
+		@extend %fontweight-semibold !optional;
+	}
+
+	.fontweight-bold {
+		@extend %fontweight-bold !optional;
+	}
+
+	.fontweight-black {
+		@extend %fontweight-black !optional;
+	}
+
+
+// OBSOLETE
+
+	.fontweight-thinnest {
+		@extend %fontweight-thinnest !optional;
+	}
+
+	.fontweight-thinner {
+		@extend %fontweight-thinner !optional;
+	}
+
+	.fontweight-thin {
+		@extend %fontweight-thin !optional;
+	}
+
+	.fontweight-normal {
+		@extend %fontweight-normal !optional;
+	}
+
+	.fontweight-thick {
+		@extend %fontweight-thick !optional;
+	}
+
+	.fontweight-thicker {
+		@extend %fontweight-thicker !optional;
+	}
+
+	.fontweight-thickest {
+		@extend %fontweight-thickest !optional;
+	}

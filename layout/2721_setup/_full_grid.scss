@@ -1,0 +1,132 @@
+/* SETUP | LAYOUT | 2721_SETUP | FULL_GRID - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	// STRUCTURE
+	
+	%full-body {}
+	%full-structure {}
+
+	// INNER
+
+	%full-siteinner {
+
+		// GRID
+		grid-area: inner;
+		display: grid;
+			display: -ms-grid;
+
+		// GRID-PARENT
+		grid-template-columns: 1fr;
+			-ms-grid-columns: 1fr;
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+				-ms-grid-columns: 1fr minmax(0, #{$width-full}rem) 1fr;
+		}
+
+		// SPACING
+		padding: 3rem 2rem;
+
+	}
+
+	%full-csw {
+
+		// GRID
+		grid-area: csw;
+
+		// GRID-HOOK
+		grid-column: 1;
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			grid-column: 2;
+				-ms-grid-column: 2;
+		}
+
+	}
+
+	%full-content {
+
+		// GRID
+		grid-area: content;
+
+	}
+
+	%full-sidebarprimary {}
+
+	// SITE-HEADER
+
+	%full-siteheader {}
+	%full-siteheaderwrap {}
+
+	// SITE-FOOTER
+
+	%full-sitefooter {}
+	%full-sitefooterwrap {}
+
+	// FOOTER-WIDGETS
+
+	%full-footerwidgets {}
+	%full-footerwidgetswrap {}
+
+	// FOOTER-MENU
+
+	%full-footermenu {}
+	%full-footermenuwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.full-width-content .body {
+		@extend %full-body !optional;
+	}
+
+	.full-width-content .structure {
+		@extend %full-structure !optional;
+	}
+
+	.full-width-content .site-inner {
+		@extend %full-siteinner !optional;
+	}
+
+	.full-width-content-wrap {
+		@extend %full-csw !optional;
+	}
+
+	.full-width-content .content {
+		@extend %full-content !optional;
+	}
+
+	.full-width-content .sidebar-primary {
+		@extend %full-sidebarprimary !optional;
+	}
+
+	.full-width-content .site-header {
+		@extend %full-siteheader !optional;
+	}
+	.full-width-content .site-header > .wrap {
+		@extend %full-siteheaderwrap !optional;
+	}
+
+	.full-width-content .site-footer {
+		@extend %full-sitefooter !optional;
+	}
+	.full-width-content .site-footer > .wrap {
+		@extend %full-sitefooterwrap !optional;
+	}
+
+	.full-width-content .footer-widgets {
+		@extend %full-footerwidgets !optional;
+	}
+	.full-width-content .footer-widgets > .wrap {
+		@extend %full-footerwidgetswrap !optional;
+	}
+
+	.full-width-content .footer-menu {
+		@extend %full-footermenu !optional;
+	}
+	.full-width-content .footer-menu > .wrap {
+		@extend %full-footermenuwrap !optional;
+	}

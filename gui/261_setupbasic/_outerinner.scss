@@ -1,0 +1,397 @@
+/* SETUP | GUI | 261_SETUPBASIC | OUTERINNER - 2018-06-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// OUTER
+
+	%outer {
+		display: grid;
+		grid-area: outer;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"outer-inner";
+	}
+
+
+	// INNER
+
+	%outer-inner {
+		grid-area: outer-inner;
+	}
+
+
+	// OUTER ALIGNMENT
+
+	%outer-center {
+		grid-template-areas:
+		". outer-inner .";
+	}
+	%outer-left {
+		grid-template-areas:
+		"outer-inner .";
+	}
+	%outer-right {
+		grid-template-areas:
+		". outer-inner";
+	}
+
+
+	// OUTER WIDTH MAX
+	// Pointless in the sense that the original structure is already a maximum fraction
+
+	%outer-max {
+		grid-template-columns: 1fr;
+	}
+		%outer-huge-center {
+			grid-template-areas:
+			"outer-inner outer-inner outer-inner";
+		}
+		%outer-huge-left {
+			grid-template-areas:
+			"outer-inner outer-inner";
+		}
+		%outer-huge-right {
+			grid-template-areas:
+			"outer-inner outer-inner";
+		}	
+
+	// OUTER WIDTH
+	// Currently ignored because we're using SECTION WIDTH
+
+	%outer-huge {
+		grid-template-columns: minmax(auto, #{$width-huge}rem);
+	}
+		%outer-huge-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-huge}rem) 1fr;
+		}
+		%outer-huge-left {
+			grid-template-columns: minmax(auto, #{$width-huge}rem) 1fr;
+		}
+		%outer-huge-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-huge}rem);
+		}
+
+	%outer-xlrg {
+		grid-template-columns: minmax(auto, #{$width-xlrg}rem);
+	}
+		%outer-xlrg-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-xlrg}rem) 1fr;
+		}
+		%outer-xlrg-left {
+			grid-template-columns: minmax(auto, #{$width-xlrg}rem) 1fr;
+		}
+		%outer-xlrg-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-xlrg}rem);
+		}
+
+	%outer-lrg {
+		grid-template-columns: minmax(auto, #{$width-lrg}rem);
+	}
+		%outer-lrg-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-lrg}rem) 1fr;
+		}
+		%outer-lrg-left {
+			grid-template-columns: minmax(auto, #{$width-lrg}rem) 1fr;
+		}
+		%outer-lrg-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-lrg}rem);
+		}
+
+	%outer-med {
+		grid-template-columns: minmax(auto, #{$width-med}rem);
+	}
+		%outer-med-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-med}rem) 1fr;
+		}
+		%outer-med-left {
+			grid-template-columns: minmax(auto, #{$width-med}rem) 1fr;
+		}
+		%outer-med-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-med}rem);
+		}
+
+	%outer-sml {
+		grid-template-columns: minmax(auto, #{$width-sml}rem);
+	}
+		%outer-sml-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-sml}rem) 1fr;
+		}
+		%outer-sml-left {
+			grid-template-columns: minmax(auto, #{$width-sml}rem) 1fr;
+		}
+		%outer-sml-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-sml}rem);
+		}
+
+	%outer-xsml {
+		grid-template-columns: minmax(auto, #{$width-xsml}rem);
+	}
+		%outer-xsml-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-xsml}rem) 1fr;
+		}
+		%outer-xsml-left {
+			grid-template-columns: minmax(auto, #{$width-xsml}rem) 1fr;
+		}
+		%outer-xsml-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-xsml}rem);
+		}
+
+	%outer-tiny {
+		grid-template-columns: minmax(auto, #{$width-tiny}rem);
+	}
+		%outer-tiny-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-tiny}rem) 1fr;
+		}
+		%outer-tiny-left {
+			grid-template-columns: minmax(auto, #{$width-tiny}rem) 1fr;
+		}
+		%outer-tiny-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-tiny}rem);
+		}
+
+	%outer-mediamedium {
+		grid-template-columns: minmax(auto, #{$width-media-medium}rem);
+	}
+		%outer-mediamedium-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-media-medium}rem) 1fr;
+		}
+		%outer-mediamedium-left {
+			grid-template-columns: minmax(auto, #{$width-media-medium}rem) 1fr;
+		}
+		%outer-mediamedium-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-media-medium}rem);
+		}
+
+	%outer-mediathumbnail {
+		grid-template-columns: minmax(auto, #{$width-media-thumbnail}rem);
+	}
+		%outer-mediathumbnail-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-media-thumbnail}rem) 1fr;
+		}
+		%outer-mediathumbnail-left {
+			grid-template-columns: minmax(auto, #{$width-media-thumbnail}rem) 1fr;
+		}
+		%outer-mediathumbnail-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-media-thumbnail}rem);
+		}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// OUTER
+
+	.outer {
+		@extend %outer !optional;
+	}
+
+	// OUTER RELATIVE
+
+	.outer.max {
+		//@extend %outer-max !optional;
+		@extend %section-max !optional;
+	}
+		.outer.max.center {
+			@extend %outer-center !optional;
+			//@extend %outer-max-center !optional;
+			@extend %section-max-center !optional;
+		}
+		.outer.max.left {
+			@extend %outer-left !optional;
+			//@extend %outer-max-left !optional;
+			@extend %section-max-left !optional;
+		}
+		.outer.max.right {
+			@extend %outer-right !optional;
+			//@extend %outer-max-right !optional;
+			@extend %section-max-right !optional;
+		}
+
+	.outer.huge {
+		//@extend %outer-huge !optional;
+		@extend %section-huge !optional;
+	}
+		.outer.huge.center {
+			@extend %outer-center !optional;
+			//@extend %outer-huge-center !optional;
+			@extend %section-huge-center !optional;
+		}
+		.outer.huge.left {
+			@extend %outer-left !optional;
+			//@extend %outer-huge-left !optional;
+			@extend %section-huge-left !optional;
+		}
+		.outer.huge.right {
+			@extend %outer-right !optional;
+			//@extend %outer-huge-right !optional;
+			@extend %section-huge-right !optional;
+		}
+
+	.outer.xlrg {
+		//@extend %outer-xlrg !optional;
+		@extend %section-xlrg !optional;
+	}
+		.outer.xlrg.center {
+			@extend %outer-center !optional;
+			//@extend %outer-xlrg-center !optional;
+			@extend %section-xlrg-center !optional;
+		}
+		.outer.xlrg.left {
+			@extend %outer-left !optional;
+			//@extend %outer-xlrg-left !optional;
+			@extend %section-xlrg-left !optional;
+		}
+		.outer.xlrg.right {
+			@extend %outer-right !optional;
+			//@extend %outer-xlrg-right !optional;
+			@extend %section-xlrg-right !optional;
+		}
+
+	.outer.lrg {
+		//@extend %outer-lrg !optional;
+		@extend %section-lrg !optional;
+	}
+		.outer.lrg.center {
+			@extend %outer-center !optional;
+			//@extend %outer-lrg-center !optional;
+			@extend %section-lrg-center !optional;
+		}
+		.outer.lrg.left {
+			@extend %outer-left !optional;
+			//@extend %outer-lrg-left !optional;
+			@extend %section-lrg-left !optional;
+		}
+		.outer.lrg.right {
+			@extend %outer-right !optional;
+			//@extend %outer-lrg-right !optional;
+			@extend %section-lrg-right !optional;
+		}
+
+	.outer.med {
+		//@extend %outer-med !optional;
+		@extend %section-med !optional;
+	}
+		.outer.med.center {
+			@extend %outer-center !optional;
+			//@extend %outer-med-center !optional;
+			@extend %section-med-center !optional;
+		}
+		.outer.med.left {
+			@extend %outer-left !optional;
+			//@extend %outer-med-left !optional;
+			@extend %section-med-left !optional;
+		}
+		.outer.med.right {
+			@extend %outer-right !optional;
+			//@extend %outer-med-right !optional;
+			@extend %section-med-right !optional;
+		}
+
+	.outer.sml {
+		@extend %outer-sml !optional;
+	}
+		.outer.sml.center {
+			@extend %outer-center !optional;
+			//@extend %outer-sml-center !optional;
+			@extend %section-sml-center !optional;
+		}
+		.outer.sml.left {
+			@extend %outer-left !optional;
+			//@extend %outer-sml-left !optional;
+			@extend %section-sml-left !optional;
+		}
+		.outer.sml.right {
+			@extend %outer-right !optional;
+			//@extend %outer-sml-right !optional;
+			@extend %section-sml-right !optional;
+		}
+
+	.outer.xsml {
+		//@extend %outer-xsml !optional;
+		@extend %section-xsml !optional;
+	}
+		.outer.xsml.center {
+			@extend %outer-center !optional;
+			//@extend %outer-xsml-center !optional;
+			@extend %section-xsml-center !optional;
+		}
+		.outer.xsml.left {
+			@extend %outer-left !optional;
+			//@extend %outer-xsml-left !optional;
+			@extend %section-xsml-left !optional;
+		}
+		.outer.xsml.right {
+			@extend %outer-right !optional;
+			//@extend %outer-xsml-right !optional;
+			@extend %section-xsml-right !optional;
+		}
+
+	.outer.tiny {
+		//@extend %outer-tiny !optional;
+		@extend %section-tiny !optional;
+	}
+		.outer.tiny.center {
+			@extend %outer-center !optional;
+			//@extend %outer-tiny-center !optional;
+			@extend %section-tiny-center !optional;
+		}
+		.outer.tiny.left {
+			@extend %outer-left !optional;
+			//@extend %outer-tiny-left !optional;
+			@extend %section-tiny-left !optional;
+		}
+		.outer.tiny.right {
+			@extend %outer-right !optional;
+			//@extend %outer-tiny-right !optional;
+			@extend %section-tiny-right !optional;
+		}
+
+	// OUTER MEDIA
+
+	.outer.mediamedium {
+		//@extend %outer-mediamedium !optional;
+		@extend %section-mediamedium !optional;
+	}
+		.outer.mediamedium.center {
+			@extend %outer-center !optional;
+			//@extend %outer-mediamedium-center !optional;
+			@extend %section-mediamedium-center !optional;
+		}
+		.outer.mediamedium.left {
+			@extend %outer-left !optional;
+			//@extend %outer-mediamedium-left !optional;
+			@extend %section-mediamedium-left !optional;
+		}
+		.outer.mediamedium.right {
+			@extend %outer-right !optional;
+			//@extend %outer-mediamedium-right !optional;
+			@extend %section-mediamedium-right !optional;
+		}
+
+	.outer.mediathumbnail {
+		//@extend %outer-mediathumbnail !optional;
+		@extend %section-mediathumbnail !optional;
+	}
+		.outer.mediathumbnail.center {
+			@extend %outer-center !optional;
+			//@extend %outer-mediathumbnail-center !optional;
+			@extend %section-mediathumbnail-center !optional;
+		}
+		.outer.mediathumbnail.left {
+			@extend %outer-left !optional;
+			//@extend %outer-mediathumbnail-left !optional;
+			@extend %section-mediathumbnail-left !optional;
+		}
+		.outer.mediathumbnail.right {
+			@extend %outer-right !optional;
+			//@extend %outer-mediathumbnail-right !optional;
+			@extend %section-mediathumbnail-right !optional;
+		}
+
+
+	// INNER
+
+	.outer > .inner {
+		@extend %outer-inner !optional;
+	}

@@ -1,0 +1,41 @@
+/* SETUP | HEADLINE | 2721_SETUP | HEADLINE - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	%headline {
+		font-family: $fontfamily-headline;
+		line-height: $lineheight-headline;
+		letter-spacing: $letterspacing-headline;
+		margin: 0;
+
+		@include responsive-range(meddown) {
+			font-size: #{$lineheight-headline-mobile}rem;
+		}
+	}
+
+	%headline-larger {
+		line-height: $lineheight-headline-larger;
+	}
+
+	%headline-smaller {
+		line-height: $lineheight-headline-smaller;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+// HEADLINE
+
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+		@extend %headline !optional;
+	}
+
+	h1, .h1, h2, .h2, h3, .h3 {
+		@extend %headline-larger !optional;
+	}
+
+	h4, .h4, h5, .h5, h6, .h6 {
+		@extend %headline-smaller !optional;
+	}

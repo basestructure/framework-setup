@@ -1,0 +1,108 @@
+/* SETUP | GRID | 262_SETUPBASIC_GRID | COLUMN-RESPONSIVE - 2018-07-31 */
+
+// -------------------------------------
+// EXTEND
+
+// RESPONSIVE
+
+	%column-responsive {
+		@include responsive-range(smldown) {
+			grid-column: span 12;
+		}
+	}
+
+	%column-fifth-responsive {
+		@include responsive-range(smldown) {
+			grid-column: span 5;
+		}
+	}
+
+	%column-eight-responsive {
+		@include responsive-range(smldown) {
+			grid-column: span 8;
+		}
+	}
+
+// -------------------------------------
+// SELECTORS
+
+// HALF
+
+	.half {
+		@extend %column-responsive !optional;
+	}
+		.columns-fifth > .half {
+			@extend %column-fifth-responsive !optional;
+		}
+		.columns-eight > .half {
+			@extend %column-eight-responsive !optional;
+		}
+
+// THIRD
+
+	.third {
+		@extend %column-responsive !optional;
+	}
+		.twothirds {
+			@extend %column-responsive !optional;
+		}
+
+// FOURTH
+
+	.fourth {
+		@extend %column-responsive !optional;
+	}
+	.threefourths {
+		@extend %column-responsive !optional;
+	}
+
+// FIFTH
+
+	.fifth {
+		@extend %column-fifth-responsive !optional;
+	}
+		.columns-fifth > .full {
+			@extend %column-fifth-responsive !optional;
+		}
+		.fourfifths {
+			@extend %column-fifth-responsive !optional;
+		}
+		.threefifths {
+			@extend %column-fifth-responsive !optional;
+		}
+		.twofifths {
+			@extend %column-fifth-responsive !optional;
+		}
+
+// SIXTH
+
+	.sixth {
+		@extend %column-responsive !optional;
+	}
+		.fivesixths {
+			@extend %column-responsive !optional;
+		}
+
+// EIGHT
+
+	.eight {
+		@extend %column-eight-responsive !optional;
+	}
+		.columns-eight > .full {
+			@extend %column-eight-responsive !optional;
+		}
+		.seveneights {
+			@extend %column-eight-responsive !optional;
+		}
+		.columns-eight > .threefourths {
+			@extend %column-eight-responsive !optional;
+		}
+		.fiveeights {
+			@extend %column-eight-responsive !optional;
+		}
+		.threeeights {
+			@extend %column-eight-responsive !optional;
+		}
+		.columns-eight > .fourth {
+			@extend %column-eight-responsive !optional;
+		}

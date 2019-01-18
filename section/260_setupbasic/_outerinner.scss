@@ -1,4 +1,4 @@
-/* SETUP | SECTION | 260_SETUPBASIC | OUTERINNER - 2018-05-09 */
+/* SETUP | SECTION | 260_SETUPBASIC | OUTERINNER - 2018-06-04 */
 
 // -------------------------------------
 // EXTEND
@@ -94,6 +94,19 @@
 		}
 		%outer-sml-right {
 			grid-template-columns: 1fr minmax(auto, #{$width-sml}rem);
+		}
+
+	%outer-xsml {
+		grid-template-columns: minmax(auto, #{$width-xsml}rem);
+	}
+		%outer-xsml-center {
+			grid-template-columns: 1fr minmax(auto, #{$width-xsml}rem) 1fr;
+		}
+		%outer-xsml-left {
+			grid-template-columns: minmax(auto, #{$width-xsml}rem) 1fr;
+		}
+		%outer-xsml-right {
+			grid-template-columns: 1fr minmax(auto, #{$width-xsml}rem);
 		}
 
 	// INNER
@@ -214,6 +227,22 @@
 		.outer.sml.right {
 			@extend %outer-right !optional;
 			@extend %outer-sml-right !optional;
+		}
+
+	.outer.xsml {
+		@extend %outer-xsml !optional;
+	}
+		.outer.xsml.center {
+			@extend %outer-center !optional;
+			@extend %outer-xsml-center !optional;
+		}
+		.outer.xsml.left {
+			@extend %outer-left !optional;
+			@extend %outer-xsml-left !optional;
+		}
+		.outer.xsml.right {
+			@extend %outer-right !optional;
+			@extend %outer-xsml-right !optional;
 		}
 
 	// INNER

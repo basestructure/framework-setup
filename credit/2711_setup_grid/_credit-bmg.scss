@@ -1,0 +1,176 @@
+/* SETUP | CREDIT | 2711_SETUP_GRID | CREDIT-BMG - 2018-12-11 */
+
+// -------------------------------------
+// EXTEND
+
+	// CREDIT
+
+	%credit {
+
+		//grid-area: credit;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr auto 1fr;
+				// IE
+				-ms-grid-columns: 1fr auto 1fr;
+		}
+
+	}
+
+
+	// SITEFOR
+
+	%sitefor {
+
+		//grid-area: sitefor;
+
+		// HOOK
+		grid-column: 1;
+		grid-row: 1;
+			// IE
+			-ms-grid-column: 1;
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+			grid-row: 1;
+				// IE
+				-ms-grid-column: 2;
+				-ms-grid-row: 1;
+		}
+
+		// TYPOLOGY
+		color: $color-gray;
+		font-size: #{$fontsize-xsml}rem;
+		line-height: 1.4;
+
+		// DISPLAY
+		display: block;
+
+	}
+		%sitefor-a {}
+		%sitefor-hvr {}
+
+	// CREDIT-BRAND
+	%credit-brand {}
+
+	// CREDIT-COPYRIGHT
+	%credit-copyright {
+
+		// TYPOLOGY
+		text-align: center;
+
+	}
+
+	// CREDIT-DESIGNBY
+	%credit-designby {
+
+		// TYPOLOGY
+		font-size: #{$fontsize-xxxsml}rem;
+		text-align: center;
+
+	}
+
+
+	// SITEBY
+
+	%siteby {
+
+		//grid-area: siteby;
+
+		// HOOK
+		grid-column: 1;
+		grid-row: 2;
+			// IE
+			-ms-grid-column: 1;
+			-ms-grid-row: 2;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+			grid-row: 2;
+				// IE
+				-ms-grid-column: 2;
+				-ms-grid-row: 2;
+		}
+
+		// SPACING
+		margin-top: 1rem;
+
+	}
+		%siteby-a {
+			background-image: url("http://bacanimedia.com/brand/credit-bacanimedia-color.png");
+			background-repeat: no-repeat;
+		 	background-position: center;
+		 	background-attachment: scroll;
+			background-size: 100px;
+			width: 100px;
+			height: 59px;
+			display: block;
+			overflow: hidden;
+			text-decoration: none;
+			text-indent: -9999px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		%siteby-hvr {
+			text-decoration: none;
+		}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// CREDIT
+	.credit {
+		@extend %credit !optional;
+	}
+
+	// SITEFOR
+
+	.sitefor {
+		@extend %sitefor !optional;
+
+		a {
+			@extend %sitefor-a !optional;
+
+			&:hover {
+				@extend %sitefor-hvr !optional;
+			}
+		}
+	}
+
+	.credit-brand {
+		@extend %credit-brand !optional;
+	}
+	.credit-copyright {
+		@extend %credit-copyright !optional;
+	}
+	.credit-designby {
+		@extend %credit-designby !optional;
+	}
+
+	// SITEBY
+
+	.siteby {
+		@extend %siteby !optional;
+
+		a {
+			@extend %siteby-a !optional;
+
+			&:hover {
+				@extend %siteby-hvr !optional;
+			}
+		}
+	}

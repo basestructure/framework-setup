@@ -1,0 +1,259 @@
+/* SETUP | SPACING | 2611_SETUP | SPACER - 2018-10-31 */
+
+// -------------------------------------
+// GUIDE
+
+	// SPACE VARIABLES
+
+	// $space:				1.0;		16px
+
+	// $space-tiny:			0.0625;		1px		TINY
+	// $space-xxxsml:		0.125;		2px		XXXSML
+	// $space-xxsml:		0.25;		4px		XXSML / QUARTER
+	// $space-quarter:		0.25;		4px
+	// $space-xsml:			0.3125;		5px		XSML
+	// $space-sml:			0.5;		8px		SML / HALF
+	// $space-half:			0.5;		8px
+	// $space-default:		1.0;		16px	DEFAULT
+	// $space-med:			1.5; 		24px	MED
+	// $space-lrg:			2;			32px	LRG / DOUBLE
+	// $space-xlrg:			3;			48px	XLRG / TRIPLE
+	// $space-xxlrg:		4;			64px	XXLRG
+	// $space-xxxlrg:		6;			96px	XXXHUGE
+	// $space-huge:			8;			128px	HUGE
+	// $space-xhuge:		10;			160px	XHUGE
+
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+
+	// SPACER-HEADLINER
+
+	.spacer-headliner {
+		padding: 1rem;
+
+		@include responsive-range(lrgup) {
+			padding: 4rem;
+		}
+		@include responsive-range(lrgdown) {
+			padding: 4rem;
+		}
+		@include responsive-range(meddown) {
+			padding: 2rem;
+		}
+		@include responsive-range(smldown) {
+			padding: 1rem;
+		}
+	}
+	.spacer-headliner-top {
+		padding-top: 1rem;
+
+		@include responsive-range(lrgup) {
+			padding-top: 4rem;
+		}
+		@include responsive-range(lrgdown) {
+			padding-top: 4rem;
+		}
+		@include responsive-range(meddown) {
+			padding-top: 2rem;
+		}
+		@include responsive-range(smldown) {
+			padding-top: 1rem;
+		}
+	}
+	.spacer-headliner-bottom {
+		padding-bottom: 1rem;
+
+		@include responsive-range(lrgup) {
+			padding-bottom: 4rem;
+		}
+		@include responsive-range(lrgdown) {
+			padding-bottom: 4rem;
+		}
+		@include responsive-range(meddown) {
+			padding-bottom: 2rem;
+		}
+		@include responsive-range(smldown) {
+			padding-bottom: 1rem;
+		}
+	}
+
+	// HEADLINE-XHUGE
+
+	.spacer-headliner.spacer-xhuge-y {
+		@include responsive-range(xlrgup) {
+			padding-top: 10rem;
+			padding-bottom: 10rem;
+		}
+	}
+	.spacer-headliner.spacer-xhuge-top {
+		@include responsive-range(xlrgup) {
+			padding-top: 10rem;
+		}
+	}
+	.spacer-headliner.spacer-xhuge-bottom {
+		@include responsive-range(xlrgup) {
+			padding-bottom: 10rem;
+		}
+	}
+
+	// HEADLINE-HUGE
+
+	.spacer-headliner.spacer-huge-y,
+	.spacer-headliner-top.spacer-huge-y,
+	.spacer-headliner-bottom.spacer-huge-y {
+		@include responsive-range(xlrgup) {
+			padding-top: 8rem;
+			padding-bottom: 8rem;
+		}
+	}
+	.spacer-headliner.spacer-huge-top,
+	.spacer-headliner-top.spacer-huge-top {
+		@include responsive-range(xlrgup) {
+			padding-top: 8rem;
+		}
+	}
+	.spacer-headliner.spacer-huge-bottom,
+	.spacer-headliner-bottom.spacer-huge-bottom {
+		@include responsive-range(xlrgup) {
+			padding-bottom: 8rem;
+		}
+	}
+
+	// HEADLINE-XXXLRG
+
+	.spacer-headliner.spacer-xxxlrg-y,
+	.spacer-headliner-top.spacer-xxxlrg-y,
+	.spacer-headliner-bottom.spacer-xxxlrg-y {
+		@include responsive-range(xlrgup) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+	}
+	.spacer-headliner.spacer-xxxlrg-top,
+	.spacer-headliner-top.spacer-xxxlrg-top {
+		@include responsive-range(xlrgup) {
+			padding-top: 6rem;
+		}
+	}
+	.spacer-headliner.spacer-xxxlrg-bottom,
+	.spacer-headliner-bottom.spacer-xxxlrg-bottom {
+		@include responsive-range(xlrgup) {
+			padding-bottom: 6rem;
+		}
+	}
+
+	// HEADLINE-LRG
+
+	.spacer-headliner.spacer-lrg {
+		@include responsive-range(xlrgup) {
+			padding: 2rem;
+		}
+		@include responsive-range(lrgdown) {
+			padding: 1rem;
+		}
+	}
+	.spacer-headliner.spacer-lrg-y,
+	.spacer-headliner-top.spacer-lrg-y,
+	.spacer-headliner-bottom.spacer-lrg-y {
+		@include responsive-range(xlrgup) {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+		@include responsive-range(lrgdown) {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+	}
+	.spacer-headliner.spacer-lrg-top,
+	.spacer-headliner-top.spacer-lrg-top {
+		@include responsive-range(xlrgup) {
+			padding-top: 2rem;
+		}
+		@include responsive-range(lrgdown) {
+			padding-top: 1rem;
+		}
+	}
+	.spacer-headliner.spacer-lrg-bottom,
+	.spacer-headliner-bottom.spacer-lrg-bottom {
+		@include responsive-range(xlrgup) {
+			padding-bottom: 2rem;
+		}
+		@include responsive-range(lrgdown) {
+			padding-bottom: 1rem;
+		}
+	}
+
+	.spacer-headliner.spacer-zero-top,
+	.spacer-headliner-top.spacer-zero-top {
+
+		@include responsive-range(lrgup) {
+			padding-top: 0;
+		}
+		@include responsive-range(lrgdown) {
+			padding-top: 0;
+		}
+		@include responsive-range(meddown) {
+			padding-top: 0;
+		}
+		@include responsive-range(smldown) {
+			padding-top: 0;
+		}
+		@include responsive-range(xsmldown) {}
+	}
+	.spacer-headliner.spacer-zero-bottom,
+	.spacer-headliner-bottom.spacer-zero-bottom {
+
+		@include responsive-range(lrgup) {
+			padding-bottom: 0;
+		}
+		@include responsive-range(lrgdown) {
+			padding-bottom: 0;
+		}
+		@include responsive-range(meddown) {
+			padding-bottom: 0;
+		}
+		@include responsive-range(smldown) {
+			padding-bottom: 0;
+		}
+		@include responsive-range(xsmldown) {}
+	}
+	.spacer-headliner.spacer-zero-left,
+	.spacer-headliner-left.spacer-zero-left {
+
+		@include responsive-range(lrgup) {
+			padding-left: 0;
+		}
+		@include responsive-range(lrgdown) {
+			padding-left: 0;
+		}
+		@include responsive-range(meddown) {
+			padding-left: 0;
+		}
+		@include responsive-range(smldown) {
+			padding-left: 0;
+		}
+		@include responsive-range(xsmldown) {}
+	}
+	.spacer-headliner.spacer-zero-right,
+	.spacer-headliner-right.spacer-zero-right {
+
+		@include responsive-range(lrgup) {
+			padding-right: 0;
+		}
+		@include responsive-range(lrgdown) {
+			padding-right: 0;
+		}
+		@include responsive-range(meddown) {
+			padding-right: 0;
+		}
+		@include responsive-range(smldown) {
+			padding-right: 0;
+		}
+		@include responsive-range(xsmldown) {}
+	}

@@ -1,0 +1,94 @@
+/* SETUP | LAYOUT | 254_SETUPBASIC | INNER-MAXSPACE - 2018-02-21 */
+
+// -------------------------------------
+// EXTEND
+
+	%maxspace {
+		margin: 0;
+		padding: 0;
+	}
+
+	// SITE-INNER
+
+	%siteinner_maxspace {}
+		%siteinner_cs_maxspace {}
+		%siteinner_sc_maxspace {}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw_maxspace {}
+
+		%csw_cs_maxspace {}
+		%csw_sc_maxspace {}
+
+	// CONTENT
+
+	%content_maxspace {
+		margin: 0;
+		padding: 0;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary_maxspace {}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary_maxspace {}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.maxspace .site-inner {
+		@extend %maxspace !optional;
+		@extend %siteinner_maxspace !optional;
+	}
+		.maxspace.content-sidebar {
+			@extend %maxspace !optional;
+			@extend %siteinner_cs_maxspace !optional;
+		}
+		.maxspace.sidebar-content {
+			@extend %maxspace !optional;
+			@extend %siteinner_sc_maxspace !optional;
+		}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.maxspace .content-sidebar-wrap {
+		@extend %maxspace !optional;
+		@extend %csw_maxspace !optional;
+	}
+		.maxspace.content-sidebar .content-sidebar-wrap {
+			@extend %maxspace !optional;
+			@extend %csw_cs_maxspace !optional;
+		}
+		.maxspace.sidebar-content .content-sidebar-wrap {
+			@extend %maxspace !optional;
+			@extend %csw_sc_maxspace !optional;
+		}
+
+	// CONTENT
+
+	.maxspace .content {
+		@extend %maxspace !optional;
+		@extend %content_maxspace !optional;
+	}
+	.maxspace-content .content {
+		@extend %content_maxspace !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.maxspace .sidebar-primary {
+		@extend %maxspace !optional;
+		@extend %sidebarprimary_maxspace !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.maxspace .sidebar-secondary {
+		@extend %maxspace !optional;
+		@extend %sidebarsecondary_maxspace !optional;
+	}

@@ -1,0 +1,33 @@
+/* SETUP | VARIABLES | 2721_SETUP | WIDTH-SPACE - 2018-12-14 */
+
+// -------------------------------------
+// VARIABLES
+
+	// NOTE: FUNCTIONAL WIDTHS
+
+	$width-pixel:						0.0625;		// 1px
+	$width-zero: 						0;
+
+	// SPACE
+
+	$space:								1.0;		// 16px
+
+	// SCALE SCALE
+
+	$space-tiny:						0.0625;		// 1px		TINY
+	$space-xxxsml:						0.125;		// 2px		XXXSML
+	$space-xxsml:						0.25;		// 4px		XXSML / QUARTER
+		$space-quarter:					0.25;		// 4px
+	$space-xsml:						0.3125;		// 5px		XSML
+	$space-sml:							0.5;		// 8px		SML / HALF
+		$space-half:					0.5;		// 8px
+	$space-default:						1.0;		// 16px
+	$space-med:							1.5; 		// 24px		MED
+	$space-lrg:							2;			// 32px		LRG / DOUBLE
+		$space-double:					2.0;		// 32px
+	$space-xlrg:						3;			// 48px		XLRG / TRIPLE
+		$space-triple:					3;			// 48px		
+	$space-xxlrg:						4;			// 64px		XXLRG
+	$space-xxxlrg:						6;			// 96px		XXXLRG
+	$space-huge:						8;			// 128px	HUGE
+	$space-xhuge:						10;			// 160px	XHUGE

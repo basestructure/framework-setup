@@ -1,0 +1,66 @@
+/* SETUP | GUI | 263_SETUPBASIC | MAINSIDE - 2018-06-24 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	// WIDTH MAIN
+
+	.section-huge.section-mainside {
+		@extend %section-huge-left !optional;
+	}
+	.section-huge.section-sidemain {
+		@extend %section-huge-right !optional;
+	}
+
+	.section-xlrg.section-mainside {
+		@extend %section-xlrg-left !optional;
+	}
+	.section-xlrg.section-sidemain {
+		@extend %section-xlrg-right !optional;
+	}
+
+	.section-lrg.section-mainside {
+		@extend %section-lrg-left !optional;
+	}
+	.section-lrg.section-sidemain {
+		@extend %section-lrg-right !optional;
+	}
+
+	.section-med.section-mainside {
+		@extend %section-med-left !optional;
+	}
+	.section-med.section-sidemain {
+		@extend %section-med-right !optional;
+	}
+
+	.section-sml.section-mainside {
+		@extend %section-sml-left !optional;
+	}
+	.section-sml.section-sidemain {
+		@extend %section-sml-right !optional;
+	}
+
+	.section-xsml.section-mainside {
+		@extend %section-xsml-left !optional;
+	}
+	.section-xsml.section-sidemain {
+		@extend %section-xsml-right !optional;
+	}
+
+	.section-xxsml.section-mainside {
+		@extend %section-xxsml-left !optional;
+	}
+	.section-xxsml.section-sidemain {
+		@extend %section-xxsml-right !optional;
+	}
+
+	.section-tiny.section-mainside {
+		@extend %section-tiny-left !optional;
+	}
+	.section-tiny.section-sidemain {
+		@extend %section-tiny-right !optional;
+	}

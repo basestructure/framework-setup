@@ -1,0 +1,88 @@
+/* SETUP | CONTENT | 2721_SETUP | BODY - 2018-12-14 */
+
+// -------------------------------------
+// EXTEND
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+
+	// HTML
+
+	%html {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		box-sizing: border-box;
+	}
+
+	// BODY
+
+	%body {
+		
+		// TYPE
+		font-family: $fontfamily-body;
+		font-size: #{$fontsize-body}rem;
+		font-weight: $fontweight-body;
+		line-height: $lineheight-body;
+		letter-spacing: $letterspacing-body;
+
+		// COLOR
+		background-color: $bgcolor-body;
+		color: $color-body;
+
+		// SPACING
+		margin: 0;
+		overflow-x: hidden;
+	}
+
+	// FLOAT CLEARING
+
+	.author-box::before,
+	.clearfix::before,
+	.entry::before,
+	.entry-content::before,
+	.footer-widgets::before,
+	.nav-primary::before,
+	.nav-secondary::before,
+	.pagination::before,
+	.site-container::before,
+	.site-footer::before,
+	.site-header::before,
+	.site-inner::before,
+	.widget::before,
+	.wrap::before {
+		content: " ";
+		display: table;
+	}
+
+	.author-box::after,
+	.clearfix::after,
+	.entry::after,
+	.entry-content::after,
+	.footer-widgets::after,
+	.nav-primary::after,
+	.nav-secondary::after,
+	.pagination::after,
+	.site-container::after,
+	.site-footer::after,
+	.site-header::after,
+	.site-inner::after,
+	.widget::after,
+	.wrap::after {
+		clear: both;
+		content: " ";
+		display: table;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	html {
+		@extend %html !optional;
+	}
+
+	body {
+		@extend %body !optional;
+	}
