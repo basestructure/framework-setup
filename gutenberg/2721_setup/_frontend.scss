@@ -677,6 +677,7 @@
 .entry-content .wp-block-quote p,
 .entry-content .wp-block-pullquote p {
 	font-family: "Source Sans Pro", serif;
+	font-family: $fontfamily-quote;
 	font-size: 21px;
 	font-style: italic;
 	line-height: 1.8;

@@ -1,0 +1,56 @@
+/* SETUP | GUTTENBERG | 2721_SETUP | IMAGES - 2019-01-17 */
+
+// -------------------------------------
+// EXTEND
+
+// WP-BLOCK IMAGE
+
+.entry-content .wp-block-image.alignwide {
+	@include responsive-range(lrgup) {
+		min-width: #{$width-layout-lrg}rem;
+		margin-left: -128px;
+		margin-right: -128px;
+	}
+}
+.content-sidebar .entry-content .wp-block-image.alignwide,
+.sidebar-content .entry-content .wp-block-image.alignwide {
+	@include responsive-range(lrgup) {
+		min-width: #{$width-layout-med}rem;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+/* Alignment
+---------------------------------------------------------------------------- */
+
+.wp-block-button.alignleft,
+.wp-block-cover.alignleft,
+.wp-block-image .alignleft {
+	margin-right: #{$space-med}rem;
+}
+
+.wp-block-button.alignright,
+.wp-block-cover.alignright,
+.wp-block-image .alignright {
+	margin-left: #{$space-med}rem;
+}
+
+.wp-block-image.alignwide,
+.wp-block-image.alignfull,
+.wp-block-embed.alignwide,
+.wp-block-embed.alignfull {
+	margin-bottom: #{$space-med}rem;
+}
+
+/* Cover Image
+---------------------------------------------------------------------------- */
+
+.full-width-content .entry-content .wp-block-cover.alignfull {
+	width: 100vw;
+}
+
+.entry-content .wp-block-cover .wp-block-cover-text {
+	font-size: 48px;
+}

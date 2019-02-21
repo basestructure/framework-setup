@@ -1,0 +1,28 @@
+/* SETUP | SECTION | 2811_SETUP | SECTION-FULLSCREEN - 2019-02-08 */
+
+// -------------------------------------
+// EXTEND
+
+// SECTION-FULLSCREEN
+
+	%section-fullscreen {
+
+		// PULLOUT
+		margin-left: calc(-100vw / 2 + 100% / 2);
+		margin-right: calc(-100vw / 2 + 100% / 2);
+		max-width: 100vw;
+
+		// FULLSCREEN
+		min-height: 100vh;
+		//min-width: 100vw;
+	}
+	
+
+// -------------------------------------
+// SELECTORS
+
+// SECTION-FULLSCREEN
+
+	.section-fullscreen {
+		@extend %section-fullscreen !optional;
+	}

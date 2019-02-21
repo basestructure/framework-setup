@@ -1,0 +1,307 @@
+/* SETUP | GUTTENBERG | 2721_SETUP | BLOCKQUOTES - 2019-01-30 */
+
+// -------------------------------------
+// EXTEND
+
+// Carry on my wayward son. For there'll be peace when you are done. Lay your weary head to rest. Don't you cry no more.
+
+// QUOTES
+
+	%quotes {
+		//border: none;
+		margin: 1.5rem 1.5rem 2rem;
+	}
+	%quotes-lrg {
+		//border: none;
+		margin: 3rem 1.5rem 3rem;
+		padding: 0;
+	}
+	%quotes-p {
+		//font-family: "Source Sans Pro", serif;
+		font-family: $fontfamily-quote;
+		font-size: #{$fontsize-sml}rem;
+		font-style: italic;
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+	}
+	%quotes-p-lrg {
+		font-size: #{$fontsize-med}rem;
+	}
+
+// WP-BLOCK-QUOTES
+
+	%block-quote {}
+	%block-quote-solidcolor {}
+
+	%block-quote-p {}
+	%block-quote-p-lrg {}
+	%block-quote-p-solidcolor {}
+
+// WP-BLOCK-PULLQUOTE
+
+	%block-pullquote {}
+	%block-pullquote-solidcolor {}
+	%block-pullquote-solidbgcolor {}
+
+	%block-pullquote-p {
+		font-size: #{$fontsize-med}rem;
+	}
+	%block-pullquote-p-solidcolor {
+		//text-align: center;
+		//color: #fff;
+		//margin-bottom: 42px;
+	}
+	%block-pullquote-p-solidbgcolor {}
+
+
+// CITE
+
+	%cite {
+		color: #666;
+		display: block;
+		font-family: "Source Sans Pro", serif;
+		font-size: #{$fontsize-xxsml}rem;
+		font-style: italic;
+		//margin-top: -25px;
+		text-align: inherit;
+		text-transform: none;
+	}
+	%cite-lrg {
+		font-size: #{$fontsize-xsml}rem;
+	}
+
+	%block-quote-cite {}
+	%block-pullquote-cite {
+		text-align: center;
+	}
+	%block-pullquote-cite-solidcolor {}
+
+
+// WP-BLOCK-PULLQUOTE ALIGNWIDE
+
+	%block-pullquote-alignwide {
+		@include responsive-range(lrgup) {
+			min-width: #{$width-layout-lrg}rem;
+			margin-left: -128px;
+			margin-right: -128px;
+		}
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+// WP-BLOCK-QUOTE
+
+.wp-block-quote {
+	@extend %quotes !optional;
+	@extend %block-quote !optional;
+}
+.entry-content .wp-block-quote {
+	@extend %quotes !optional;
+	@extend %block-quote !optional;
+}
+.wp-block-quote.is-style-large {
+	@extend %quotes-lrg !optional;
+}
+.entry-content .wp-block-quote.is-style-large {
+	@extend %quotes-lrg !optional;
+}
+
+// WP-BLOCK-QUOTE P
+
+.wp-block-quote p {
+	@extend %quotes-p !optional;
+	@extend %block-quote-p !optional;
+}
+.entry-content .wp-block-quote p {
+	@extend %quotes-p !optional;
+	@extend %block-quote-p !optional;
+}
+.entry-content .wp-block-quote.is-style-large p {
+	@extend %quotes-p-lrg !optional;
+	@extend %block-quote-p-large !optional;
+}
+
+// WP-BLOCK-PULLQUOTE
+
+.wp-block-pullquote {
+	@extend %quotes !optional;
+	@extend %block-pullquote !optional;
+}
+.entry-content .wp-block-pullquote {
+	@extend %quotes !optional;
+	@extend %block-pullquote !optional;
+}
+.entry-content .wp-block-pullquote.is-style-solid-color {
+	@extend %block-pullquote-solidcolor !optional;
+	@extend %block-pullquote-solidbgcolor !optional;
+}
+
+// WP-BLOCK-PULLQUOTE P
+
+.wp-block-pullquote p {
+	@extend %block-quotes-p !optional;
+	@extend %block-pullquote-p !optional;
+}
+.entry-content .wp-block-pullquote p {
+	@extend %block-quotes-p !optional;
+	@extend %block-pullquote-p !optional;
+}
+.entry-content .wp-block-pullquote.is-style-solid-color p {
+	@extend %block-pullquote-p-solidcolor !optional;
+	@extend %block-pullquote-p-solidbgcolor !optional;
+}
+
+
+// WP-BLOCK-QUOTE CITE
+
+.wp-block-quote cite {
+	@extend %cite !optional;
+	@extend %block-quote-cite !optional;
+}
+.entry-content .wp-block-quote cite {
+	@extend %cite !optional;
+	@extend %block-quote-cite !optional;
+}
+.wp-block-quote.is-style-large cite {
+	@extend %cite-lrg !optional;
+}
+.entry-content .wp-block-quote.is-style-large cite {
+	@extend %cite-lrg !optional;
+}
+
+// WP-BLOCK-PULLQUOTE CITE
+
+.wp-block-pullquote cite {
+	@extend %cite !optional;
+	@extend %block-pullquote-cite !optional;
+}
+.entry-content .wp-block-pullquote cite {
+	@extend %cite !optional;
+	@extend %block-pullquote-cite !optional;
+}
+.entry-content .wp-block-pullquote.is-style-solid-color cite {
+	@extend %block-pullquote-cite-solidcolor !optional;
+}
+
+
+
+.entry-content .wp-block-pullquote:not(.is-style-solid-color)[style*="border-color"] {
+	//border: 2px solid;
+	//border-left: none;
+	//border-right: none;
+}
+
+.entry-content .wp-block-quote cite,
+.entry-content .wp-block-pullquote cite {}
+
+.entry-content .wp-block-pullquote cite {
+	//text-align: center;
+}
+
+.entry-content .wp-block-pullquote.is-style-solid-color cite {
+	//color: #fff;
+	//font-style: italic;
+}
+
+.entry-content .wp-block-pullquote .has-text-color cite,
+.entry-content .wp-block-pullquote .has-text-color p {
+	//color: currentColor;
+}
+
+.entry-content .wp-block-audio figcaption,
+.entry-content .wp-block-embed figcaption,
+.entry-content .wp-block-image figcaption {
+	color: #666;
+	font-size: 16px;
+	font-style: italic;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+// WP-BLOCK STYLE-EDITOR
+
+
+
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+	border: none;
+	padding: 0;
+}
+
+.wp-block-quote p,
+.wp-block-pullquote p {
+	font-family: "Source Sans Pro", serif;
+	font-size: 21px !important;
+	font-style: italic;
+	line-height: 1.8;
+	margin-bottom: 42px;
+}
+
+.wp-block-pullquote p,
+.wp-block-quote.is-style-large p {
+	font-size: 32px !important;
+}
+
+.wp-block-pullquote.is-style-solid-color p {
+	color: #fff;
+	margin-bottom: 42px;
+	text-align: center;
+}
+
+.wp-block-pullquote.is-style-solid-color {
+	background-color: #333;
+}
+
+.wp-block-pullquote:not(.is-style-solid-color)[style*="border-color"] {
+	border: 2px solid;
+	border-left: none;
+	border-right: none;
+}
+
+.wp-block-quote .wp-block-quote__citation,
+.wp-block-pullquote .wp-block-pullquote__citation {
+	color: #666;
+	display: block;
+	font-family: "Source Sans Pro", serif;
+	font-size: 16px;
+	font-style: italic;
+	margin-top: -25px;
+	text-align: inherit;
+	text-transform: none;
+}
+
+.wp-block-pullquote .wp-block-pullquote__citation {
+	text-align: center;
+}
+
+.wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation {
+	color: #fff;
+	font-style: italic;
+}
+
+.wp-block-pullquote .has-text-color .wp-block-pullquote__citation,
+.wp-block-pullquote .has-text-color p {
+	color: currentColor;
+}
+
+.wp-block-audio figcaption,
+.wp-block-embed figcaption,
+.wp-block-image figcaption {
+	color: #666;
+	font-size: 16px;
+	font-style: italic;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+.wp-block-quote[class*="align"] .wp-block-quote__citation,
+.wp-block-pullquote[class*="align"] .wp-block-pullquote__citation {
+	text-align: center;
+}
+
+// WP-BLOCK-PULLQUOTE ALIGNWIDE
+
+.wp-block-pullquote.alignwide {
+	@extend %block-pullquote-alignwide !optional;
+}

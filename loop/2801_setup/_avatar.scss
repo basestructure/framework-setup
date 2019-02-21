@@ -1,0 +1,19 @@
+/* SETUP | LOOP | 2801_SETUP | AVATAR - 2019-02-05 */
+
+// -------------------------------------
+// EXTEND
+
+	%avatar {
+		border-radius: 50%;
+  		float: left;
+  		margin-right: #{$space-med}rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.avatar {
+		@extend %avatar !optional;
+	}
+

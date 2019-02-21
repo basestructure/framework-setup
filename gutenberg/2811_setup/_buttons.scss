@@ -1,0 +1,40 @@
+/* SETUP | GUTTENBERG | 2811_SETUP | BUTTONS - 2019-02-12 */
+
+// -------------------------------------
+// EXTEND
+
+
+
+// -------------------------------------
+// SELECTORS
+
+.content .wp-block-button .wp-block-button__link {
+	@extend %button !optional;
+	@extend %button-default !optional;
+	@extend %button-selector !optional;
+	@extend %button-round !optional;
+}
+
+.content .wp-block-button .wp-block-button__link:focus,
+.content .wp-block-button .wp-block-button__link:hover {
+	@extend %button !optional;
+	@extend %button-default !optional;
+	@extend %button-hover !optional;
+}
+
+.content .wp-block-button.is-style-squared .wp-block-button__link {
+	border-radius: 0;
+}
+
+.content .wp-block-button.is-style-outline .wp-block-button__link {
+	color: $button-color-link-alt;
+	background-color: transparent;
+	border: 2px solid $button-color-link-alt;
+	border-radius: 0;
+}
+
+.content .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.content .wp-block-button.is-style-outline .wp-block-button__link:hover {
+	color: $button-color-hover-alt;
+	background-color: $button-bgcolor-link;
+}

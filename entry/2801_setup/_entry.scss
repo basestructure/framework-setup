@@ -1,0 +1,49 @@
+/* SETUP | ENTRY | 2801_SETUP | ENTRY - 2019-02-02 */
+
+// -------------------------------------
+// EXTEND
+
+// ENTRY
+
+	%entry {}
+		%entry--archive {}
+		%entry--category {}
+		%entry--tag {}
+
+	%entry-header {}
+
+	%entry-content {}
+
+	%entry-footer {}
+
+
+// -------------------------------------
+// SELECTORS
+
+
+// ENTRY
+
+	.entry {
+		@extend %entry !optional;
+	}
+		.archive .entry {
+			@extend %entry--archive !optional;
+		}
+		.category .entry {
+			@extend %entry--category !optional;
+		}
+		.tag .entry {
+			@extend %entry--tag !optional;
+		}
+
+	.entry-header {
+		@extend %entry-header !optional;
+	}
+
+	.entry-content {
+		@extend %entry-content !optional;
+	}
+
+	.entry-footer {
+		@extend %entry-footer !optional;
+	}

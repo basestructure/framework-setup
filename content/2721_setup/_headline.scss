@@ -1,4 +1,4 @@
-/* SETUP | CONTENT | 2721_SETUP | HEADLINE - 2019-01-01 */
+/* SETUP | CONTENT | 2721_SETUP | HEADLINE - 2019-01-18 */
 
 // -------------------------------------
 // EXTEND
@@ -9,6 +9,7 @@
 		//line-height: $lineheight-headline;
 		letter-spacing: $letterspacing-headline;
 		margin: 0;
+		margin-bottom: #{$space-med}rem;
 
 		@include responsive-range(meddown) {
 			font-size: #{$lineheight-headline-mobile}rem;

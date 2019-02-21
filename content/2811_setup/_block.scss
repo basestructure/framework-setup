@@ -1,0 +1,105 @@
+/* SETUP | CONTENT | 2811_SETUP | BLOCK - 2019-02-10 */
+
+// -------------------------------------
+// EXTEND
+
+// WP-BLOCK-COLUMNS
+
+	%block-columns 
+
+	%block-column {}
+
+
+
+// WP-BLOCK-EMBED
+
+	%blockembed {}
+	%blockembed-alignleft {}
+	%blockembed-alignright {}
+	%blockembed-aligncenter {}
+
+// WP-BLOCK-IMAGE
+
+	%block-image {}
+
+// WP-BLOCK-VIDEO
+
+	%block-video {}
+
+
+// -------------------------------------
+// SELECTORS
+
+// WP-BLOCK-COLUMNS
+
+	.wp-block-columns {
+		@extend %block-columns !optional;
+	}
+		.wp-block-columns.space-zero {
+			@extend %space-zero !optional;
+		}
+		.wp-block-columns.spacein-zero {
+			@extend %spacein-zero !optional;
+		}
+		.wp-block-columns.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}
+		.entry-content .wp-block-columns.alignfull.space-zero {
+			@extend %space-zero !optional;
+		}
+		.entry-content .wp-block-columns.alignfull.spacein-zero {
+			@extend %spacein-zero !optional;
+		}
+
+	.wp-block-column {
+		@extend %block-column !optional;
+	}
+		.wp-block-columns.spacein-zero .wp-block-column {
+			@extend %space-zero !optional;
+		}
+
+		.wp-block-columns .wp-block-column.space-zero-bottom,
+		.entry-content .wp-block-columns .wp-block-column.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}
+
+// WP-BLOCK-COVER
+
+	.wp-block-cover {}
+
+	.wp-block-cover.space-zero-bottom {
+		@extend %block-zero-bottom !optional;
+	}
+
+// WP-BLOCK-EMBED
+
+	.wp-block-embed {}
+
+	.wp-block-embed.alignleft {}
+
+	.wp-block-embed.alignright {}
+
+	.wp-block-embed.aligncenter {}
+
+// WP-BLOCK-IMAGE
+
+	.wp-block-image {
+		@extend %block-image !optional;
+	}
+		.wp-block-image.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}
+
+// WP-BLOCK-VIDEO
+
+	.wp-block-video {
+		@extend %block-video !optional;
+	}
+		.wp-block-video.alignwide,
+		.entry-content .wp-block-video.alignwide {
+			@extend %alignwide !optional;
+		}
+		.wp-block-video.space-zero-bottom,
+		.entry-content .wp-block-columns.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}

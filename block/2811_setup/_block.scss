@@ -1,0 +1,64 @@
+/* SETUP | BLOCK | 2811_SETUP | BLOCK - 2019-02-14 */
+
+// -------------------------------------
+// EXTEND
+
+// BLOCK
+
+// WP-BLOCK-COLUMNS
+
+	%block-columns 
+
+	%block-column {}
+
+// WP-BLOCK-IMAGE
+
+	%block-image {}
+
+// WP-BLOCK-VIDEO
+
+	%block-video {}
+	
+
+// -------------------------------------
+// SELECTORS
+
+// WP-BLOCK-COLUMNS
+
+	.wp-block-columns {
+		@extend %block-columns !optional;
+	}
+		.wp-block-columns.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}
+
+	.wp-block-column {
+		@extend %block-column !optional;
+	}
+		.wp-block-columns .wp-block-column.space-zero-bottom,
+		.entry-content .wp-block-columns .wp-block-column.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}
+
+// WP-BLOCK-IMAGE
+
+	.wp-block-image {
+		@extend %block-image !optional;
+	}
+		.wp-block-image.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}
+
+// WP-BLOCK-VIDEO
+
+	.wp-block-video {
+		@extend %block-video !optional;
+	}
+		.wp-block-video.alignwide,
+		.entry-content .wp-block-video.alignwide {
+			@extend %alignwide !optional;
+		}
+		.wp-block-video.space-zero-bottom,
+		.entry-content .wp-block-columns.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}

@@ -1,4 +1,4 @@
-/* SETUP | LIST | 2721_SETUP | LIST - 2018-12-14 */
+/* SETUP | LIST | 2721_SETUP | LIST - 2019-01-30 */
 
 // -------------------------------------
 // EXTEND
@@ -89,6 +89,12 @@
 		@extend %entrycontent-ol !optional;
 		@extend %entrycontent-uol !optional;
 	}
+
+	ol.space-zero-bottom,
+	.entry-content ol.space-zero-bottom {
+		@extend %space-zero-bottom !optional;
+	}
+
 	.entry-content ol > li {
 		@extend %entrycontent-ol-li !optional;
 	}
@@ -122,6 +128,12 @@
 		@extend %entrycontent-ul !optional;
 		@extend %entrycontent-uol !optional;
 	}
+
+	ul.space-zero-bottom,
+	.entry-content ul.space-zero-bottom {
+		@extend %space-zero-bottom !optional;
+	}
+
 	.entry-content ul > li {
 		@extend %entrycontent-ul-li !optional;
 	}
