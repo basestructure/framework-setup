@@ -1,0 +1,263 @@
+/* SETUP | CONTENT | 2911_SETUP | TITLE - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+// ENTRY-TITLE
+
+	%entrytitle {
+		font-family: $fontfamily-entrytitle;
+		font-size: #{$fontsize-entrytitle}rem;
+		font-weight: $fontweight-entrytitle;
+		line-height: $lineheight-entrytitle;
+
+		// SPACING
+		margin-bottom: 2rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-entrytitle-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-entrytitle-sml}rem;
+		}
+	}
+	%entrytitle-a {
+		text-decoration: none;
+	}
+	%entrytitle-hvr {}
+
+// WIDGET-TITLE
+
+	%widgettitle {
+		font-family: $fontfamily-widgettitle;
+		font-size: #{$fontsize-widgettitle}rem;
+		font-weight: $fontweight-widgettitle;
+		line-height: $lineheight-widgettitle;
+	}
+
+// BLOG-TITLE
+
+	%blog-entrytitle {
+		font-family: $fontfamily-blog-entrytitle;
+		font-size: #{$fontsize-blog-entrytitle}rem;
+		font-weight: $fontweight-blog-entrytitle;
+		line-height: $lineheight-blog-entrytitle;
+
+		// SPACING
+		margin-bottom: 0.5rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-entrytitle-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-entrytitle-sml}rem;
+		}
+	}
+		%blog-entrytitle-a {}
+		%blog-entrytitle-hvr {}
+
+// ARCHIVE-TITLE
+
+	%archivetitle {
+		font-family: $fontfamily-archivetitle;
+		font-size: #{$fontsize-archivetitle}rem;
+		font-weight: $fontweight-archivetitle;
+		line-height: $lineheight-archivetitle;
+	}
+		%archivetitle-a {}
+		%archivetitle-hvr {}
+
+	%archivedescription {}
+
+// -------------------------------------
+// SELECTORS
+
+	.entry-title {
+		@extend %entrytitle !optional;
+
+		a {
+			@extend %entrytitle-a !optional;
+
+			&:hover {
+				@extend %entrytitle-hvr !optional;
+			}
+		}
+	}
+
+	.widget-title,
+	.widgettitle {
+		@extend %widgettitle !optional;
+
+		a {
+			@extend %widgettitle-a !optional;
+
+			&:hover {
+				@extend %widgettitle-hvr !optional;
+			}
+		}
+	}
+
+	// ARCHIVE
+
+	.archive {
+		.entry-title {
+			@extend %blog-entrytitle !optional;
+			//@extend %archive-entrytitle !optional;
+
+			a {
+				@extend %blog-entrytitle-a !optional;
+				//@extend %archive-entrytitle-a !optional;
+
+				&:hover {
+					@extend %blog-entrytitle-hvr !optional;
+					//@extend %archive-entrytitle-hvr !optional;
+				}
+			}
+		}
+		.has-post-thumbnail .entry-title {
+			@extend %haspostthumbnail-all-entrytitle !optional;
+
+			a {
+				@extend %haspostthumbnail-all-entrytitle-a !optional;
+
+				&:hover {
+					@extend %haspostthumbnail-all-entrytitle-hvr !optional;
+				}
+			}
+		}
+	}
+
+	// CATEGORY
+
+	.category {
+		.entry-title {
+			@extend %blog-entrytitle !optional;
+			//@extend %category-entrytitle !optional;
+
+			a {
+				@extend %blog-entrytitle-a !optional;
+				//@extend %category-entrytitle-a !optional;
+
+				&:hover {
+					@extend %blog-entrytitle-hvr !optional;
+					//@extend %category-entrytitle-hvr !optional;
+				}
+			}
+		}
+		.has-post-thumbnail .entry-title {
+			@extend %haspostthumbnail-all-entrytitle !optional;
+
+			a {
+				@extend %haspostthumbnail-all-entrytitle-a !optional;
+
+				&:hover {
+					@extend %haspostthumbnail-all-entrytitle-hvr !optional;
+				}
+			}
+		}
+	}
+
+	// TAG
+
+	.tag {
+		.entry-title {
+			@extend %blog-entrytitle !optional;
+			//@extend %tag-entrytitle !optional;
+
+			a {
+				@extend %blog-entrytitle-a !optional;
+				//@extend %tag-entrytitle-a !optional;
+
+				&:hover {
+					@extend %blog-entrytitle-hvr !optional;
+					//@extend %tag-entrytitle-hvr !optional;
+				}
+			}
+		}
+		.has-post-thumbnail .entry-title {
+			@extend %haspostthumbnail-all-entrytitle !optional;
+
+			a {
+				@extend %haspostthumbnail-all-entrytitle-a !optional;
+
+				&:hover {
+					@extend %haspostthumbnail-all-entrytitle-hvr !optional;
+				}
+			}
+		}
+	}
+
+	// BLOG
+
+	.blog {
+		.entry-title {
+			@extend %blog-entrytitle !optional;
+
+			a {
+				@extend %blog-entrytitle-a !optional;
+
+				&:hover {
+					@extend %blog-entrytitle-hvr !optional;
+				}
+			}
+		}
+		.has-post-thumbnail .entry-title {
+			@extend %haspostthumbnail-all-entrytitle !optional;
+
+			a {
+				@extend %haspostthumbnail-all-entrytitle-a !optional;
+
+				&:hover {
+					@extend %haspostthumbnail-all-entrytitle-hvr !optional;
+				}
+			}
+		}
+	}
+
+	// SEARCH RESULTS
+
+	.search-results {
+		.entry-title {
+			@extend %blog-entrytitle !optional;
+			//@extend %searchresults-entrytitle !optional;
+
+			a {
+				@extend %blog-entrytitle-a !optional;
+				//@extend %searchresults-entrytitle-a !optional;
+
+				&:hover {
+					@extend %blog-entrytitle-hvr !optional;
+					//@extend %searchresults-entrytitle-hvr !optional;
+				}
+			}
+		}
+		.has-post-thumbnail .entry-title {
+			@extend %haspostthumbnail-all-entrytitle !optional;
+
+			a {
+				@extend %haspostthumbnail-all-entrytitle-a !optional;
+
+				&:hover {
+					@extend %haspostthumbnail-all-entrytitle-hvr !optional;
+				}
+			}
+		}
+	}
+
+	// ARCHIVE TITLE
+
+	.archive-description {
+		@extend %archivedescription !optional;
+	}
+
+	.archive-title {
+		@extend %archivetitle !optional;
+
+		a {
+			@extend %archivetitle-a !optional;
+
+			&:hover {
+				@extend %archivetitle-hvr !optional;
+			}
+		}
+	}

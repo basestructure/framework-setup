@@ -1,4 +1,4 @@
-/* SETUP | BLOCK | 2811_SETUP | BLOCK - 2019-02-14 */
+/* SETUP | BLOCK | 2811_SETUP | BLOCK - 2019-03-22 */
 
 // -------------------------------------
 // EXTEND
@@ -10,6 +10,10 @@
 	%block-columns 
 
 	%block-column {}
+
+// WP-BLOCK-COVER
+
+	%block-cover {}
 
 // WP-BLOCK-IMAGE
 
@@ -28,7 +32,8 @@
 	.wp-block-columns {
 		@extend %block-columns !optional;
 	}
-		.wp-block-columns.space-zero-bottom {
+		.wp-block-columns.space-zero-bottom,
+		.entry-content .wp-block-columns.space-zero-bottom {
 			@extend %space-zero-bottom !optional;
 		}
 
@@ -40,12 +45,27 @@
 			@extend %space-zero-bottom !optional;
 		}
 
+// WP-BLOCK-COVER
+
+	.wp-block-cover {
+		@extend %block-cover !optional;
+	}
+		.wp-block-cover.alignwide,
+		.entry-content .wp-block-cover.alignwide {
+			@extend %alignwide !optional;
+		}
+		.wp-block-cover.space-zero-bottom,
+		.entry-content .wp-block-cover.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}
+
 // WP-BLOCK-IMAGE
 
 	.wp-block-image {
 		@extend %block-image !optional;
 	}
-		.wp-block-image.space-zero-bottom {
+		.wp-block-image.space-zero-bottom,
+		.entry-content .wp-block-image.space-zero-bottom {
 			@extend %space-zero-bottom !optional;
 		}
 

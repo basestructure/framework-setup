@@ -1,0 +1,237 @@
+/* SETUP | LIST | 2811_SETUP | LIST - 2019-03-09 */
+
+// -------------------------------------
+// EXTEND
+
+	%li {
+		list-style-type: none;
+	}
+
+	%liul {
+		margin-bottom: 0;
+	}
+	%liol {
+		margin-bottom: 0;
+	}
+
+	%li-noliststyle {
+		list-style-type: none;
+	}
+
+	%ol {}
+
+	%ul {}
+
+	%uol {
+		margin: 0;
+		padding: 0;
+	}
+
+	%uol-list-no-style {
+		list-style-type: none;
+	}
+
+	%uol-outside {
+		list-style-position: outside;
+	}
+	%uol-inside {
+		list-style-position: inside;
+	}
+
+	%entrycontent-ol {}
+
+	%entrycontent-ol-li {
+		list-style-type: decimal;
+	}
+
+	%entrycontent-ol-ol {}
+
+	%entrycontent-ul {}
+
+	%entrycontent-ul-li {
+		list-style-type: disc;
+	}
+	%entrycontent-uol-ul-li {
+		list-style-type: circle;
+	}
+
+	%entrycontent-ul-ul {}
+
+	%entrycontent-uol {
+		margin-bottom: #{$space-med}rem;
+		list-style-position: inside;
+	}
+
+	%entrycontent-uoluol {
+		margin-bottom: 0;
+		margin-left: #{$space-med}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// LI
+
+	li {
+		@extend %li !optional;
+	}
+	li > ul {
+		@extend %liul !optional;
+	}
+	li > ol {
+		@extend %liol !optional;
+	}
+
+	// LI
+
+	li.no-liststyle {
+		@extend %li-noliststyle !optional;
+	}
+
+	// OL
+
+	ol {
+		@extend %ol !optional;
+		@extend %uol !optional;
+	}
+	.entry-content ol {
+		@extend %entrycontent-ol !optional;
+		@extend %entrycontent-uol !optional;
+	}
+
+	.entry-content ol > li {
+		@extend %entrycontent-ol-li !optional;
+	}
+	.entry-content ol ul > li {
+		@extend %entrycontent-uol-ul-li !optional;
+	}
+
+	ol ol,
+	ol ul {
+		@extend %uoluol !optional;
+	}
+	.entry-content ol ol,
+	.entry-content ol ul {
+		@extend %entrycontent-uoluol !optional;
+	}
+
+	// OL SPACE-ZERO-BOTTOM
+
+	ol.space-zero-bottom,
+	.entry-content ol.space-zero-bottom {
+		@extend %space-zero-bottom !optional;
+	}
+
+	// OL LIST-OUTSIDE / LIST-INSIDE
+
+	ol.list-outside,
+	.entry-content ol.list-outside {
+		@extend %uol-outside !optional;
+	}
+	ol.list-inside,
+	.entry-content ol.list-inside {
+		@extend %uol-inside !optional;
+	}
+
+	// OL LIST-ZERO-STYLE
+
+	ol.list-no-style,
+	ol.list-no-style.list-all > li {
+		@extend %uol-list-no-style !optional;
+	}
+	.entry-content ol.list-no-style,
+	.entry-content ol.list-no-style.list-all li {
+		@extend %uol-list-no-style !optional;
+	}
+
+	// OL LIST-ZERO-STYLE - PARENT
+
+	ol.list-no-style-parent.list-parent > li {
+		@extend %uol-list-no-style !optional;
+	}
+	.entry-content ol.list-no-style.list-parent > li {
+		@extend %uol-list-no-style !optional;
+	}
+
+	// OL LIST-ZERO-STYLE - CHILD
+
+	ol.list-no-style-parent.list-child li li {
+		@extend %uol-list-no-style !optional;
+	}
+	.entry-content ol.list-no-style.list-child li li {
+		@extend %uol-list-no-style !optional;
+	}
+
+	// UL
+
+	ul {
+		@extend %ul !optional;
+		@extend %uol !optional;
+	}
+	.entry-content ul {
+		@extend %entrycontent-ul !optional;
+		@extend %entrycontent-uol !optional;
+	}
+
+	.entry-content ul > li {
+		@extend %entrycontent-ul-li !optional;
+	}
+	.entry-content ul ul > li {
+		@extend %entrycontent-uol-ul-li !optional;
+	}
+
+	ul ol,
+	ul ul {
+		@extend %uoluol !optional;
+	}
+	.entry-content ul ul,
+	.entry-content ul ol {
+		@extend %entrycontent-uoluol !optional;
+	}
+
+	// UL SPACE-ZERO-BOTTOM
+
+	ul.space-zero-bottom,
+	.entry-content ul.space-zero-bottom {
+		@extend %space-zero-bottom !optional;
+	}
+
+	// UL LIST-OUTSIDE / LIST-INSIDE
+
+	ul.list-outside,
+	.entry-content ul.list-outside {
+		@extend %uol-outside !optional;
+	}
+	ul.list-inside,
+	.entry-content ul.list-inside {
+		@extend %uol-inside !optional;
+	}
+
+	// UL LIST-ZERO-STYLE
+
+	ul.list-no-style,
+	ul.list-no-style.list-all > li {
+		@extend %uol-list-no-style !optional;
+	}
+	.entry-content ul.list-no-style,
+	.entry-content ul.list-no-style.list-all li {
+		@extend %uol-list-no-style !optional;
+	}
+
+	// UL LIST-ZERO-STYLE - PARENT
+
+	ul.list-no-style-parent.list-parent > li {
+		@extend %uol-list-no-style !optional;
+	}
+	.entry-content ul.list-no-style.list-parent > li {
+		@extend %uol-list-no-style !optional;
+	}
+
+	// UL LIST-ZERO-STYLE - CHILD
+
+	ul.list-no-style-parent.list-child li li {
+		@extend %uol-list-no-style !optional;
+	}
+	.entry-content ul.list-no-style.list-child li li {
+		@extend %uol-list-no-style !optional;
+	}

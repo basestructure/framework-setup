@@ -1,0 +1,27 @@
+/* SETUP | LOOP | 2911_SETUP | AUTHORBOX - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+	%authorbox {
+		background-color: #f3f3f3;
+		padding: #{$space-med}rem;
+		margin-bottom: #{$space-lrg}rem;
+	}
+
+	%authorbox-title {
+		font-size: #{$fontsize-sml}rem;
+		margin-bottom: #{$space-sml}rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.author-box {
+		@extend %authorbox !optional;
+	}
+
+	.author-box-title {
+		@extend %authorbox-title !optional;
+	}

@@ -1,0 +1,67 @@
+/* SETUP | INNER | 2811_SETUP | INNER_OVERRIDE - 2019-03-12 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner-override {}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw-override {}
+
+	// CONTENT
+
+	%content-override {}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary-override {}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary-override {}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.site-inner {
+		@extend %siteinner !optional;
+
+		.inner-spacein-zero & {
+			padding: 0;
+		}
+		.inner-spacein-zero-top & {
+			padding-top: 0;
+		}
+		.inner-spacein-zero-bottom & {
+			padding-bottom: 0;
+		}
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.site-inner .content-sidebar-wrap {
+		@extend %csw !optional;
+	}
+
+	// CONTENT
+
+	.content {
+		@extend %content !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary {
+		@extend %sidebarprimary !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary {
+		@extend %sidebarsecondary !optional;
+	}

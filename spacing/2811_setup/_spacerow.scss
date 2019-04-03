@@ -1,0 +1,56 @@
+/* SETUP | SPACING | 2811_SETUP | SPACEROW - 2019-03-12 */
+
+// -------------------------------------
+// GUIDE
+
+	// SPACE VARIABLES
+
+	// $space:				1.0;		16px
+
+	// $space-tiny:			0.0625;		1px		TINY
+	// $space-xxxsml:		0.125;		2px		XXXSML
+	// $space-xxsml:		0.25;		4px		XXSML / QUARTER
+	// $space-quarter:		0.25;		4px
+	// $space-xsml:			0.3125;		5px		XSML
+	// $space-sml:			0.5;		8px		SML / HALF
+	// $space-half:			0.5;		8px
+	// $space-default:		1.0;		16px	DEFAULT
+	// $space-med:			1.5; 		24px	MED
+	// $space-lrg:			2;			32px	LRG / DOUBLE
+	// $space-xlrg:			3;			48px	XLRG / TRIPLE
+	// $space-xxlrg:		4;			64px	XXLRG
+	// $space-xxxlrg:		6;			96px	XXXHUGE
+	// $space-huge:			8;			128px	HUGE
+	// $space-xhuge:		10;			160px	XHUGE
+
+
+// -------------------------------------
+// EXTEND
+
+	// UNIQUE
+
+	%spacerow-row {}
+
+	%spacerow-row2 {}
+
+	%spacerow-row3 {}
+
+	%spacerow-row4 {}
+
+	%spacerow-row5 {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// UNIQUE
+
+	.spacerow-row {}
+
+	.spacerow-row2 {}
+
+	.spacerow-row3 {}
+
+	.spacerow-row4 {}
+
+	.spacerow-row5 {}

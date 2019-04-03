@@ -1,0 +1,189 @@
+/* SETUP | COLOR | 2911_SETUP | FADE - 2019-04-02 */
+
+// The simple method of adding transparent faded white color above images
+// These faded white colors can be added with hover for focused effect
+
+// -------------------------------------
+// EXTEND
+
+	// FADE COVER
+
+	%fade {
+		position: relative;
+		cursor: pointer;
+	}
+
+	%fade-before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(255,255,255, 0.5);
+		transition: all .3s linear;
+	}
+
+	// FADE - HOVEROFF
+
+	%fade-hoveroff-before {}
+
+	%fade-hoveroff-before-hover {
+		background: none;
+	}
+
+	// FADE - HOVERON
+
+	%fade-hoveron-before {
+		background: none;
+	}
+	%fade-hoveron-before-hover {
+		background: rgba(255,255,255, 0.5);
+		transition: all .3s linear;
+	}
+
+	// FADE
+
+	%fade-lightest {
+		background: rgba(255,255,255, 0.15);
+	}
+	%fade-lighter {
+		background: rgba(255,255,255, 0.25);
+	}
+	%fade-light {
+		background: rgba(255,255,255, 0.35);
+	}
+	%fade-middle {
+		background: rgba(255,255,255, 0.5);
+	}
+	%fade-dark {
+		background: rgba(255,255,255, 0.65);
+	}
+	%fade-darker {
+		background: rgba(255,255,255, 0.75);
+	}
+	%fade-darkest {
+		background: rgba(255,255,255, 0.85);
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// FADE COVER
+
+	.fade {
+		@extend %fade !optional;
+	}
+	.fade:before {
+		@extend %fade-before !optional;
+	}
+	.fade-hoveroff:before {
+		@extend %fade-hoveroff-before !optional;
+	}
+	.fade-hoveroff:hover:before {
+		@extend %fade-hoveroff-before-hover !optional;
+	}
+	.fade-hoveron:before {
+		@extend %fade-hoveron-before !optional;
+	}
+	.fade-hoveron:hover:before {
+		@extend %fade-hoveron-before-hover !optional;
+	}
+
+	// FADE 
+
+	.fade-lightest:before {
+		@extend %fade-lightest !optional;
+	}
+	.fade-lighter:before {
+		@extend %fade-lighter !optional;
+	}
+	.fade-light:before {
+		@extend %fade-light !optional;
+	}
+	.fade-middle:before {
+		@extend %fade-middle !optional;
+	}
+	.fade-dark:before {
+		@extend %fade-dark !optional;
+	}
+	.fade-darker:before {
+		@extend %fade-darker !optional;
+	}
+	.fade-darkest:before {
+		@extend %fade-darkest !optional;
+	}
+
+	// FADE + BGFADE
+
+	.fade-lightest.bgfade {
+		@extend %fade-lightest !optional;
+	}
+	.fade-lighter.bgfade {
+		@extend %fade-lighter !optional;
+	}
+	.fade-light.bgfade {
+		@extend %fade-light !optional;
+	}
+	.fade-middle.bgfade {
+		@extend %fade-middle !optional;
+	}
+	.fade-dark.bgfade {
+		@extend %fade-dark !optional;
+	}
+	.fade-darker.bgfade {
+		@extend %fade-darker !optional;
+	}
+	.fade-darkest.bgfade {
+		@extend %fade-darkest !optional;
+	}
+
+	// FADE-HOVERON
+
+	.fade-hoveron.fade-lightest:before {
+		@extend %fade-hoveron-before !optional;
+	}
+	.fade-hoveron.fade-lighter:before {
+		@extend %fade-hoveron-before !optional;
+	}
+	.fade-hoveron.fade-light:before {
+		@extend %fade-hoveron-before !optional;
+	}
+	.fade-hoveron.fade-middle:before {
+		@extend %fade-hoveron-before !optional;
+	}
+	.fade-hoveron.fade-dark:before {
+		@extend %fade-hoveron-before !optional;
+	}
+	.fade-hoveron.fade-darker:before {
+		@extend %fade-hoveron-before !optional;
+	}
+	.fade-hoveron.fade-darkest:before {
+		@extend %fade-hoveron-before !optional;
+	}
+
+	// FADE-HOVERON HOVER
+
+	.fade-hoveron.fade-lightest:hover:before {
+		@extend %fade-lightest !optional;
+	}
+	.fade-hoveron.fade-lighter:hover:before {
+		@extend %fade-lighter !optional;
+	}
+	.fade-hoveron.fade-light:hover:before {
+		@extend %fade-light !optional;
+	}
+	.fade-hoveron.fade-middle:hover:before {
+		@extend %fade-middle !optional;
+	}
+	.fade-hoveron.fade-dark:hover:before {
+		@extend %fade-dark !optional;
+	}
+	.fade-hoveron.fade-darker:hover:before {
+		@extend %fade-darker !optional;
+	}
+	.fade-hoveron.fade-darkest:hover:before {
+		@extend %fade-darkest !optional;
+	}

@@ -1,0 +1,376 @@
+/* SETUP | CONTENT | 2911_SETUP | BUTTON - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+// BUTTON
+
+	%button {
+
+		// COLOR
+		color: $button-color-link;
+		background-color: $button-bgcolor-link;
+		
+		// MISC
+		border: 0;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		width: auto;
+		//white-space: normal;
+
+		// FONTWEIGHT
+		font-weight: $fontweight-semibold;
+	}
+	%button-selector {
+		display: inline-block;
+	}
+	%button-link {
+		color: $button-color-link;
+		background-color: $button-bgcolor-link;
+		text-decoration: none;
+	}
+	%button-active {}
+	%button-hover {
+		color: $button-color-hover;
+		background-color: $button-bgcolor-hover;
+		text-decoration: none;
+	}
+
+// BUTTON-ALT
+
+	%button-alt {
+
+		// COLOR
+		color: $button-color-link-alt;
+		background-color: $button-bgcolor-link-alt;
+		
+		// MISC
+		border: 0;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		width: auto;
+
+		// FONTWEIGHT
+		font-weight: $fontweight-semibold;
+	}
+	%button-link-alt {
+		color: $button-color-link-alt;
+		background-color: $button-bgcolor-link-alt;
+		text-decoration: none;
+	}
+	%button-active-alt {}
+	%button-hover-alt {
+		color: $button-color-hover-alt;
+		background-color: $button-bgcolor-hover-alt;
+		text-decoration: none;
+	}
+
+// BUTTON-SIZE
+	
+	%button-wide {
+		display: block;
+	}
+
+// BUTTON-ROUND
+
+	%button-round {
+		border-radius: 0.5rem;
+	}
+
+// BUTTON-SIZE
+
+	%button-default {
+		padding: #{$space-default}rem #{$space-med}rem;
+	}
+	%button-tiny {
+		padding: #{$space-tiny}rem #{$space-xsml}rem;
+	}
+	%button-xxxsml {
+		padding: #{$space-xxxsml}rem #{$space-sml}rem;
+	}
+	%button-xxsml {
+		padding: #{$space-xxsml}rem #{$space-sml}rem;
+	}
+	%button-xsml {
+		padding: #{$space-xsml}rem #{$space-med}rem;
+	}
+	%button-sml {
+		padding: #{$space-sml}rem #{$space-med}rem;
+	}
+	%button-med {
+		padding: #{$space-default}rem #{$space-med}rem;;
+	}
+	%button-lrg {
+		padding: #{$space-med}rem #{$space-xlrg}rem;
+	}
+	%button-xlrg {
+		padding: #{$space-lrg}rem #{$space-xxlrg}rem;
+	}
+	%button-huge {
+		padding: #{$space-xlrg}rem #{$space-huge}rem;
+	}
+
+// BUTTON-COLOR
+
+	%button-black {
+		color: $color-white;
+		background-color: $color-black;
+	}
+	%button-black-hover {
+		color: $color-black;
+		background-color: $color-lightest;
+	}
+	%button-dark {
+		color: $color-lightest;
+		background-color: $color-darkest;
+	}
+	%button-dark-hover {
+		color: $color-darkest;
+		background-color: $color-lightest;
+	}
+	%button-middle {
+		color: $color-lightest;
+		background-color: $color-middle;
+	}
+	%button-middle-hover {
+		color: $color-middle;
+		background-color: $color-lightest;
+	}
+	%button-light {
+		color: $color-darkest;
+		background-color: $color-lightest;
+	}
+	%button-light-hover {
+		color: $color-lightest;
+		background-color: $color-darkest;
+	}
+	%button-red {
+		color: $color-white;
+		background-color: $color-red;
+	}
+	%button-red-hover {
+		color: $color-red;
+		background-color: $color-lightest;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+// BUTTON
+
+	.button,
+	a.button {
+		@extend %button !optional;
+		@extend %button-selector !optional;
+	}
+
+	.button:link,
+	a.button:link {
+		@extend %button !optional;
+		@extend %button-link !optional;
+	}
+
+	.button:active,
+	a.button:active {
+		@extend %button !optional;
+		@extend %button-active !optional;
+	}
+
+	.button:hover,
+	a.button:hover {
+		@extend %button !optional;
+		@extend %button-hover !optional;
+	}
+
+// BUTTON-ALT
+
+	.button.button-alt,
+	a.button.button-alt {
+		@extend %button-alt !optional;
+		@extend %button-selector !optional;
+	}
+
+	.button.button-alt:link,
+	a.button.button-alt:link {
+		@extend %button-alt !optional;
+		@extend %button-link-alt !optional;
+	}
+
+	.button.button-alt:active,
+	a.button.button-alt:active {
+		@extend %button-alt !optional;
+		@extend %button-active-alt !optional;
+	}
+
+	.button.button-alt:hover,
+	a.button.button-alt:hover {
+		@extend %button-alt !optional;
+		@extend %button-hover-alt !optional;
+	}
+
+// BUTTON-EXTRAS
+
+	.button.valigntop {
+		@extend %verticalaligntop !optional;
+	}
+	.button.valignbottom {
+		@extend %verticalalignbottom !optional;
+	}
+
+	.button.display-block {
+		@extend %display-block !optional;
+	}
+
+// BUTTON-WIDE
+
+	.button.button-wide,
+	a.button.button-wide {
+		@extend %button-wide !optional;
+	}
+
+// BUTTON-ROUND
+
+	.button.button-round,
+	a.button.button-round {
+		@extend %button-round !optional;
+	}
+
+// BUTTON-SIZE
+
+	.button {
+		@extend %button-default !optional;
+	}
+	.button-tiny,
+	.button-tiny.button {
+		@extend %button-tiny !optional;
+	}
+	.button-xxxsml,
+	.button-xxxsml.button {
+		@extend %button-xxxsml !optional;
+	}
+	.button-xxsml,
+	.button-xxsml.button {
+		@extend %button-xxsml !optional;
+	}
+	.button-xsml,
+	.button-xsml.button {
+		@extend %button-xsml !optional;
+	}
+	.button-sml,
+	.button-sml.button {
+		@extend %button-sml !optional;
+	}
+	.button-med,
+	.button-med.button {
+		@extend %button-med !optional;
+	}
+	.button-lrg,
+	.button-lrg.button {
+		@extend %button-lrg !optional;
+	}
+	.button-xlrg,
+	.button-xlrg.button {
+		@extend %button-xlrg !optional;
+	}
+	.button-huge,
+	.button-huge.button {
+		@extend %button-huge !optional;
+	}
+
+// BUTTON-COLOR
+
+	.button.button-black,
+	a.button.button-black {
+		@extend %button-black !optional;
+	}
+	.button.button-black:link,
+	a.button.button-black:link {
+		@extend %button-black !optional;
+	}
+	.button-black:hover,
+	a.button-black:hover {
+		@extend %button-black-hover !optional;
+	}
+
+	.button.button-dark,
+	a.button.button-dark {
+		@extend %button-dark !optional;
+	}
+	.button.button-dark:link,
+	a.button.button-dark:link {
+		@extend %button-dark !optional;
+	}
+	.button-dark:hover,
+	a.button-dark:hover {
+		@extend %button-dark-hover !optional;
+	}
+
+	.button.button-middle,
+	a.button.button-middle {
+		@extend %button-middle !optional;
+	}
+	.button.button-middle:link,
+	a.button.button-middle:link {
+		@extend %button-middle !optional;
+	}
+	.button-middle:hover,
+	a.button-middle:hover {
+		@extend %button-middle-hover !optional;
+	}
+
+	.button.button-light,
+	a.button.button-light {
+		@extend %button-light !optional;
+	}
+	.button.button-light:link,
+	a.button.button-light:link {
+		@extend %button-light !optional;
+	}
+	.button-light:hover,
+	a.button-light:hover {
+		@extend %button-light-hover !optional;
+	}
+
+	.button.button-red,
+	a.button.button-red {
+		@extend %button-red !optional;
+	}
+	.button.button-red:link,
+	a.button.button-red:link {
+		@extend %button-red !optional;
+	}
+	.button-red:hover,
+	a.button-red:hover {
+		@extend %button-red-hover !optional;
+	}
+
+// BUTTON FONT-WEIGHT
+
+	.button.fontweight-extralight,
+	.button.fontweight-extralight.button-alt:hover,
+	a.button.fontweight-extralight.button-alt:hover {
+		@extend %fontweight-extralight !optional;
+	}
+	.button.fontweight-light,
+	.button.fontweight-light.button-alt:hover,
+	a.button.fontweight-light.button-alt:hover {
+		@extend %fontweight-light !optional;
+	}
+	.button.fontweight-regular,
+	.button.fontweight-regular.button-alt:hover,
+	a.button.fontweight-regular.button-alt:hover {
+		@extend %fontweight-regular !optional;
+	}
+	.button.fontweight-semibold,
+	.button.fontweight-semibold.button-alt:hover,
+	a.button.fontweight-semibold.button-alt:hover {
+		@extend %fontweight-semibold !optional;
+	}
+	.button.fontweight-bold,
+	.button.fontweight-bold.button-alt:hover,
+	a.button.fontweight-bold.button-alt:hover {
+		@extend %fontweight-bold !optional;
+	}

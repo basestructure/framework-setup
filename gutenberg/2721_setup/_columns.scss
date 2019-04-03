@@ -28,7 +28,7 @@
 		margin-left: 0.75rem;
 		margin-bottom: 1.5rem;
 	}
-	@include responsive-range(medbelowdown) {
+	@include responsive-range(meddownbelow) {
 		margin-right: 0;
 		margin-left: 0;
 		margin-bottom: 1.5rem;
@@ -200,7 +200,7 @@
 .entry-content .wp-block-columns.has-4-columns .wp-block-column:not(:first-child),
 .entry-content .wp-block-columns.has-5-columns .wp-block-column:not(:first-child),
 .entry-content .wp-block-columns.has-6-columns .wp-block-column:not(:first-child) {
-	@include responsive-range(medbelowdown) {
+	@include responsive-range(meddownbelow) {
 		//margin-left: 0.75rem;
 	}
 }
@@ -210,7 +210,7 @@
 .entry-content .wp-block-columns.has-4-columns .wp-block-column:not(:last-child),
 .entry-content .wp-block-columns.has-5-columns .wp-block-column:not(:last-child),
 .entry-content .wp-block-columns.has-6-columns .wp-block-column:not(:last-child) {
-	@include responsive-range(medbelowdown) {
+	@include responsive-range(meddownbelow) {
 		//margin-right: 0.75rem;
 	}
 }
@@ -247,7 +247,7 @@
 
 
 .entry-content .wp-block-columns .wp-block-column:nth-child(odd) {
-	@include responsive-range(medbelowdown) {
+	@include responsive-range(meddownbelow) {
 		//margin-right: 0;
 	}
 }

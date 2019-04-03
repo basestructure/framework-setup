@@ -1,0 +1,150 @@
+/* SETUP | LAYOUT | 2911_SETUP | CS_GRID - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+	// STRUCTURE
+	
+	%cs-body {}
+	%cs-structure {}
+
+	// INNER
+
+	%cs-siteinner {
+
+		// GRID
+
+		@include responsive-range(lrgup) {
+			grid-template-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+				-ms-grid-columns: 1fr minmax(0, #{$width-cs}rem) 1fr;
+		}
+
+	}
+
+	%cs-csw {
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		// IE
+		display: -ms-grid;
+		-ms-grid-columns: 1fr;
+		-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-columns: minmax(0, #{$width-content}rem) 2rem minmax(0, #{$width-sidebarprimary}rem);
+			grid-template-columns: minmax(0, #{$width-content}rem) 2rem minmax(0, #{$width-sidebarprimary}rem);
+		}
+
+	}
+
+	%cs-content {
+
+		// HOOK
+		-ms-grid-column: 1;
+		grid-column: 1;
+		-ms-grid-row: 1;
+		grid-row: 1;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 1;
+			grid-column: 1;
+			-ms-grid-row: 1;
+			grid-row: 1;
+		}
+
+	}
+
+	%cs-sidebarprimary {
+
+		// HOOK
+		-ms-grid-column: 1;
+		grid-column: 1;
+		-ms-grid-row: 2;
+		grid-row: 2;
+
+		@include responsive-range(lrgup) {
+			-ms-grid-column: 3;
+			grid-column: 3;
+			-ms-grid-row: 1;
+			grid-row: 1;
+		}
+
+	}
+
+	// SITE-HEADER
+
+	%cs-siteheader {}
+	%cs-siteheaderwrap {}
+
+	// SITE-FOOTER
+
+	%cs-sitefooter {}
+	%cs-sitefooterwrap {}
+
+	// FOOTER-WIDGETS
+
+	%cs-footerwidgets {}
+	%cs-footerwidgetswrap {}
+
+	// FOOTER-MENU
+
+	%cs-footermenu {}
+	%cs-footermenuwrap {}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar .body {
+		@extend %cs-body !optional;
+	}
+
+	.content-sidebar .structure {
+		@extend %cs-structure !optional;
+	}
+
+	.content-sidebar .site-inner {
+		@extend %cs-siteinner !optional;
+	}
+
+	.content-sidebar .content-sidebar-wrap {
+		@extend %cs-csw !optional;
+	}
+
+	.content-sidebar .content {
+		@extend %cs-content !optional;
+	}
+
+	.content-sidebar .sidebar-primary {
+		@extend %cs-sidebarprimary !optional;
+	}
+
+	.content-sidebar .site-header {
+		@extend %cs-siteheader !optional;
+	}
+	.content-sidebar .site-header > .wrap {
+		@extend %cs-siteheaderwrap !optional;
+	}
+
+	.content-sidebar .site-footer {
+		@extend %cs-sitefooter !optional;
+	}
+	.content-sidebar .site-footer > .wrap {
+		@extend %cs-sitefooterwrap !optional;
+	}
+
+	.content-sidebar .footer-widgets {
+		@extend %cs-footerwidgets !optional;
+	}
+	.content-sidebar .footer-widgets > .wrap {
+		@extend %cs-footerwidgetswrap !optional;
+	}
+
+	.content-sidebar .footer-menu {
+		@extend %cs-footermenu !optional;
+	}
+	.content-sidebar .footer-menu > .wrap {
+		@extend %cs-footermenuwrap !optional;
+	}

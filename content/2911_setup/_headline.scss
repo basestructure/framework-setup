@@ -1,0 +1,130 @@
+/* SETUP | CONTENT | 2911_SETUP | HEADLINE - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+	%headline {
+		font-family: $fontfamily-headline;
+		font-weight: $fontweight-headline;
+		//line-height: $lineheight-headline;
+		letter-spacing: $letterspacing-headline;
+		margin: 0;
+		margin-bottom: #{$space-med}rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$lineheight-headline-mobile}rem;
+		}
+	}
+
+	%headline-larger {
+		line-height: $lineheight-headline-larger;
+	}
+
+	%headline-smaller {
+		line-height: $lineheight-headline-smaller;
+	}
+
+	%h1 {
+		font-size: #{$fontsize-h1}rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-h1-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-h1-sml}rem;
+		}
+	}
+
+	%h2 {
+		font-size: #{$fontsize-h2}rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-h2-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-h2-sml}rem;
+		}
+	}
+
+	%h3 {
+		font-size: #{$fontsize-h3}rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-h3-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-h3-sml}rem;
+		}
+	}
+
+	%h4 {
+		font-size: #{$fontsize-h4}rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-h4-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-h4-sml}rem;
+		}
+	}
+
+	%h5 {
+		font-size: #{$fontsize-h5}rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-h5-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-h5-sml}rem;
+		}
+	}
+
+	%h6 {
+		font-size: #{$fontsize-h6}rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-h6-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-h6-sml}rem;
+		}
+	}
+
+// -------------------------------------
+// SELECTORS
+
+// HEADLINE
+
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+		@extend %headline !optional;
+	}
+
+	h1, .h1 {
+		@extend %h1 !optional;
+		@extend %headline-larger !optional;
+	}
+
+	h2, .h2 {
+		@extend %h2 !optional;
+		@extend %headline-larger !optional;
+	}
+
+	h3, .h3 {
+		@extend %h3 !optional;
+		@extend %headline-larger !optional;		
+	}
+
+	h4, .h4 {
+		@extend %h4 !optional;
+		@extend %headline-smaller !optional;
+	}
+
+	h5, .h5 {
+		@extend %h5 !optional;
+		@extend %headline-smaller !optional;
+	}
+
+	h6, .h6 {
+		@extend %h6 !optional;
+		@extend %headline-smaller !optional;
+	}

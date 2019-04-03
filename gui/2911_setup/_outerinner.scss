@@ -1,0 +1,210 @@
+/* SETUP | GUI | 2811_SETUP | OUTERINNER - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+	// OUTER
+
+	%outer {}
+	%outer-flex {
+		//display: flex;
+		@extend %flex !optional;
+	}
+	%outer-center {
+		//justify-content: center;
+		@extend %flex-center !optional;
+	}
+	%outer-left {
+		//justify-content: flex-start;
+		@extend %flex-left !optional;
+	}
+	%outer-right {
+		//justify-content: flex-end;
+		@extend %flex-right !optional;
+	}
+
+	// INNER
+
+	%inner {}
+	%inner-flex {
+		//display: flex;
+		@extend %flex !optional;
+	}
+	%inner-center {
+		//justify-content: center;
+		@extend %flex-center !optional;
+	}
+	%inner-left {
+		//justify-content: flex-start;
+		@extend %flex-left !optional;
+	}
+	%inner-right {
+		//justify-content: flex-end;
+		@extend %flex-right !optional;
+	}
+
+	// OUTERINNER-SIZE
+
+	%outerinner-huge {
+		max-width: #{$width-huge}rem;
+	}
+	%outerinner-xlrg {
+		max-width: #{$width-xlrg}rem;
+	}
+	%outerinner-lrg {
+		max-width: #{$width-lrg}rem;
+	}
+	%outerinner-med {
+		max-width: #{$width-med}rem;
+	}
+	%outerinner-sml {
+		max-width: #{$width-sml}rem;
+	}
+	%outerinner-xsml {
+		max-width: #{$width-xsml}rem;
+	}
+	%outerinner-xxsml {
+		max-width: #{$width-xxsml}rem;
+	}
+	%outerinner-tiny {
+		max-width: #{$width-tiny}rem;
+	}
+
+	// OUTERINNER-BLOCK
+
+	%outerinner-block {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: #{$width-med}rem;
+		width: 100%;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// OUTER
+
+	.outer {
+		@extend %outer !optional;
+	}
+	.outer.left,
+	.outer.center,
+	.outer.right {
+		@extend %outer-flex !optional;
+	}
+		.outer.center {
+			@extend %outer-center !optional;
+		}
+		.outer.left {
+			@extend %outer-left !optional;
+		}
+		.outer.right {
+			@extend %outer-right !optional;
+		}
+
+	// INNER
+
+	.inner {
+		@extend %inner !optional;
+	}
+	.inner.left,
+	.inner.center,
+	.inner.right {
+		@extend %inner-flex !optional;
+	}
+		.inner.left {
+			@extend %inner-center !optional;
+		}
+		.inner.center {
+			@extend %inner-left !optional;
+		}
+		.inner.right {
+			@extend %inner-right !optional;
+		}
+
+	// OUTER > INNER WIDTH
+
+	.outer.huge .inner {
+		@extend %outerinner-huge !optional;
+	}
+
+	.outer.xlrg .inner {
+		@extend %outerinner-xlrg !optional;
+	}
+
+	.outer.lrg .inner {
+		@extend %outerinner-lrg !optional;
+	}
+
+	.outer.med .inner {
+		@extend %outerinner-med !optional;
+	}
+
+	.outer.sml .inner {
+		@extend %outerinner-sml !optional;
+	}
+
+	.outer.xsml .inner {
+		@extend %outerinner-xsml !optional;
+	}
+
+	.outer.tiny .inner {
+		@extend %outerinner-tiny !optional;
+	}
+
+
+
+
+
+
+
+	// OUTER RELATIVE
+
+	.outer.max {
+		@extend %outer !optional;
+	}
+		.outer.max.center {
+			@extend %outer !optional;
+		}
+		.outer.max.left {
+			@extend %outer !optional;
+		}
+		.outer.max.right {
+			@extend %outer !optional;
+		}
+
+	// OUTER MEDIA
+
+	.outer.mediamedium {
+		@extend %outer !optional;
+		@extend %section-mediamedium !optional;
+	}
+		.outer.mediamedium.center {
+			@extend %outer-center !optional;
+			@extend %section-mediamedium-center !optional;
+		}
+		.outer.mediamedium.left {
+			@extend %outer-left !optional;
+			@extend %section-mediamedium-left !optional;
+		}
+		.outer.mediamedium.right {
+			@extend %outer-right !optional;
+			@extend %section-mediamedium-right !optional;
+		}
+
+	.outer.mediathumbnail {
+		@extend %outer !optional;
+		@extend %section-mediathumbnail !optional;
+	}
+		.outer.mediathumbnail.center {
+			@extend %outer-center !optional;
+			@extend %section-mediathumbnail-center !optional;
+		}
+		.outer.mediathumbnail.left {
+			@extend %outer-left !optional;
+			@extend %section-mediathumbnail-left !optional;
+		}
+		.outer.mediathumbnail.right {
+			@extend %outer-right !optional;
+			@extend %section-mediathumbnail-right !optional;
+		}

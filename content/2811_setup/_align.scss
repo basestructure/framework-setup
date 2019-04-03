@@ -1,4 +1,4 @@
-/* SETUP | SELECTOR | 2811_SETUP | ALIGN - 2019-02-08 */
+/* SETUP | SELECTOR | 2811_SETUP | ALIGN - 2019-03-20 */
 
 // -------------------------------------
 // EXTEND
@@ -33,9 +33,15 @@
 		max-width: 100vw;
 	}
 	%alignfull--fullwidth {
-		margin-left: calc(-100vw / 2 + 100% / 2);
-		margin-right: calc(-100vw / 2 + 100% / 2);
-		max-width: 100vw;
+		//margin-left: calc(-100vw / 2 + 100% / 2);
+		//margin-right: calc(-100vw / 2 + 100% / 2);
+		//max-width: 100vw;
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
 	}
 	%alignfull--cs {
 		//margin: 0 0 2em;
@@ -49,26 +55,77 @@
 
 	%alignwide {
 		@include responsive-range(lrgup) {
-			margin-left: -128px;
-			margin-right: -128px;
-			min-width: #{$width-layout-lrg}rem;
+			margin-left: -128px;						// centers item based on width-lrg
+			margin-right: -128px;						// centers item based on width-lrg
+			min-width: #{$width-layout-lrg}rem;			// forces width-lrg
+			max-width: #{$width-layout-lrg}rem;			// caps width-lrg
 		}
 		@include responsive-range(lrgdownbelow) {
 			margin-left: auto;
 			margin-right: auto;
 			width: 100%;
+			max-width: #{$width-layout-lrg}rem;			// caps width-lrg
 		}
 	}
 	%alignwide--cs {
 		@include responsive-range(lrgup) {
-			margin-left: auto;
-			margin-right: auto;
-			width: 100%;
-			min-width: auto;
-			max-width: #{$width-layout-med}rem;
+			margin-left: auto;							// removes centering based on larger sizes
+			margin-right: auto;							// removes centering based on larger sizes
+			width: 100%;								// adjusts width to maximum (width-med)
+			min-width: auto;							// removes forced width-lrg
+			max-width: #{$width-layout-lrg}rem;			// reduces width to width-med
 		}
 		@include responsive-range(lrgdownbelow) {
-			max-width: #{$width-layout-med}rem;
+			max-width: #{$width-layout-lrg}rem;			// maximizes width to width-med
+		}
+	}
+
+	%alignwide-xlrg {
+		@include responsive-range(xlrgup) {
+			margin-left: -256px;						// centers item based on width-xlrg
+			margin-right: -256px;						// centers item based on width-xlrg
+			min-width: #{$width-layout-xlrg}rem;		// forces width-xlrg
+			max-width: #{$width-layout-xlrg}rem;		// caps width-xlrg
+		}
+		@include responsive-range(xlrgdownbelow) {
+			min-width: none;							// removes min width-xlrg
+		}
+	}
+	%alignwide-xlrg--cs {
+		@include responsive-range(xlrgup) {
+			margin-left: auto;							// removes centering based on larger sizes
+			margin-right: auto;							// removes centering based on larger sizes
+			width: 100%;								// adjusts width to maximum (width-med)
+			min-width: auto;							// removes forced width-lrg
+			max-width: #{$width-layout-xlrg}rem;		// reduces width to width-med
+		}
+		@include responsive-range(xlrgdownbelow) {
+			max-width: #{$width-layout-xlrg}rem;		// maximizes width to width-med
+		}
+	}
+
+	%alignwide-lrg {
+		@include responsive-range(lrgup) {
+			margin-left: -128px;						// centers item based on width-lrg
+			margin-right: -128px;						// centers item based on width-lrg
+			min-width: #{$width-layout-lrg}rem;			// forces width-xlrg
+			max-width: #{$width-layout-lrg}rem;			// caps width-xlrg
+		}
+		@include responsive-range(lrgdownbelow) {
+			max-width: #{$width-layout-lrg}rem;
+		}
+	}
+	%alignwide-lrg--cs {
+		@include responsive-range(lrgup) {
+			margin-left: auto;							// removes centering based on larger sizes
+			margin-right: auto;							// removes centering based on larger sizes
+			width: 100%;								// adjusts width to maximum (width-med)
+			min-width: auto;							// removes forced width-lrg
+			max-width: #{$width-layout-lrg}rem;			// reduces width to width-med
+		}
+		@include responsive-range(lrgdownbelow) {
+			min-width: none;
+			max-width: #{$width-layout-lrg}rem;
 		}
 	}
 
@@ -76,7 +133,7 @@
 		@include responsive-range(lrgup) {
 			margin-left: auto;
 			margin-right: auto;
-			min-width: #{$width-layout-med}rem;
+			min-width: #{$width-layout-med}rem;			// forces width-med
 			max-width: #{$width-layout-med}rem;
 		}
 		@include responsive-range(lrgdownbelow) {
@@ -84,7 +141,7 @@
 		}
 	}
 	%alignwide-med--cs {
-		@include responsive-range(lrgdown) {
+		@include responsive-range(lrgdownbelow) {
 			min-width: auto;
 			max-width: #{$width-layout-med}rem;
 		}
@@ -102,7 +159,7 @@
 		}
 	}
 	%alignwide-sml--cs {
-		@include responsive-range(lrgdown) {
+		@include responsive-range(lrgdownbelow) {
 			min-width: auto;
 			max-width: #{$width-layout-sml}rem;
 		}
@@ -120,7 +177,7 @@
 		}
 	}
 	%alignwide-xsml--cs {
-		@include responsive-range(lrgdown) {
+		@include responsive-range(lrgdownbelow) {
 			min-width: auto;
 			max-width: #{$width-layout-xsml}rem;
 		}
@@ -212,18 +269,35 @@
 		.content-sidebar .alignwide {
 			@extend %alignwide--cs !optional;
 		}
+
+	.alignwide.width-xlrg {
+		@extend %alignwide-xlrg !optional;
+	}
+		.content-sidebar .alignwide.width-xlrg {
+			@extend %alignwide-xlrg--cs !optional;
+		}
+
+	.alignwide.width-lrg {
+		@extend %alignwide-lrg !optional;
+	}
+		.content-sidebar .alignwide.width-lrg {
+			@extend %alignwide-lrg--cs !optional;
+		}
+
 	.alignwide.width-med {
 		@extend %alignwide-med !optional;
 	}
 		.content-sidebar .alignwide.width-med {
 			@extend %alignwide-med--cs !optional;
 		}
+
 	.alignwide.width-sml {
 		@extend %alignwide-sml !optional;
 	}
 		.content-sidebar .alignwide.width-sml {
 			@extend %alignwide-sml--cs !optional;
 		}
+
 	.alignwide.width-xsml {
 		@extend %alignwide-xsml !optional;
 	}
@@ -260,4 +334,10 @@
 	}
 	img.alignnone {
 		@extend %alignnone !optional;
+	}
+
+	// MAXWIDTH
+
+	.maxwidth {
+		@extend %alignfull !optional;
 	}

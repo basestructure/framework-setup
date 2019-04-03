@@ -1,0 +1,208 @@
+/* SETUP | MENU | 2811_SETUP | NAV - 2019-03-21 */
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-PRIMARY (MENU-HEADER Container)
+
+	%navprimary {
+
+		grid-area: navprimary;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr auto 1fr;
+				// IE 
+				-ms-grid-columns: 1fr auto 1fr;
+		}
+
+	}
+	%navprimarywrap {
+
+		grid-area: navprimarywrap;
+
+		// HOOK
+		grid-column: 1;
+			// IE
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+				// IE
+				-ms-grid-column: 2;
+		}
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: auto;
+				// IE 
+				-ms-grid-columns: auto;
+		}	
+
+	}
+
+	// NAV-SECONDARY (MENU-TOP Container)
+
+	%navsecondary {
+
+		grid-area: navsecondary;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr auto 1fr;
+				// IE 
+				-ms-grid-columns: 1fr auto 1fr;
+		}
+
+	}
+	%navsecondarywrap {
+
+		grid-area: navsecondarywrap;
+
+		// HOOK
+		grid-column: 1;
+			// IE
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+				// IE
+				-ms-grid-column: 2;
+		}
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: auto;
+				// IE 
+				-ms-grid-columns: auto;
+		}	
+
+	}
+
+	// NAV-FOOTER
+
+	%navfooter {
+
+		grid-area: navfooter;
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: 1fr auto 1fr;
+				// IE 
+				-ms-grid-columns: 1fr auto 1fr;
+		}
+
+	}
+	%navfooterwrap {
+
+		grid-area: navfooterwrap;
+
+		// HOOK
+		grid-column: 1;
+			// IE
+			-ms-grid-column: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+				// IE
+				-ms-grid-column: 2;
+		}
+
+		// GRID
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+			// IE
+			display: -ms-grid;
+			-ms-grid-columns: 1fr;
+			-ms-grid-rows: auto;
+
+		@include responsive-range(lrgup) {
+			// GRID
+			grid-template-columns: auto;
+				// IE 
+				-ms-grid-columns: auto;
+		}	
+
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %navprimary !optional;
+	}
+	.nav-primary > .wrap {
+		@extend %navprimarywrap !optional;
+	}
+
+	// NAV-SECONDARY
+
+	.nav-secondary {
+		@extend %navsecondary !optional;
+	}
+	.nav-secondary > .wrap {
+		@extend %navsecondarywrap !optional;
+	}
+
+	// NAV-FOOTER
+
+	.nav-footer {
+		@extend %navfooter !optional;
+	}
+	.nav-footer > .wrap {
+		@extend %navfooterwrap !optional;
+	}
+		#mega-menu-wrap-footer.mega-menu-wrap {
+			@extend %navfooterwrap !optional;
+		}

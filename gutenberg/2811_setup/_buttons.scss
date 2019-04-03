@@ -22,6 +22,87 @@
 	@extend %button-hover !optional;
 }
 
+// SIZES
+.content .wp-block-button.button,
+.content .wp-block-button.button-tiny,
+.content .wp-block-button.button-xxxsml,
+.content .wp-block-button.button-xxsml,
+.content .wp-block-button.button-xsml,
+.content .wp-block-button.button-sml,
+.content .wp-block-button.button-med,
+.content .wp-block-button.button-lrg,
+.content .wp-block-button.button-xlrg,
+.content .wp-block-button.button-huge {
+	padding: 0;
+}
+
+.content .wp-block-button.button .wp-block-button__link {
+	@extend %button-default !optional;
+}
+.content .wp-block-button.button-tiny .wp-block-button__link {
+	@extend %button-tiny !optional;
+}
+.content .wp-block-button.button-xxxsml .wp-block-button__link {
+	@extend %button-xxxsml !optional;
+}
+.content .wp-block-button.button-xxsml .wp-block-button__link {
+	@extend %button-xxsml !optional;
+}
+.content .wp-block-button.button-xsml .wp-block-button__link {
+	@extend %button-xsml !optional;
+}
+.content .wp-block-button.button-sml .wp-block-button__link {
+	@extend %button-sml !optional;
+}
+.content .wp-block-button.button-med .wp-block-button__link {
+	@extend %button-med !optional;
+}
+.content .wp-block-button.button-lrg .wp-block-button__link {
+	@extend %button-lrg !optional;
+}
+.content .wp-block-button.button-xlrg .wp-block-button__link {
+	@extend %button-xlrg !optional;
+}
+.content .wp-block-button.button-huge .wp-block-button__link {
+	@extend %button-huge !optional;
+}
+
+// FONTSIZE
+
+.content .wp-block-button.fontsize-tiniest .wp-block-button__link {
+	@extend %fontsize-tiniest !optional;
+}
+.content .wp-block-button.fontsize-tinier .wp-block-button__link {
+	@extend %fontsize-tinier !optional;
+}
+.content .wp-block-button.fontsize-tiny .wp-block-button__link {
+	@extend %fontsize-tiny !optional;
+}
+.content .wp-block-button.fontsize-xxxsml .wp-block-button__link {
+	@extend %fontsize-xxxsml !optional;
+}
+.content .wp-block-button.fontsize-xxsml .wp-block-button__link {
+	@extend %fontsize-xxsml !optional;
+}
+.content .wp-block-button.fontsize-xsml .wp-block-button__link {
+	@extend %fontsize-xsml !optional;
+}
+.content .wp-block-button.fontsize-sml .wp-block-button__link {
+	@extend %fontsize-sml !optional;
+}
+.content .wp-block-button.fontsize-med .wp-block-button__link {
+	@extend %fontsize-med !optional;
+}
+.content .wp-block-button.fontsize-lrg .wp-block-button__link {
+	@extend %fontsize-lrg !optional;
+}
+.content .wp-block-button.fontsize-xlrg .wp-block-button__link {
+	@extend %fontsize-xlrg !optional;
+}
+.content .wp-block-button.fontsize-huge .wp-block-button__link {
+	@extend %fontsize-huge !optional;
+}
+
 .content .wp-block-button.is-style-squared .wp-block-button__link {
 	border-radius: 0;
 }
@@ -33,7 +114,9 @@
 	border-radius: 0;
 }
 
-.content .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.content .wp-block-button.is-style-outline .wp-block-button__link:focus {
+
+}
 .content .wp-block-button.is-style-outline .wp-block-button__link:hover {
 	color: $button-color-hover-alt;
 	background-color: $button-bgcolor-link;

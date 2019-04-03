@@ -1,0 +1,284 @@
+/* SETUP | GUTTENBERG | 2911_SETUP | TYPOGRAPHY - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+
+
+// -------------------------------------
+// SELECTORS
+
+// FONT-SIZE
+
+.entry-content p.has-tiny-font-size {
+	@extend %fontsize-tiny !optional;
+}
+.entry-content p.has-xxxsmall-font-size {
+	@extend %fontsize-xxxsml !optional;
+}
+.entry-content p.has-xxsmall-font-size {
+	@extend %fontsize-xxsml !optional;
+}
+.entry-content p.has-regular-font-size {
+	@extend %fontsize-regular !optional;
+}
+.entry-content p.has-xsmall-font-size {
+	@extend %fontsize-xsml !optional;
+}
+.entry-content p.has-small-font-size {
+	@extend %fontsize-sml !optional;
+}
+.entry-content p.has-medium-font-size {
+	@extend %fontsize-med !optional;
+}
+.entry-content p.has-large-font-size {
+	@extend %fontsize-lrg !optional;
+}
+.entry-content p.has-xlarge-font-size {
+	@extend %fontsize-xlrg !optional;
+}
+
+/* Drop Caps
+---------------------------------------------------------------------------- */
+
+.entry-content p.has-drop-cap:not(:focus)::first-letter {
+	margin: 0.02em 0.08em 0 -0.08em;
+}
+
+.entry-content p.has-larger-font-size.has-drop-cap:not(:focus)::first-letter,
+.entry-content p.has-small-font-size.has-drop-cap:not(:focus)::first-letter {
+	margin-right: 0.01em;
+}
+
+// COLOR PALETTE
+
+.entry-content .has-white-background-color {
+	@extend %bgcolor-white !optional;
+}
+
+.entry-content .has-white-color {
+	@extend %color-white !optional;
+}
+
+.entry-content .has-light-gray-background-color {
+	@extend %bgcolor-lightgray !optional;
+}
+
+.entry-content .has-light-gray-color {
+	@extend %color-lightgray !optional;
+}
+
+.entry-content .has-medium-gray-background-color {
+	@extend %bgcolor-gray !optional;
+}
+
+.entry-content .has-medium-gray-color {
+	@extend %color-gray !optional;
+}
+
+.entry-content .has-dark-gray-background-color {
+	@extend %bgcolor-darkgray !optional;
+}
+
+.entry-content .has-dark-gray-color {
+	@extend %color-darkgray !optional;
+}
+
+.entry-content .has-black-background-color {
+	@extend %bgcolor-black !optional;
+}
+
+.entry-content .has-black-color {
+	@extend %color-black !optional;
+}
+
+.entry-content .has-red-background-color {
+	@extend %bgcolor-red !optional;
+}
+
+.entry-content .has-red-color {
+	@extend %color-red !optional;
+}
+
+.entry-content .has-orange-background-color {
+	@extend %bgcolor-orange !optional;
+}
+
+.entry-content .has-orange-color {
+	@extend %color-orange !optional;
+}
+
+.entry-content .has-yellow-background-color {
+	@extend %bgcolor-yellow !optional;
+}
+
+.entry-content .has-yellow-color {
+	@extend %color-yellow !optional;
+}
+
+.entry-content .has-green-background-color {
+	@extend %bgcolor-green !optional;
+}
+
+.entry-content .has-green-color {
+	@extend %color-green !optional;
+}
+
+.entry-content .has-violet-background-color {
+	@extend %bgcolor-violet !optional;
+}
+
+.entry-content .has-violet-color {
+	@extend %color-violet !optional;
+}
+
+.entry-content .has-blue-background-color {
+	@extend %bgcolor-blue !optional;
+}
+
+.entry-content .has-blue-color {
+	@extend %color-blue !optional;
+}
+
+// BACKGROUND COLOR (+SPACING)
+
+.entry-content p.has-background {
+	//padding: 25px 30px;
+	@extend %spacein-top !optional;
+	@extend %spacein-bottom !optional;
+	@extend %spacein-left !optional;
+	@extend %spacein-right !optional;
+}
+
+.entry-content p.has-background.spacein-med {
+	@extend %spacein-med-top !optional;
+	@extend %spacein-med-bottom !optional;
+	@extend %spacein-med-left !optional;
+	@extend %spacein-med-right !optional;
+}
+.entry-content p.has-background.spacein-med-topless {
+	//@extend %spacein-med-top !optional;
+	@extend %spacein-med-bottom !optional;
+	@extend %spacein-med-left !optional;
+	@extend %spacein-med-right !optional;
+	@extend %spacein-zero-top !optional;
+}
+.entry-content p.has-background.spacein-med-bottomless {
+	@extend %spacein-med-top !optional;
+	//@extend %spacein-med-bottom !optional;
+	@extend %spacein-med-left !optional;
+	@extend %spacein-med-right !optional;
+	@extend %spacein-zero-bottom !optional;
+}
+
+.entry-content p.has-background.spacein {
+	@extend %spacein-top !optional;
+	@extend %spacein-bottom !optional;
+	@extend %spacein-left !optional;
+	@extend %spacein-right !optional;
+}
+.entry-content p.has-background.spacein-topless {
+	//@extend %spacein-top !optional;
+	@extend %spacein-bottom !optional;
+	@extend %spacein-left !optional;
+	@extend %spacein-right !optional;
+	@extend %spacein-zero-top !optional;
+}
+.entry-content p.has-background.spacein-bottomless {
+	@extend %spacein-top !optional;
+	//@extend %spacein-bottom !optional;
+	@extend %spacein-left !optional;
+	@extend %spacein-right !optional;
+	@extend %spacein-zero-bottom !optional;
+}
+
+.entry-content p.has-background.spacein-sml {
+	@extend %spacein-sml-top !optional;
+	@extend %spacein-sml-bottom !optional;
+	@extend %spacein-sml-left !optional;
+	@extend %spacein-sml-right !optional;
+}
+.entry-content p.has-background.spacein-sml-topless {
+	//@extend %spacein-sml-top !optional;
+	@extend %spacein-sml-bottom !optional;
+	@extend %spacein-sml-left !optional;
+	@extend %spacein-sml-right !optional;
+	@extend %spacein-zero-top !optional;
+}
+.entry-content p.has-background.spacein-sml-bottomless {
+	@extend %spacein-sml-top !optional;
+	//@extend %spacein-sml-bottom !optional;
+	@extend %spacein-sml-left !optional;
+	@extend %spacein-sml-right !optional;
+	@extend %spacein-zero-bottom !optional;
+}
+
+.entry-content p.has-background.spacein-xsml {
+	@extend %spacein-xsml-top !optional;
+	@extend %spacein-xsml-bottom !optional;
+	@extend %spacein-xsml-left !optional;
+	@extend %spacein-xsml-right !optional;
+}
+.entry-content p.has-background.spacein-xsml-topless {
+	//@extend %spacein-xsml-top !optional;
+	@extend %spacein-xsml-bottom !optional;
+	@extend %spacein-xsml-left !optional;
+	@extend %spacein-xsml-right !optional;
+	@extend %spacein-zero-top !optional;
+}
+.entry-content p.has-background.spacein-xsml-bottomless {
+	@extend %spacein-xsml-top !optional;
+	@extend %spacein-xsml-bottom !optional;
+	@extend %spacein-xsml-left !optional;
+	@extend %spacein-xsml-right !optional;
+	@extend %spacein-zero-bottom !optional;
+}
+
+.entry-content p.has-background.spacein-zero,
+.entry-content p.has-background.spacein-zero.spacein-med,
+.entry-content p.has-background.spacein-zero.spacein-sml,
+.entry-content p.has-background.spacein-zero.spacein-xsml {
+	@extend %spacein-zero-top !optional;
+	@extend %spacein-zero-bottom !optional;
+	@extend %spacein-zero-left !optional;
+	@extend %spacein-zero-right !optional;
+}
+.entry-content p.has-background.spacein-zero-top,
+.entry-content p.has-background.spacein-zero-top.spacein-med,
+.entry-content p.has-background.spacein-zero-top.spacein-sml,
+.entry-content p.has-background.spacein-zero-top.spacein-xsml {
+	@extend %spacein-zero-top !optional;
+}
+.entry-content p.has-background.spacein-zero-bottom,
+.entry-content p.has-background.spacein-zero-bottom.spacein-med,
+.entry-content p.has-background.spacein-zero-bottom.spacein-sml,
+.entry-content p.has-background.spacein-zero-bottom.spacein-xsml {
+	@extend %spacein-zero-bottom !optional;
+}
+
+.entry-content p.has-background.box-shadow {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.entry-content p.has-text-color a,
+.entry-content p.has-background a {
+	color: inherit;
+}
+
+.entry-content p.has-text-color a:focus,
+.entry-content p.has-background a:focus,
+.entry-content p.has-text-color a:hover,
+.entry-content p.has-background a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+.entry-content p.has-background.light-text a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.entry-content p.has-background.light-text a:focus,
+.entry-content p.has-background.light-text a:hover {
+	text-decoration: none;
+}

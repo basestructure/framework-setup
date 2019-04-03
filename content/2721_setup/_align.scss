@@ -220,3 +220,9 @@
 	img.alignnone {
 		@extend %alignnone !optional;
 	}
+
+	// MAXWIDTH
+
+	.maxwidth {
+		@extend %alignfull !optional;
+	}

@@ -1,0 +1,118 @@
+/* SETUP | VARIABLES | 2911_SETUP | LINEHEIGHT - 2019-04-02 */
+
+// -------------------------------------
+// VARIABLES
+
+	$lineheight-default:				1.5;
+		$lineheight-default-mobile:		1.4;
+	$lineheight-regular:				1.5;
+
+// TAGS
+
+	$lineheight-body:					1.5;
+	$lineheight-p:						1.5;
+	
+	// LIST
+	$lineheight-list:					1.5;
+	$lineheight-ul:						1.5;
+	$lineheight-ol:						1.5;
+	$lineheight-li:						1.5;
+
+	// HEADLINE
+	$lineheight-headline:				1.2;
+	$lineheight-headline-largest:		1.1;
+	$lineheight-headline-larger:		1.2;
+	$lineheight-headline-smaller:		1.4;
+		$lineheight-headline-mobile:	1.2;
+	$lineheight-h1:						null;
+	$lineheight-h2:						null;
+	$lineheight-h3:						null;
+	$lineheight-h4:						null;
+	$lineheight-h5:						null;
+	$lineheight-h6:						null;
+
+// PURPOSE
+
+	// QUOTES
+	$lineheight-blockquote:				null;
+	$lineheight-quote:					null;
+	$lineheight-cite:					null;
+
+	// CAPTION
+	$lineheight-caption:				null;
+	
+	// TITLES
+	$lineheight-sitetitle:				null;
+	$lineheight-sitedescription:		null;
+	$lineheight-titlepage:				null;
+	$lineheight-titlepost:				null;
+	$lineheight-titlewidget:			null;
+	$lineheight-titlearchive:			null;
+
+	// META
+	$lineheight-meta:					null;
+	$lineheight-copyright:				null;
+	$lineheight-breadcrumb:				null;
+
+// PAGE & POST
+
+	// ENTRY
+	$lineheight-entrytitle:				1.2;
+	$lineheight-entrymeta:				null;
+
+	// SINGLE
+	$lineheight-single-entrytitle:		null;
+	$lineheight-single-entrymeta:		null;
+
+	// PAGE
+	$lineheight-page-entrytitle:		null;
+	$lineheight-page-entrymeta:			null;
+
+	// BLOG
+	$lineheight-blog-entrytitle:		1.2;
+	$lineheight-blog-entrymeta:			null;
+
+	// ARCHIVE
+	$lineheight-archivetitle:			null;
+	$lineheight-archivedescription:		null;
+
+	// COMMENTS
+	$lineheight-commentstitle:			null;
+
+	// REPLY
+	$lineheight-replytitle:				null;
+
+	// WIDGET
+	$lineheight-widgettitle:			null;
+
+// RELATIVE
+
+	$lineheight-huge:					1;		
+	$lineheight-xxxlrg:					1.1;		
+	$lineheight-xxxlrg:					1.1;		
+	$lineheight-xxlrg:					1.1;		// H1
+	$lineheight-xlrg:					1.2;		// H2
+	$lineheight-lrg:					1.2;		// H3
+	$lineheight-med:					1.4;		// H4
+	$lineheight-sml:					null;		// P
+	$lineheight-xsml:					1.4;		// H5
+	$lineheight-xxsml:					1.4;		// H6
+	$lineheight-xxxsml:					1.4;
+	$lineheight-tiny:					1.4;
+
+	$lineheight-narrower:				0.75;
+	$lineheight-narrow:					1.4;
+	$lineheight-normal:					1.7;
+	$lineheight-wide:					2;
+	$lineheight-wider:					2.75;
+
+// PERCENTAGE
+
+	$lineheight-half:					0.5;
+	$lineheight-threefourth:			0.75;
+	$lineheight-single:					1.0;
+	$lineheight-onehalf:				1.6;
+	$lineheight-onequarter:				1.25;
+	$lineheight-onefifth:				1.2;
+	$lineheight-double:					2.0;
+	$lineheight-triple:					3.0;

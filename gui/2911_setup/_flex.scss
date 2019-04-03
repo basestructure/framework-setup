@@ -1,0 +1,62 @@
+/* SETUP | GUI | 2911_SETUP | FLEX - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+	%flex {
+		display: flex;
+	}
+
+	%flex-center {
+		justify-content: center;
+	}
+	%flex-left {
+		justify-content: flex-start;
+	}
+	%flex-right {
+		justify-content: flex-end;
+	}
+
+	%flex-wrap {
+		flex-flow: flex-wrap;
+	}
+
+	%flex-fullscreen {
+		min-height: 100vh;
+		min-width: 100vw;
+	}
+
+	%flex-twothirds {
+		min-height: 66.67vh;
+	}
+
+	%flex-half {
+		min-height: 50vh;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.flex {
+		@extend %flex !optional;
+	}
+	.flex-left {
+		@extend %flex !optional;
+		@extend %flex-left !optional;
+	}
+
+	.flex-wrap {
+		@extend %flex-wrap !optional;
+	}
+
+	.flex-fullscreen {
+		@extend %flex-fullscreen !optional;
+	}
+
+	.flex-twothirds {
+		@extend %flex-twothirds !optional;
+	}
+
+	.flex-half {
+		@extend %flex-half !optional;
+	}

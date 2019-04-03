@@ -1,0 +1,25 @@
+/* SETUP | SELECTOR | 2911_SETUP | BOXSIZING - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+	%boxsizing-borderbox {
+		box-sizing: border-box;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.boxsizing-borderbox {
+		@extend %boxsizing-borderbox !optional;
+	}
+
+	html {
+		@extend %boxsizing-borderbox !optional;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}

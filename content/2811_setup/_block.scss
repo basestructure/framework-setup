@@ -1,15 +1,13 @@
-/* SETUP | CONTENT | 2811_SETUP | BLOCK - 2019-02-10 */
+/* SETUP | CONTENT | 2811_SETUP | BLOCK - 2019-03-22 */
 
 // -------------------------------------
 // EXTEND
 
 // WP-BLOCK-COLUMNS
 
-	%block-columns 
+	%block-columns {}
 
 	%block-column {}
-
-
 
 // WP-BLOCK-EMBED
 
@@ -17,6 +15,10 @@
 	%blockembed-alignleft {}
 	%blockembed-alignright {}
 	%blockembed-aligncenter {}
+
+// WP-BLOCK-COVER
+
+	%block-cover {}
 
 // WP-BLOCK-IMAGE
 
@@ -57,19 +59,51 @@
 		.wp-block-columns.spacein-zero .wp-block-column {
 			@extend %space-zero !optional;
 		}
-
 		.wp-block-columns .wp-block-column.space-zero-bottom,
 		.entry-content .wp-block-columns .wp-block-column.space-zero-bottom {
 			@extend %space-zero-bottom !optional;
 		}
 
+	// COLUMNS-ZERO-SPACE
+
+	.wp-block-columns.columns-all-space-zero,
+	.wp-block-columns.columns-all-space-zero .wp-block-column,
+	.entry-content .wp-block-columns.columns-all-space-zero,
+	.entry-content .wp-block-columns.columns-all-space-zero .wp-block-column, 
+	.wp-block-columns.columns-all-space-zero .wp-block-columns,
+	.entry-content .wp-block-columns.columns-all-space-zero .wp-block-columns {
+		@extend %space-zero !optional;
+	}
+
 // WP-BLOCK-COVER
 
-	.wp-block-cover {}
-
-	.wp-block-cover.space-zero-bottom {
-		@extend %block-zero-bottom !optional;
+	.wp-block-cover {
+		@extend %block-cover !optional;
 	}
+
+		// ALIGNWIDE
+		.wp-block-cover.alignwide {
+			@extend %alignwide !optional;
+		}
+		.wp-block-cover.alignwide.width-xlrg {
+			@extend %alignwide-xlrg !optional;
+		}
+
+		// ALIGNFULL
+		.wp-block-cover.alignfull {
+			@extend %alignfull !optional;
+		}
+
+		// SPACING
+		.wp-block-cover.space-zero-bottom,
+		.entry-content .wp-block-cover.space-zero-bottom {
+			@extend %space-zero-bottom !optional;
+		}
+
+		// TEXT
+		.wp-block-cover.fontsize-huge .wp-block-cover-text {
+			
+		}
 
 // WP-BLOCK-EMBED
 
@@ -86,7 +120,22 @@
 	.wp-block-image {
 		@extend %block-image !optional;
 	}
-		.wp-block-image.space-zero-bottom {
+
+		// ALIGNWIDE
+		.wp-block-image.alignwide {
+			@extend %alignwide !optional;
+		}
+		.wp-block-image.alignwide.width-xlrg {
+			@extend %alignwide-xlrg !optional;
+		}
+
+		// ALIGNFULL
+		.wp-block-image.alignfull {
+			@extend %alignfull !optional;
+		}
+
+		.wp-block-image.space-zero-bottom,
+		.entry-content .wp-block-image.space-zero-bottom {
 			@extend %space-zero-bottom !optional;
 		}
 

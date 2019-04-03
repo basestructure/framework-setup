@@ -1,0 +1,55 @@
+/* SETUP | MENU | 2811_SETUP | MEGAMENU - 2019-03-21 */
+
+// GUIDE
+// -------------------------------------
+
+	// #mega-menu-wrap-primary 		+ .mega-menu-wrap
+	// #mega-menu-wrap-secondary	+ .mega-menu-wrap
+	// #mega-menu-wrap-footer		+ .mega-menu-wrap
+
+		// #mega-menu-primary		+ .mega-menu
+		// #mega-menu-secondary		+ .mega-menu
+		// #mega-menu-footer		+ .mega-menu
+
+			// .mega-menu-item
+
+				// .mega-menu-link
+
+// -------------------------------------
+// EXTEND
+
+	// MEGA-MENU
+
+	%mega-menu {}
+
+	// NAV-PRIMARY
+
+	%primary-megamenu {}
+
+	// NAV-SECONDARY
+
+	%secondary-megamenu {}
+
+	// NAV-FOOTER
+
+	%footer-megamenu {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.mega-menu {
+		@extend %megamenu !optional;
+	}
+
+	#mega-menu-wrap-primary #mega-menu-primary.mega-menu {
+		@extend %primary-megamenu !optional;
+	}
+
+	#mega-menu-wrap-secondary #mega-menu-secondary.mega-menu {
+		@extend %secondary-megamenu !optional;
+	}
+
+	#mega-menu-wrap-footer #mega-menu-footer.mega-menu {
+		@extend %footer-megamenu !optional;
+	}

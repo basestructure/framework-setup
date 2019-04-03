@@ -1,0 +1,102 @@
+/* SETUP | GUTTENBERG | 2911_SETUP | UNCATEGORIZED - 2019-04-02 */
+
+// -------------------------------------
+// EXTEND
+
+/* Category Block
+---------------------------------------------------------------------------- */
+
+.entry-content .wp-block-categories,
+.entry-content .wp-block-categories ol,
+.entry-content .wp-block-categories ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.entry-content .wp-block-categories li {
+	list-style-type: none;
+}
+
+.entry-content .wp-block-categories.aligncenter {
+	text-align: center;
+}
+
+.entry-content .wp-block-categories-list.alignfull {
+	padding: 0 30px;
+}
+
+/* Latest Posts Block
+---------------------------------------------------------------------------- */
+
+.entry-content .wp-block-latest-posts {
+	clear: both;
+	margin-left: 0;
+}
+
+.entry-content .wp-block-latest-posts li {
+	list-style-type: none;
+}
+
+.entry-content .wp-block-latest-posts.aligncenter {
+	text-align: center;
+}
+
+.entry-content .wp-block-latest-posts.alignfull {
+	padding: 0 30px;
+}
+
+/* Other Blocks
+---------------------------------------------------------------------------- */
+
+.wp-block-verse,
+.wp-block-preformatted {
+	font-size: 16px;
+}
+
+.wp-block-preformatted {
+	white-space: pre-wrap;
+}
+
+hr.wp-block-separator {
+	border: none;
+	border-top: 1px solid #eee;
+	margin: 1.65em auto;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: 100px;
+}
+
+.wp-block-audio audio {
+	display: inline-block;
+	width: 100%;
+}
+
+.entry-content .wp-block-gallery {
+	padding-left: 0;
+}
+
+/* Media Queries
+---------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 510px) {
+
+	.entry-content .wp-block-columns {
+		//display: flex;
+	}
+
+	.entry-content .wp-block-columns .wp-block-column {
+		//flex: 1;
+	}
+
+}
+
+@media only screen and (min-width: 1062px) {
+
+	.full-width-content .entry-content .alignwide {
+		//margin-left: -180px;
+		//margin-right: -180px;
+		//min-width: 1062px;
+	}
+
+}
