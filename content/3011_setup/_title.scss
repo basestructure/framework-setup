@@ -1,4 +1,4 @@
-/* SETUP | CONTENT | 2911_SETUP | TITLE - 2019-06-29 */
+/* SETUP | CONTENT | 3011_SETUP | TITLE - 2019-06-29 */
 
 // -------------------------------------
 // EXTEND
@@ -56,6 +56,27 @@
 		%blog-entrytitle-a {}
 		%blog-entrytitle-hvr {}
 
+// BLOG-TITLE
+
+	%archive-entrytitle {
+		font-family: $fontfamily-archive-entrytitle;
+		font-size: #{$fontsize-archive-entrytitle}rem;
+		font-weight: $fontweight-archive-entrytitle;
+		line-height: $lineheight-archive-entrytitle;
+
+		// SPACING
+		margin-bottom: 0.5rem;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-archive-entrytitle-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-archive-entrytitle-sml}rem;
+		}
+	}
+		%archive-entrytitle-a {}
+		%archive-entrytitle-hvr {}
+
 // ARCHIVE-TITLE
 
 	%archivetitle {
@@ -63,6 +84,13 @@
 		font-size: #{$fontsize-archivetitle}rem;
 		font-weight: $fontweight-archivetitle;
 		line-height: $lineheight-archivetitle;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-archivetitle-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-archivetitle-sml}rem;
+		}
 	}
 		%archivetitle-a {}
 		%archivetitle-hvr {}
@@ -97,20 +125,50 @@
 		}
 	}
 
+	// BLOG
+
+	.blog {
+		.entry-title {
+			//@extend %blog-entrytitle !optional;
+			@extend %blog-entrytitle !optional;
+
+			a {
+				//@extend %blog-entrytitle-a !optional;
+				@extend %blog-entrytitle-a !optional;
+
+				&:hover {
+					//@extend %blog-entrytitle-hvr !optional;
+					@extend %blog-entrytitle-hvr !optional;
+				}
+			}
+		}
+		.has-post-thumbnail .entry-title {
+			@extend %haspostthumbnail-all-entrytitle !optional;
+
+			a {
+				@extend %haspostthumbnail-all-entrytitle-a !optional;
+
+				&:hover {
+					@extend %haspostthumbnail-all-entrytitle-hvr !optional;
+				}
+			}
+		}
+	}
+
 	// ARCHIVE
 
 	.archive {
 		.entry-title {
-			@extend %blog-entrytitle !optional;
-			//@extend %archive-entrytitle !optional;
+			//@extend %blog-entrytitle !optional;
+			@extend %archive-entrytitle !optional;
 
 			a {
-				@extend %blog-entrytitle-a !optional;
-				//@extend %archive-entrytitle-a !optional;
+				//@extend %blog-entrytitle-a !optional;
+				@extend %archive-entrytitle-a !optional;
 
 				&:hover {
-					@extend %blog-entrytitle-hvr !optional;
-					//@extend %archive-entrytitle-hvr !optional;
+					//@extend %blog-entrytitle-hvr !optional;
+					@extend %archive-entrytitle-hvr !optional;
 				}
 			}
 		}

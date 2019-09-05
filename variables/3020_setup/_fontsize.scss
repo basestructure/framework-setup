@@ -1,4 +1,4 @@
-/* SETUP | VARIABLES | 2911_SETUP | FONTSIZE - 2019-05-29 */
+/* SETUP | VARIABLES | 3020_SETUP | FONTSIZE - 2019-08-15 */
 
 // -------------------------------------
 // VARIABLES
@@ -122,11 +122,17 @@
 	$fontsize-page-entrytitle:			null;
 	$fontsize-page-entrymeta:			null;
 
-	// BLOG
-	$fontsize-blog-entrytitle:			2.25;		// 36px	H4
-		$fontsize-blog-entrytitle-med:	1.5;
-		$fontsize-blog-entrytitle-sml:	1.5;
-	$fontsize-blog-entrymeta:			0.75;
+	// BLOG ENTRY-TITLE
+	$fontsize-blog-entrytitle:				3;		// 48px H3
+		$fontsize-blog-entrytitle-med:		1.5;
+		$fontsize-blog-entrytitle-sml:		1.5;
+	$fontsize-blog-entrymeta:				0.75;
+
+	// ARCHIVE ENTRY-TITLE
+	$fontsize-archive-entrytitle:			3;		// 48px H3
+		$fontsize-archive-entrytitle-med:	1.5;
+		$fontsize-archive-entrytitle-sml:	1.5;
+	$fontsize-archive-entrymeta:			0.75;
 
 	// ARCHIVE
 	$fontsize-archivetitle:				2.125;

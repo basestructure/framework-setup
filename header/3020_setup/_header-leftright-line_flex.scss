@@ -1,0 +1,265 @@
+/* SETUP | HEADER | 3020_SETUP | HEADER-LEFTRIGHT-LINE_FLEX - 2019-08-15 */
+/* Note: The width defined on the custom logo forces the title area to be limited */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader {
+
+		// BG
+		background-color: #f0f0f0;
+
+	}
+	%siteheaderwrap {
+
+		// SPACING
+		padding: 1.5rem;
+
+		// FLEX
+		display: flex;
+		justify-content: space-between;	// edge to edge
+
+		@include responsive-range(lrgdown) {
+			justify-content: center;
+			flex-direction: column;
+		}
+
+	}
+	%siteheaderwrap-before {
+		display: none;
+	}
+	%siteheaderwrap-after {
+		display: none;
+	}
+
+	// TITLE-AREA
+
+	%titlearea {
+
+		// FLEX
+		display: flex;
+		flex-direction: row;		// from left to right
+		justify-content: center;	// center aligned
+		align-items: center;		// align horizontal items to center vertically
+
+		@include responsive-range(lrgdown) {
+			justify-content: center;
+			flex-direction: column;
+		}
+
+	}
+
+	// CUSTOM-LOGO
+
+	%wpcustomlogo-titlearea {
+		max-width: 100% !important;
+		padding-top: 0 !important;
+	}
+	%wpcustomlogo-sitetitle {}
+	%wpcustomlogo-sitedescription {}
+
+	%customlogo-link {
+		max-width: 150px;
+		margin-right: 1rem;
+
+		@include responsive-range(lrgdown) {
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
+	}
+
+	%customlogo {}
+
+	// HEADER-WIDGET-AREA
+
+	%headerwidgetarea {}
+
+	// SITE-TITLE
+
+	%sitetitle {
+
+		// typography
+		font-family: $fontfamily-sitetitle;				// fontfamily
+		//font-size: #{$fontsize-sitetitle}rem;			// fontsize
+		font-size: 1rem;
+		font-weight: $fontweight-thicker;
+		line-height: 1;
+		text-align: center;
+
+		// SPACING
+		margin-bottom: 0;
+		margin-right: 0.5rem;
+
+		// HIDE
+		//display: none;
+
+		@include responsive-range(lrgdown) {
+			margin-right: 0;
+		}
+
+	}
+	%sitetitle-a {}
+	%sitetitle-hvr {}
+
+	// SITE-TITLE (HEADER-IMAGE)
+
+	%headerimage-sitetitle {
+
+		// graphic logo
+		color: transparent;
+
+		// SPACING
+		margin-bottom: 0;
+
+	}
+	%headerimage-sitetitle-a {}
+	%headerimage-sitetitle-hvr {}
+
+	// SITE-DESCRIPTION
+
+	%sitedescription {
+
+		// typography
+		font-family: $fontfamily-sitedescription;		// fontfamily
+		//font-size: #{$fontsize-sitedescription}rem;		// fontsize
+		font-size: 1rem;
+		font-weight: $fontweight-thin;
+		line-height: 1;
+		text-align: center;
+
+		// space
+		margin-bottom: 0;
+
+		// HIDE
+		//display: none;
+
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	%headerimage-sitedescription {}
+
+	// NAV-PRIMARY
+
+	%header-navprimary {
+		@include responsive-range(lrgdown) {
+			margin-top: 1rem;
+		}
+	}
+	%header-navprimarywrap {}
+
+	// MEGA-MENU
+	%header-navprimary-megamenuprimary {
+		@include responsive-range(lrgdown) {
+			text-align: center;
+		}
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header {
+		@extend %siteheader !optional;
+	}
+	.site-header > .wrap {
+		@extend %siteheaderwrap !optional;
+	}
+	.site-header > .wrap::before {
+		@extend %siteheaderwrap-before !optional;
+	}
+	.site-header > .wrap::after {
+		@extend %siteheaderwrap-after !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	.header-widget-area {
+		@extend %headerwidgetarea !optional;
+	}
+
+	// TITLE-AREA
+
+	.title-area {
+		@extend %titlearea !optional;
+	}
+
+	// CUSTOM-LOGO
+
+	.wp-custom-logo .title-area {
+		@extend %wpcustomlogo-titlearea !optional;
+	}
+	.wp-custom-logo .site-title {
+		@extend %wpcustomlogo-sitetitle !optional;
+	}
+	.wp-custom-logo .site-description {
+		@extend %wpcustomlogo-sitetitle !optional;
+		@extend %wpcustomlogo-sitedescription !optional;
+	}
+
+	.custom-logo-link,
+	a.custom-logo-link {
+		@extend %customlogo-link !optional;
+	}
+
+	.custom-logo,
+	img.custom-logo {
+		@extend %customlogo !optional;
+	}
+
+	// SITE-TITLE
+
+	.site-title {
+		@extend %sitetitle !optional;
+
+		a {
+			@extend %sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-TITLE (HEADER IMAGE)
+
+	.header-image .site-title {
+		@extend %headerimage-sitetitle !optional;
+
+		a {
+			@extend %headerimage-sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %headerimage-sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-DESCRIPTION
+
+	.site-description {
+		@extend %sitedescription !optional;
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	.header-image .site-description {
+		@extend %headerimage-sitedescription !optional;
+	}
+
+	// NAV-PRIMARY
+	
+	.site-header .nav-primary {
+		@extend %header-navprimary !optional;
+	}
+	.site-header .nav-primary > .wrap {
+		@extend %header-navprimarywrap !optional;
+	}
+
+	// MEGA-MENU
+
+	.site-header .nav-primary #mega-menu-wrap-primary #mega-menu-primary {
+		@extend %header-navprimary-megamenuprimary !optional;
+	}

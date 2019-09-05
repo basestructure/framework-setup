@@ -1,0 +1,64 @@
+/* SETUP | MENU | 3020_SETUP | NAV - 2019-07-24 */
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-PRIMARY (MENU-HEADER Container)
+
+	%navprimary {
+		@include responsive-range(lrgup) {}
+	}
+	%navprimarywrap {
+		@include responsive-range(lrgup) {}
+	}
+
+	// NAV-SECONDARY (MENU-TOP Container)
+
+	%navsecondary {
+		@include responsive-range(lrgup) {}
+	}
+	%navsecondarywrap {
+		@include responsive-range(lrgup) {}	
+	}
+
+	// NAV-FOOTER
+
+	%navfooter {
+		@include responsive-range(lrgup) {}
+	}
+	%navfooterwrap {
+		@include responsive-range(lrgup) {}
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %navprimary !optional;
+	}
+	.nav-primary > .wrap {
+		@extend %navprimarywrap !optional;
+	}
+
+	// NAV-SECONDARY
+
+	.nav-secondary {
+		@extend %navsecondary !optional;
+	}
+	.nav-secondary > .wrap {
+		@extend %navsecondarywrap !optional;
+	}
+
+	// NAV-FOOTER
+
+	.nav-footer {
+		@extend %navfooter !optional;
+	}
+	.nav-footer > .wrap {
+		@extend %navfooterwrap !optional;
+	}
+		#mega-menu-wrap-footer.mega-menu-wrap {
+			@extend %navfooterwrap !optional;
+		}

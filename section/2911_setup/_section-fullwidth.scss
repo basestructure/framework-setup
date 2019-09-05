@@ -1,4 +1,4 @@
-/* SETUP | SECTION | 2811_SETUP | SECTION-FULLSCREEN - 2019-03-25 */
+/* SETUP | SECTION | 2911_SETUP | SECTION-FULLSCREEN - 2019-04-23 */
 
 // -------------------------------------
 // EXTEND
@@ -35,11 +35,20 @@
 	%outerxlrg-inner {
 		max-width: #{$width-xlrg}rem;
 	}
+	%inner-widthxlrg {
+		width: #{$width-xlrg}rem;
+	}
 	%outerlrg-inner {
 		max-width: #{$width-lrg}rem;
 	}
+	%inner-widthlrg {
+		width: #{$width-lrg}rem;
+	}
 	%outermed-inner {
 		max-width: #{$width-med}rem;
+	}
+	%inner-widthmed {
+		width: #{$width-med}rem;
 	}
 	%outersml-inner {
 		max-width: #{$width-sml}rem;
@@ -93,4 +102,18 @@
 	.fullwidth.outer.width-sml .inner,
 	.section-fullwidth.outer.width-sml .inner {
 		@extend %outersml-inner !optional;
+	}
+
+	// WIDTH-X.INNER
+	.inner.width-xlrg {
+		@extend %inner-widthxlrg !optional;
+	}
+	.inner.width-lrg {
+		@extend %inner-widthlrg !optional;
+	}
+	.inner.width-med {
+		@extend %inner-widthmed !optional;
+	}
+	.inner.width-sml {
+		@extend %inner-widthsml !optional;
 	}

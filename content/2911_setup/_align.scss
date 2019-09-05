@@ -270,6 +270,9 @@
 	.alignwide {
 		@extend %alignwide !optional;
 	}
+		.full-width-content .site-container .alignwide {
+			@extend %alignwide !optional;
+		}
 		.content-sidebar .alignwide {
 			@extend %alignwide--cs !optional;
 		}
@@ -277,6 +280,9 @@
 	.alignwide.width-xlrg {
 		@extend %alignwide-xlrg !optional;
 	}
+		.full-width-content.width-xlrg .site-container .alignwide {
+			@extend %alignwide-xlrg !optional;
+		}
 		.content-sidebar .alignwide.width-xlrg {
 			@extend %alignwide-xlrg--cs !optional;
 		}
@@ -284,6 +290,9 @@
 	.alignwide.width-lrg {
 		@extend %alignwide-lrg !optional;
 	}
+		.full-width-content.width-lrg .site-container .alignwide {
+			@extend %alignwide-lrg !optional;
+		}
 		.content-sidebar .alignwide.width-lrg {
 			@extend %alignwide-lrg--cs !optional;
 		}
@@ -291,6 +300,9 @@
 	.alignwide.width-med {
 		@extend %alignwide-med !optional;
 	}
+		.full-width-content.width-med .site-container .alignwide {
+			@extend %alignwide-med !optional;
+		}
 		.content-sidebar .alignwide.width-med {
 			@extend %alignwide-med--cs !optional;
 		}
@@ -298,6 +310,9 @@
 	.alignwide.width-sml {
 		@extend %alignwide-sml !optional;
 	}
+		.full-width-content.width-sml .site-container .alignwide {
+			@extend %alignwide-sml !optional;
+		}
 		.content-sidebar .alignwide.width-sml {
 			@extend %alignwide-sml--cs !optional;
 		}
@@ -305,6 +320,9 @@
 	.alignwide.width-xsml {
 		@extend %alignwide-xsml !optional;
 	}
+		.full-width-content.width-xsml .site-container .alignwide {
+			@extend %alignwide-xsml !optional;
+		}
 		.content-sidebar .alignwide.width-xsml {
 			@extend %alignwide-xsml--cs !optional;
 		}

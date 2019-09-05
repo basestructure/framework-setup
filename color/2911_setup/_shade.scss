@@ -1,0 +1,78 @@
+/* SETUP | COLOR | 2911_SETUP | SHADE - 2019-04-02 */
+
+// Logic on shadows and gradients indicates that it the last color dictates the end direction
+// For example:
+// shadow-inner-bottom - means light (or transparent) top to dark bottom
+// shadow-inner-top - means light (or transparent) bottom to dark top
+//
+// box-shadow: inset 0px 50px 50px -20px rgba(221,221,221,0.25);
+// variables | inset (optional) | horizontal length | vertical lenght | spread-radius | opacity
+
+// -------------------------------------
+// EXTEND
+
+	%shade-inside-bottom {
+		-webkit-box-shadow: inset 0px -100px 100px -100px rgba(0,0,0,0.15);
+		-moz-box-shadow: 	inset 0px -100px 100px -100px rgba(0,0,0,0.15);
+		box-shadow: 		inset 0px -100px 100px -100px rgba(0,0,0,0.15);
+	}
+
+	%shade-inside-top {
+		-webkit-box-shadow: inset 0px 100px 100px -100px rgba(0,0,0,0.15);
+		-moz-box-shadow: 	inset 0px 100px 100px -100px rgba(0,0,0,0.15);
+		box-shadow: 		inset 0px 100px 100px -100px rgba(0,0,0,0.15);
+	}
+
+	%shade-inside-dark-bottom {
+		-webkit-box-shadow: inset 0px -100px 300px -100px rgba(0,0,0,0.25);
+		-moz-box-shadow: 	inset 0px -100px 300px -100px rgba(0,0,0,0.25);
+		box-shadow: 		inset 0px -100px 300px -100px rgba(0,0,0,0.25);
+	}
+
+	%shade-inside-dark-top {
+		-webkit-box-shadow: inset 0px 100px 300px -100px rgba(0,0,0,0.25);
+		-moz-box-shadow: 	inset 0px 100px 300px -100px rgba(0,0,0,0.25);
+		box-shadow: 		inset 0px 100px 300px -100px rgba(0,0,0,0.25);
+	}
+
+	%shade-inside-darker-bottom {
+		-webkit-box-shadow: inset 0px -200px 300px -100px rgba(0,0,0,0.5);
+		-moz-box-shadow: 	inset 0px -200px 300px -100px rgba(0,0,0,0.5);
+		box-shadow: 		inset 0px -200px 300px -100px rgba(0,0,0,0.5);
+	}
+
+	%shade-inside-darker-top {
+		-webkit-box-shadow: inset 0px 200px 300px -100px rgba(0,0,0,0.5);
+		-moz-box-shadow: 	inset 0px 200px 300px -100px rgba(0,0,0,0.5);
+		box-shadow: 		inset 0px 200px 300px -100px rgba(0,0,0,0.5);
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.shade,
+	.shade-bottom {
+		@extend %shade-inside-bottom !optional;
+	}
+
+	.shade-top {
+		@extend %shade-inside-top !optional;
+	}
+
+	.shade-dark,
+	.shade-dark-bottom {
+		@extend %shade-inside-dark-bottom !optional;
+	}
+
+	.shade-dark-top {
+		@extend %shade-inside-dark-top !optional;
+	}
+
+	.shade-darker,
+	.shade-darker-bottom {
+		@extend %shade-inside-darker-bottom !optional;
+	}
+
+	.shade-darker-top {
+		@extend %shade-inside-darker-top !optional;
+	}

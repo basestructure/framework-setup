@@ -1,4 +1,4 @@
-/* SETUP | CONTENT | 2911_SETUP | BUTTON - 2019-04-02 */
+/* SETUP | CONTENT | 2911_SETUP | BUTTON - 2019-05-27 */
 
 // -------------------------------------
 // EXTEND
@@ -82,34 +82,34 @@
 // BUTTON-SIZE
 
 	%button-default {
-		padding: #{$space-default}rem #{$space-med}rem;
+		padding: #{$space-default}rem #{$space-med}rem !important;
 	}
 	%button-tiny {
-		padding: #{$space-tiny}rem #{$space-xsml}rem;
+		padding: #{$space-tiny}rem #{$space-xsml}rem !important;
 	}
 	%button-xxxsml {
-		padding: #{$space-xxxsml}rem #{$space-sml}rem;
+		padding: #{$space-xxxsml}rem #{$space-sml}rem !important;
 	}
 	%button-xxsml {
-		padding: #{$space-xxsml}rem #{$space-sml}rem;
+		padding: #{$space-xxsml}rem #{$space-sml}rem !important;
 	}
 	%button-xsml {
-		padding: #{$space-xsml}rem #{$space-med}rem;
+		padding: #{$space-xsml}rem #{$space-med}rem !important;
 	}
 	%button-sml {
-		padding: #{$space-sml}rem #{$space-med}rem;
+		padding: #{$space-sml}rem #{$space-med}rem !important;
 	}
 	%button-med {
-		padding: #{$space-default}rem #{$space-med}rem;;
+		padding: #{$space-default}rem #{$space-med}rem !important;
 	}
 	%button-lrg {
-		padding: #{$space-med}rem #{$space-xlrg}rem;
+		padding: #{$space-med}rem #{$space-xlrg}rem !important;
 	}
 	%button-xlrg {
-		padding: #{$space-lrg}rem #{$space-xxlrg}rem;
+		padding: #{$space-lrg}rem #{$space-xxlrg}rem !important;
 	}
 	%button-huge {
-		padding: #{$space-xlrg}rem #{$space-huge}rem;
+		padding: #{$space-xlrg}rem #{$space-huge}rem !important;
 	}
 
 // BUTTON-COLOR

@@ -1,0 +1,244 @@
+/* SETUP | TYPE | 3020_SETUP | SIZE - 2019-07-23 */
+
+// -------------------------------------
+// EXTEND
+
+	// DEFAULT
+	%fontsize-default {
+		font-size: #{$fontsize-default}rem;
+	}
+	%fontsize-regular {
+		font-size: #{$fontsize-regular}rem;
+	}
+
+// TAGS
+
+	%fontsize-body {
+		font-size: $fontsize-body;
+	}
+	%fontsize-p {
+		font-size: $fontsize-p;
+	}
+	
+	// LIST
+	%fontsize-list {
+		font-size: $fontsize-list;
+	}
+
+	// HEADLINE
+	%fontsize-headline {
+		font-size: $fontsize-headline;
+	}
+
+// PURPOSE
+
+	// QUOTES
+	%fontsize-quote {
+		font-size: $fontsize-quote;
+	}
+	%fontsize-cite {
+		font-size: $fontsize-cite;
+	}
+
+	// CAPTION
+	%fontsize-caption {
+		font-size: $fontsize-caption;
+	}
+
+// RELATIVE
+
+	%fontsize-tiniest {
+		font-size: #{$fontsize-tiniest}rem;
+		//line-height: $lineheight-tiniest;
+	}
+	%fontsize-tinier {
+		font-size: #{$fontsize-tinier}rem;
+		//line-height: $lineheight-tinier;
+	}
+	%fontsize-tiny {
+		font-size: #{$fontsize-tiny}rem;
+		line-height: $lineheight-tiny;
+	}
+	%fontsize-xxxsml {
+		font-size: #{$fontsize-xxxsml}rem;
+		line-height: $lineheight-xxxsml;
+	}
+	%fontsize-xxsml {
+		font-size: #{$fontsize-xxsml}rem;
+		line-height: $lineheight-xxsml;
+	}
+	%fontsize-xsml {
+		font-size: #{$fontsize-xsml}rem;
+		line-height: $lineheight-xsml;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-xsml-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-xsml-sml}rem;
+		}
+	}
+	%fontsize-sml {
+		font-size: #{$fontsize-sml}rem;
+		line-height: $lineheight-sml;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-sml-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-sml-sml}rem;
+		}
+	}
+	%fontsize-med {
+		font-size: #{$fontsize-med}rem;
+		line-height: $lineheight-med;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-med-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-med-sml}rem;
+		}
+	}
+	%fontsize-lrg {
+		font-size: #{$fontsize-lrg}rem;
+		line-height: $lineheight-lrg;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-lrg-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-lrg-sml}rem;
+		}
+	}
+	%fontsize-xlrg {
+		font-size: #{$fontsize-xlrg}rem;
+		line-height: $lineheight-xlrg;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-xlrg-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-xlrg-sml}rem;
+		}
+	}
+	%fontsize-xxlrg {
+		font-size: #{$fontsize-xxlrg}rem;
+		line-height: $lineheight-xxlrg;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-xxlrg-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-xxlrg-sml}rem;
+		}
+	}
+	%fontsize-xxxlrg {
+		font-size: #{$fontsize-xxxlrg}rem;
+		line-height: $lineheight-xxxlrg;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-xxxlrg-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-xxxlrg-sml}rem;
+		}
+	}
+	%fontsize-huge {
+		font-size: #{$fontsize-huge}rem;
+		line-height: $lineheight-huge;
+
+		@include responsive-range(meddown) {
+			font-size: #{$fontsize-huge-med}rem;
+		}
+		@include responsive-range(smldown) {
+			font-size: #{$fontsize-huge-sml}rem;
+		}
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.fontsize-default {
+		@extend %fontsize-default !optional;
+	}
+	.fontsize-regular {
+		@extend %fontsize-regular !optional;
+	}
+
+// TAGS
+
+	.fontsize-body {
+		@extend %fontsize-body !optional;
+	}
+	.fontsize-p {
+		@extend %fontsize-p !optional;
+	}
+	.fontsize-headline {
+		@extend %fontsize-headline !optional;
+	}
+
+// PURPOSE
+
+	.fontsize-quote {
+		@extend %fontsize-quote !optional;
+	}
+	.fontsize-cite {
+		@extend %fontsize-cite !optional;
+	}
+
+	.fontsize-caption {
+		@extend %fontsize-caption !optional;
+	}
+
+// RELATIVE
+
+	.fontsize-tiniest {
+		@extend %fontsize-tiniest !optional;
+	}
+	.fontsize-tinier {
+		@extend %fontsize-tinier !optional;
+	}
+	.fontsize-tiny {
+		@extend %fontsize-tiny !optional;
+	}
+
+	.fontsize-xxxsml {
+		@extend %fontsize-xxxsml !optional;
+	}
+
+	.fontsize-xxsml {
+		@extend %fontsize-xxsml !optional;
+	}
+
+	.fontsize-xsml {
+		@extend %fontsize-xsml !optional;
+	}
+
+	.fontsize-sml {
+		@extend %fontsize-sml !optional;
+	}
+
+	.fontsize-med {
+		@extend %fontsize-med !optional;
+	}
+
+	.fontsize-lrg {
+		@extend %fontsize-lrg !optional;
+	}
+
+	.fontsize-xlrg {
+		@extend %fontsize-xlrg !optional;
+	}
+
+	.fontsize-xxlrg {
+		@extend %fontsize-xxlrg !optional;
+	}
+
+	.fontsize-xxxlrg {
+		@extend %fontsize-xxxlrg !optional;
+	}
+
+	.fontsize-huge {
+		@extend %fontsize-huge !optional;
+	}

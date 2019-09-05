@@ -1,26 +1,42 @@
-/* SETUP | GUI | 2811_SETUP | OUTERINNER - 2019-04-02 */
+/* SETUP | GUI | 2911_SETUP | OUTERINNER - 2019-04-24 */
 
 // -------------------------------------
 // EXTEND
 
 	// OUTER
 
-	%outer {}
+	%outer {
+
+	}
 	%outer-flex {
 		//display: flex;
 		@extend %flex !optional;
 	}
 	%outer-center {
 		//justify-content: center;
-		@extend %flex-center !optional;
+		//@extend %flex-center !optional;
 	}
 	%outer-left {
 		//justify-content: flex-start;
-		@extend %flex-left !optional;
+		//@extend %flex-left !optional;
 	}
 	%outer-right {
 		//justify-content: flex-end;
-		@extend %flex-right !optional;
+		//@extend %flex-right !optional;
+	}
+
+	// OUTER INNER
+
+	%outerinner {}
+	%outerinner-center {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	%outerinner-left {
+		margin-right: auto;
+	}
+	%outerinner-right {
+		margin-left: auto;
 	}
 
 	// INNER
@@ -32,15 +48,19 @@
 	}
 	%inner-center {
 		//justify-content: center;
-		@extend %flex-center !optional;
+		//@extend %flex-center !optional;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	%inner-left {
 		//justify-content: flex-start;
-		@extend %flex-left !optional;
+		//@extend %flex-left !optional;
+		margin-right: auto;
 	}
 	%inner-right {
 		//justify-content: flex-end;
-		@extend %flex-right !optional;
+		//@extend %flex-right !optional;
+		margin-left: auto;
 	}
 
 	// OUTERINNER-SIZE
@@ -70,6 +90,48 @@
 		max-width: #{$width-tiny}rem;
 	}
 
+	// FULLWIDTH OUTERINNER-SIZE
+	%outerinnerfullwidth-huge {
+		@include responsive-range(hugeup) {
+			width: #{$width-huge}rem;
+		}
+	}
+	%outerinnerfullwidth-xlrg {
+		@include responsive-range(xlrgup) {
+			width: #{$width-xlrg}rem;
+		}
+	}
+	%outerinnerfullwidth-lrg {
+		@include responsive-range(lrgup) {
+			width: #{$width-lrg}rem;
+		}
+	}
+	%outerinnerfullwidth-med {
+		@include responsive-range(medup) {
+			width: #{$width-med}rem;
+		}
+	}
+	%outerinnerfullwidth-sml {
+		@include responsive-range(smlup) {
+			width: #{$width-sml}rem;
+		}
+	}
+	%outerinnerfullwidth-xsml {
+		@include responsive-range(xsmlup) {
+			width: #{$width-xsml}rem;
+		}
+	}
+	%outerinnerfullwidth-xxsml {
+		@include responsive-range(xxsmlup) {
+			width: #{$width-xxsml}rem;
+		}
+	}
+	%outerinnerfullwidth-tiny {
+		@include responsive-range(tinyup) {
+			width: #{$width-tiny}rem;
+		}
+	}
+
 	// OUTERINNER-BLOCK
 
 	%outerinner-block {
@@ -87,10 +149,10 @@
 	.outer {
 		@extend %outer !optional;
 	}
-	.outer.left,
 	.outer.center,
+	.outer.left,
 	.outer.right {
-		@extend %outer-flex !optional;
+		//@extend %outer-flex !optional;
 	}
 		.outer.center {
 			@extend %outer-center !optional;
@@ -102,15 +164,30 @@
 			@extend %outer-right !optional;
 		}
 
+	// OUTER > INNER
+
+	.outer .inner {
+		@extend %outerinner !optional;
+	}
+		.outer.center .inner {
+			@extend %outerinner-center !optional;
+		}
+		.outer.left .inner {
+			@extend %outerinner-left !optional;
+		}
+		.outer.right .inner {
+			@extend %outerinner-right !optional;
+		}
+
 	// INNER
 
 	.inner {
 		@extend %inner !optional;
 	}
-	.inner.left,
 	.inner.center,
+	.inner.left,
 	.inner.right {
-		@extend %inner-flex !optional;
+		//@extend %inner-flex !optional;
 	}
 		.inner.left {
 			@extend %inner-center !optional;
@@ -148,15 +225,55 @@
 		@extend %outerinner-xsml !optional;
 	}
 
+	.outer.xxsml .inner {
+		@extend %outerinner-xxsml !optional;
+	}
+
 	.outer.tiny .inner {
 		@extend %outerinner-tiny !optional;
 	}
 
+	// OUTER.FULLWIDTH > INNER WIDTH
 
+	.fullwidth.outer.huge .inner {
+		//@extend %outerinner-huge !optional;
+		@extend %outerinnerfullwidth-huge !optional;
+	}
 
+	.fullwidth.outer.xlrg .inner {
+		//@extend %outerinner-xlrg !optional;
+		@extend %outerinnerfullwidth-xlrg !optional;
+	}
 
+	.fullwidth.outer.lrg .inner {
+		//@extend %outerinner-lrg !optional;
+		@extend %outerinnerfullwidth-lrg !optional;
+	}
 
+	.fullwidth.outer.med .inner {
+		//@extend %outerinner-med !optional;
+		@extend %outerinnerfullwidth-med !optional;
+	}
 
+	.fullwidth.outer.sml .inner {
+		//@extend %outerinner-sml !optional;
+		@extend %outerinnerfullwidth-sml !optional;
+	}
+
+	.fullwidth.outer.xsml .inner {
+		//@extend %outerinner-xsml !optional;
+		@extend %outerinnerfullwidth-xsml !optional;
+	}
+
+	.fullwidth.outer.xxsml .inner {
+		//@extend %outerinner-xxsml !optional;
+		@extend %outerinnerfullwidth-xxsml !optional;
+	}
+
+	.fullwidth.outer.tiny .inner {
+		//@extend %outerinner-tiny !optional;
+		@extend %outerinnerfullwidth-tiny !optional;
+	}
 
 	// OUTER RELATIVE
 

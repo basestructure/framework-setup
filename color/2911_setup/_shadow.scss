@@ -1,0 +1,115 @@
+/* SETUP | COLOR | 2911_SETUP | SHADOW - 2019-04-02 */
+
+// Logic on shadows and gradients indicates that it the last color dictates the end direction
+// For example:
+// shadow-inner-bottom - means light (or transparent) top to dark bottom
+// shadow-inner-top - means light (or transparent) bottom to dark top
+//
+// box-shadow: inset 0px 50px 50px -20px rgba(221,221,221,0.25);
+// variables | inset (optional) | horizontal length | vertical lenght | spread-radius | opacity
+
+// -------------------------------------
+// EXTEND
+
+	// SHADOW
+
+	%shadow-inside-bottom {
+		-webkit-box-shadow: inset 0px -100px 20px -100px rgba(0,0,0,0.15);
+		-moz-box-shadow: 	inset 0px -100px 20px -100px rgba(0,0,0,0.15);
+		box-shadow: 		inset 0px -100px 20px -100px rgba(0,0,0,0.15);
+	}
+
+	%shadow-inside-top {
+		-webkit-box-shadow: inset 0px 100px 20px -100px rgba(0,0,0,0.15);
+		-moz-box-shadow: 	inset 0px 100px 20px -100px rgba(0,0,0,0.15);
+		box-shadow: 		inset 0px 100px 20px -100px rgba(0,0,0,0.15);
+	}
+
+	%shadow-inside-dark-bottom {
+		-webkit-box-shadow: inset 0px -100px 40px -100px rgba(0,0,0,0.25);
+		-moz-box-shadow: 	inset 0px -100px 40px -100px rgba(0,0,0,0.25);
+		box-shadow: 		inset 0px -100px 40px -100px rgba(0,0,0,0.25);
+	}
+
+	%shadow-inside-dark-top {
+		-webkit-box-shadow: inset 0px 100px 40px -100px rgba(0,0,0,0.25);
+		-moz-box-shadow: 	inset 0px 100px 40px -100px rgba(0,0,0,0.25);
+		box-shadow: 		inset 0px 100px 40px -100px rgba(0,0,0,0.25);
+	}
+
+	%shadow-inside-darker-bottom {
+		-webkit-box-shadow: inset 0px -100px 60px -100px rgba(0,0,0,0.5);
+		-moz-box-shadow: 	inset 0px -100px 60px -100px rgba(0,0,0,0.5);
+		box-shadow: 		inset 0px -100px 60px -100px rgba(0,0,0,0.5);
+	}
+
+	%shadow-inside-darker-top {
+		-webkit-box-shadow: inset 0px 100px 60px -100px rgba(0,0,0,0.5);
+		-moz-box-shadow: 	inset 0px 100px 60px -100px rgba(0,0,0,0.5);
+		box-shadow: 		inset 0px 100px 60px -100px rgba(0,0,0,0.5);
+	}
+
+	// SHADOW FRAME
+	%shadow-frame {
+		-webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.25);
+		-moz-box-shadow: 	5px 5px 20px 0px rgba(0,0,0,0.25);
+		box-shadow: 		5px 5px 20px 0px rgba(0,0,0,0.25);
+		//-webkit-box-shadow: 20px 20px 20px -20px rgba(0,0,0,0.25);
+		//-moz-box-shadow: 	20px 20px 20px -20px rgba(0,0,0,0.25);
+		//box-shadow: 		20px 20px 20px -20px rgba(0,0,0,0.25);
+	}
+
+	%shadow-frame-dark {
+		-webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+		-moz-box-shadow: 	5px 5px 20px 0px rgba(0,0,0,0.5);
+		box-shadow: 		5px 5px 20px 0px rgba(0,0,0,0.5);
+	}
+
+	%shadow-frame-darker {
+		-webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 	5px 5px 20px 0px rgba(0,0,0,0.75);
+		box-shadow: 		5px 5px 20px 0px rgba(0,0,0,0.75);
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.shadow,
+	.shadow-bottom {
+		@extend %shadow-inside-bottom !optional;
+	}
+
+	.shadow-top {
+		@extend %shadow-inside-top !optional;
+	}
+
+	.shadow-dark,
+	.shadow-dark-bottom {
+		@extend %shadow-inside-dark-bottom !optional;
+	}
+
+	.shadow-dark-top {
+		@extend %shadow-inside-dark-top !optional;
+	}
+
+	.shadow-darker,
+	.shadow-darker-bottom {
+		@extend %shadow-inside-darker-bottom !optional;
+	}
+
+	.shadow-darker-top {
+		@extend %shadow-inside-darker-top !optional;
+	}
+
+	.shadow-frame {
+		@extend %shadow-frame !optional;
+	}
+
+	.shadow-frame-dark {
+		@extend %shadow-frame-dark !optional;
+	}
+
+	.shadow-frame-darker {
+		@extend %shadow-frame-darker !optional;
+	}

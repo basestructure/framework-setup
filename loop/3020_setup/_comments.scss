@@ -1,0 +1,78 @@
+/* SETUP | LOOP | 3020_SETUP | COMMENTS - 2019-08-15 */
+
+// -------------------------------------
+// EXTEND
+
+	%entry-comments {
+		margin-bottom: #{$space-xlrg}rem;
+	}
+
+	%entry-comments-title {
+		font-size: #{$fontsize-med}rem;
+		margin-bottom: 0;
+	}
+
+	%comment-respond {
+		margin-bottom: #{$space-xlrg}rem;
+	}
+
+	%comment-reply-title {
+		font-size: #{$fontsize-med}rem;
+		margin-bottom: 0;
+	}
+
+	%comment-author {
+		font-size: #{$fontsize-xsml}rem;
+	}
+
+	%comment-meta {
+		font-size: #{$fontsize-xxxsml}rem;
+	}
+
+	%comment-header {}
+
+	%comment-content {}
+
+	%comment-edit-link {
+		display: none;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.entry-comments {
+		@extend %entry-comments !optional;
+	}
+
+	.entry-comments h3 {
+		@extend %entry-comments-title !optional;
+	}
+
+	.comment-respond {
+		@extend %comment-respond !optional;
+	}
+
+	.comment-reply-title {
+		@extend %comment-reply-title !optional;
+	}
+
+	.comment-author {
+		@extend %comment-author !optional;
+	}
+
+	.comment-meta {
+		@extend %comment-meta !optional;
+	}
+
+	.comment-header {
+		@extend %comment-header !optional;
+	}
+
+	.comment-content {
+		@extend %comment-content !optional;
+	}
+
+	.comment-edit-link {
+		@extend %comment-edit-link !optional;
+	}

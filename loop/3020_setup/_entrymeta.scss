@@ -1,0 +1,121 @@
+/* SETUP | LOOP | 3020_SETUP | ENTRYMETA - 2019-08-15 */
+
+// -------------------------------------
+// EXTEND
+
+// ENTRY-META
+
+	%entrymeta {
+		font-size: #{$fontsize-xxxsml}rem;
+	}
+		%entrymeta--archive {}
+		%entrymeta--category {}
+		%entrymeta--tag {}
+		%entrymeta--featuredcontent {
+			font-size: #{$fontsize-xxxsml}rem;
+		}
+		%entrymeta--featuredpost {}
+		%entrymeta--featuredpage {}
+
+	%entrymeta-entrytime {}
+	%entrymeta-entryauthor {}
+	%entrymeta-entrycommentslink {}
+	%entrymeta-entrycategories {}
+	%entrymeta-entrycategories-link {
+		//EXAMPLE
+		//font-size: 14px;
+		//font-weight: 700;
+		//text-transform: uppercase;
+		//padding: 2px 6px;
+		//border-radius: 8px;
+		//background-color: #999;
+		//color: #fff;
+	}
+
+// MORE-FROM-CATEGORY
+
+	%morefromcategory {
+		font-size: #{$fontsize-xxsml}rem;
+		text-align: right;
+	}
+	%morefromcategory-link {
+		padding: 0.25rem 0.5rem;
+		background-color: #f3f3f3;
+	}
+
+// HEADER, CONTENT & FOOTER
+
+	%entryheader-entrymeta {}
+
+	%entrycontent-entrymeta {}
+
+	%entryfooter-entrymeta {
+		margin-bottom: 0;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+// ENTRY-META
+
+	.entry-meta {
+		@extend %entrymeta !optional;
+	}
+		.archive .entry-meta {
+			@extend %entrymeta--archive !optional;
+		}
+		.category .entry-meta {
+			@extend %entrymeta--category !optional;
+		}
+		.tag .entry-meta {
+			@extend %entrymeta--tag !optional;
+		}
+		.featured-content .entry-meta {
+			@extend %entrymeta--featuredcontent !optional;
+		}
+		.featured-post .entry-meta {
+			@extend %entrymeta--featuredpost !optional;
+		}
+		.featured-page .entry-meta {
+			@extend %entrymeta--featuredpage !optional;
+		}
+
+	.entry-meta .entry-time {
+		@extend %entrymeta-entrytime !optional;		
+	}
+	.entry-meta .entry-author {
+		@extend %entrymeta-entryauthor !optional;
+	}
+	.entry-meta .entry-comments-link {
+		@extend %entrymeta-entrycommentslink !optional;
+	}
+	.entry-meta .entry-categories {
+		@extend %entrymeta-entrycategories !optional;
+	}
+	.entry-meta .entry-categories a {
+		@extend %entrymeta-entrycategories-link !optional;
+	}
+
+// MORE-FROM-CATEGORY
+	
+	.more-from-category {
+		@extend %morefromcategory !optional;
+	}
+	.more-from-category a {
+		@extend %morefromcategory-link !optional;
+	}
+
+// HEADER, CONTENT & FOOTER
+
+	.entry-header .entry-meta {
+		@extend %entryheader-entrymeta !optional;
+	}
+
+	.entry-content .entry-meta {
+		@extend %entrycontent-entrymeta !optional;
+	}
+
+	.entry-footer .entry-meta {
+		@extend %entryfooter-entrymeta !optional;
+	}

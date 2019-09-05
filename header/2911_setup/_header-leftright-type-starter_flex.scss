@@ -1,0 +1,245 @@
+/* SETUP | HEADER | 2911_SETUP | HEADER-LEFTRIGHT-TYPE-STARTER_FLEX - 2019-05-10 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader {
+
+		// BG
+		background-color: #f0f0f0;
+
+	}
+	%siteheaderwrap {
+
+		// SPACING
+		padding: 1.5rem;
+
+		// FLEX
+		display: flex;
+		flex-direction: row;			// from top to bottom
+		justify-content: flex-start;	// center aligned
+
+	}
+
+	// TITLE-AREA
+
+	%titlearea {
+
+		// FLEX
+		display: flex;
+		flex-direction: column;			// from top to bottom
+		justify-content: flex-start;	// center aligned
+
+	}
+
+	// CUSTOM-LOGO
+
+	%wpcustomlogo-titlearea {}
+	%wpcustomlogo-sitetitle {}
+	%wpcustomlogo-sitedescription {}
+
+	%customlogo-link {}
+	%customlogo {}
+
+	// HEADER-WIDGET-AREA
+
+	%headerwidgetarea {}
+
+	// SITE-TITLE
+
+	%sitetitle {
+
+		// typography
+		font-family: $fontfamily-sitetitle;				// fontfamily
+		font-size: #{$fontsize-sitetitle}rem;			// fontsize
+		font-weight: $fontweight-thick;
+		line-height: 1;
+
+		// SPACING
+		margin-bottom: 0;
+
+		// HIDE
+		//display: none;
+
+	}
+	%sitetitle-a {}
+	%sitetitle-hvr {}
+
+	// SITE-TITLE (HEADER-IMAGE)
+
+	%headerimage-sitetitle {
+
+		// graphic logo
+		color: transparent;
+
+		// SPACING
+		margin-bottom: 0;
+
+	}
+	%headerimage-sitetitle-a {}
+	%headerimage-sitetitle-hvr {}
+
+	// SITE-DESCRIPTION
+
+	%sitedescription {
+
+		// typography
+		font-family: $fontfamily-sitedescription;		// fontfamily
+		font-size: #{$fontsize-sitedescription}rem;		// fontsize
+		font-weight: $fontweight-thin;
+		line-height: 1;
+		text-align: center;
+
+		// space
+		margin-bottom: 0;
+
+		// HIDE
+		//display: none;
+
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	%headerimage-sitedescription {}
+
+	// NAV-PRIMARY
+
+	%navprimary {}
+	%navprimarywrap {}
+
+	%header-navprimary {}
+	%header-navprimarywrap {}
+
+	// MENU-PRIMARY
+
+	%menuprimary {
+		// FLEX
+		display: flex;
+		flex-direction: row;			// from left to right
+		justify-content: flex-start;	// center aligned
+	}
+
+	// MENU-ITEM
+
+	%menuitem--menuprimary {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header {
+		@extend %siteheader !optional;
+	}
+	.site-header > .wrap {
+		@extend %siteheaderwrap !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	.header-widget-area {
+		@extend %headerwidgetarea !optional;
+	}
+
+	// TITLE-AREA
+
+	.title-area {
+		@extend %titlearea !optional;
+	}
+
+	// CUSTOM-LOGO
+
+	.wp-custom-logo .title-area {
+		@extend %wpcustomlogo-titlearea !optional;
+	}
+	.wp-custom-logo .site-title {
+		@extend %wpcustomlogo-sitetitle !optional;
+	}
+	.wp-custom-logo .site-description {
+		@extend %wpcustomlogo-sitetitle !optional;
+		@extend %wpcustomlogo-sitedescription !optional;
+	}
+
+	.custom-logo-link,
+	a.custom-logo-link {
+		@extend %customlogo-link !optional;
+	}
+
+	.custom-logo,
+	img.custom-logo {
+		@extend %customlogo !optional;
+	}
+
+	// SITE-TITLE
+
+	.site-title {
+		@extend %sitetitle !optional;
+
+		a {
+			@extend %sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-TITLE (HEADER IMAGE)
+
+	.header-image .site-title {
+		@extend %headerimage-sitetitle !optional;
+
+		a {
+			@extend %headerimage-sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %headerimage-sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-DESCRIPTION
+
+	.site-description {
+		@extend %sitedescription !optional;
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	.header-image .site-description {
+		@extend %headerimage-sitedescription !optional;
+	}
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %navprimary !optional;
+	}
+	.nav-primary > .wrap {
+		@extend %navprimarywrap !optional;
+	}
+
+	// NAV-PRIMARY (INSIDE SITE-HEADER)
+	
+	.site-header .nav-primary {
+		@extend %header-navprimary !optional;
+	}
+	.site-header .nav-primary > .wrap {
+		@extend %header-navprimarywrap !optional;
+	}
+
+	// MENU-PRIMARY
+
+	.menu-primary {
+		@extend %menuprimary !optional;
+	}
+
+	// MENU-ITEM (MENU-PRIMARY)
+
+	.menu-primary .menu-item {
+		@extend %menuitem--menuprimary !optional;
+	}

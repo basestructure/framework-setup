@@ -1,0 +1,240 @@
+/* SETUP | HEADER | 2911_SETUP | HEADER-LEFTRIGHT-LINE_FLEX - 2019-04-04 */
+/* Note: The width defined on the custom logo forces the title area to be limited */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader {
+
+		// BG
+		background-color: #f0f0f0;
+
+	}
+	%siteheaderwrap {
+
+		// SPACING
+		padding: 1.5rem;
+
+		// FLEX
+		display: flex;
+		justify-content: flex-start;	// left aligned
+
+	}
+
+	// TITLE-AREA
+
+	%titlearea {
+
+		// FLEX
+		display: flex;
+		flex-direction: row;		// from left to right
+		justify-content: center;	// center aligned
+		align-items: flex-end;		// align horizontal items to bottom
+
+	}
+
+	// CUSTOM-LOGO
+
+	%wpcustomlogo-titlearea {
+		max-width: 100% !important;
+	}
+	%wpcustomlogo-sitetitle {}
+	%wpcustomlogo-sitedescription {}
+
+	%customlogo-link {
+		max-width: 150px;
+		margin-right: 1rem;
+	}
+
+	%customlogo {}
+
+	// HEADER-WIDGET-AREA
+
+	%headerwidgetarea {}
+
+	// SITE-TITLE
+
+	%sitetitle {
+
+		// typography
+		font-family: $fontfamily-sitetitle;				// fontfamily
+		//font-size: #{$fontsize-sitetitle}rem;			// fontsize
+		font-size: 1rem;
+		font-weight: $fontweight-thicker;
+		line-height: 1;
+		text-align: center;
+
+		// SPACING
+		margin-bottom: 0;
+		margin-right: 0.5rem;
+
+		// HIDE
+		//display: none;
+
+	}
+	%sitetitle-a {}
+	%sitetitle-hvr {}
+
+	// SITE-TITLE (HEADER-IMAGE)
+
+	%headerimage-sitetitle {
+
+		// graphic logo
+		color: transparent;
+
+		// SPACING
+		margin-bottom: 0;
+
+	}
+	%headerimage-sitetitle-a {}
+	%headerimage-sitetitle-hvr {}
+
+	// SITE-DESCRIPTION
+
+	%sitedescription {
+
+		// typography
+		font-family: $fontfamily-sitedescription;		// fontfamily
+		//font-size: #{$fontsize-sitedescription}rem;		// fontsize
+		font-size: 1rem;
+		font-weight: $fontweight-thin;
+		line-height: 1;
+		text-align: center;
+
+		// space
+		margin-bottom: 0;
+
+		// HIDE
+		//display: none;
+
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	%headerimage-sitedescription {}
+
+	// NAV-PRIMARY
+
+	%header-navprimary {
+
+		// HOOK
+		grid-column: 1;
+		grid-row: 1;
+			// IE
+			-ms-grid-column: 1;
+			-ms-grid-row: 1;
+
+		@include responsive-range(lrgup) {
+			// HOOK
+			grid-column: 2;
+			grid-row: 3;
+				// IE
+				-ms-grid-column: 2;
+				-ms-grid-row: 3;
+
+			// SPACING
+			margin-bottom: 0;
+		}
+
+		// SPACING
+		margin-bottom: 1rem;
+
+	}
+	%header-navprimarywrap {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header {
+		@extend %siteheader !optional;
+	}
+	.site-header > .wrap {
+		@extend %siteheaderwrap !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	.header-widget-area {
+		@extend %headerwidgetarea !optional;
+	}
+
+	// TITLE-AREA
+
+	.title-area {
+		@extend %titlearea !optional;
+	}
+
+	// CUSTOM-LOGO
+
+	.wp-custom-logo .title-area {
+		@extend %wpcustomlogo-titlearea !optional;
+	}
+	.wp-custom-logo .site-title {
+		@extend %wpcustomlogo-sitetitle !optional;
+	}
+	.wp-custom-logo .site-description {
+		@extend %wpcustomlogo-sitetitle !optional;
+		@extend %wpcustomlogo-sitedescription !optional;
+	}
+
+	.custom-logo-link,
+	a.custom-logo-link {
+		@extend %customlogo-link !optional;
+	}
+
+	.custom-logo,
+	img.custom-logo {
+		@extend %customlogo !optional;
+	}
+
+	// SITE-TITLE
+
+	.site-title {
+		@extend %sitetitle !optional;
+
+		a {
+			@extend %sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-TITLE (HEADER IMAGE)
+
+	.header-image .site-title {
+		@extend %headerimage-sitetitle !optional;
+
+		a {
+			@extend %headerimage-sitetitle-a !optional;
+		}
+		a:hover {
+			@extend %headerimage-sitetitle-hvr !optional;
+		}
+	}
+
+	// SITE-DESCRIPTION
+
+	.site-description {
+		@extend %sitedescription !optional;
+	}
+
+	// SITE-DESCRIPTION (HEADER-IMAGE)
+
+	.header-image .site-description {
+		@extend %headerimage-sitedescription !optional;
+	}
+
+	// NAV-PRIMARY
+	
+	.site-header .nav-primary {
+		@extend %header-navprimary !optional;
+	}
+	.site-header .nav-primary > .wrap {
+		@extend %header-navprimarywrap !optional;
+	}

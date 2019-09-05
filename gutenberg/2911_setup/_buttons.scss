@@ -1,4 +1,4 @@
-/* SETUP | GUTTENBERG | 2911_SETUP | BUTTONS - 2019-04-02 */
+/* SETUP | GUTTENBERG | 2911_SETUP | BUTTONS - 2019-05-27 */
 
 // -------------------------------------
 // EXTEND
@@ -23,6 +23,7 @@
 }
 
 // SIZES
+
 .content .wp-block-button.button,
 .content .wp-block-button.button-tiny,
 .content .wp-block-button.button-xxxsml,
@@ -33,7 +34,7 @@
 .content .wp-block-button.button-lrg,
 .content .wp-block-button.button-xlrg,
 .content .wp-block-button.button-huge {
-	padding: 0;
+	padding: 0 !important;
 }
 
 .content .wp-block-button.button .wp-block-button__link {
